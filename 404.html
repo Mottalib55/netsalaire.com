@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z328SB8DZ8"></script>
+    <!-- Google Analytics (lazy-loaded) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Z328SB8DZ8');
-        // Track 404 error
-        gtag('event', 'page_not_found', {
-            'page_path': window.location.pathname,
-            'page_referrer': document.referrer
+
+        function loadGA() {
+            if (window.gaLoaded) return;
+            window.gaLoaded = true;
+
+            var script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z328SB8DZ8';
+            script.async = true;
+            document.head.appendChild(script);
+
+            gtag('js', new Date());
+            gtag('config', 'G-Z328SB8DZ8');
+            // Track 404 error
+            gtag('event', 'page_not_found', {
+                'page_path': window.location.pathname,
+                'page_referrer': document.referrer
+            });
+        }
+
+        ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {
+            window.addEventListener(evt, loadGA, {once: true, passive: true});
         });
+        setTimeout(loadGA, 3000);
     </script>
 
     <title>Page non trouvee - 404</title>
@@ -43,9 +58,6 @@
 
     <!-- Icons (defer pour ne pas bloquer) -->
     <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         body { font-family: 'Inter', sans-serif; }

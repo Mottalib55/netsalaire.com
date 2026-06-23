@@ -53,6 +53,9 @@
     <meta property="og:site_name" content="NetSalaire">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://netsalaire.com/assets/images/og-home.png">
+    <meta property="og:image:alt" content="Gross vs Net, Tax Brackets, Deductions: FAQ Answered">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
@@ -64,6 +67,26 @@
     <meta name="author" content="NetSalaire">
 
     <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://netsalaire.com/en/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "FAQ"
+                }
+        ]
+}
+    </script>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -141,7 +164,7 @@
 
     <!-- Icons (defer pour ne pas bloquer) -->
     <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script defer src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
