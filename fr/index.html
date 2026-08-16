@@ -377,30 +377,83 @@
             <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="home.subtitle">
                 Simulateurs fiscaux gratuits pour la France et le Maroc. Calculez salaires, impôts et comparez la pression fiscale entre les deux pays.
             </p>
-            <!-- Country Search Dropdown -->
-            <div class="max-w-md mx-auto mb-8">
-                <div class="relative" id="country-selector">
-                    <div class="relative">
-                        <input
-                            type="text"
-                            id="country-search"
-                            placeholder="🔍 Rechercher un pays..."
-                            autocomplete="off"
-                            class="w-full px-5 py-4 bg-white border-2 border-slate-200 rounded-2xl text-slate-700 font-medium text-center shadow-lg shadow-slate-200/50 focus:outline-none focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100 transition-all placeholder:text-slate-400"
-                        >
-                        <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                            <iconify-icon icon="lucide:chevron-down" width="20" class="text-slate-400" id="dropdown-chevron"></iconify-icon>
-                        </div>
-                    </div>
-                    <div id="country-dropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-2xl shadow-slate-300/50 z-50">
-                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 pt-3 pb-2">Sélectionner un pays</div>
-                        <div id="country-list" class="px-2 pb-2 space-y-1" style="max-height: 192px; overflow-y: scroll;">
-                            <!-- Countries will be populated by JS -->
-                        </div>
-                        <div id="no-results" class="hidden px-4 py-6 text-center text-slate-400 text-sm">
-                            <iconify-icon icon="lucide:search-x" width="32" class="mb-2 opacity-50"></iconify-icon>
-                            <p>Aucun pays trouvé</p>
-                        </div>
+            <!-- Tous les pays -->
+            <div class="max-w-3xl mx-auto mb-8">
+                <div class="bg-white border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50 p-6">
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 text-center">18 pays disponibles</p>
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                        <a href="/fr/france/simulateur-impot-revenu/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-indigo-50 hover:border-indigo-200 border border-transparent transition-all group">
+                            <span class="text-2xl">🇫🇷</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-indigo-700">France</span>
+                        </a>
+                        <a href="/fr/maroc/simulateur-impot-revenu/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-emerald-50 hover:border-emerald-200 border border-transparent transition-all group">
+                            <span class="text-2xl">🇲🇦</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Maroc</span>
+                        </a>
+                        <a href="/fr/allemagne/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇩🇪</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Allemagne</span>
+                        </a>
+                        <a href="/fr/belgique/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇧🇪</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Belgique</span>
+                        </a>
+                        <a href="/fr/chine/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇨🇳</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Chine</span>
+                        </a>
+                        <a href="/fr/coree-du-sud/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇰🇷</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Corée du Sud</span>
+                        </a>
+                        <a href="/fr/danemark/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇩🇰</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Danemark</span>
+                        </a>
+                        <a href="/fr/espagne/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇪🇸</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Espagne</span>
+                        </a>
+                        <a href="/fr/grece/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇬🇷</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Grèce</span>
+                        </a>
+                        <a href="/fr/irlande/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇮🇪</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Irlande</span>
+                        </a>
+                        <a href="/fr/italie/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇮🇹</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Italie</span>
+                        </a>
+                        <a href="/fr/luxembourg/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇱🇺</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Luxembourg</span>
+                        </a>
+                        <a href="/fr/mexique/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇲🇽</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Mexique</span>
+                        </a>
+                        <a href="/fr/pays-bas/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇳🇱</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Pays-Bas</span>
+                        </a>
+                        <a href="/fr/portugal/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇵🇹</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Portugal</span>
+                        </a>
+                        <a href="/fr/tchequie/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇨🇿</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Tchéquie</span>
+                        </a>
+                        <a href="/fr/thailande/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇹🇭</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">Thaïlande</span>
+                        </a>
+                        <a href="/fr/usa/simulateur-impot/" class="flex flex-col items-center gap-1.5 p-3 rounded-xl hover:bg-slate-50 border border-transparent transition-all group">
+                            <span class="text-2xl">🇺🇸</span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-slate-900">USA</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -934,94 +987,7 @@
         </div>
     </footer>
 
-    <!-- Country Selector Script -->
-    <script>
-        const countries = [
-            { name: 'France', flag: '🇫🇷', url: '/fr/france/simulateur-impot-revenu/', color: 'indigo' },
-            { name: 'Maroc', flag: '🇲🇦', url: '/fr/maroc/simulateur-impot-revenu/', color: 'emerald' },
-            { name: 'USA', flag: '🇺🇸', url: '/fr/usa/simulateur-impot/', color: 'blue' },
-            { name: 'Allemagne', flag: '🇩🇪', url: '/fr/allemagne/simulateur-impot/', color: 'slate' },
-            { name: 'Belgique', flag: '🇧🇪', url: '/fr/belgique/simulateur-impot/', color: 'yellow' },
-            { name: 'Chine', flag: '🇨🇳', url: '/fr/chine/simulateur-impot/', color: 'red' },
-            { name: 'Corée du Sud', flag: '🇰🇷', url: '/fr/coree-du-sud/simulateur-impot/', color: 'blue' },
-            { name: 'Danemark', flag: '🇩🇰', url: '/fr/danemark/simulateur-impot/', color: 'red' },
-            { name: 'Espagne', flag: '🇪🇸', url: '/fr/espagne/simulateur-impot/', color: 'yellow' },
-            { name: 'Grèce', flag: '🇬🇷', url: '/fr/grece/simulateur-impot/', color: 'blue' },
-            { name: 'Irlande', flag: '🇮🇪', url: '/fr/irlande/simulateur-impot/', color: 'green' },
-            { name: 'Italie', flag: '🇮🇹', url: '/fr/italie/simulateur-impot/', color: 'green' },
-            { name: 'Luxembourg', flag: '🇱🇺', url: '/fr/luxembourg/simulateur-impot/', color: 'sky' },
-            { name: 'Mexique', flag: '🇲🇽', url: '/fr/mexique/simulateur-impot/', color: 'cyan' },
-            { name: 'Pays-Bas', flag: '🇳🇱', url: '/fr/pays-bas/simulateur-impot/', color: 'orange' },
-            { name: 'Portugal', flag: '🇵🇹', url: '/fr/portugal/simulateur-impot/', color: 'green' },
-            { name: 'Tchéquie', flag: '🇨🇿', url: '/fr/tchequie/simulateur-impot/', color: 'blue' },
-            { name: 'Thaïlande', flag: '🇹🇭', url: '/fr/thailande/simulateur-impot/', color: 'purple' }
-        ];
 
-        const searchInput = document.getElementById('country-search');
-        const dropdown = document.getElementById('country-dropdown');
-        const countryList = document.getElementById('country-list');
-        const noResults = document.getElementById('no-results');
-        const chevron = document.getElementById('dropdown-chevron');
-
-        function renderCountries(filter = '') {
-            const filtered = countries.filter(c =>
-                c.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-                    .includes(filter.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))
-            );
-
-            if (filtered.length === 0) {
-                countryList.innerHTML = '';
-                noResults.classList.remove('hidden');
-                return;
-            }
-
-            noResults.classList.add('hidden');
-            countryList.innerHTML = filtered.map(country => `
-                <a href="${country.url}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 transition-all group cursor-pointer">
-                    <span class="text-2xl">${country.flag}</span>
-                    <span class="font-medium text-slate-700 group-hover:text-slate-900">${country.name}</span>
-                    <iconify-icon icon="lucide:arrow-right" width="16" class="ml-auto text-slate-300 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all"></iconify-icon>
-                </a>
-            `).join('');
-        }
-
-        function openDropdown() {
-            dropdown.classList.remove('hidden');
-            chevron.style.transform = 'rotate(180deg)';
-            renderCountries(searchInput.value);
-        }
-
-        function closeDropdown() {
-            dropdown.classList.add('hidden');
-            chevron.style.transform = 'rotate(0deg)';
-        }
-
-        searchInput.addEventListener('focus', openDropdown);
-        searchInput.addEventListener('input', () => renderCountries(searchInput.value));
-
-        // Close on click outside
-        document.addEventListener('click', (e) => {
-            const selector = document.getElementById('country-selector');
-            if (!selector.contains(e.target)) {
-                closeDropdown();
-            }
-        });
-
-        // Keyboard navigation
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeDropdown();
-                searchInput.blur();
-            }
-            if (e.key === 'Enter') {
-                const firstLink = countryList.querySelector('a');
-                if (firstLink) window.location.href = firstLink.href;
-            }
-        });
-
-        // Initialize
-        renderCountries();
-    </script>
 <!-- Microsoft Clarity -->
 <script>
 setTimeout(function(){
