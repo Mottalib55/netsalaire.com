@@ -89,63 +89,6 @@
         }
     </style>
 
-    <script>
-        // Language detection
-        const isEnglish = window.location.pathname.startsWith('/en/') ||
-                          (localStorage.getItem('netsalaire_lang') === 'en');
-
-        const texts = {
-            fr: {
-                title: 'Page introuvable',
-                subtitle: 'Oups ! La page que vous recherchez semble avoir disparu.',
-                description: 'Elle a peut-etre ete deplacee, supprimee, ou n\'a jamais existe.',
-                home: 'Retour a l\'accueil',
-                orTry: 'Ou essayez nos simulateurs',
-                france: 'Simulateur France',
-                maroc: 'Simulateur Maroc',
-                compare: 'Comparateur Global',
-                faq: 'FAQ'
-            },
-            en: {
-                title: 'Page not found',
-                subtitle: 'Oops! The page you\'re looking for seems to have vanished.',
-                description: 'It may have been moved, deleted, or never existed.',
-                home: 'Back to homepage',
-                orTry: 'Or try our simulators',
-                france: 'France Simulator',
-                maroc: 'Morocco Simulator',
-                compare: 'Global Comparator',
-                faq: 'FAQ'
-            }
-        };
-
-        const lang = isEnglish ? 'en' : 'fr';
-        const t = texts[lang];
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.documentElement.lang = lang;
-            document.getElementById('title').textContent = t.title;
-            document.getElementById('subtitle').textContent = t.subtitle;
-            document.getElementById('description').textContent = t.description;
-            document.getElementById('home-btn').textContent = t.home;
-            document.getElementById('or-try').textContent = t.orTry;
-            document.getElementById('france-link').textContent = t.france;
-            document.getElementById('maroc-link').textContent = t.maroc;
-            document.getElementById('compare-link').textContent = t.compare;
-            document.getElementById('faq-link').textContent = t.faq;
-
-            // Update links based on language
-            if (isEnglish) {
-                document.getElementById('logo-link').href = '/en/';
-                document.getElementById('home-link').href = '/en/';
-                document.getElementById('france-href').href = '/en/france/gross-to-net/';
-                document.getElementById('maroc-href').href = '/en/morocco/gross-to-net/';
-                document.getElementById('compare-href').href = '/en/global-comparison/';
-                document.getElementById('faq-href').href = '/en/faq/';
-                document.title = 'Page not found - 404 | NetSalaire';
-            }
-        });
-    </script>
 </head>
 <body class="bg-slate-50 text-slate-600 antialiased min-h-screen flex flex-col">
 

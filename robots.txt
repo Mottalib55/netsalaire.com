@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /_archives/
 Disallow: /*?*
 
 Sitemap: https://netsalaire.com/sitemap.xml
