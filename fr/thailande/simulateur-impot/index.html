@@ -126,6 +126,31 @@
         .result-card { transition: all 0.3s ease; }
         .result-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(0,0,0,0.1); }
     </style>
+
+    <!-- Schema.org Person (E-E-A-T) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mottalib Radif",
+        "jobTitle": "Fondateur de NetSalaire",
+        "description": "MBA INSEAD, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.",
+        "url": "https://netsalaire.com/fr/a-propos/",
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "INSEAD",
+            "url": "https://www.insead.edu"
+        },
+        "knowsAbout": ["finance personnelle", "fiscalite internationale", "simulation fiscale"],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "NetSalaire",
+            "url": "https://netsalaire.com"
+        }
+    }
+    </script>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Mottalib Radif">
 </head>
 <body class="bg-slate-50 font-sans antialiased">
 
@@ -246,6 +271,7 @@
                     </div>
                 </div>
                 <a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a>
+                <a href="/fr/a-propos/" class="hover:text-slate-900 transition-colors">A propos</a>
             </div>
             <div class="flex items-center gap-3">
                 <a href="#contact" class="hidden md:flex items-center gap-2 text-xs font-medium bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-900 px-4 py-2 rounded-full transition-all">
@@ -763,7 +789,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-500">&copy; 2026 NetSalaire.com - Tous droits réservés</p>
+                <p class="text-sm text-slate-500">&copy; 2026 NetSalaire.com &mdash; Cree par Mottalib Radif</p>
             </div>
         </div>
     </footer>

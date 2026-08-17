@@ -58,8 +58,8 @@
     <meta name="twitter:image" content="https://netsalaire.com/assets/images/og-home.png">
 
     <!-- Additional SEO -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="NetSalaire">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Mottalib Radif">
     <link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/">
 <link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/">
 
@@ -70,7 +70,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Schema.org Organization (pour logo Google) -->
+    <!-- Schema.org Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -78,17 +78,81 @@
         "name": "NetSalaire",
         "url": "https://netsalaire.com",
         "logo": "https://netsalaire.com/assets/images/logo-512.png",
+        "description": "Simulateurs fiscaux gratuits pour calculer votre salaire brut en net, impots sur le revenu et cotisations sociales dans plus de 18 pays. Baremes officiels mis a jour chaque annee.",
+        "founder": {
+            "@type": "Person",
+            "name": "Mottalib Radif",
+            "jobTitle": "Fondateur de NetSalaire",
+            "description": "MBA INSEAD, passionne par la finance personnelle",
+            "url": "https://netsalaire.com/fr/a-propos/"
+        },
+        "foundingDate": "2024",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://netsalaire.com/fr/#contact",
+            "availableLanguage": ["French", "English"]
+        },
         "sameAs": []
     }
     </script>
 
-    <!-- Schema.org WebSite -->
+    <!-- Schema.org WebSite avec SearchAction -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "NetSalaire",
-        "url": "https://netsalaire.com/fr/"
+        "url": "https://netsalaire.com/fr/",
+        "description": "Simulateurs de salaire brut en net et d'impots pour la France, le Maroc et 16 autres pays.",
+        "inLanguage": "fr",
+        "publisher": {
+            "@type": "Organization",
+            "name": "NetSalaire",
+            "url": "https://netsalaire.com"
+        }
+    }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Comment fonctionne le comparateur pays ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le comparateur calcule simultanement votre salaire net et votre pression fiscale totale dans les deux pays, pour un meme salaire brut. Il utilise le taux de change en temps reel pour convertir les montants."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Les calculs sont-ils fiables ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nos simulateurs utilisent les baremes officiels 2026 publies par les administrations fiscales francaise et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalise."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Puis-je simuler un statut cadre en France ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tout a fait. Le calculateur Salaire Brut a Net pour la France dispose d'une option pour basculer entre statut Cadre et Non-Cadre, ajustant ainsi les cotisations de retraite complementaire."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mes donnees sont-elles stockees ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non. Tous les calculs sont effectues localement dans votre navigateur. Aucune donnee personnelle n'est envoyee a nos serveurs ni stockee. Vous pouvez utiliser nos outils en toute confidentialite."
+                }
+            }
+        ]
     }
     </script>
 
@@ -240,6 +304,7 @@
                     </div>
                 </div>
                 <a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a>
+                <a href="/fr/a-propos/" class="hover:text-slate-900 transition-colors">A propos</a>
             </div>
             <div class="flex items-center gap-3">
                 <a href="#contact" class="hidden md:flex items-center gap-2 text-xs font-medium bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-900 px-4 py-2 rounded-full transition-all">
@@ -941,10 +1006,11 @@
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">Informations</p>
                     <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="/fr/a-propos/" class="hover:text-slate-900 transition-colors">A propos</a></li>
                         <li><a href="/fr/comparateur-salaire-france-maroc/" class="hover:text-slate-900 transition-colors">Comparer FR vs MA</a></li>
                         <li><a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a></li>
-                        <li><a href="/fr/mentions-legales/" class="hover:text-slate-900 transition-colors">Mentions Légales</a></li>
-                        <li><a href="/fr/politique-confidentialite/" class="hover:text-slate-900 transition-colors">Confidentialité</a></li>
+                        <li><a href="/fr/mentions-legales/" class="hover:text-slate-900 transition-colors">Mentions Legales</a></li>
+                        <li><a href="/fr/politique-confidentialite/" class="hover:text-slate-900 transition-colors">Confidentialite</a></li>
                     </ul>
                 </div>
             </div>
@@ -982,7 +1048,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-500">&copy; 2026 NetSalaire.com - Tous droits réservés</p>
+                <p class="text-sm text-slate-500">&copy; 2026 NetSalaire.com &mdash; Cree par Mottalib Radif</p>
             </div>
         </div>
     </footer>

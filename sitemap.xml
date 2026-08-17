@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://netsalaire.com/fr/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/"/>
@@ -13,7 +13,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/france/simulateur-salaire-brut-net/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/"/>
@@ -22,7 +22,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/france/simulateur-impot-revenu/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/simulateur-impot-revenu/"/>
@@ -31,7 +31,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/france/simulateur-chomage-are/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/simulateur-chomage-are/"/>
@@ -40,7 +40,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/france/simulateur-apl/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/simulateur-apl/"/>
@@ -49,7 +49,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/france/creche-tarifs/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/creche-tarifs/"/>
@@ -58,7 +58,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/france/simulateur-indemnite-kilometrique/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/simulateur-indemnite-kilometrique/"/>
@@ -67,7 +67,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/maroc/simulateur-salaire-brut-net/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/maroc/simulateur-salaire-brut-net/"/>
@@ -76,7 +76,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/maroc/simulateur-impot-revenu/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/maroc/simulateur-impot-revenu/"/>
@@ -85,7 +85,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/maroc/guide/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/maroc/guide/"/>
@@ -94,7 +94,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/comparateur-salaire-france-maroc/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/comparateur-salaire-france-maroc/"/>
@@ -102,8 +102,17 @@
   </url>
 
 <url>
+    <loc>https://netsalaire.com/fr/a-propos/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/a-propos/"/>
+  </url>
+
+<url>
     <loc>https://netsalaire.com/fr/faq/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/faq/"/>
@@ -112,7 +121,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/mentions-legales/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/mentions-legales/"/>
@@ -121,7 +130,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/politique-confidentialite/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/politique-confidentialite/"/>
@@ -130,7 +139,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/allemagne/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/allemagne/simulateur-impot/"/>
@@ -140,7 +149,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/italie/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/italie/simulateur-impot/"/>
@@ -150,7 +159,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/pays-bas/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/pays-bas/simulateur-impot/"/>
@@ -160,7 +169,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/coree-du-sud/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/coree-du-sud/simulateur-impot/"/>
@@ -170,7 +179,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/belgique/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/belgique/simulateur-impot/"/>
@@ -180,7 +189,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/irlande/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/irlande/simulateur-impot/"/>
@@ -189,7 +198,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/danemark/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/danemark/simulateur-impot/"/>
@@ -199,7 +208,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/portugal/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/portugal/simulateur-impot/"/>
@@ -209,7 +218,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/usa/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/usa/simulateur-impot/"/>
@@ -218,7 +227,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/chine/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/chine/simulateur-impot/"/>
@@ -228,7 +237,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/luxembourg/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/luxembourg/simulateur-impot/"/>
@@ -237,7 +246,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/espagne/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/espagne/simulateur-impot/"/>
@@ -247,7 +256,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/grece/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/grece/simulateur-impot/"/>
@@ -257,7 +266,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/tchequie/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/tchequie/simulateur-impot/"/>
@@ -267,7 +276,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/thailande/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/thailande/simulateur-impot/"/>
@@ -277,7 +286,7 @@
 
 <url>
     <loc>https://netsalaire.com/fr/mexique/simulateur-impot/</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/mexique/simulateur-impot/"/>
