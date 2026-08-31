@@ -216,52 +216,72 @@
         details summary { list-style: none; }
         details summary::-webkit-details-marker { display: none; }
 
-        /* Custom slider styling */
+        /* Slider — Apple-style thin track, subtle thumb */
         input[type="range"] {
             -webkit-appearance: none;
             appearance: none;
             border-radius: 99px;
-            height: 6px;
-            background: linear-gradient(to right, #818cf8 0%, #818cf8 var(--progress, 0%), #e2e8f0 var(--progress, 0%), #e2e8f0 100%);
+            height: 4px;
+            background: linear-gradient(to right, #6366f1 0%, #6366f1 var(--progress, 0%), #e5e7eb var(--progress, 0%), #e5e7eb 100%);
+            opacity: 0.85;
+            transition: opacity 0.15s;
         }
+        input[type="range"]:hover { opacity: 1; }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 18px; height: 18px;
             border-radius: 50%;
             background: white;
             cursor: pointer;
-            border: 2px solid #818cf8;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+            border: none;
+            box-shadow: 0 0.5px 2px rgba(0,0,0,0.2), 0 0 0 0.5px rgba(0,0,0,0.04);
         }
         input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
+            width: 18px; height: 18px;
             border-radius: 50%;
             background: white;
             cursor: pointer;
-            border: 2px solid #818cf8;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+            border: none;
+            box-shadow: 0 0.5px 2px rgba(0,0,0,0.2), 0 0 0 0.5px rgba(0,0,0,0.04);
         }
         input[type="range"]::-moz-range-progress {
-            background: #818cf8;
+            background: #6366f1;
             border-radius: 99px;
-            height: 6px;
+            height: 4px;
         }
         input[type="range"]::-moz-range-track {
-            background: #e2e8f0;
+            background: #e5e7eb;
             border-radius: 99px;
-            height: 6px;
+            height: 4px;
         }
-        /* Income table inputs */
-        .income-field { outline: none; }
-        .income-field:hover { background: #f8fafc !important; }
+        /* Income inputs — seamless in table */
+        .income-field {
+            outline: none;
+            border: none;
+            background: transparent;
+            transition: background 0.15s, box-shadow 0.15s;
+        }
+        .income-field:hover { background: rgba(0,0,0,0.02) !important; }
         .income-field:focus {
             background: white !important;
-            box-shadow: 0 0 0 2px #818cf8 !important;
-            border-color: transparent !important;
+            box-shadow: 0 0 0 2px #a5b4fc, 0 1px 3px rgba(0,0,0,0.06) !important;
+            border-radius: 8px;
         }
+        /* Income table structure */
+        .income-table {
+            display: grid;
+            grid-template-columns: 3rem 1fr 1fr;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            background: white;
+        }
+        .income-table > div { padding: 10px 12px; }
+        .income-table .it-header { background: #f9fafb; font-size: 11px; font-weight: 500; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; padding: 8px 12px; }
+        .income-table .it-label { font-size: 12px; color: #9ca3af; display: flex; align-items: center; border-top: 1px solid #f3f4f6; }
+        .income-table .it-cell { border-top: 1px solid #f3f4f6; padding: 6px 8px; position: relative; }
+        .income-table .it-net { background: #eef2ff; }
+        .income-table .it-net-label { background: #eef2ff; color: #4f46e5; font-weight: 600; }
     </style>
 
 
@@ -732,40 +752,36 @@
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
                         </div>
-                        <div class="rounded-xl overflow-hidden border border-slate-200 mb-3">
-                            <div class="grid items-center" style="grid-template-columns: 2.8rem 1fr 1fr;">
-                                <!-- Header -->
-                                <div class="bg-slate-50 py-2 px-3"></div>
-                                <div class="bg-slate-50 py-2 text-center text-xs font-medium text-slate-500 uppercase tracking-wide">Mensuel</div>
-                                <div class="bg-slate-50 py-2 text-center text-xs font-medium text-slate-500 uppercase tracking-wide">Annuel</div>
-                                <!-- Brut row -->
-                                <div class="py-2 px-3 text-xs text-slate-400 border-t border-slate-100">Brut</div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100">
-                                    <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 text-slate-600 text-sm font-medium" style="border:none;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 text-xs pointer-events-none">€</span>
-                                </div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100">
-                                    <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 text-slate-600 text-sm font-medium" style="border:none;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 text-xs pointer-events-none">€</span>
-                                </div>
-                                <!-- Net row -->
-                                <div class="py-2 px-3 text-xs font-semibold text-indigo-600 border-t border-slate-100 bg-indigo-50">Net</div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100 bg-indigo-50">
-                                    <input type="text" inputmode="numeric" id="income1-monthly" value="3 333" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 bg-white text-slate-900 text-sm font-bold shadow-sm" style="border:1px solid #e2e8f0;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">€</span>
-                                </div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100 bg-indigo-50">
-                                    <input type="text" inputmode="numeric" id="income1-input" value="40 000" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 bg-white text-slate-900 text-sm font-bold shadow-sm" style="border:1px solid #e2e8f0;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">€</span>
-                                </div>
+                        <div class="income-table" style="margin-bottom:12px;">
+                            <div class="it-header" style="border-radius:12px 0 0 0;"></div>
+                            <div class="it-header">Mensuel</div>
+                            <div class="it-header" style="border-radius:0 12px 0 0;">Annuel</div>
+                            <div class="it-label">Brut</div>
+                            <div class="it-cell">
+                                <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                            </div>
+                            <div class="it-cell">
+                                <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                            </div>
+                            <div class="it-label it-net-label" style="border-radius:0 0 0 12px;">Net</div>
+                            <div class="it-cell it-net">
+                                <input type="text" inputmode="numeric" id="income1-monthly" value="3 333" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
+                            </div>
+                            <div class="it-cell it-net" style="border-radius:0 0 12px 0;">
+                                <input type="text" inputmode="numeric" id="income1-input" value="40 000" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
                             </div>
                         </div>
-                        <input type="range" id="income1-slider" min="0" max="200000" step="500" value="40000"
-                               class="w-full appearance-none cursor-pointer touch-pan-x"
-                               style="-webkit-appearance: none; padding: 6px 0;">
-                        <div class="flex justify-between text-xs text-slate-400 mt-0.5">
-                            <span>0€</span>
-                            <span>200k€</span>
+                        <div style="padding:0 2px;">
+                            <input type="range" id="income1-slider" min="0" max="200000" step="500" value="40000"
+                                   class="w-full cursor-pointer" style="-webkit-appearance:none; padding:4px 0;">
+                            <div class="flex justify-between text-xs text-slate-400" style="margin-top:2px;">
+                                <span>0€</span>
+                                <span>200k€</span>
+                            </div>
                         </div>
                     </div>
 
@@ -792,40 +808,36 @@
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
                         </div>
-                        <div class="rounded-xl overflow-hidden border border-slate-200 mb-3">
-                            <div class="grid items-center" style="grid-template-columns: 2.8rem 1fr 1fr;">
-                                <!-- Header -->
-                                <div class="bg-slate-50 py-2 px-3"></div>
-                                <div class="bg-slate-50 py-2 text-center text-xs font-medium text-slate-500 uppercase tracking-wide">Mensuel</div>
-                                <div class="bg-slate-50 py-2 text-center text-xs font-medium text-slate-500 uppercase tracking-wide">Annuel</div>
-                                <!-- Brut row -->
-                                <div class="py-2 px-3 text-xs text-slate-400 border-t border-slate-100">Brut</div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100">
-                                    <input type="text" inputmode="numeric" id="income2-brut-monthly" value="0" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 text-slate-600 text-sm font-medium" style="border:none;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 text-xs pointer-events-none">€</span>
-                                </div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100">
-                                    <input type="text" inputmode="numeric" id="income2-brut-annual" value="0" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 text-slate-600 text-sm font-medium" style="border:none;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 text-xs pointer-events-none">€</span>
-                                </div>
-                                <!-- Net row -->
-                                <div class="py-2 px-3 text-xs font-semibold text-indigo-600 border-t border-slate-100 bg-indigo-50">Net</div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100 bg-indigo-50">
-                                    <input type="text" inputmode="numeric" id="income2-monthly" value="0" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 bg-white text-slate-900 text-sm font-bold shadow-sm" style="border:1px solid #e2e8f0;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">€</span>
-                                </div>
-                                <div class="relative py-1 px-1.5 border-t border-slate-100 bg-indigo-50">
-                                    <input type="text" inputmode="numeric" id="income2-input" value="0" class="income-field w-full text-right rounded-md py-1.5 px-2 pr-6 bg-white text-slate-900 text-sm font-bold shadow-sm" style="border:1px solid #e2e8f0;outline:none;">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">€</span>
-                                </div>
+                        <div class="income-table" style="margin-bottom:12px;">
+                            <div class="it-header" style="border-radius:12px 0 0 0;"></div>
+                            <div class="it-header">Mensuel</div>
+                            <div class="it-header" style="border-radius:0 12px 0 0;">Annuel</div>
+                            <div class="it-label">Brut</div>
+                            <div class="it-cell">
+                                <input type="text" inputmode="numeric" id="income2-brut-monthly" value="0" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                            </div>
+                            <div class="it-cell">
+                                <input type="text" inputmode="numeric" id="income2-brut-annual" value="0" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                            </div>
+                            <div class="it-label it-net-label" style="border-radius:0 0 0 12px;">Net</div>
+                            <div class="it-cell it-net">
+                                <input type="text" inputmode="numeric" id="income2-monthly" value="0" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
+                            </div>
+                            <div class="it-cell it-net" style="border-radius:0 0 12px 0;">
+                                <input type="text" inputmode="numeric" id="income2-input" value="0" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
                             </div>
                         </div>
-                        <input type="range" id="income2-slider" min="0" max="200000" step="500" value="0"
-                               class="w-full appearance-none cursor-pointer touch-pan-x"
-                               style="-webkit-appearance: none; padding: 6px 0;">
-                        <div class="flex justify-between text-xs text-slate-400 mt-0.5">
-                            <span>0€</span>
-                            <span>200k€</span>
+                        <div style="padding:0 2px;">
+                            <input type="range" id="income2-slider" min="0" max="200000" step="500" value="0"
+                                   class="w-full cursor-pointer" style="-webkit-appearance:none; padding:4px 0;">
+                            <div class="flex justify-between text-xs text-slate-400" style="margin-top:2px;">
+                                <span>0€</span>
+                                <span>200k€</span>
+                            </div>
                         </div>
                     </div>
 
