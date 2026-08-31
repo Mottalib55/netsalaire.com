@@ -2,6 +2,7 @@
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8509347331076245" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Analytics (chargé après interaction pour performance) -->
@@ -254,34 +255,67 @@
             border-radius: 99px;
             height: 4px;
         }
-        /* Income inputs — seamless in table */
-        .income-field {
-            outline: none;
+        /* Income inputs — Apple/Google premium clean design */
+        .inc-head {
+            display: grid;
+            grid-template-columns: 2.8rem 1fr 1fr;
+            padding: 0 0 4px;
+        }
+        .inc-head span {
+            font-size: 10px;
+            font-weight: 600;
+            color: #b0b8c4;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            text-align: center;
+        }
+        .inc-row {
+            display: grid;
+            grid-template-columns: 2.8rem 1fr 1fr;
+            align-items: center;
+        }
+        .inc-row .inc-lbl {
+            font-size: 11px;
+            font-weight: 600;
+            color: #94a3b8;
+            padding: 0 2px;
+        }
+        .inc-row .inc-v {
+            position: relative;
+            padding: 3px 2px;
+        }
+        .inc-row .inc-v input {
+            width: 100%;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            padding: 7px 26px 7px 8px;
             border: none;
             background: transparent;
+            outline: none;
+            border-radius: 10px;
             transition: background 0.15s, box-shadow 0.15s;
         }
-        .income-field:hover { background: rgba(0,0,0,0.02) !important; }
-        .income-field:focus {
-            background: white !important;
-            box-shadow: 0 0 0 2px #a5b4fc, 0 1px 3px rgba(0,0,0,0.06) !important;
-            border-radius: 8px;
+        .inc-row .inc-v input:hover { background: #f1f5f9; }
+        .inc-row .inc-v input:focus { background: white; box-shadow: 0 0 0 2px #818cf8; }
+        .inc-row .inc-v .inc-u {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 11px;
+            color: #cbd5e1;
+            pointer-events: none;
         }
-        /* Income table structure */
-        .income-table {
-            display: grid;
-            grid-template-columns: 3rem 1fr 1fr;
+        .inc-row-net {
+            background: rgba(99,102,241,0.04);
             border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e5e7eb;
-            background: white;
+            margin-top: 2px;
         }
-        .income-table > div { padding: 10px 12px; }
-        .income-table .it-header { background: #f9fafb; font-size: 11px; font-weight: 500; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; padding: 8px 12px; }
-        .income-table .it-label { font-size: 12px; color: #9ca3af; display: flex; align-items: center; border-top: 1px solid #f3f4f6; }
-        .income-table .it-cell { border-top: 1px solid #f3f4f6; padding: 6px 8px; position: relative; }
-        .income-table .it-net { background: #eef2ff; }
-        .income-table .it-net-label { background: #eef2ff; color: #4f46e5; font-weight: 600; }
+        .inc-row-net .inc-lbl { color: #6366f1; font-weight: 700; }
+        .inc-row-net .inc-v input { color: #1e293b; font-weight: 600; }
     </style>
 
 
@@ -752,27 +786,31 @@
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
                         </div>
-                        <div class="income-table" style="margin-bottom:12px;">
-                            <div class="it-header" style="border-radius:12px 0 0 0;"></div>
-                            <div class="it-header">Mensuel</div>
-                            <div class="it-header" style="border-radius:0 12px 0 0;">Annuel</div>
-                            <div class="it-label">Brut</div>
-                            <div class="it-cell">
-                                <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                        <div style="margin-bottom:12px;">
+                            <div class="inc-head">
+                                <span></span><span>Mensuel</span><span>Annuel</span>
                             </div>
-                            <div class="it-cell">
-                                <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                            <div class="inc-row">
+                                <span class="inc-lbl">Brut</span>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274">
+                                    <span class="inc-u">€</span>
+                                </div>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282">
+                                    <span class="inc-u">€</span>
+                                </div>
                             </div>
-                            <div class="it-label it-net-label" style="border-radius:0 0 0 12px;">Net</div>
-                            <div class="it-cell it-net">
-                                <input type="text" inputmode="numeric" id="income1-monthly" value="3 333" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
-                            </div>
-                            <div class="it-cell it-net" style="border-radius:0 0 12px 0;">
-                                <input type="text" inputmode="numeric" id="income1-input" value="40 000" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
+                            <div class="inc-row inc-row-net">
+                                <span class="inc-lbl">Net</span>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income1-monthly" value="3 333">
+                                    <span class="inc-u">€</span>
+                                </div>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income1-input" value="40 000">
+                                    <span class="inc-u">€</span>
+                                </div>
                             </div>
                         </div>
                         <div style="padding:0 2px;">
@@ -808,27 +846,31 @@
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
                         </div>
-                        <div class="income-table" style="margin-bottom:12px;">
-                            <div class="it-header" style="border-radius:12px 0 0 0;"></div>
-                            <div class="it-header">Mensuel</div>
-                            <div class="it-header" style="border-radius:0 12px 0 0;">Annuel</div>
-                            <div class="it-label">Brut</div>
-                            <div class="it-cell">
-                                <input type="text" inputmode="numeric" id="income2-brut-monthly" value="0" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                        <div style="margin-bottom:12px;">
+                            <div class="inc-head">
+                                <span></span><span>Mensuel</span><span>Annuel</span>
                             </div>
-                            <div class="it-cell">
-                                <input type="text" inputmode="numeric" id="income2-brut-annual" value="0" class="income-field w-full text-right text-sm font-medium" style="color:#64748b; padding:6px 24px 6px 8px;">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#cbd5e1;font-size:12px;pointer-events:none;">€</span>
+                            <div class="inc-row">
+                                <span class="inc-lbl">Brut</span>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income2-brut-monthly" value="0">
+                                    <span class="inc-u">€</span>
+                                </div>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income2-brut-annual" value="0">
+                                    <span class="inc-u">€</span>
+                                </div>
                             </div>
-                            <div class="it-label it-net-label" style="border-radius:0 0 0 12px;">Net</div>
-                            <div class="it-cell it-net">
-                                <input type="text" inputmode="numeric" id="income2-monthly" value="0" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
-                            </div>
-                            <div class="it-cell it-net" style="border-radius:0 0 12px 0;">
-                                <input type="text" inputmode="numeric" id="income2-input" value="0" class="income-field w-full text-right text-sm font-bold" style="color:#1e293b; padding:6px 24px 6px 8px; background:white; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
-                                <span style="position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:12px;pointer-events:none;">€</span>
+                            <div class="inc-row inc-row-net">
+                                <span class="inc-lbl">Net</span>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income2-monthly" value="0">
+                                    <span class="inc-u">€</span>
+                                </div>
+                                <div class="inc-v">
+                                    <input type="text" inputmode="numeric" id="income2-input" value="0">
+                                    <span class="inc-u">€</span>
+                                </div>
                             </div>
                         </div>
                         <div style="padding:0 2px;">
