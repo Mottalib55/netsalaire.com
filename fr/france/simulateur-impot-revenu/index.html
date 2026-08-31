@@ -255,67 +255,69 @@
             border-radius: 99px;
             height: 4px;
         }
-        /* Income inputs — Apple/Google premium clean design */
+        /* Income inputs */
         .inc-head {
             display: grid;
-            grid-template-columns: 2.8rem 1fr 1fr;
-            padding: 0 0 4px;
+            grid-template-columns: 3rem 1fr 1fr;
+            padding: 0 0 6px;
         }
         .inc-head span {
             font-size: 10px;
             font-weight: 600;
-            color: #b0b8c4;
+            color: #94a3b8;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.05em;
             text-align: center;
         }
         .inc-row {
             display: grid;
-            grid-template-columns: 2.8rem 1fr 1fr;
+            grid-template-columns: 3rem 1fr 1fr;
             align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
         }
         .inc-row .inc-lbl {
-            font-size: 11px;
-            font-weight: 600;
-            color: #94a3b8;
-            padding: 0 2px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+            padding: 0;
         }
         .inc-row .inc-v {
             position: relative;
-            padding: 3px 2px;
         }
         .inc-row .inc-v input {
             width: 100%;
             text-align: right;
             font-variant-numeric: tabular-nums;
-            font-size: 14px;
-            font-weight: 500;
-            color: #64748b;
-            padding: 7px 26px 7px 8px;
-            border: none;
-            background: transparent;
+            font-size: 15px;
+            font-weight: 600;
+            color: #334155;
+            padding: 9px 28px 9px 10px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
             outline: none;
             border-radius: 10px;
-            transition: background 0.15s, box-shadow 0.15s;
+            transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
         }
-        .inc-row .inc-v input:hover { background: #f1f5f9; }
-        .inc-row .inc-v input:focus { background: white; box-shadow: 0 0 0 2px #818cf8; }
+        .inc-row .inc-v input:hover { border-color: #cbd5e1; background: #f1f5f9; }
+        .inc-row .inc-v input:focus { border-color: #818cf8; background: white; box-shadow: 0 0 0 3px rgba(129,140,248,0.15); }
         .inc-row .inc-v .inc-u {
             position: absolute;
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 11px;
-            color: #cbd5e1;
+            font-size: 12px;
+            color: #94a3b8;
             pointer-events: none;
         }
         .inc-row-net {
-            background: rgba(99,102,241,0.04);
-            border-radius: 12px;
-            margin-top: 2px;
+            background: rgba(99,102,241,0.06);
+            border-radius: 14px;
+            padding: 6px;
+            margin-bottom: 0;
         }
-        .inc-row-net .inc-lbl { color: #6366f1; font-weight: 700; }
-        .inc-row-net .inc-v input { color: #1e293b; font-weight: 600; }
+        .inc-row-net .inc-lbl { color: #4f46e5; font-weight: 800; font-size: 13px; }
+        .inc-row-net .inc-v input { border-color: rgba(99,102,241,0.15); background: white; color: #1e293b; font-weight: 700; }
     </style>
 
 
