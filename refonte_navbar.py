@@ -20,40 +20,40 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Maps fr_slug -> (lang_code, native_url, lang_name, flag_emoji)
 # ============================================================
 NATIVE_LANG_MAP = {
-    'allemagne': ('de', '/de/deutschland/einkommensteuer/', 'Deutsch', '🇩🇪'),
+    'allemagne': ('de', '/de/deutschland/einkommensteuer/', 'Deutsch', '<iconify-icon icon="circle-flags:de" width="16"></iconify-icon>'),
     'autriche': ('de', '/de/oesterreich/einkommensteuer/', 'Deutsch', '🇦🇹'),
     'suisse': ('de', '/de/schweiz/einkommensteuer/', 'Deutsch', '🇨🇭'),
-    'espagne': ('es', '/es/espana/simulador-impuestos/', 'Español', '🇪🇸'),
-    'mexique': ('es', '/es/mexico/simulador-impuestos/', 'Español', '🇲🇽'),
+    'espagne': ('es', '/es/espana/simulador-impuestos/', 'Español', '<iconify-icon icon="circle-flags:es" width="16"></iconify-icon>'),
+    'mexique': ('es', '/es/mexico/simulador-impuestos/', 'Español', '<iconify-icon icon="circle-flags:mx" width="16"></iconify-icon>'),
     'argentine': ('es', '/es/argentina/simulador-impuestos/', 'Español', '🇦🇷'),
     'chili': ('es', '/es/chile/simulador-impuestos/', 'Español', '🇨🇱'),
     'colombie': ('es', '/es/colombia/simulador-impuestos/', 'Español', '🇨🇴'),
     'perou': ('es', '/es/peru/simulador-impuestos/', 'Español', '🇵🇪'),
-    'portugal': ('pt', '/pt/portugal/simulador-impostos/', 'Português', '🇵🇹'),
+    'portugal': ('pt', '/pt/portugal/simulador-impostos/', 'Português', '<iconify-icon icon="circle-flags:pt" width="16"></iconify-icon>'),
     'bresil': ('pt', '/pt/brasil/simulador-impostos/', 'Português', '🇧🇷'),
-    'pays-bas': ('nl', '/nl/nederland/belasting-berekenen/', 'Nederlands', '🇳🇱'),
-    'belgique': ('nl', '/nl/belgie/belasting-berekenen/', 'Nederlands', '🇧🇪'),
+    'pays-bas': ('nl', '/nl/nederland/belasting-berekenen/', 'Nederlands', '<iconify-icon icon="circle-flags:nl" width="16"></iconify-icon>'),
+    'belgique': ('nl', '/nl/belgie/belasting-berekenen/', 'Nederlands', '<iconify-icon icon="circle-flags:be" width="16"></iconify-icon>'),
     'arabie-saoudite': ('ar', '/ar/arabie-saoudite/tax-calculator/', 'العربية', '🇸🇦'),
     'dubai': ('ar', '/ar/dubai/tax-calculator/', 'العربية', '🇦🇪'),
     'qatar': ('ar', '/ar/qatar/tax-calculator/', 'العربية', '🇶🇦'),
     'koweit': ('ar', '/ar/koweit/tax-calculator/', 'العربية', '🇰🇼'),
     'egypte': ('ar', '/ar/egypte/tax-calculator/', 'العربية', '🇪🇬'),
-    'italie': ('it', '/it/italia/calcolatore-imposte/', 'Italiano', '🇮🇹'),
+    'italie': ('it', '/it/italia/calcolatore-imposte/', 'Italiano', '<iconify-icon icon="circle-flags:it" width="16"></iconify-icon>'),
     'suede': ('sv', '/sv/sverige/skatteberaknare/', 'Svenska', '🇸🇪'),
     'norvege': ('no', '/no/norge/skattekalkulator/', 'Norsk', '🇳🇴'),
-    'danemark': ('da', '/da/danmark/skatteberegner/', 'Dansk', '🇩🇰'),
+    'danemark': ('da', '/da/danmark/skatteberegner/', 'Dansk', '<iconify-icon icon="circle-flags:dk" width="16"></iconify-icon>'),
     'finlande': ('fi', '/fi/suomi/verolaskuri/', 'Suomi', '🇫🇮'),
-    'grece': ('el', '/el/ellada/ypologismos-forou/', 'Ελληνικά', '🇬🇷'),
+    'grece': ('el', '/el/ellada/ypologismos-forou/', 'Ελληνικά', '<iconify-icon icon="circle-flags:gr" width="16"></iconify-icon>'),
     'pologne': ('pl', '/pl/polska/kalkulator-podatkowy/', 'Polski', '🇵🇱'),
-    'tchequie': ('cs', '/cs/cesko/danovy-kalkulator/', 'Čeština', '🇨🇿'),
+    'tchequie': ('cs', '/cs/cesko/danovy-kalkulator/', 'Čeština', '<iconify-icon icon="circle-flags:cz" width="16"></iconify-icon>'),
     'hongrie': ('hu', '/hu/magyarorszag/ado-kalkulator/', 'Magyar', '🇭🇺'),
     'roumanie': ('ro', '/ro/romania/calculator-impozit/', 'Română', '🇷🇴'),
     'croatie': ('hr', '/hr/hrvatska/porezni-kalkulator/', 'Hrvatski', '🇭🇷'),
     'turquie': ('tr', '/tr/turkiye/vergi-hesaplama/', 'Türkçe', '🇹🇷'),
     'japon': ('ja', '/ja/nihon/zeikin-keisan/', '日本語', '🇯🇵'),
-    'coree-du-sud': ('ko', '/ko/hanguk/segeum-gyesan/', '한국어', '🇰🇷'),
-    'chine': ('zh', '/zh/zhongguo/shuishou-jisuan/', '中文', '🇨🇳'),
-    'thailande': ('th', '/th/prathet-thai/khamnuan-phasi/', 'ไทย', '🇹🇭'),
+    'coree-du-sud': ('ko', '/ko/hanguk/segeum-gyesan/', '한국어', '<iconify-icon icon="circle-flags:kr" width="16"></iconify-icon>'),
+    'chine': ('zh', '/zh/zhongguo/shuishou-jisuan/', '中文', '<iconify-icon icon="circle-flags:cn" width="16"></iconify-icon>'),
+    'thailande': ('th', '/th/prathet-thai/khamnuan-phasi/', 'ไทย', '<iconify-icon icon="circle-flags:th" width="16"></iconify-icon>'),
     'malaisie': ('ms', '/ms/malaysia/kalkulator-cukai/', 'Bahasa Melayu', '🇲🇾'),
     'indonesie': ('id', '/id/indonesia/kalkulator-pajak/', 'Bahasa Indonesia', '🇮🇩'),
     'vietnam': ('vi', '/vi/viet-nam/tinh-thue/', 'Tiếng Việt', '🇻🇳'),
@@ -61,40 +61,40 @@ NATIVE_LANG_MAP = {
 
 # EN slug -> same info
 EN_NATIVE_LANG_MAP = {
-    'germany': ('de', '/de/deutschland/einkommensteuer/', 'Deutsch', '🇩🇪'),
+    'germany': ('de', '/de/deutschland/einkommensteuer/', 'Deutsch', '<iconify-icon icon="circle-flags:de" width="16"></iconify-icon>'),
     'austria': ('de', '/de/oesterreich/einkommensteuer/', 'Deutsch', '🇦🇹'),
     'switzerland': ('de', '/de/schweiz/einkommensteuer/', 'Deutsch', '🇨🇭'),
-    'spain': ('es', '/es/espana/simulador-impuestos/', 'Español', '🇪🇸'),
-    'mexico': ('es', '/es/mexico/simulador-impuestos/', 'Español', '🇲🇽'),
+    'spain': ('es', '/es/espana/simulador-impuestos/', 'Español', '<iconify-icon icon="circle-flags:es" width="16"></iconify-icon>'),
+    'mexico': ('es', '/es/mexico/simulador-impuestos/', 'Español', '<iconify-icon icon="circle-flags:mx" width="16"></iconify-icon>'),
     'argentina': ('es', '/es/argentina/simulador-impuestos/', 'Español', '🇦🇷'),
     'chile': ('es', '/es/chile/simulador-impuestos/', 'Español', '🇨🇱'),
     'colombia': ('es', '/es/colombia/simulador-impuestos/', 'Español', '🇨🇴'),
     'peru': ('es', '/es/peru/simulador-impuestos/', 'Español', '🇵🇪'),
-    'portugal': ('pt', '/pt/portugal/simulador-impostos/', 'Português', '🇵🇹'),
+    'portugal': ('pt', '/pt/portugal/simulador-impostos/', 'Português', '<iconify-icon icon="circle-flags:pt" width="16"></iconify-icon>'),
     'brazil': ('pt', '/pt/brasil/simulador-impostos/', 'Português', '🇧🇷'),
-    'netherlands': ('nl', '/nl/nederland/belasting-berekenen/', 'Nederlands', '🇳🇱'),
-    'belgium': ('nl', '/nl/belgie/belasting-berekenen/', 'Nederlands', '🇧🇪'),
+    'netherlands': ('nl', '/nl/nederland/belasting-berekenen/', 'Nederlands', '<iconify-icon icon="circle-flags:nl" width="16"></iconify-icon>'),
+    'belgium': ('nl', '/nl/belgie/belasting-berekenen/', 'Nederlands', '<iconify-icon icon="circle-flags:be" width="16"></iconify-icon>'),
     'saudi-arabia': ('ar', '/ar/arabie-saoudite/tax-calculator/', 'العربية', '🇸🇦'),
     'dubai': ('ar', '/ar/dubai/tax-calculator/', 'العربية', '🇦🇪'),
     'qatar': ('ar', '/ar/qatar/tax-calculator/', 'العربية', '🇶🇦'),
     'kuwait': ('ar', '/ar/koweit/tax-calculator/', 'العربية', '🇰🇼'),
     'egypt': ('ar', '/ar/egypte/tax-calculator/', 'العربية', '🇪🇬'),
-    'italy': ('it', '/it/italia/calcolatore-imposte/', 'Italiano', '🇮🇹'),
+    'italy': ('it', '/it/italia/calcolatore-imposte/', 'Italiano', '<iconify-icon icon="circle-flags:it" width="16"></iconify-icon>'),
     'sweden': ('sv', '/sv/sverige/skatteberaknare/', 'Svenska', '🇸🇪'),
     'norway': ('no', '/no/norge/skattekalkulator/', 'Norsk', '🇳🇴'),
-    'denmark': ('da', '/da/danmark/skatteberegner/', 'Dansk', '🇩🇰'),
+    'denmark': ('da', '/da/danmark/skatteberegner/', 'Dansk', '<iconify-icon icon="circle-flags:dk" width="16"></iconify-icon>'),
     'finland': ('fi', '/fi/suomi/verolaskuri/', 'Suomi', '🇫🇮'),
-    'greece': ('el', '/el/ellada/ypologismos-forou/', 'Ελληνικά', '🇬🇷'),
+    'greece': ('el', '/el/ellada/ypologismos-forou/', 'Ελληνικά', '<iconify-icon icon="circle-flags:gr" width="16"></iconify-icon>'),
     'poland': ('pl', '/pl/polska/kalkulator-podatkowy/', 'Polski', '🇵🇱'),
-    'czech-republic': ('cs', '/cs/cesko/danovy-kalkulator/', 'Čeština', '🇨🇿'),
+    'czech-republic': ('cs', '/cs/cesko/danovy-kalkulator/', 'Čeština', '<iconify-icon icon="circle-flags:cz" width="16"></iconify-icon>'),
     'hungary': ('hu', '/hu/magyarorszag/ado-kalkulator/', 'Magyar', '🇭🇺'),
     'romania': ('ro', '/ro/romania/calculator-impozit/', 'Română', '🇷🇴'),
     'croatia': ('hr', '/hr/hrvatska/porezni-kalkulator/', 'Hrvatski', '🇭🇷'),
     'turkey': ('tr', '/tr/turkiye/vergi-hesaplama/', 'Türkçe', '🇹🇷'),
     'japan': ('ja', '/ja/nihon/zeikin-keisan/', '日本語', '🇯🇵'),
-    'south-korea': ('ko', '/ko/hanguk/segeum-gyesan/', '한국어', '🇰🇷'),
-    'china': ('zh', '/zh/zhongguo/shuishou-jisuan/', '中文', '🇨🇳'),
-    'thailand': ('th', '/th/prathet-thai/khamnuan-phasi/', 'ไทย', '🇹🇭'),
+    'south-korea': ('ko', '/ko/hanguk/segeum-gyesan/', '한국어', '<iconify-icon icon="circle-flags:kr" width="16"></iconify-icon>'),
+    'china': ('zh', '/zh/zhongguo/shuishou-jisuan/', '中文', '<iconify-icon icon="circle-flags:cn" width="16"></iconify-icon>'),
+    'thailand': ('th', '/th/prathet-thai/khamnuan-phasi/', 'ไทย', '<iconify-icon icon="circle-flags:th" width="16"></iconify-icon>'),
     'malaysia': ('ms', '/ms/malaysia/kalkulator-cukai/', 'Bahasa Melayu', '🇲🇾'),
     'indonesia': ('id', '/id/indonesia/kalkulator-pajak/', 'Bahasa Indonesia', '🇮🇩'),
     'vietnam': ('vi', '/vi/viet-nam/tinh-thue/', 'Tiếng Việt', '🇻🇳'),
@@ -282,25 +282,25 @@ def build_navbar_fr(lang_dropdown_id, lang_links, is_home):
                         <div class="bg-white border border-slate-200 rounded-xl shadow-xl mega-country-container" style="width: 600px; max-height: 75vh; overflow-y: auto;">
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Europe</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
-                                <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇫🇷</span> France</a>
-                                <a href="/fr/espagne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇪🇸</span> Espagne</a>
-                                <a href="/fr/royaume-uni/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇬🇧</span> Royaume-Uni</a>
-                                <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇩🇪</span> Allemagne</a>
-                                <a href="/fr/italie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇮🇹</span> Italie</a>
-                                <a href="/fr/pays-bas/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇳🇱</span> Pays-Bas</a>
+                                <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> France</a>
+                                <a href="/fr/espagne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:es" width="16"></iconify-icon> Espagne</a>
+                                <a href="/fr/royaume-uni/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> Royaume-Uni</a>
+                                <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:de" width="16"></iconify-icon> Allemagne</a>
+                                <a href="/fr/italie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:it" width="16"></iconify-icon> Italie</a>
+                                <a href="/fr/pays-bas/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:nl" width="16"></iconify-icon> Pays-Bas</a>
                                 <a href="/fr/suisse/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇭</span> Suisse</a>
-                                <a href="/fr/portugal/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇹</span> Portugal</a>
-                                <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇧🇪</span> Belgique</a>
-                                <a href="/fr/luxembourg/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇱🇺</span> Luxembourg</a>
+                                <a href="/fr/portugal/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:pt" width="16"></iconify-icon> Portugal</a>
+                                <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:be" width="16"></iconify-icon> Belgique</a>
+                                <a href="/fr/luxembourg/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:lu" width="16"></iconify-icon> Luxembourg</a>
                                 <a href="/fr/autriche/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇹</span> Autriche</a>
-                                <a href="/fr/irlande/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇮🇪</span> Irlande</a>
+                                <a href="/fr/irlande/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:ie" width="16"></iconify-icon> Irlande</a>
                                 <a href="/fr/suede/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇸🇪</span> Suède</a>
                                 <a href="/fr/norvege/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇳🇴</span> Norvège</a>
-                                <a href="/fr/danemark/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇩🇰</span> Danemark</a>
+                                <a href="/fr/danemark/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:dk" width="16"></iconify-icon> Danemark</a>
                                 <a href="/fr/finlande/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇫🇮</span> Finlande</a>
-                                <a href="/fr/grece/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇬🇷</span> Grèce</a>
+                                <a href="/fr/grece/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:gr" width="16"></iconify-icon> Grèce</a>
                                 <a href="/fr/pologne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇱</span> Pologne</a>
-                                <a href="/fr/tchequie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇿</span> Tchéquie</a>
+                                <a href="/fr/tchequie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cz" width="16"></iconify-icon> Tchéquie</a>
                                 <a href="/fr/hongrie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇭🇺</span> Hongrie</a>
                                 <a href="/fr/roumanie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇷🇴</span> Roumanie</a>
                                 <a href="/fr/croatie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇭🇷</span> Croatie</a>
@@ -308,10 +308,10 @@ def build_navbar_fr(lang_dropdown_id, lang_links, is_home):
                             </div>
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Amériques</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
-                                <a href="/fr/usa/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇺🇸</span> USA</a>
+                                <a href="/fr/usa/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:us" width="16"></iconify-icon> USA</a>
                                 <a href="/fr/canada/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇦</span> Canada</a>
                                 <a href="/fr/bresil/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇧🇷</span> Brésil</a>
-                                <a href="/fr/mexique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇲🇽</span> Mexique</a>
+                                <a href="/fr/mexique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:mx" width="16"></iconify-icon> Mexique</a>
                                 <a href="/fr/argentine/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇷</span> Argentine</a>
                                 <a href="/fr/chili/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇱</span> Chili</a>
                                 <a href="/fr/colombie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇴</span> Colombie</a>
@@ -320,8 +320,8 @@ def build_navbar_fr(lang_dropdown_id, lang_links, is_home):
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Asie-Pacifique</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/japon/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇯🇵</span> Japon</a>
-                                <a href="/fr/coree-du-sud/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇰🇷</span> Corée du Sud</a>
-                                <a href="/fr/chine/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇳</span> Chine</a>
+                                <a href="/fr/coree-du-sud/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:kr" width="16"></iconify-icon> Corée du Sud</a>
+                                <a href="/fr/chine/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cn" width="16"></iconify-icon> Chine</a>
                                 <a href="/fr/singapour/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇸🇬</span> Singapour</a>
                                 <a href="/fr/australie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇺</span> Australie</a>
                                 <a href="/fr/hong-kong/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇭🇰</span> Hong Kong</a>
@@ -329,14 +329,14 @@ def build_navbar_fr(lang_dropdown_id, lang_links, is_home):
                                 <a href="/fr/nouvelle-zelande/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇳🇿</span> Nouvelle-Zélande</a>
                                 <a href="/fr/indonesie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇮🇩</span> Indonésie</a>
                                 <a href="/fr/malaisie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇲🇾</span> Malaisie</a>
-                                <a href="/fr/thailande/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇹🇭</span> Thaïlande</a>
+                                <a href="/fr/thailande/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:th" width="16"></iconify-icon> Thaïlande</a>
                                 <a href="/fr/pakistan/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇰</span> Pakistan</a>
                                 <a href="/fr/philippines/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇭</span> Philippines</a>
                                 <a href="/fr/vietnam/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇻🇳</span> Vietnam</a>
                             </div>
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Moyen-Orient & Afrique</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
-                                <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇲🇦</span> Maroc</a>
+                                <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:ma" width="16"></iconify-icon> Maroc</a>
                                 <a href="/fr/dubai/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇪</span> Émirats arabes</a>
                                 <a href="/fr/arabie-saoudite/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇸🇦</span> Arabie Saoudite</a>
                                 <a href="/fr/qatar/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇶🇦</span> Qatar</a>
@@ -358,7 +358,7 @@ def build_navbar_fr(lang_dropdown_id, lang_links, is_home):
                 <!-- Language Switcher -->
                 <div class="relative">
                     <button onclick="document.getElementById('{lang_dropdown_id}').classList.toggle('hidden')" class="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-full transition-all" title="Changer de langue">
-                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-flag"><iconify-icon icon="circle-flags:fr" width="16"></iconify-icon></span>
                         <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
                     </button>
                     <div id="{lang_dropdown_id}" class="hidden absolute top-full right-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg min-w-[140px] py-1 z-50">
@@ -600,25 +600,25 @@ def build_navbar_en(lang_dropdown_id, lang_links, is_home):
                         <div class="bg-white border border-slate-200 rounded-xl shadow-xl mega-country-container" style="width: 600px; max-height: 75vh; overflow-y: auto;">
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Europe</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
-                                <a href="/en/france/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇫🇷</span> France</a>
-                                <a href="/en/spain/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇪🇸</span> Spain</a>
-                                <a href="/en/uk/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇬🇧</span> United Kingdom</a>
-                                <a href="/en/germany/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇩🇪</span> Germany</a>
-                                <a href="/en/italy/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇮🇹</span> Italy</a>
-                                <a href="/en/netherlands/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇳🇱</span> Netherlands</a>
+                                <a href="/en/france/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> France</a>
+                                <a href="/en/spain/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:es" width="16"></iconify-icon> Spain</a>
+                                <a href="/en/uk/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> United Kingdom</a>
+                                <a href="/en/germany/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:de" width="16"></iconify-icon> Germany</a>
+                                <a href="/en/italy/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:it" width="16"></iconify-icon> Italy</a>
+                                <a href="/en/netherlands/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:nl" width="16"></iconify-icon> Netherlands</a>
                                 <a href="/en/switzerland/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇭</span> Switzerland</a>
-                                <a href="/en/portugal/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇹</span> Portugal</a>
-                                <a href="/en/belgium/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇧🇪</span> Belgium</a>
-                                <a href="/en/luxembourg/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇱🇺</span> Luxembourg</a>
+                                <a href="/en/portugal/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:pt" width="16"></iconify-icon> Portugal</a>
+                                <a href="/en/belgium/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:be" width="16"></iconify-icon> Belgium</a>
+                                <a href="/en/luxembourg/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:lu" width="16"></iconify-icon> Luxembourg</a>
                                 <a href="/en/austria/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇹</span> Austria</a>
-                                <a href="/en/ireland/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇮🇪</span> Ireland</a>
+                                <a href="/en/ireland/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:ie" width="16"></iconify-icon> Ireland</a>
                                 <a href="/en/sweden/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇸🇪</span> Sweden</a>
                                 <a href="/en/norway/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇳🇴</span> Norway</a>
-                                <a href="/en/denmark/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇩🇰</span> Denmark</a>
+                                <a href="/en/denmark/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:dk" width="16"></iconify-icon> Denmark</a>
                                 <a href="/en/finland/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇫🇮</span> Finland</a>
-                                <a href="/en/greece/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇬🇷</span> Greece</a>
+                                <a href="/en/greece/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:gr" width="16"></iconify-icon> Greece</a>
                                 <a href="/en/poland/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇱</span> Poland</a>
-                                <a href="/en/czech-republic/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇿</span> Czech Republic</a>
+                                <a href="/en/czech-republic/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cz" width="16"></iconify-icon> Czech Republic</a>
                                 <a href="/en/hungary/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇭🇺</span> Hungary</a>
                                 <a href="/en/romania/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇷🇴</span> Romania</a>
                                 <a href="/en/croatia/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇭🇷</span> Croatia</a>
@@ -626,10 +626,10 @@ def build_navbar_en(lang_dropdown_id, lang_links, is_home):
                             </div>
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Americas</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
-                                <a href="/en/usa/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇺🇸</span> USA</a>
+                                <a href="/en/usa/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:us" width="16"></iconify-icon> USA</a>
                                 <a href="/en/canada/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇦</span> Canada</a>
                                 <a href="/en/brazil/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇧🇷</span> Brazil</a>
-                                <a href="/en/mexico/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇲🇽</span> Mexico</a>
+                                <a href="/en/mexico/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:mx" width="16"></iconify-icon> Mexico</a>
                                 <a href="/en/argentina/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇷</span> Argentina</a>
                                 <a href="/en/chile/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇱</span> Chile</a>
                                 <a href="/en/colombia/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇴</span> Colombia</a>
@@ -638,8 +638,8 @@ def build_navbar_en(lang_dropdown_id, lang_links, is_home):
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Asia-Pacific</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/en/japan/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇯🇵</span> Japan</a>
-                                <a href="/en/south-korea/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇰🇷</span> South Korea</a>
-                                <a href="/en/china/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇨🇳</span> China</a>
+                                <a href="/en/south-korea/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:kr" width="16"></iconify-icon> South Korea</a>
+                                <a href="/en/china/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cn" width="16"></iconify-icon> China</a>
                                 <a href="/en/singapore/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇸🇬</span> Singapore</a>
                                 <a href="/en/australia/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇺</span> Australia</a>
                                 <a href="/en/hong-kong/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇭🇰</span> Hong Kong</a>
@@ -647,14 +647,14 @@ def build_navbar_en(lang_dropdown_id, lang_links, is_home):
                                 <a href="/en/new-zealand/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇳🇿</span> New Zealand</a>
                                 <a href="/en/indonesia/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇮🇩</span> Indonesia</a>
                                 <a href="/en/malaysia/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇲🇾</span> Malaysia</a>
-                                <a href="/en/thailand/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇹🇭</span> Thailand</a>
+                                <a href="/en/thailand/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:th" width="16"></iconify-icon> Thailand</a>
                                 <a href="/en/pakistan/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇰</span> Pakistan</a>
                                 <a href="/en/philippines/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇵🇭</span> Philippines</a>
                                 <a href="/en/vietnam/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇻🇳</span> Vietnam</a>
                             </div>
                             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Middle East & Africa</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
-                                <a href="/en/morocco/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇲🇦</span> Morocco</a>
+                                <a href="/en/morocco/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:ma" width="16"></iconify-icon> Morocco</a>
                                 <a href="/en/dubai/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇦🇪</span> UAE</a>
                                 <a href="/en/saudi-arabia/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇸🇦</span> Saudi Arabia</a>
                                 <a href="/en/qatar/income-tax/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><span>🇶🇦</span> Qatar</a>
@@ -676,7 +676,7 @@ def build_navbar_en(lang_dropdown_id, lang_links, is_home):
                 <!-- Language Switcher -->
                 <div class="relative">
                     <button onclick="document.getElementById('{lang_dropdown_id}').classList.toggle('hidden')" class="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-full transition-all" title="Switch language">
-                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-flag"><iconify-icon icon="circle-flags:gb" width="16"></iconify-icon></span>
                         <iconify-icon icon="lucide:chevron-down" width="14"></iconify-icon>
                     </button>
                     <div id="{lang_dropdown_id}" class="hidden absolute top-full right-0 mt-2 bg-white border border-slate-200 rounded-lg shadow-lg min-w-[140px] py-1 z-50">
@@ -858,13 +858,13 @@ def process_file(filepath):
         lang = detect_language(filepath)
         if lang == 'fr':
             lang_links = [
-                '<a href="/fr/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 bg-slate-50 transition-colors">\n                            <span>🇫🇷</span> Français\n                        </a>',
-                '<a href="/en/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">\n                            <span>🇬🇧</span> English\n                        </a>'
+                '<a href="/fr/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 bg-slate-50 transition-colors">\n                            <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> Français\n                        </a>',
+                '<a href="/en/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">\n                            <iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> English\n                        </a>'
             ]
         else:
             lang_links = [
-                '<a href="/fr/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">\n                            <span>🇫🇷</span> Francais\n                        </a>',
-                '<a href="/en/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 bg-slate-50 transition-colors">\n                            <span>🇬🇧</span> English\n                        </a>'
+                '<a href="/fr/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">\n                            <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> Francais\n                        </a>',
+                '<a href="/en/" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 bg-slate-50 transition-colors">\n                            <iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> English\n                        </a>'
             ]
 
     # Detect lang dropdown ID and language

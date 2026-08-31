@@ -169,7 +169,7 @@ const translations = {
     },
 
     // France FAQ
-    'faq.france_title': { fr: '🇫🇷 France', en: '🇫🇷 France' },
+    'faq.france_title': { fr: '<iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> France', en: '<iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> France' },
     'faq.france_net_title': { fr: 'Comment est calculé le salaire net en France ?', en: 'How is net salary calculated in France?' },
     'faq.france_net_text': {
         fr: 'Le salaire net est obtenu en déduisant du brut les cotisations sociales salariales (environ 22% pour les non-cadres, 25% pour les cadres). Ces cotisations financent la sécurité sociale, la retraite, le chômage et la retraite complémentaire.',
@@ -192,7 +192,7 @@ const translations = {
     },
 
     // Maroc FAQ
-    'faq.maroc_title': { fr: '🇲🇦 Maroc', en: '🇲🇦 Morocco' },
+    'faq.maroc_title': { fr: '<iconify-icon icon="circle-flags:ma" width="16"></iconify-icon> Maroc', en: '<iconify-icon icon="circle-flags:ma" width="16"></iconify-icon> Morocco' },
     'faq.maroc_tranches_title': { fr: 'Quelles sont les tranches d\'IR au Maroc ?', en: 'What are the income tax brackets in Morocco?' },
     'faq.maroc_tranches_text': {
         fr: 'L\'IR marocain comporte 6 tranches progressives : 0% jusqu\'à 40 000 DH, 10% de 40 001 à 60 000 DH, 20% de 60 001 à 80 000 DH, 30% de 80 001 à 100 000 DH, 34% de 100 001 à 180 000 DH, et 37% au-delà.',
@@ -725,13 +725,13 @@ const i18n = {
     updateSwitcherUI() {
         // Update all flag displays
         document.querySelectorAll('.lang-flag').forEach(el => {
-            el.textContent = this.currentLang === 'fr' ? '🇫🇷' : '🇬🇧';
+            el.textContent = this.currentLang === 'fr' ? '<iconify-icon icon="circle-flags:fr" width="16"></iconify-icon>' : '<iconify-icon icon="circle-flags:gb" width="16"></iconify-icon>';
         });
 
         // Legacy support for id-based flag
         const currentFlag = document.getElementById('current-lang-flag');
         if (currentFlag) {
-            currentFlag.textContent = this.currentLang === 'fr' ? '🇫🇷' : '🇬🇧';
+            currentFlag.textContent = this.currentLang === 'fr' ? '<iconify-icon icon="circle-flags:fr" width="16"></iconify-icon>' : '<iconify-icon icon="circle-flags:gb" width="16"></iconify-icon>';
         }
 
         // Update switcher button states

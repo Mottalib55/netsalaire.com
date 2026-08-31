@@ -367,7 +367,7 @@ UI = {
         'legal': 'Juridisk information',
         'privacy': 'Privatlivspolitik',
         'lang_native': 'Dansk',
-        'lang_flag': '🇩🇰',
+        'lang_flag': '<iconify-icon icon="circle-flags:dk" width="16"></iconify-icon>',
         'simulator_link': 'Beregner',
         'net': 'Netto',
     },
@@ -431,7 +431,7 @@ UI = {
         'legal': 'Νομική σημείωση',
         'privacy': 'Απόρρητο',
         'lang_native': 'Ελληνικά',
-        'lang_flag': '🇬🇷',
+        'lang_flag': '<iconify-icon icon="circle-flags:gr" width="16"></iconify-icon>',
         'simulator_link': 'Υπολογιστής',
         'net': 'Καθαρά',
     },
@@ -495,7 +495,7 @@ UI = {
         'legal': 'Právní informace',
         'privacy': 'Ochrana soukromí',
         'lang_native': 'Čeština',
-        'lang_flag': '🇨🇿',
+        'lang_flag': '<iconify-icon icon="circle-flags:cz" width="16"></iconify-icon>',
         'simulator_link': 'Kalkulátor',
         'net': 'Čistý',
     },
@@ -687,7 +687,7 @@ UI = {
         'legal': '법적 고지',
         'privacy': '개인정보',
         'lang_native': '한국어',
-        'lang_flag': '🇰🇷',
+        'lang_flag': '<iconify-icon icon="circle-flags:kr" width="16"></iconify-icon>',
         'simulator_link': '계산기',
         'net': '순',
     },
@@ -719,7 +719,7 @@ UI = {
         'legal': '法律声明',
         'privacy': '隐私政策',
         'lang_native': '中文',
-        'lang_flag': '🇨🇳',
+        'lang_flag': '<iconify-icon icon="circle-flags:cn" width="16"></iconify-icon>',
         'simulator_link': '计算器',
         'net': '净',
     },
@@ -751,7 +751,7 @@ UI = {
         'legal': 'ข้อมูลทางกฎหมาย',
         'privacy': 'ความเป็นส่วนตัว',
         'lang_native': 'ไทย',
-        'lang_flag': '🇹🇭',
+        'lang_flag': '<iconify-icon icon="circle-flags:th" width="16"></iconify-icon>',
         'simulator_link': 'เครื่องคำนวณ',
         'net': 'สุทธิ',
     },
@@ -963,35 +963,35 @@ for _c in COUNTRIES:
 
 MEGA_MENU_REGIONS = [
     ('europe', [
-        ('🇫🇷', 'France', 'france', 'france'),
-        ('🇪🇸', 'Spain', 'spain', 'espagne'),
-        ('🇬🇧', 'United Kingdom', 'uk', 'royaume-uni'),
-        ('🇩🇪', 'Germany', 'germany', 'allemagne'),
-        ('🇮🇹', 'Italy', 'italy', 'italie'),
-        ('🇳🇱', 'Netherlands', 'netherlands', 'pays-bas'),
+        ('<iconify-icon icon="circle-flags:fr" width="16"></iconify-icon>', 'France', 'france', 'france'),
+        ('<iconify-icon icon="circle-flags:es" width="16"></iconify-icon>', 'Spain', 'spain', 'espagne'),
+        ('<iconify-icon icon="circle-flags:gb" width="16"></iconify-icon>', 'United Kingdom', 'uk', 'royaume-uni'),
+        ('<iconify-icon icon="circle-flags:de" width="16"></iconify-icon>', 'Germany', 'germany', 'allemagne'),
+        ('<iconify-icon icon="circle-flags:it" width="16"></iconify-icon>', 'Italy', 'italy', 'italie'),
+        ('<iconify-icon icon="circle-flags:nl" width="16"></iconify-icon>', 'Netherlands', 'netherlands', 'pays-bas'),
         ('🇨🇭', 'Switzerland', 'switzerland', 'suisse'),
-        ('🇵🇹', 'Portugal', 'portugal', 'portugal'),
-        ('🇧🇪', 'Belgium', 'belgium', 'belgique'),
-        ('🇱🇺', 'Luxembourg', 'luxembourg', 'luxembourg'),
+        ('<iconify-icon icon="circle-flags:pt" width="16"></iconify-icon>', 'Portugal', 'portugal', 'portugal'),
+        ('<iconify-icon icon="circle-flags:be" width="16"></iconify-icon>', 'Belgium', 'belgium', 'belgique'),
+        ('<iconify-icon icon="circle-flags:lu" width="16"></iconify-icon>', 'Luxembourg', 'luxembourg', 'luxembourg'),
         ('🇦🇹', 'Austria', 'austria', 'autriche'),
-        ('🇮🇪', 'Ireland', 'ireland', 'irlande'),
+        ('<iconify-icon icon="circle-flags:ie" width="16"></iconify-icon>', 'Ireland', 'ireland', 'irlande'),
         ('🇸🇪', 'Sweden', 'sweden', 'suede'),
         ('🇳🇴', 'Norway', 'norway', 'norvege'),
-        ('🇩🇰', 'Denmark', 'denmark', 'danemark'),
+        ('<iconify-icon icon="circle-flags:dk" width="16"></iconify-icon>', 'Denmark', 'denmark', 'danemark'),
         ('🇫🇮', 'Finland', 'finland', 'finlande'),
-        ('🇬🇷', 'Greece', 'greece', 'grece'),
+        ('<iconify-icon icon="circle-flags:gr" width="16"></iconify-icon>', 'Greece', 'greece', 'grece'),
         ('🇵🇱', 'Poland', 'poland', 'pologne'),
-        ('🇨🇿', 'Czech Republic', 'czech-republic', 'tchequie'),
+        ('<iconify-icon icon="circle-flags:cz" width="16"></iconify-icon>', 'Czech Republic', 'czech-republic', 'tchequie'),
         ('🇭🇺', 'Hungary', 'hungary', 'hongrie'),
         ('🇷🇴', 'Romania', 'romania', 'roumanie'),
         ('🇭🇷', 'Croatia', 'croatia', 'croatie'),
         ('🇹🇷', 'Turkey', 'turkey', 'turquie'),
     ]),
     ('americas', [
-        ('🇺🇸', 'USA', 'usa', 'usa'),
+        ('<iconify-icon icon="circle-flags:us" width="16"></iconify-icon>', 'USA', 'usa', 'usa'),
         ('🇨🇦', 'Canada', 'canada', 'canada'),
         ('🇧🇷', 'Brazil', 'brazil', 'bresil'),
-        ('🇲🇽', 'Mexico', 'mexico', 'mexique'),
+        ('<iconify-icon icon="circle-flags:mx" width="16"></iconify-icon>', 'Mexico', 'mexico', 'mexique'),
         ('🇦🇷', 'Argentina', 'argentina', 'argentine'),
         ('🇨🇱', 'Chile', 'chile', 'chili'),
         ('🇨🇴', 'Colombia', 'colombia', 'colombie'),
@@ -999,8 +999,8 @@ MEGA_MENU_REGIONS = [
     ]),
     ('asia_pacific', [
         ('🇯🇵', 'Japan', 'japan', 'japon'),
-        ('🇰🇷', 'South Korea', 'south-korea', 'coree-du-sud'),
-        ('🇨🇳', 'China', 'china', 'chine'),
+        ('<iconify-icon icon="circle-flags:kr" width="16"></iconify-icon>', 'South Korea', 'south-korea', 'coree-du-sud'),
+        ('<iconify-icon icon="circle-flags:cn" width="16"></iconify-icon>', 'China', 'china', 'chine'),
         ('🇸🇬', 'Singapore', 'singapore', 'singapour'),
         ('🇦🇺', 'Australia', 'australia', 'australie'),
         ('🇭🇰', 'Hong Kong', 'hong-kong', 'hong-kong'),
@@ -1008,13 +1008,13 @@ MEGA_MENU_REGIONS = [
         ('🇳🇿', 'New Zealand', 'new-zealand', 'nouvelle-zelande'),
         ('🇮🇩', 'Indonesia', 'indonesia', 'indonesie'),
         ('🇲🇾', 'Malaysia', 'malaysia', 'malaisie'),
-        ('🇹🇭', 'Thailand', 'thailand', 'thailande'),
+        ('<iconify-icon icon="circle-flags:th" width="16"></iconify-icon>', 'Thailand', 'thailand', 'thailande'),
         ('🇵🇰', 'Pakistan', 'pakistan', 'pakistan'),
         ('🇵🇭', 'Philippines', 'philippines', 'philippines'),
         ('🇻🇳', 'Vietnam', 'vietnam', 'vietnam'),
     ]),
     ('middle_east_africa', [
-        ('🇲🇦', 'Morocco', 'morocco', 'maroc'),
+        ('<iconify-icon icon="circle-flags:ma" width="16"></iconify-icon>', 'Morocco', 'morocco', 'maroc'),
         ('🇦🇪', 'UAE', 'dubai', 'dubai'),
         ('🇸🇦', 'Saudi Arabia', 'saudi-arabia', 'arabie-saoudite'),
         ('🇶🇦', 'Qatar', 'qatar', 'qatar'),
@@ -1375,10 +1375,10 @@ def build_navbar(lang, country_name, flag, fr_slug, en_slug, country_slug_native
                             <span>{ui['lang_flag']}</span> {ui['lang_native']}
                         </a>
                         <a href="{fr_url}" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
-                            <span>🇫🇷</span> Français
+                            <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> Français
                         </a>
                         <a href="{en_url}" class="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
-                            <span>🇬🇧</span> English
+                            <iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> English
                         </a>
                     </div>
                 </div>
@@ -1420,10 +1420,10 @@ def build_navbar(lang, country_name, flag, fr_slug, en_slug, country_slug_native
                         <span>{ui['lang_flag']}</span> {ui['lang_native']}
                     </a>
                     <a href="{fr_url}" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium hover:bg-slate-50 border border-slate-200 rounded-full text-slate-600">
-                        <span>🇫🇷</span> Français
+                        <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> Français
                     </a>
                     <a href="{en_url}" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium hover:bg-slate-50 border border-slate-200 rounded-full text-slate-600">
-                        <span>🇬🇧</span> English
+                        <iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> English
                     </a>
                 </div>
             </div>
