@@ -818,7 +818,7 @@
         const THB_TO_EUR = 0.026;
 
         function getAnnualIncome() {
-            return parseFloat(document.getElementById('income-annual').value) || 0;
+            return parseNum(document.getElementById('income-annual').value);
         }
 
         function calculateThaiTax(income) {
@@ -908,6 +908,10 @@
             document.getElementById('legend-social').textContent = socialPercent + '%';
         }
 
+        
+        const formatNum = v => Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        const parseNum = s => parseInt(String(s).replace(/\s/g, '')) || 0;
+
         document.getElementById('income-monthly').addEventListener('input', function() {
             const monthly = parseFloat(this.value) || 0;
             const annual = monthly * 12;
@@ -925,8 +929,8 @@
 
         document.getElementById('income-slider').addEventListener('input', function() {
             const annual = parseFloat(this.value) || 0;
-            document.getElementById('income-annual').value = annual;
-            document.getElementById('income-monthly').value = Math.round(annual / 12);
+            document.getElementById('income-annual').value = formatNum(annual);
+            document.getElementById('income-monthly').value = formatNum(Math.round(annual / 12));
             calculate();
         });
 

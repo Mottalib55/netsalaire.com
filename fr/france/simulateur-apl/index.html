@@ -511,7 +511,7 @@
                         <div>
                             <label class="block text-xs text-slate-500 mb-1">Mensuel</label>
                             <div class="relative">
-                                <input type="number" id="revenus-mensuel" value="1250" min="0" max="20000" step="10"
+                                <input type="text" inputmode="numeric" id="revenus-mensuel" value="1 250"
                                        class="w-full px-4 py-3 pr-14 border-2 border-slate-200 rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-lg font-semibold"
                                        oninput="syncFromMensuel()">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">€</span>
@@ -520,7 +520,7 @@
                         <div>
                             <label class="block text-xs text-slate-500 mb-1">Annuel</label>
                             <div class="relative">
-                                <input type="number" id="revenus" value="15000" min="0" max="200000" step="100"
+                                <input type="text" inputmode="numeric" id="revenus" value="15 000"
                                        class="w-full px-4 py-3 pr-14 border-2 border-slate-200 rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition-all text-lg font-semibold"
                                        oninput="syncFromAnnuel()">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">€</span>
@@ -991,17 +991,27 @@
             calculerAPL();
         }
 
+        const formatNum = v => Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        const parseNum = s => parseInt(String(s).replace(/\s/g, '')) || 0;
+
         function syncFromMensuel() {
-            const mensuel = parseFloat(document.getElementById('revenus-mensuel').value) || 0;
-            document.getElementById('revenus').value = Math.round(mensuel * 12);
+            const mensuel = parseNum(document.getElementById('revenus-mensuel').value);
+            document.getElementById('revenus').value = formatNum(mensuel * 12);
             calculerAPL();
         }
 
         function syncFromAnnuel() {
-            const annuel = parseFloat(document.getElementById('revenus').value) || 0;
-            document.getElementById('revenus-mensuel').value = Math.round(annuel / 12);
+            const annuel = parseNum(document.getElementById('revenus').value);
+            document.getElementById('revenus-mensuel').value = formatNum(Math.round(annuel / 12));
             calculerAPL();
         }
+
+        document.getElementById('revenus-mensuel').addEventListener('blur', function() {
+            const v = parseNum(this.value); if (v > 0) this.value = formatNum(v);
+        });
+        document.getElementById('revenus').addEventListener('blur', function() {
+            const v = parseNum(this.value); if (v > 0) this.value = formatNum(v);
+        });
 
         // === GA4 EVENT TRACKING ===
         let lastTrackedLoyer = 0;
@@ -1025,7 +1035,7 @@
             var zone = currentZone;
             var situation = currentSituation;
             var loyer = parseFloat(document.getElementById('loyer').value) || 0;
-            var revenus = parseFloat(document.getElementById('revenus').value) || 0;
+            var revenus = parseNum(document.getElementById('revenus').value);
 
             // Nombre de personnes dans le foyer
             var nbPersonnes = (situation === 'couple' ? 2 : 1) + enfants;

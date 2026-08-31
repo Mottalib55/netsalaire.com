@@ -406,7 +406,7 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-2">Revenu Mensuel</label>
                             <div class="relative">
-                                <input type="number" id="income-monthly" value="3750" min="0" max="10000000"
+                                <input type="text" inputmode="numeric" id="income-monthly" value="3 750"
                                        class="w-full text-right rounded-lg border-0 py-3 pl-3 pr-14 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-lg font-semibold">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">€</span>
                             </div>
@@ -415,7 +415,7 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-2">Revenu Annuel</label>
                             <div class="relative">
-                                <input type="number" id="income-annual" value="45000" min="0" max="10000000"
+                                <input type="text" inputmode="numeric" id="income-annual" value="45 000"
                                        class="w-full text-right rounded-lg border-0 py-3 pl-3 pr-14 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-lg font-semibold">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">€</span>
                             </div>
@@ -935,7 +935,7 @@
         const SYMBOL = '€';
         const IS_TAX_FREE = false;
         function getAnnualIncome() {
-            return parseFloat(document.getElementById('income-annual').value) || 0;
+            return parseNum(document.getElementById('income-annual').value);
         }
 
 function calculateBracketTax(income, brackets) {
@@ -1030,6 +1030,10 @@ function calculateBracketTax(income, brackets) {
         }
 
         // Dual input synchronization
+        
+        const formatNum = v => Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        const parseNum = s => parseInt(String(s).replace(/\s/g, '')) || 0;
+
         document.getElementById('income-monthly').addEventListener('input', function() {
             const monthly = parseFloat(this.value) || 0;
             const annual = monthly * 12;
@@ -1047,8 +1051,8 @@ function calculateBracketTax(income, brackets) {
 
         document.getElementById('income-slider').addEventListener('input', function() {
             const annual = parseFloat(this.value) || 0;
-            document.getElementById('income-annual').value = annual;
-            document.getElementById('income-monthly').value = Math.round(annual / 12);
+            document.getElementById('income-annual').value = formatNum(annual);
+            document.getElementById('income-monthly').value = formatNum(Math.round(annual / 12));
             calculate();
         });
 

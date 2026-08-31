@@ -400,7 +400,7 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-2">Revenu Mensuel</label>
                             <div class="relative">
-                                <input type="number" id="income-monthly" value="5000" min="0" max="10000000"
+                                <input type="text" inputmode="numeric" id="income-monthly" value="5 000"
                                        class="w-full text-right rounded-lg border-0 py-3 pl-3 pr-14 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-lg font-semibold">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">EUR</span>
                             </div>
@@ -408,7 +408,7 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-2">Revenu Annuel</label>
                             <div class="relative">
-                                <input type="number" id="income-annual" value="60000" min="0" max="10000000"
+                                <input type="text" inputmode="numeric" id="income-annual" value="60 000"
                                        class="w-full text-right rounded-lg border-0 py-3 pl-3 pr-14 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-lg font-semibold">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">EUR</span>
                             </div>
@@ -840,7 +840,7 @@
         const CURRENCY = ' EUR';
 
         function getAnnualIncome() {
-            return parseFloat(document.getElementById('income-annual').value) || 0;
+            return parseNum(document.getElementById('income-annual').value);
         }
 
         function calculateNetherlandsTax(income) {
@@ -914,25 +914,35 @@
             document.getElementById('legend-tax').textContent = taxPercent + '%';
         }
 
+        
+        const formatNum = v => Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        const parseNum = s => parseInt(String(s).replace(/\s/g, '')) || 0;
+
         document.getElementById('income-monthly').addEventListener('input', function() {
-            const monthly = parseFloat(this.value) || 0;
+            const monthly = parseNum(this.value);
             const annual = monthly * 12;
-            document.getElementById('income-annual').value = Math.round(annual);
+            document.getElementById('income-annual').value = formatNum(annual);
             document.getElementById('income-slider').value = Math.min(annual, 300000);
             calculate();
         });
+        document.getElementById('income-monthly').addEventListener('blur', function() {
+            const v = parseNum(this.value); if (v > 0) this.value = formatNum(v);
+        });
 
         document.getElementById('income-annual').addEventListener('input', function() {
-            const annual = parseFloat(this.value) || 0;
-            document.getElementById('income-monthly').value = Math.round(annual / 12);
+            const annual = parseNum(this.value);
+            document.getElementById('income-monthly').value = formatNum(Math.round(annual / 12));
             document.getElementById('income-slider').value = Math.min(annual, 300000);
             calculate();
+        });
+        document.getElementById('income-annual').addEventListener('blur', function() {
+            const v = parseNum(this.value); if (v > 0) this.value = formatNum(v);
         });
 
         document.getElementById('income-slider').addEventListener('input', function() {
             const annual = parseFloat(this.value) || 0;
-            document.getElementById('income-annual').value = annual;
-            document.getElementById('income-monthly').value = Math.round(annual / 12);
+            document.getElementById('income-annual').value = formatNum(annual);
+            document.getElementById('income-monthly').value = formatNum(Math.round(annual / 12));
             calculate();
         });
 
