@@ -724,30 +724,32 @@
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
                         </div>
-                        <div class="grid grid-cols-[auto_1fr_1fr] gap-x-2 gap-y-1.5 mb-3 items-center">
-                            <!-- Header row -->
-                            <div></div>
-                            <div class="text-xs text-slate-500 text-center">Mensuel</div>
-                            <div class="text-xs text-slate-500 text-center">Annuel</div>
-                            <!-- Brut row -->
-                            <div class="text-xs font-medium text-slate-500">Brut</div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                        <div class="flex items-end gap-2 mb-3">
+                            <div class="flex flex-col gap-1.5 text-right pt-5">
+                                <span class="text-xs font-medium text-slate-500 h-8 flex items-center justify-end">Brut</span>
+                                <span class="text-xs font-medium text-slate-500 h-8 flex items-center justify-end">Net</span>
                             </div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                            <div class="flex flex-col gap-1.5">
+                                <span class="text-xs text-slate-500 text-center">Mensuel</span>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274" class="income-field w-24 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income1-monthly" value="3 333" class="income-field w-24 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
                             </div>
-                            <!-- Net row -->
-                            <div class="text-xs font-medium text-slate-500">Net</div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income1-monthly" value="3 333" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
-                            </div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income1-input" value="40 000" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                            <div class="flex flex-col gap-1.5">
+                                <span class="text-xs text-slate-500 text-center">Annuel</span>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282" class="income-field w-28 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income1-input" value="40 000" class="income-field w-28 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
                             </div>
                         </div>
                         <input type="range" id="income1-slider" min="0" max="200000" step="500" value="40000"
@@ -782,30 +784,32 @@
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
                         </div>
-                        <div class="grid grid-cols-[auto_1fr_1fr] gap-x-2 gap-y-1.5 mb-3 items-center">
-                            <!-- Header row -->
-                            <div></div>
-                            <div class="text-xs text-slate-500 text-center">Mensuel</div>
-                            <div class="text-xs text-slate-500 text-center">Annuel</div>
-                            <!-- Brut row -->
-                            <div class="text-xs font-medium text-slate-500">Brut</div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income2-brut-monthly" value="0" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                        <div class="flex items-end gap-2 mb-3">
+                            <div class="flex flex-col gap-1.5 text-right pt-5">
+                                <span class="text-xs font-medium text-slate-500 h-8 flex items-center justify-end">Brut</span>
+                                <span class="text-xs font-medium text-slate-500 h-8 flex items-center justify-end">Net</span>
                             </div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income2-brut-annual" value="0" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                            <div class="flex flex-col gap-1.5">
+                                <span class="text-xs text-slate-500 text-center">Mensuel</span>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income2-brut-monthly" value="0" class="income-field w-24 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income2-monthly" value="0" class="income-field w-24 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
                             </div>
-                            <!-- Net row -->
-                            <div class="text-xs font-medium text-slate-500">Net</div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income2-monthly" value="0" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
-                            </div>
-                            <div class="relative">
-                                <input type="text" inputmode="numeric" id="income2-input" value="0" class="income-field block w-full text-right rounded-lg border-0 py-1.5 pl-2 pr-7 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold transition-all">
-                                <span class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                            <div class="flex flex-col gap-1.5">
+                                <span class="text-xs text-slate-500 text-center">Annuel</span>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income2-brut-annual" value="0" class="income-field w-28 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" inputmode="numeric" id="income2-input" value="0" class="income-field w-28 text-right rounded-lg border-0 py-1.5 pl-2 pr-6 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm font-semibold">
+                                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">€</span>
+                                </div>
                             </div>
                         </div>
                         <input type="range" id="income2-slider" min="0" max="200000" step="500" value="0"
