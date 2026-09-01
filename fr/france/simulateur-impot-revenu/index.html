@@ -2061,9 +2061,19 @@
             const avgRate = grossIncome > 0 ? (finalTax / grossIncome) * 100 : 0;
             const taxPercent = grossIncome > 0 ? (finalTax / grossIncome) * 100 : 0;
 
-            // PER optimization: amount to eliminate 30% bracket (threshold = 29315€/part)
-            const seuil30 = 29315 * parts;
-            const perOptimalAmount = Math.max(0, Math.round(incomeAfterAbattement - seuil30));
+            // PER optimization: amount to drop to the bracket below (only for TMI >= 30%)
+            const tmiBeforePer = resultWithoutPer.marginalRate;
+            let perOptimalAmount = 0;
+            if (tmiBeforePer >= 0.30) {
+                let seuilTranche = 0;
+                for (let i = 0; i < TAX_BRACKETS.length; i++) {
+                    if (TAX_BRACKETS[i].rate === tmiBeforePer && i > 0) {
+                        seuilTranche = TAX_BRACKETS[i - 1].limit * parts;
+                        break;
+                    }
+                }
+                perOptimalAmount = Math.max(0, Math.round(incomeAfterAbattement - seuilTranche));
+            }
             // Estimated PER ceiling: 10% of net income, min 4710€, max 37680€ (PASS 2025)
             // Pour un couple marié, chaque conjoint a son propre plafond PER
             let perPlafondEstimate;
