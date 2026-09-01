@@ -907,7 +907,7 @@
                 </div>
 
                 <!-- Card: Frais de garde (Crèche) -->
-                <div id="creche-card" class="order-4 lg:col-span-7 rounded-2xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-white p-6 shadow-sm">
+                <div id="creche-card" class="order-5 lg:col-span-7 rounded-2xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-white p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
                             <div class="p-2 bg-pink-100 rounded-lg text-pink-600">
@@ -997,7 +997,7 @@
                 </div>
 
                 <!-- Card: PER -->
-                <div class="order-5 lg:col-span-7 rounded-2xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm">
+                <div class="order-4 lg:col-span-7 rounded-2xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
                             <div class="p-2 bg-emerald-100 rounded-lg text-emerald-600">
@@ -1073,20 +1073,24 @@
                         </div>
 
                         <!-- PER Optimization Suggestion -->
-                        <div id="per-optim" class="rounded-xl bg-indigo-50 border border-indigo-200 p-4 space-y-2">
-                            <p class="text-xs font-semibold text-indigo-700 uppercase tracking-wide mb-1">Optimisation suggérée</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm text-slate-600">Montant pour annuler la tranche a 30%</span>
-                                <span class="text-sm font-bold text-indigo-700" id="per-optim-amount">—</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-1">
-                                    <span class="text-sm text-slate-600">Plafond PER estimé (10% du revenu)</span>
-                                    <span class="tooltip cursor-help" data-tip="10% du revenu net imposable, min 4 710 EUR, max 37 680 EUR (PASS 2025)">
-                                        <i data-lucide="help-circle" class="h-3.5 w-3.5 text-slate-400"></i>
-                                    </span>
+                        <div id="per-optim" class="rounded-xl bg-indigo-50 border border-indigo-200 p-4 space-y-3">
+                            <p class="text-xs font-semibold text-indigo-700 uppercase tracking-wide">Recommandation personnalisée</p>
+                            <!-- Message dynamique principal -->
+                            <p id="per-optim-msg" class="text-sm text-slate-700 leading-relaxed"></p>
+                            <!-- Détails chiffrés -->
+                            <div class="grid grid-cols-2 gap-3 text-sm">
+                                <div class="bg-white rounded-lg p-3">
+                                    <span class="text-xs text-slate-500">Versement suggéré</span>
+                                    <p id="per-optim-amount" class="font-bold text-indigo-700">—</p>
                                 </div>
-                                <span class="text-sm font-bold text-slate-700" id="per-plafond-estimate">—</span>
+                                <div class="bg-white rounded-lg p-3">
+                                    <span class="text-xs text-slate-500">Économie d'impôt</span>
+                                    <p id="per-optim-savings" class="font-bold text-emerald-600">—</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center text-sm pt-1 border-t border-indigo-100">
+                                <span class="text-slate-500">Plafond PER estimé</span>
+                                <span id="per-plafond-estimate" class="font-bold text-slate-700">—</span>
                             </div>
                         </div>
 
@@ -2063,13 +2067,26 @@
             const seuil30 = 29315 * parts;
             const perOptimalAmount = Math.max(0, Math.round(incomeAfterAbattement - seuil30));
             // Estimated PER ceiling: 10% of net income, min 4710€, max 37680€ (PASS 2025)
-            const perPlafondEstimate = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
+            // Pour un couple marié, chaque conjoint a son propre plafond PER
+            let perPlafondEstimate;
+            if (state.status === 'married' && state.hasTwoIncomes) {
+                const plafond1 = clamp(Math.round(state.income1 * 0.10), 4710, 37680);
+                const plafond2 = clamp(Math.round(state.income2 * 0.10), 4710, 37680);
+                perPlafondEstimate = plafond1 + plafond2;
+            } else {
+                perPlafondEstimate = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
+            }
+
+            // Versement recommandé = min(montant optimal, plafond estimé)
+            const perRecommended = Math.min(perOptimalAmount, perPlafondEstimate);
+            // Économie d'impôt = versement × TMI avant PER
+            const perEstimatedSavings = Math.round(perRecommended * resultWithoutPer.marginalRate);
 
             updateUI({
                 parts, grossIncome, totalAbattement, perDeduction, incomeAfterAbattement, taxableIncome,
-                tax: finalTax, taxBeforeDons: result.tax, marginalRate: result.marginalRate, qf: result.qf,
+                tax: finalTax, taxBeforeDons: result.tax, marginalRate: result.marginalRate, marginalRateBeforePer: resultWithoutPer.marginalRate, qf: result.qf,
                 tranchesApplied: result.tranchesApplied, netAfterTax, monthly, avgRate, taxPercent, perSavings, donsTotal, donsReduction,
-                crecheCredit, crechePlafond, perOptimalAmount, perPlafondEstimate
+                crecheCredit, crechePlafond, perOptimalAmount, perPlafondEstimate, perRecommended, perEstimatedSavings
             });
             if (userHasInteracted) updateURL();
 
@@ -2083,10 +2100,24 @@
 
             // PER optimization display (always visible when PER card is open)
             if (state.hasPer) {
-                if (data.perOptimalAmount > 0) {
-                    $('#per-optim-amount').textContent = formatMoney(data.perOptimalAmount);
+                const tmi = Math.round(data.marginalRateBeforePer * 100);
+                const recommended = data.perRecommended;
+                const savings = data.perEstimatedSavings;
+
+                if (tmi >= 30) {
+                    $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. En versant <strong>${formatMoney(recommended)}</strong> sur un PER, vous pourriez économiser <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                } else if (tmi === 11) {
+                    $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>11%</strong>. Un PER est moins avantageux à ce taux, mais reste utile pour préparer votre retraite.`;
                 } else {
-                    $('#per-optim-amount').textContent = 'Deja sous le seuil';
+                    $('#per-optim-msg').innerHTML = `Vous n'êtes pas imposable. Un PER n'apportera pas d'avantage fiscal immédiat.`;
+                }
+
+                if (recommended > 0) {
+                    $('#per-optim-amount').textContent = formatMoney(recommended);
+                    $('#per-optim-savings').textContent = formatMoney(savings);
+                } else {
+                    $('#per-optim-amount').textContent = 'Déjà sous le seuil';
+                    $('#per-optim-savings').textContent = '—';
                 }
                 $('#per-plafond-estimate').textContent = formatMoney(data.perPlafondEstimate);
             }
