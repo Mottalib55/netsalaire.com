@@ -2018,10 +2018,23 @@
                 totalAbattement += calculateAbattement(state.income2);
             }
 
+            // Estimated PER ceiling (computed early to cap deduction)
+            let perPlafondEstimate;
+            if (state.status === 'married' && state.hasTwoIncomes) {
+                const plafond1 = clamp(Math.round(state.income1 * 0.10), 4710, 37680);
+                const plafond2 = clamp(Math.round(state.income2 * 0.10), 4710, 37680);
+                perPlafondEstimate = plafond1 + plafond2;
+            } else if (state.status === 'married') {
+                const plafond1 = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
+                perPlafondEstimate = plafond1 + 4710;
+            } else {
+                perPlafondEstimate = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
+            }
+
             let perDeduction = 0;
             if (state.hasPer && state.perAmount > 0) {
                 if (state.perPlafondUnknown || state.perPlafond === 0) {
-                    perDeduction = state.perAmount;
+                    perDeduction = Math.min(state.perAmount, perPlafondEstimate);
                 } else {
                     perDeduction = Math.min(state.perAmount, state.perPlafond);
                 }
@@ -2068,21 +2081,6 @@
                 const seuilOptim = 29315 * parts;
                 perOptimalAmount = Math.max(0, Math.round(incomeAfterAbattement - seuilOptim));
             }
-            // Estimated PER ceiling: 10% of net income, min 4710€, max 37680€ (PASS 2025)
-            // Pour un couple marié, chaque conjoint a son propre plafond PER
-            let perPlafondEstimate;
-            if (state.status === 'married' && state.hasTwoIncomes) {
-                const plafond1 = clamp(Math.round(state.income1 * 0.10), 4710, 37680);
-                const plafond2 = clamp(Math.round(state.income2 * 0.10), 4710, 37680);
-                perPlafondEstimate = plafond1 + plafond2;
-            } else if (state.status === 'married') {
-                // Conjoint sans revenu : plafond minimum de 4 710 EUR
-                const plafond1 = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
-                perPlafondEstimate = plafond1 + 4710;
-            } else {
-                perPlafondEstimate = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
-            }
-
             // Versement recommandé = min(montant optimal, plafond estimé)
             const perRecommended = Math.min(perOptimalAmount, perPlafondEstimate);
             // Économie d'impôt = différence réelle d'impôt (multi-tranches)
