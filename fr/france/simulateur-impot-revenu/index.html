@@ -1078,7 +1078,7 @@
                             <!-- Détails chiffrés -->
                             <div class="grid grid-cols-2 gap-3 text-sm">
                                 <div class="bg-white rounded-lg p-3">
-                                    <span class="text-xs text-slate-500">Versement optimal</span>
+                                    <span class="text-xs text-slate-500">Versement recommandé</span>
                                     <p id="per-optim-amount" class="font-bold text-indigo-700">—</p>
                                 </div>
                                 <div class="bg-white rounded-lg p-3">
@@ -2103,16 +2103,17 @@
             // PER optimization display (always visible when PER card is open)
             if (state.hasPer) {
                 const tmi = Math.round(data.marginalRateBeforePer * 100);
-                const optimal = data.perOptimalAmount;
+                const recommended = data.perRecommended;
                 const plafond = data.perPlafondEstimate;
-                const capped = data.perRecommended;
                 const savings = data.perEstimatedSavings;
 
                 if (tmi >= 30) {
-                    if (optimal > plafond) {
-                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. Pour annuler toute la tranche à ${tmi}%, il faudrait verser <strong>${formatMoney(optimal)}</strong>. Votre plafond estimé est de <strong>${formatMoney(plafond)}</strong> : en le versant intégralement, vous économiseriez <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                    if (recommended >= plafond && recommended > 0) {
+                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. En versant <strong>${formatMoney(plafond)}</strong> (votre plafond PER), vous économisez <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                    } else if (recommended > 0) {
+                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. En versant <strong>${formatMoney(recommended)}</strong> sur un PER, vous annulez toute la tranche à ${tmi}% et économisez <strong>${formatMoney(savings)}</strong> d'impôt.`;
                     } else {
-                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. En versant <strong>${formatMoney(optimal)}</strong> sur un PER, vous annulez toute la tranche à ${tmi}% et économisez <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>, mais votre revenu est déjà sous le seuil de cette tranche après abattement.`;
                     }
                 } else if (tmi === 11) {
                     $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>11%</strong>. Un PER est moins avantageux à ce taux, mais reste utile pour préparer votre retraite.`;
@@ -2120,8 +2121,8 @@
                     $('#per-optim-msg').innerHTML = `Vous n'êtes pas imposable. Un PER n'apportera pas d'avantage fiscal immédiat.`;
                 }
 
-                if (optimal > 0) {
-                    $('#per-optim-amount').textContent = formatMoney(optimal);
+                if (recommended > 0) {
+                    $('#per-optim-amount').textContent = formatMoney(recommended);
                     $('#per-optim-savings').textContent = formatMoney(savings);
                 } else {
                     $('#per-optim-amount').textContent = 'Déjà sous le seuil';
