@@ -1080,7 +1080,7 @@
                             <!-- Détails chiffrés -->
                             <div class="grid grid-cols-2 gap-3 text-sm">
                                 <div class="bg-white rounded-lg p-3">
-                                    <span class="text-xs text-slate-500">Versement suggéré</span>
+                                    <span class="text-xs text-slate-500">Versement optimal</span>
                                     <p id="per-optim-amount" class="font-bold text-indigo-700">—</p>
                                 </div>
                                 <div class="bg-white rounded-lg p-3">
@@ -2073,6 +2073,10 @@
                 const plafond1 = clamp(Math.round(state.income1 * 0.10), 4710, 37680);
                 const plafond2 = clamp(Math.round(state.income2 * 0.10), 4710, 37680);
                 perPlafondEstimate = plafond1 + plafond2;
+            } else if (state.status === 'married') {
+                // Conjoint sans revenu : plafond minimum de 4 710 EUR
+                const plafond1 = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
+                perPlafondEstimate = plafond1 + 4710;
             } else {
                 perPlafondEstimate = clamp(Math.round(grossIncome * 0.10), 4710, 37680);
             }
@@ -2101,25 +2105,31 @@
             // PER optimization display (always visible when PER card is open)
             if (state.hasPer) {
                 const tmi = Math.round(data.marginalRateBeforePer * 100);
-                const recommended = data.perRecommended;
+                const optimal = data.perOptimalAmount;
+                const plafond = data.perPlafondEstimate;
+                const capped = data.perRecommended;
                 const savings = data.perEstimatedSavings;
 
                 if (tmi >= 30) {
-                    $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. En versant <strong>${formatMoney(recommended)}</strong> sur un PER, vous pourriez économiser <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                    if (optimal > plafond) {
+                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. Pour annuler toute la tranche à ${tmi}%, il faudrait verser <strong>${formatMoney(optimal)}</strong>. Votre plafond estimé est de <strong>${formatMoney(plafond)}</strong> : en le versant intégralement, vous économiseriez <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                    } else {
+                        $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>${tmi}%</strong>. En versant <strong>${formatMoney(optimal)}</strong> sur un PER, vous annulez toute la tranche à ${tmi}% et économisez <strong>${formatMoney(savings)}</strong> d'impôt.`;
+                    }
                 } else if (tmi === 11) {
                     $('#per-optim-msg').innerHTML = `Vous êtes dans la tranche à <strong>11%</strong>. Un PER est moins avantageux à ce taux, mais reste utile pour préparer votre retraite.`;
                 } else {
                     $('#per-optim-msg').innerHTML = `Vous n'êtes pas imposable. Un PER n'apportera pas d'avantage fiscal immédiat.`;
                 }
 
-                if (recommended > 0) {
-                    $('#per-optim-amount').textContent = formatMoney(recommended);
+                if (optimal > 0) {
+                    $('#per-optim-amount').textContent = formatMoney(optimal);
                     $('#per-optim-savings').textContent = formatMoney(savings);
                 } else {
                     $('#per-optim-amount').textContent = 'Déjà sous le seuil';
                     $('#per-optim-savings').textContent = '—';
                 }
-                $('#per-plafond-estimate').textContent = formatMoney(data.perPlafondEstimate);
+                $('#per-plafond-estimate').textContent = formatMoney(plafond);
             }
 
             if (state.hasPer) {
