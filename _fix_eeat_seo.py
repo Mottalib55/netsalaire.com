@@ -3,7 +3,7 @@
 Batch SEO E-E-A-T fix script for netsalaire.com
 Applies across all HTML pages:
 1. Update meta robots to include max-snippet:-1, max-image-preview:large, max-video-preview:-1
-2. Update meta author to Mottalib Radif
+2. Update meta author to Radif Partners
 3. Add Person schema JSON-LD for E-E-A-T
 4. Add "A propos" link in footer where missing
 5. Enrich Organization schema where present
@@ -21,16 +21,11 @@ PERSON_SCHEMA = '''
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mottalib Radif",
+        "@type": "Organization",
+        "name": "Radif Partners",
         "jobTitle": "Fondateur de NetSalaire",
-        "description": "MBA INSEAD, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.",
+        "description": "Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.",
         "url": "https://netsalaire.com/fr/a-propos/",
-        "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "INSEAD",
-            "url": "https://www.insead.edu"
-        },
         "knowsAbout": ["finance personnelle", "fiscalite internationale", "simulation fiscale"],
         "worksFor": {
             "@type": "Organization",
@@ -67,18 +62,18 @@ def fix_html_file(filepath):
             )
             changes.append('robots meta enriched')
 
-    # 2. Fix meta author: change from "NetSalaire" to "Mottalib Radif"
+    # 2. Fix meta author: change from "NetSalaire" to "Radif Partners"
     author_pattern = r'<meta\s+name="author"\s+content="NetSalaire"'
     if re.search(author_pattern, content):
         content = re.sub(
             author_pattern,
-            '<meta name="author" content="Mottalib Radif"',
+            '<meta name="author" content="Radif Partners"',
             content
         )
         changes.append('author updated')
 
     # 3. Add Person schema if not already present
-    if '"@type": "Person"' not in content and '"@type":"Person"' not in content:
+    if '"@type": "Organization"' not in content and '"@type":"Organization"' not in content:
         # Insert before </head>
         if '</head>' in content:
             content = content.replace('</head>', PERSON_SCHEMA + '\n</head>')
@@ -96,7 +91,7 @@ def fix_html_file(filepath):
 
     # 5. Update copyright line to include author
     old_copyright = '&copy; 2026 NetSalaire.com - Tous droits réservés'
-    new_copyright = '&copy; 2026 NetSalaire.com &mdash; Cree par Mottalib Radif'
+    new_copyright = '&copy; 2026 NetSalaire.com &mdash; Cree par Radif Partners'
     if old_copyright in content:
         content = content.replace(old_copyright, new_copyright)
         changes.append('copyright updated with author')

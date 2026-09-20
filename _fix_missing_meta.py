@@ -11,7 +11,7 @@ import glob
 SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 ROBOTS_META = '    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">'
-AUTHOR_META = '    <meta name="author" content="Mottalib Radif">'
+AUTHOR_META = '    <meta name="author" content="Radif Partners">'
 
 
 def fix_html_file(filepath):

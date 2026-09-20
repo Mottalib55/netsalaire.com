@@ -24,8 +24,8 @@ ARTICLE_SCHEMA = '''
         "datePublished": "{published}",
         "dateModified": "{modified}",
         "author": {{
-            "@type": "Person",
-            "name": "Mottalib Radif",
+            "@type": "Organization",
+            "name": "Radif Partners",
             "jobTitle": "Fondateur de NetSalaire",
             "url": "https://netsalaire.com/fr/a-propos/"
         }},
@@ -109,8 +109,8 @@ def fix_file(rel_path, page_info):
         "datePublished": "''' + PUBLISHED + '''",
         "dateModified": "''' + TODAY + '''",
         "author": {
-            "@type": "Person",
-            "name": "Mottalib Radif",
+            "@type": "Organization",
+            "name": "Radif Partners",
             "url": "https://netsalaire.com/fr/a-propos/"
         }
     }'''
