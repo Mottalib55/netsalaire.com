@@ -84,60 +84,196 @@
     </script>
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Les calculs sont-ils fiables ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nos simulateurs utilisent les baremes officiels 2026 publies par les administrations fiscales francaise et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalise."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Mes donnees sont-elles stockees ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Non. Tous les calculs sont effectues localement dans votre navigateur. Aucune donnee personnelle n'est envoyee a nos serveurs ni stockee."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Comment est calcule le salaire net en France ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Le salaire net est obtenu en deduisant du brut les cotisations sociales salariales (environ 22% pour les non-cadres, 25% pour les cadres). Ces cotisations financent la securite sociale, la retraite, le chomage et la retraite complementaire."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Qu'est-ce que le quotient familial ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Le quotient familial est un mecanisme qui divise le revenu imposable par le nombre de parts du foyer fiscal. Un celibataire a 1 part, un couple marie 2 parts, et les enfants ajoutent des demi-parts supplementaires."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Quelles sont les tranches d'IR au Maroc ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "L'IR marocain comporte 6 tranches progressives : 0% jusqu'a 40 000 DH, 10% de 40 001 a 60 000 DH, 20% de 60 001 a 80 000 DH, 30% de 80 001 a 100 000 DH, 34% de 100 001 a 180 000 DH, et 37% au-dela."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Qu'est-ce que la CNSS et l'AMO ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "La CNSS (Caisse Nationale de Securite Sociale) couvre les prestations familiales, maladie et retraite. Le taux salarial est de 4.48%, plafonne a 6 000 DH/mois. L'AMO (Assurance Maladie Obligatoire) couvre les frais de sante au taux de 2.26% sans plafond."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Les calculs sont-ils fiables ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nos simulateurs utilisent les barèmes officiels 2026 publiés par les administrations fiscales française et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalisé. Les cotisations sociales sont calculées avec des taux moyens qui peuvent varier selon votre situation spécifique."
             }
-        ]
-    }
+        },
+        {
+            "@type": "Question",
+            "name": "Mes données sont-elles stockées ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité. Ni salaire, ni situation familiale, ni résultat ne quittent votre appareil : le calcul s'exécute en JavaScript dans la page. Fermer l'onglet suffit à tout effacer, et nous n'avons aucun moyen technique de retrouver ce que vous avez saisi."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Les simulateurs sont-ils gratuits ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, tous nos simulateurs sont 100% gratuits, sans publicité et sans inscription requise. Vous pouvez les utiliser autant de fois que vous le souhaitez. Aucun compte, aucune adresse électronique et aucun moyen de paiement ne vous seront demandés, y compris pour imprimer ou copier un résultat. Le site est financé par son éditeur, la société Radif Partners, et ne vend ni données ni espaces publicitaires."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "À quelle fréquence les barèmes sont-ils mis à jour ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nous mettons à jour les barèmes chaque année après la publication des lois de finances. Les barèmes actuels correspondent à l'année fiscale 2026. En pratique, la loi de finances est promulguée fin décembre et les nouveaux seuils sont intégrés dans les jours qui suivent, avant les premières paies de janvier. Chaque page porte en tête sa date de dernière révision, afin que vous sachiez exactement sur quel millésime repose le calcul."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment est calculé le salaire net en France ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le salaire net est obtenu en déduisant du brut les cotisations sociales salariales (environ 22% pour les non-cadres, 25% pour les cadres). Ces cotisations financent la sécurité sociale, la retraite, le chômage et la retraite complémentaire. Le taux réel dépend de votre statut, de votre convention collective, de la mutuelle d'entreprise et du franchissement du plafond de la Sécurité sociale, fixé à 3 925 euros par mois en 2026. Le net ainsi obtenu s'entend avant prélèvement à la source."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qu'est-ce que le quotient familial ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le quotient familial est un mécanisme qui divise le revenu imposable par le nombre de parts du foyer fiscal. Un célibataire a 1 part, un couple marié 2 parts, et les enfants ajoutent des demi-parts supplémentaires. Cela réduit la progressivité de l'impôt pour les familles."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelle est la différence entre cadre et non-cadre ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les cadres ont des cotisations sociales plus élevées (environ 25% vs 22%) principalement dues à des cotisations de retraite complémentaire supérieures. En contrepartie, ils bénéficient d'une meilleure couverture retraite. L'écart tient à la tranche 2 de l'Agirc-Arrco, qui frappe la part du salaire supérieure au plafond de la Sécurité sociale, et à la cotisation APEC, réservée aux cadres. Le statut se lit sur le bulletin de paie et découle de la convention collective, non du seul intitulé du poste."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qu'est-ce que l'abattement de 10% ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'abattement de 10% pour frais professionnels est automatiquement appliqué au revenu imposable. Il représente les frais engagés pour exercer votre activité (transport, repas, etc.). Vous pouvez opter pour les frais réels si ceux-ci sont supérieurs. Cet abattement est plafonné à 14 426 euros par personne pour les revenus de 2026, avec un minimum de 504 euros. L'option pour les frais réels se fait chaque année, personne par personne au sein du foyer, et suppose de conserver les justificatifs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelles sont les tranches d'IR au Maroc ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'IR marocain comporte 6 tranches progressives : 0% jusqu'à 40 000 DH, 10% de 40 001 à 60 000 DH, 20% de 60 001 à 80 000 DH, 30% de 80 001 à 100 000 DH, 34% de 100 001 à 180 000 DH, et 37% au-delà."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qu'est-ce que la CNSS et l'AMO ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La CNSS (Caisse Nationale de Sécurité Sociale) couvre les prestations familiales, maladie et retraite. Le taux salarial est de 4,48%, plafonné à 6 000 DH/mois. L'AMO (Assurance Maladie Obligatoire) couvre les frais de santé au taux de 2,26% sans plafond."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne l'abattement familial au Maroc ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'abattement familial réduit l'IR de 500 DH par an et par personne à charge (conjoint et enfants), dans la limite de 3 000 DH par an (soit 6 personnes maximum). Il s'agit d'une réduction appliquée sur l'impôt dû, et non d'une déduction du revenu imposable : son effet est donc le même quel que soit votre niveau de salaire. L'employeur l'applique directement sur la paie dès que vous lui remettez l'acte de mariage et les actes de naissance."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Que sont les frais professionnels de 20% ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Une déduction forfaitaire de 20% du revenu brut (après cotisations sociales) est appliquée pour frais professionnels. Cette déduction est plafonnée à 30 000 DH par an. Cette déduction est calculée après retrait des cotisations CNSS et AMO, et ne concerne que les revenus salariaux. Certaines professions, comme les journalistes ou le personnel navigant, relèvent de taux spécifiques plus élevés fixés par le Code général des impôts marocain."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne le comparateur ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le comparateur calcule simultanément votre salaire net et votre pression fiscale totale (cotisations + impôt) dans les deux pays, pour un même salaire brut. Il utilise le taux de change en temps réel pour convertir les montants. Vous saisissez un brut annuel une seule fois : chaque pays est ensuite traité avec son propre barème, ses cotisations et ses abattements, puis les deux nets sont ramenés à une même monnaie. Le résultat s'entend à situation familiale identique dans les deux pays."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "D'où vient le taux de change ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le taux de change EUR/MAD est récupéré automatiquement depuis l'API Frankfurter, qui utilise les données de la Banque Centrale Européenne. Vous pouvez aussi saisir un taux personnalisé. Ce taux de référence est publié chaque jour ouvré en fin de matinée et ne correspond pas au taux que pratiquera votre banque, qui applique sa propre marge. Pour un projet de mobilité, mieux vaut refaire la simulation avec le taux réellement obtenu sur un transfert."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Le comparateur prend-il en compte le coût de la vie ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non, le comparateur se concentre uniquement sur la fiscalité. Le coût de la vie, le pouvoir d'achat et autres facteurs économiques ne sont pas pris en compte. Ces éléments doivent être considérés séparément dans votre réflexion. Le logement, la santé, l'école et la fiscalité locale pèsent souvent davantage que l'écart d'impôt lui-même, et peuvent inverser complètement la conclusion. Le comparateur répond donc à une question précise : à brut égal, combien reste-t-il après prélèvements dans chaque pays."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne le prélèvement à la source ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le prélèvement à la source (PAS), en vigueur depuis le 1er janvier 2019, consiste a prelever l'impôt sur le revenu directement sur votre salaire chaque mois, au lieu de le payer en une ou plusieurs fois l'année suivante. Votre employeur applique un taux communique par l'administration fiscale. Ce taux est calcule à partir de votre dernière déclaration de revenus."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment lire une fiche de paie ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La fiche de paie se décompose en plusieurs blocs. En haut figurent vos informations personnelles et celles de l'employeur (SIRET, convention collective, intitule de poste). Vient ensuite le salaire brut , qui inclut votre salaire de base, les heures supplémentaires éventuelles, les primes et les avantages en nature. Le bloc central détaillé chaque ligne de cotisation salariale et patronale : assurance maladie, retraite de base, retraite complémentaire AGIRC-ARRCO, prévoyance, CSG déductible, CSG non déductible et CRDS. Après déduction de toutes les cotisations salariales, vous obtenez le net avant impôt ."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelle est la différence entre salaire brut, net et net imposable ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le salaire brut est le montant total de votre rémunération avant toute déduction. Il figure en haut de votre fiche de paie et constitue la base de calcul des cotisations. Le salaire net avant impôt (ou net social) est obtenu en retranchant l'ensemble des cotisations sociales salariales du brut. C'est le montant auquel on applique ensuite le prélèvement à la source. Le net a payer est la somme réellement versée sur votre compte bancaire : c'est le net avant impôt moins le prélèvement à la source."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment les heures supplémentaires sont-elles imposees ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depuis 2019, les heures supplémentaires bénéficient d'une exonération de cotisations salariales (réductions sur les cotisations retraite et chômage, dans la limite de 11,31%). De plus, la rémunération des heures supplémentaires est exonérée d'impôt sur le revenu dans la limite de 7 500 euros par an (montant net imposable). Au-dela de ce seuil, les heures supplémentaires sont imposees normalement. La majoration légale est de 25% pour les 8 premières heures supplémentaires (de la 36e à la 43e heure hebdomadaire) et de 50% au-dela."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment optimiser sa déclaration de revenus ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Plusieurs leviers permettent de réduire legalement votre impôt sur le revenu. D'abord, vérifiez si les frais réels sont plus avantageux que l'abattement forfaitaire de 10% : si vous parcourez de longues distances pour le travail, si vous avez des frais de repas élevés ou si vous travaillez a domicile, vos frais réels pourraient dépasser l'abattement forfaitaire."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelles sont les erreurs courantes lors de la déclaration ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les erreurs les plus fréquentes sont les suivantes. Oublier de déclarer des revenus : les revenus de placements, les locations meublees (même occasionnelles via des plateformes), les indemnités de stage et les revenus exceptionnels doivent tous être déclarés. Ne pas mettre a jour sa situation familiale : un mariage, un PACS, une naissance ou un divorce modifient votre nombre de parts et doivent être signales. Omettre les charges déductibles : pension alimentaire versée a un ex-conjoint ou a un enfant majeur, frais réels, cotisations syndicales."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne le quotient familial et ses plafonds ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le quotient familial divise votre revenu net imposable par le nombre de parts de votre foyer fiscal. Un célibataire dispose d'une part, un couple marie ou pacse de deux parts. Chacun des deux premiers enfants a charge ajoute une demi-part, et chaque enfant à partir du troisième ajoute une part entière. Cependant, l'avantage fiscal procure par les demi-parts supplémentaires (au-dela des 2 parts du couple) est plafonne : en 2026, le plafond est d'environ 1 759 euros par demi-part supplémentaire."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quels sont les frais réels déductibles ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si vos frais professionnels dépassent l'abattement forfaitaire de 10%, vous pouvez opter pour la déduction des frais réels. Les principales catégories sont : les frais de transport domicile-travail (barème kilométrique ou frais réels de transport en commun), les frais de repas (différence entre le cout d'un repas pris sur le lieu de travail et le cout d'un repas pris a domicile, evalue a 5,35 euros en 2026), les frais de double résidence si vous êtes contraint de louer un logement pres de votre travail en plus de votre résidence principale."
+            }
+        }
+    ]
+}
     </script>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -406,17 +542,17 @@
 
                 <details>
                     <summary data-i18n="faq.data_title">Mes données sont-elles stockées ?</summary>
-                    <p data-i18n="faq.data_text">Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité.</p>
+                    <p data-i18n="faq.data_text">Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité. Ni salaire, ni situation familiale, ni résultat ne quittent votre appareil : le calcul s'exécute en JavaScript dans la page. Fermer l'onglet suffit à tout effacer, et nous n'avons aucun moyen technique de retrouver ce que vous avez saisi.</p>
                 </details>
 
                 <details>
                     <summary data-i18n="faq.free_title">Les simulateurs sont-ils gratuits ?</summary>
-                    <p data-i18n="faq.free_text">Oui, tous nos simulateurs sont 100% gratuits, sans publicité et sans inscription requise. Vous pouvez les utiliser autant de fois que vous le souhaitez.</p>
+                    <p data-i18n="faq.free_text">Oui, tous nos simulateurs sont 100% gratuits, sans publicité et sans inscription requise. Vous pouvez les utiliser autant de fois que vous le souhaitez. Aucun compte, aucune adresse électronique et aucun moyen de paiement ne vous seront demandés, y compris pour imprimer ou copier un résultat. Le site est financé par son éditeur, la société Radif Partners, et ne vend ni données ni espaces publicitaires.</p>
                 </details>
 
                 <details>
                     <summary data-i18n="faq.update_title">À quelle fréquence les barèmes sont-ils mis à jour ?</summary>
-                    <p data-i18n="faq.update_text">Nous mettons à jour les barèmes chaque année après la publication des lois de finances. Les barèmes actuels correspondent à l'année fiscale 2026.</p>
+                    <p data-i18n="faq.update_text">Nous mettons à jour les barèmes chaque année après la publication des lois de finances. Les barèmes actuels correspondent à l'année fiscale 2026. En pratique, la loi de finances est promulguée fin décembre et les nouveaux seuils sont intégrés dans les jours qui suivent, avant les premières paies de janvier. Chaque page porte en tête sa date de dernière révision, afin que vous sachiez exactement sur quel millésime repose le calcul.</p>
                 </details>
             </section>
 
@@ -426,7 +562,7 @@
 
                 <details>
                     <summary data-i18n="faq.france_net_title">Comment est calculé le salaire net en France ?</summary>
-                    <p data-i18n="faq.france_net_text">Le salaire net est obtenu en déduisant du brut les cotisations sociales salariales (environ 22% pour les non-cadres, 25% pour les cadres). Ces cotisations financent la sécurité sociale, la retraite, le chômage et la retraite complémentaire.</p>
+                    <p data-i18n="faq.france_net_text">Le salaire net est obtenu en déduisant du brut les cotisations sociales salariales (environ 22% pour les non-cadres, 25% pour les cadres). Ces cotisations financent la sécurité sociale, la retraite, le chômage et la retraite complémentaire. Le taux réel dépend de votre statut, de votre convention collective, de la mutuelle d'entreprise et du franchissement du plafond de la Sécurité sociale, fixé à 3 925 euros par mois en 2026. Le net ainsi obtenu s'entend avant prélèvement à la source.</p>
                 </details>
 
                 <details>
@@ -436,12 +572,12 @@
 
                 <details>
                     <summary data-i18n="faq.france_cadre_title">Quelle est la différence entre cadre et non-cadre ?</summary>
-                    <p data-i18n="faq.france_cadre_text">Les cadres ont des cotisations sociales plus élevées (environ 25% vs 22%) principalement dues à des cotisations de retraite complémentaire supérieures. En contrepartie, ils bénéficient d'une meilleure couverture retraite.</p>
+                    <p data-i18n="faq.france_cadre_text">Les cadres ont des cotisations sociales plus élevées (environ 25% vs 22%) principalement dues à des cotisations de retraite complémentaire supérieures. En contrepartie, ils bénéficient d'une meilleure couverture retraite. L'écart tient à la tranche 2 de l'Agirc-Arrco, qui frappe la part du salaire supérieure au plafond de la Sécurité sociale, et à la cotisation APEC, réservée aux cadres. Le statut se lit sur le bulletin de paie et découle de la convention collective, non du seul intitulé du poste.</p>
                 </details>
 
                 <details>
                     <summary data-i18n="faq.france_abatement_title">Qu'est-ce que l'abattement de 10% ?</summary>
-                    <p data-i18n="faq.france_abatement_text">L'abattement de 10% pour frais professionnels est automatiquement appliqué au revenu imposable. Il représente les frais engagés pour exercer votre activité (transport, repas, etc.). Vous pouvez opter pour les frais réels si ceux-ci sont supérieurs.</p>
+                    <p data-i18n="faq.france_abatement_text">L'abattement de 10% pour frais professionnels est automatiquement appliqué au revenu imposable. Il représente les frais engagés pour exercer votre activité (transport, repas, etc.). Vous pouvez opter pour les frais réels si ceux-ci sont supérieurs. Cet abattement est plafonné à 14 426 euros par personne pour les revenus de 2026, avec un minimum de 504 euros. L'option pour les frais réels se fait chaque année, personne par personne au sein du foyer, et suppose de conserver les justificatifs.</p>
                 </details>
             </section>
 
@@ -461,12 +597,12 @@
 
                 <details>
                     <summary data-i18n="faq.maroc_family_title">Comment fonctionne l'abattement familial au Maroc ?</summary>
-                    <p data-i18n="faq.maroc_family_text">L'abattement familial réduit l'IR de 500 DH par an et par personne à charge (conjoint et enfants), dans la limite de 3 000 DH par an (soit 6 personnes maximum).</p>
+                    <p data-i18n="faq.maroc_family_text">L'abattement familial réduit l'IR de 500 DH par an et par personne à charge (conjoint et enfants), dans la limite de 3 000 DH par an (soit 6 personnes maximum). Il s'agit d'une réduction appliquée sur l'impôt dû, et non d'une déduction du revenu imposable : son effet est donc le même quel que soit votre niveau de salaire. L'employeur l'applique directement sur la paie dès que vous lui remettez l'acte de mariage et les actes de naissance.</p>
                 </details>
 
                 <details>
                     <summary data-i18n="faq.maroc_pro_title">Que sont les frais professionnels de 20% ?</summary>
-                    <p data-i18n="faq.maroc_pro_text">Une déduction forfaitaire de 20% du revenu brut (après cotisations sociales) est appliquée pour frais professionnels. Cette déduction est plafonnée à 30 000 DH par an.</p>
+                    <p data-i18n="faq.maroc_pro_text">Une déduction forfaitaire de 20% du revenu brut (après cotisations sociales) est appliquée pour frais professionnels. Cette déduction est plafonnée à 30 000 DH par an. Cette déduction est calculée après retrait des cotisations CNSS et AMO, et ne concerne que les revenus salariaux. Certaines professions, comme les journalistes ou le personnel navigant, relèvent de taux spécifiques plus élevés fixés par le Code général des impôts marocain.</p>
                 </details>
             </section>
 
@@ -476,17 +612,17 @@
 
                 <details>
                     <summary data-i18n="faq.comp_how_title">Comment fonctionne le comparateur ?</summary>
-                    <p data-i18n="faq.comp_how_text">Le comparateur calcule simultanément votre salaire net et votre pression fiscale totale (cotisations + impôt) dans les deux pays, pour un même salaire brut. Il utilise le taux de change en temps réel pour convertir les montants.</p>
+                    <p data-i18n="faq.comp_how_text">Le comparateur calcule simultanément votre salaire net et votre pression fiscale totale (cotisations + impôt) dans les deux pays, pour un même salaire brut. Il utilise le taux de change en temps réel pour convertir les montants. Vous saisissez un brut annuel une seule fois : chaque pays est ensuite traité avec son propre barème, ses cotisations et ses abattements, puis les deux nets sont ramenés à une même monnaie. Le résultat s'entend à situation familiale identique dans les deux pays.</p>
                 </details>
 
                 <details>
                     <summary data-i18n="faq.comp_rate_title">D'où vient le taux de change ?</summary>
-                    <p data-i18n="faq.comp_rate_text">Le taux de change EUR/MAD est récupéré automatiquement depuis l'API Frankfurter, qui utilise les données de la Banque Centrale Européenne. Vous pouvez aussi saisir un taux personnalisé.</p>
+                    <p data-i18n="faq.comp_rate_text">Le taux de change EUR/MAD est récupéré automatiquement depuis l'API Frankfurter, qui utilise les données de la Banque Centrale Européenne. Vous pouvez aussi saisir un taux personnalisé. Ce taux de référence est publié chaque jour ouvré en fin de matinée et ne correspond pas au taux que pratiquera votre banque, qui applique sa propre marge. Pour un projet de mobilité, mieux vaut refaire la simulation avec le taux réellement obtenu sur un transfert.</p>
                 </details>
 
                 <details>
                     <summary data-i18n="faq.comp_cost_title">Le comparateur prend-il en compte le coût de la vie ?</summary>
-                    <p data-i18n="faq.comp_cost_text">Non, le comparateur se concentre uniquement sur la fiscalité. Le coût de la vie, le pouvoir d'achat et autres facteurs économiques ne sont pas pris en compte. Ces éléments doivent être considérés séparément dans votre réflexion.</p>
+                    <p data-i18n="faq.comp_cost_text">Non, le comparateur se concentre uniquement sur la fiscalité. Le coût de la vie, le pouvoir d'achat et autres facteurs économiques ne sont pas pris en compte. Ces éléments doivent être considérés séparément dans votre réflexion. Le logement, la santé, l'école et la fiscalité locale pèsent souvent davantage que l'écart d'impôt lui-même, et peuvent inverser complètement la conclusion. Le comparateur répond donc à une question précise : à brut égal, combien reste-t-il après prélèvements dans chaque pays.</p>
                 </details>
             </section>
 

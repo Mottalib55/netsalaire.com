@@ -79,44 +79,44 @@
 
     <!-- Schema.org FAQPage -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Comment fonctionne le comparateur pays ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Le comparateur calcule simultanement votre salaire net et votre pression fiscale totale dans les deux pays, pour un meme salaire brut. Il utilise le taux de change en temps reel pour convertir les montants."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Les calculs sont-ils fiables ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nos simulateurs utilisent les baremes officiels 2026 publies par les administrations fiscales francaise et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalise."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Puis-je simuler un statut cadre en France ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Tout a fait. Le calculateur Salaire Brut a Net pour la France dispose d'une option pour basculer entre statut Cadre et Non-Cadre, ajustant ainsi les cotisations de retraite complementaire."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Mes donnees sont-elles stockees ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Non. Tous les calculs sont effectues localement dans votre navigateur. Aucune donnee personnelle n'est envoyee a nos serveurs ni stockee. Vous pouvez utiliser nos outils en toute confidentialite."
-                }
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne le comparateur pays ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le comparateur calcule simultanément votre salaire net et votre pression fiscale totale dans les deux pays, pour un même salaire brut. Il utilise le taux de change en temps réel pour convertir les montants. Concrètement, vous saisissez un brut annuel une seule fois : le comparateur applique à chacun des deux pays son propre barème, ses cotisations sociales et ses abattements, puis affiche côte à côte le net mensuel et le taux de prélèvement global, converti au cours du jour."
             }
-        ]
-    }
+        },
+        {
+            "@type": "Question",
+            "name": "Les calculs sont-ils fiables ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nos simulateurs utilisent les barèmes officiels 2026 publiés par les administrations fiscales française et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalisé. Les barèmes sont relus à chaque loi de finances et chaque page indique sa date de mise à jour ainsi que les textes de référence utilisés. Pour une situation particulière (revenus étrangers, régime spécial, pension alimentaire), l'avis d'un conseil reste nécessaire."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Puis-je simuler un statut cadre en France ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tout à fait. Le calculateur \"Salaire Brut à Net\" pour la France dispose d'une option pour basculer entre statut Cadre et Non-Cadre, ajustant ainsi les cotisations de retraite complémentaire. La différence tient surtout à la retraite complémentaire Agirc-Arrco, dont la tranche 2 pèse davantage sur les salaires élevés, et à la cotisation APEC réservée aux cadres. À brut égal, un cadre perçoit donc un net légèrement inférieur à celui d'un non-cadre."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Mes données sont-elles stockées ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité. Aucun salaire, aucune situation familiale et aucun résultat ne quitte votre appareil : le calcul s'exécute en JavaScript dans la page. Fermer l'onglet suffit à tout effacer, et rien n'est conservé d'une visite à l'autre."
+            }
+        }
+    ]
+}
     </script>
 
     <!-- Fonts -->
@@ -701,8 +701,7 @@
                         <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
                     </summary>
                     <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a1">
-                        Le comparateur calcule simultanément votre salaire net et votre pression fiscale totale dans les deux pays, pour un même salaire brut. Il utilise le taux de change en temps réel pour convertir les montants.
-                    </div>
+                        Le comparateur calcule simultanément votre salaire net et votre pression fiscale totale dans les deux pays, pour un même salaire brut. Il utilise le taux de change en temps réel pour convertir les montants. Concrètement, vous saisissez un brut annuel une seule fois : le comparateur applique à chacun des deux pays son propre barème, ses cotisations sociales et ses abattements, puis affiche côte à côte le net mensuel et le taux de prélèvement global, converti au cours du jour.</div>
                 </details>
 
                 <details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
@@ -711,8 +710,7 @@
                         <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
                     </summary>
                     <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a2">
-                        Nos simulateurs utilisent les barèmes officiels 2026 publiés par les administrations fiscales française et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalisé.
-                    </div>
+                        Nos simulateurs utilisent les barèmes officiels 2026 publiés par les administrations fiscales française et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalisé. Les barèmes sont relus à chaque loi de finances et chaque page indique sa date de mise à jour ainsi que les textes de référence utilisés. Pour une situation particulière (revenus étrangers, régime spécial, pension alimentaire), l'avis d'un conseil reste nécessaire.</div>
                 </details>
 
                 <details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
@@ -721,8 +719,7 @@
                         <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
                     </summary>
                     <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a3">
-                        Tout à fait. Le calculateur "Salaire Brut à Net" pour la France dispose d'une option pour basculer entre statut Cadre et Non-Cadre, ajustant ainsi les cotisations de retraite complémentaire.
-                    </div>
+                        Tout à fait. Le calculateur "Salaire Brut à Net" pour la France dispose d'une option pour basculer entre statut Cadre et Non-Cadre, ajustant ainsi les cotisations de retraite complémentaire. La différence tient surtout à la retraite complémentaire Agirc-Arrco, dont la tranche 2 pèse davantage sur les salaires élevés, et à la cotisation APEC réservée aux cadres. À brut égal, un cadre perçoit donc un net légèrement inférieur à celui d'un non-cadre.</div>
                 </details>
 
                 <details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
@@ -731,8 +728,7 @@
                         <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
                     </summary>
                     <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a4">
-                        Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité.
-                    </div>
+                        Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité. Aucun salaire, aucune situation familiale et aucun résultat ne quitte votre appareil : le calcul s'exécute en JavaScript dans la page. Fermer l'onglet suffit à tout effacer, et rien n'est conservé d'une visite à l'autre.</div>
                 </details>
             </div>
 

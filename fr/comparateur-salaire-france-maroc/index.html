@@ -131,67 +131,75 @@
 
     <!-- Schema.org FAQPage -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-                {
-                        "@type": "Question",
-                        "name": "Quel pays est le plus avantageux fiscalement ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "La France est souvent plus avantageuse fiscalement pour les salaries, surtout pour les familles grace au quotient familial. Pour un celibataire, la difference peut etre faible. N'oubliez pas que le cout de la vie est 40-60% moins eleve au Maroc."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Comment fonctionne le quotient familial francais ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Le quotient familial divise le revenu imposable par le nombre de parts : 1 part pour un celibataire, 2 parts pour un couple marie, +0.5 part pour les 2 premiers enfants, +1 part par enfant supplementaire. Cela reduit la progressivite de l'impot."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Qu'est-ce que l'abattement familial au Maroc ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Au Maroc, l'abattement familial est une reduction forfaitaire de 360 MAD par an et par personne a charge (conjoint + enfants), plafonnee a 2 160 MAD par an. C'est beaucoup moins avantageux que le quotient familial francais."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Les MRE doivent-ils payer des impots en France ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Les Marocains Residant en France sont soumis a l'impot francais sur leurs revenus de source francaise. Grace a la convention fiscale franco-marocaine, ils ne sont pas doublement imposes sur les memes revenus."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Quelle est la difference entre CNSS et Securite sociale ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "La CNSS marocaine preleve environ 4,48% du salaire (plafonne a 6 000 MAD/mois) contre environ 22-25% pour les cotisations sociales francaises. La France finance chomage, retraite complete et allocations familiales, tandis que la CNSS offre une couverture plus limitee."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Comment est calcule le taux de change ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Notre comparateur utilise le taux de change EUR/MAD fourni par la Banque Centrale Europeenne via l'API Frankfurter. Le taux est mis a jour en temps reel. Vous pouvez egalement saisir un taux personnalise."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Faut-il considerer le cout de la vie ?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Absolument ! Ce comparateur ne montre que la fiscalite. Le cout de la vie au Maroc est environ 40-60% moins eleve qu'en France. Un salaire net inferieur au Maroc peut donc offrir un meilleur pouvoir d'achat qu'en France."
-                        }
-                }
-        ]
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Quel pays est le plus avantageux fiscalement ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La France est souvent plus avantageuse fiscalement pour les salariés, surtout pour les familles grâce au quotient familial. Pour un célibataire, la différence peut être faible. En revanche, pour les familles avec enfants, la France offre un net sensiblement supérieur. N'oubliez pas que le coût de la vie est 40-60% moins élevé au Maroc, ce qui peut compenser une fiscalité plus élevée."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne le quotient familial français ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le quotient familial divise le revenu imposable par le nombre de parts : 1 part pour un célibataire, 2 parts pour un couple marié, +0,5 part pour les 2 premiers enfants, +1 part par enfant supplémentaire. Cela réduit la progressivité de l'impôt et avantage significativement les familles."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qu'est-ce que l'abattement familial au Maroc ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Au Maroc, l'abattement familial est une réduction forfaitaire de 360 MAD par an et par personne à charge (conjoint + enfants), plafonnée à 2 160 MAD par an (soit 6 personnes maximum). C'est beaucoup moins avantageux que le quotient familial français, surtout pour les familles nombreuses."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Les MRE doivent-ils payer des impôts en France ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les Marocains Résidant en France (MRE) sont soumis à l'impôt français sur leurs revenus de source française. Grâce à la convention fiscale franco-marocaine, ils ne sont pas doublement imposés sur les mêmes revenus. Leurs revenus marocains peuvent être déclarés en France mais avec un crédit d'impôt."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelle est la différence entre CNSS et Sécurité sociale ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La CNSS (Caisse Nationale de Sécurité Sociale) marocaine prélève environ 4,48% du salaire (plafonné à 6 000 MAD/mois) contre ~22-25% pour les cotisations sociales françaises. La différence majeure : la France finance chômage, retraite complète et allocations familiales, tandis que la CNSS offre une couverture plus limitée."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Les frais professionnels sont-ils déduits pareil ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "En France, un abattement forfaitaire de 10% est appliqué automatiquement sur le revenu imposable. Au Maroc, c'est 20% du salaire brut après cotisations sociales, mais plafonné à 30 000 MAD par an. Le système marocain est donc plus généreux pour les salaires moyens."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment est calculé le taux de change ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Notre comparateur utilise le taux de change EUR/MAD fourni par la Banque Centrale Européenne via l'API Frankfurter. Le taux est mis à jour en temps réel. Vous pouvez également saisir un taux personnalisé si vous avez un taux spécifique en tête."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Faut-il considérer le coût de la vie ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolument ! Ce comparateur ne montre que la fiscalité. Le coût de la vie au Maroc est environ 40-60% moins élevé qu'en France (loyer, alimentation, services). Un salaire net inférieur au Maroc peut donc offrir un meilleur pouvoir d'achat qu'en France."
+            }
+        }
+    ]
 }
     </script>
 </head>
