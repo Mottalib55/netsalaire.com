@@ -93,10 +93,10 @@
         },
         {
             "@type": "Question",
-            "name": "Les calculs sont-ils fiables ?",
+            "name": "Sur quelles sources reposent les barèmes utilisés ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nos simulateurs utilisent les barèmes officiels 2026 publiés par les administrations fiscales française et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalisé. Les barèmes sont relus à chaque loi de finances et chaque page indique sa date de mise à jour ainsi que les textes de référence utilisés. Pour une situation particulière (revenus étrangers, régime spécial, pension alimentaire), l'avis d'un conseil reste nécessaire."
+                "text": "Chaque simulateur s'appuie sur les textes publiés par l'administration du pays concerné : barème de l'impôt, taux et plafonds de cotisations, abattements. Les sources sont citées en bas de chaque page, avec un lien vers le document officiel, et la date de dernière révision figure en tête. Le résultat reste une estimation, non un avis fiscal personnalisé."
             }
         },
         {
@@ -109,10 +109,26 @@
         },
         {
             "@type": "Question",
-            "name": "Mes données sont-elles stockées ?",
+            "name": "Quels pays puis-je simuler sur NetSalaire ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité. Aucun salaire, aucune situation familiale et aucun résultat ne quitte votre appareil : le calcul s'exécute en JavaScript dans la page. Fermer l'onglet suffit à tout effacer, et rien n'est conservé d'une visite à l'autre."
+                "text": "Le site couvre la France et le Maroc de façon détaillée, avec leurs aides et leurs régimes particuliers, et propose un simulateur d'impôt pour seize autres pays : Allemagne, Belgique, Chine, Corée du Sud, Danemark, Espagne, Grèce, Irlande, Italie, Luxembourg, Mexique, Pays-Bas, Portugal, Tchéquie, Thaïlande et États-Unis."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Le net affiché s'entend-il avant ou après impôt ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cela dépend du pays. Pour la France, le simulateur brut en net donne le net avant prélèvement à la source, celui qui figure sur la fiche de paie, et le simulateur d'impôt calcule séparément la retenue. Dans les pays où l'impôt est retenu directement par l'employeur, le net affiché est bien celui qui arrive sur le compte."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Faut-il créer un compte pour utiliser les simulateurs ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non, aucun compte n'est nécessaire et aucune adresse électronique n'est demandée. Les calculs s'exécutent dans votre navigateur, sans envoi au serveur : ni salaire, ni situation familiale, ni résultat ne quittent votre appareil. Vous pouvez donc simuler autant de situations que vous le souhaitez, y compris depuis un poste partagé."
             }
         }
     ]
@@ -706,11 +722,10 @@
 
                 <details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
-                        <span class="font-medium text-slate-800" data-i18n="faq.q2">Les calculs sont-ils fiables ?</span>
+                        <span class="font-medium text-slate-800" data-i18n="faq.q2">Sur quelles sources reposent les barèmes utilisés ?</span>
                         <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
                     </summary>
-                    <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a2">
-                        Nos simulateurs utilisent les barèmes officiels 2026 publiés par les administrations fiscales française et marocaine. Cependant, ils fournissent une estimation et ne remplacent pas un conseil fiscal personnalisé. Les barèmes sont relus à chaque loi de finances et chaque page indique sa date de mise à jour ainsi que les textes de référence utilisés. Pour une situation particulière (revenus étrangers, régime spécial, pension alimentaire), l'avis d'un conseil reste nécessaire.</div>
+                    <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a2">Chaque simulateur s'appuie sur les textes publiés par l'administration du pays concerné : barème de l'impôt, taux et plafonds de cotisations, abattements. Les sources sont citées en bas de chaque page, avec un lien vers le document officiel, et la date de dernière révision figure en tête. Le résultat reste une estimation, non un avis fiscal personnalisé.</div>
                 </details>
 
                 <details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
@@ -721,14 +736,27 @@
                     <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a3">
                         Tout à fait. Le calculateur "Salaire Brut à Net" pour la France dispose d'une option pour basculer entre statut Cadre et Non-Cadre, ajustant ainsi les cotisations de retraite complémentaire. La différence tient surtout à la retraite complémentaire Agirc-Arrco, dont la tranche 2 pèse davantage sur les salaires élevés, et à la cotisation APEC réservée aux cadres. À brut égal, un cadre perçoit donc un net légèrement inférieur à celui d'un non-cadre.</div>
                 </details>
+<details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
+                        <span class="font-medium text-slate-800" data-i18n="faq.q4">Quels pays puis-je simuler sur NetSalaire ?</span>
+                        <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a4">Le site couvre la France et le Maroc de façon détaillée, avec leurs aides et leurs régimes particuliers, et propose un simulateur d'impôt pour seize autres pays : Allemagne, Belgique, Chine, Corée du Sud, Danemark, Espagne, Grèce, Irlande, Italie, Luxembourg, Mexique, Pays-Bas, Portugal, Tchéquie, Thaïlande et États-Unis.</div>
+                </details>
+<details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
+                        <span class="font-medium text-slate-800" data-i18n="faq.q5">Le net affiché s'entend-il avant ou après impôt ?</span>
+                        <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a5">Cela dépend du pays. Pour la France, le simulateur brut en net donne le net avant prélèvement à la source, celui qui figure sur la fiche de paie, et le simulateur d'impôt calcule séparément la retenue. Dans les pays où l'impôt est retenu directement par l'employeur, le net affiché est bien celui qui arrive sur le compte.</div>
+                </details>
 
                 <details class="group bg-slate-50 border border-slate-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-slate-300 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-5 cursor-pointer select-none">
-                        <span class="font-medium text-slate-800" data-i18n="faq.q4">Mes données sont-elles stockées ?</span>
+                        <span class="font-medium text-slate-800" data-i18n="faq.q6">Faut-il créer un compte pour utiliser les simulateurs ?</span>
                         <iconify-icon icon="lucide:plus" class="text-slate-400 transition-transform duration-300 group-open:rotate-45" width="20"></iconify-icon>
                     </summary>
-                    <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a4">
-                        Non. Tous les calculs sont effectués localement dans votre navigateur. Aucune donnée personnelle n'est envoyée à nos serveurs ni stockée. Vous pouvez utiliser nos outils en toute confidentialité. Aucun salaire, aucune situation familiale et aucun résultat ne quitte votre appareil : le calcul s'exécute en JavaScript dans la page. Fermer l'onglet suffit à tout effacer, et rien n'est conservé d'une visite à l'autre.</div>
+                    <div class="px-5 pb-5 text-sm text-slate-500 leading-relaxed border-t border-slate-100 pt-4 mt-1" data-i18n="faq.a6">Non, aucun compte n'est nécessaire et aucune adresse électronique n'est demandée. Les calculs s'exécutent dans votre navigateur, sans envoi au serveur : ni salaire, ni situation familiale, ni résultat ne quittent votre appareil. Vous pouvez donc simuler autant de situations que vous le souhaitez, y compris depuis un poste partagé.</div>
                 </details>
             </div>
 
