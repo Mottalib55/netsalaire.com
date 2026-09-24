@@ -35,7 +35,7 @@
     </script>
 
     <title>Salaire brut en net 2026 : calcul instantané et gratuit</title>
-    <meta name="description" content="Combien allez-vous vraiment toucher ? Sur 3 500 € brut cadre, il reste 2 625 € net. Barèmes URSSAF 2026, 13e mois et temps partiel pris en compte.">
+    <meta name="description" content="Combien allez-vous vraiment toucher ? Sur 3 500 € brut cadre, il reste 2 625 € net. Barèmes URSSAF 2026, 13e mois et temps partiel pris en compte au calcul.">
     <meta name="keywords" content="simulateur brut net, salaire net france, calcul salaire, cotisations sociales, cadre non cadre">
     <link rel="canonical" href="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/">
     <link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/">
@@ -43,7 +43,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Salaire brut en net 2026 : calcul instantané et gratuit">
-    <meta property="og:description" content="Combien allez-vous vraiment toucher ? Sur 3 500 € brut cadre, il reste 2 625 € net. Barèmes URSSAF 2026, 13e mois et temps partiel pris en compte.">
+    <meta property="og:description" content="Combien allez-vous vraiment toucher ? Sur 3 500 € brut cadre, il reste 2 625 € net. Barèmes URSSAF 2026, 13e mois et temps partiel pris en compte au calcul.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/">
     <meta property="og:image" content="https://netsalaire.com/assets/images/og-france-brut-net.png">
@@ -56,7 +56,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Salaire brut en net 2026 : calcul instantané et gratuit">
-    <meta name="twitter:description" content="Combien allez-vous vraiment toucher ? Sur 3 500 € brut cadre, il reste 2 625 € net. Barèmes URSSAF 2026, 13e mois et temps partiel pris en compte.">
+    <meta name="twitter:description" content="Combien allez-vous vraiment toucher ? Sur 3 500 € brut cadre, il reste 2 625 € net. Barèmes URSSAF 2026, 13e mois et temps partiel pris en compte au calcul.">
     <meta name="twitter:image" content="https://netsalaire.com/assets/images/og-france-brut-net.png">
 
     <!-- Additional SEO -->
@@ -1242,6 +1242,9 @@
 
         // === SYNC ALL FIELDS ===
         function syncAll(source, value) {
+            // Champ vide : on laisse l'utilisateur finir sa saisie plutôt que de
+            // remettre 0 partout.
+            if (value === '' || value === null || Number.isNaN(value)) return;
             const nbMois = getNombreMois();
             const hoursYear = getHoursPerYear();
             let brutAn;
@@ -1268,14 +1271,18 @@
             const netMois = netAn / nbMois;
             const netH = netAn / hoursYear;
 
-            // Update all fields (with null checks for optional fields)
-            brutAnnuel.value = formatNumber(brutAn);
-            brutMensuel.value = formatNumber(brutMois);
-            if (brutHoraire) brutHoraire.value = formatDecimal(brutH);
+            // On n'écrit jamais dans le champ en cours de saisie : c'est ce qui
+            // faisait réapparaître « 0 » dès qu'on effaçait (RECETTE §17.2).
+            const enCours = document.activeElement;
+            const poser = (el, v) => { if (el && el !== enCours) el.value = v; };
+
+            poser(brutAnnuel, formatNumber(brutAn));
+            poser(brutMensuel, formatNumber(brutMois));
+            poser(brutHoraire, formatDecimal(brutH));
             brutSlider.value = Math.min(150000, Math.max(15000, brutAn));
-            netAnnuel.value = formatNumber(netAn);
-            netMensuel.value = formatNumber(netMois);
-            if (netHoraire) netHoraire.value = formatDecimal(netH);
+            poser(netAnnuel, formatNumber(netAn));
+            poser(netMensuel, formatNumber(netMois));
+            poser(netHoraire, formatDecimal(netH));
 
             updateUI(brutMois, nbMois);
 
@@ -1392,34 +1399,40 @@
         // === EVENT LISTENERS ===
         brutAnnuel.addEventListener('input', (e) => {
             e.target.value = formatInputNumber(e.target.value);
+            if (e.target.value.trim() === '') return;   // champ vidé : on n'y réécrit rien
             syncAll('brutAnnuel', parseNumber(e.target.value));
         });
 
         brutMensuel.addEventListener('input', (e) => {
             e.target.value = formatInputNumber(e.target.value);
+            if (e.target.value.trim() === '') return;   // champ vidé : on n'y réécrit rien
             syncAll('brutMensuel', parseNumber(e.target.value));
         });
 
         if (brutHoraire) {
             brutHoraire.addEventListener('input', (e) => {
                 e.target.value = formatInputDecimal(e.target.value);
+                if (e.target.value.trim() === '') return;   // champ vidé : on n'y réécrit rien
                 syncAll('brutHoraire', parseNumber(e.target.value));
             });
         }
 
         netAnnuel.addEventListener('input', (e) => {
             e.target.value = formatInputNumber(e.target.value);
+            if (e.target.value.trim() === '') return;   // champ vidé : on n'y réécrit rien
             syncAll('netAnnuel', parseNumber(e.target.value));
         });
 
         netMensuel.addEventListener('input', (e) => {
             e.target.value = formatInputNumber(e.target.value);
+            if (e.target.value.trim() === '') return;   // champ vidé : on n'y réécrit rien
             syncAll('netMensuel', parseNumber(e.target.value));
         });
 
         if (netHoraire) {
             netHoraire.addEventListener('input', (e) => {
                 e.target.value = formatInputDecimal(e.target.value);
+                if (e.target.value.trim() === '') return;   // champ vidé : on n'y réécrit rien
                 syncAll('netHoraire', parseNumber(e.target.value));
             });
         }

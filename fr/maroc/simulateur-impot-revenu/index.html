@@ -573,7 +573,7 @@
                                 <button id="dec-kids" class="w-10 h-8 flex items-center justify-center bg-white border border-zinc-200 rounded text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors shadow-sm disabled:opacity-50">
                                     <i data-lucide="minus" class="w-3 h-3"></i>
                                 </button>
-                                <input type="number" id="kids" value="0" min="0" max="10" readonly class="flex-1 bg-transparent text-center font-semibold text-zinc-900 focus:outline-none">
+                                <input type="number" id="kids" value="0" min="0" max="10" step="1" inputmode="numeric" class="flex-1 bg-transparent text-center font-semibold text-zinc-900 focus:outline-none">
                                 <button id="inc-kids" class="w-10 h-8 flex items-center justify-center bg-white border border-zinc-200 rounded text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900 transition-colors shadow-sm">
                                     <i data-lucide="plus" class="w-3 h-3"></i>
                                 </button>
@@ -1534,6 +1534,16 @@
 
         btnDecKids.addEventListener('click', () => updateKids(state.kids - 1));
         btnIncKids.addEventListener('click', () => updateKids(state.kids + 1));
+
+        // Le champ se saisit aussi au clavier : cliquer sept fois pour sept enfants
+        // n'est pas une interface. On borne à la sortie du champ, pas pendant la
+        // frappe, pour ne pas réécrire ce que l'utilisateur est en train de taper.
+        elKids.addEventListener('input', () => {
+            if (elKids.value.trim() === '') { state.kids = 0; calculate(); return; }
+            state.kids = Math.max(0, Math.min(10, parseInt(elKids.value, 10) || 0));
+            calculate();
+        });
+        elKids.addEventListener('blur', () => { elKids.value = state.kids; });
 
         // Accordion
         const btnToggle = document.getElementById('toggle-details');

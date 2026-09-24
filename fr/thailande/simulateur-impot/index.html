@@ -469,7 +469,7 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-2">Revenu Mensuel</label>
                             <div class="relative">
-                                <input type="number" id="income-monthly" value="100000" min="0" max="100000000"
+                                <input type="text" inputmode="numeric" id="income-monthly" value="100 000"
                                        class="w-full text-right rounded-lg border-0 py-3 pl-3 pr-14 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-blue-500 text-lg font-semibold">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 text-sm">THB</span>
                             </div>
@@ -477,7 +477,7 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-2">Revenu Annuel</label>
                             <div class="relative">
-                                <input type="number" id="income-annual" value="1200000" min="0" max="100000000"
+                                <input type="text" inputmode="numeric" id="income-annual" value="1 200 000"
                                        class="w-full text-right rounded-lg border-0 py-3 pl-3 pr-14 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-blue-500 text-lg font-semibold">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 text-sm">THB</span>
                             </div>
@@ -1031,22 +1031,22 @@
         const parseNum = s => parseInt(String(s).replace(/\s/g, '')) || 0;
 
         document.getElementById('income-monthly').addEventListener('input', function() {
-            const monthly = parseFloat(this.value) || 0;
+            const monthly = parseNum(this.value);
             const annual = monthly * 12;
-            document.getElementById('income-annual').value = Math.round(annual);
+            document.getElementById('income-annual').value = formatNum(annual);
             document.getElementById('income-slider').value = Math.min(annual, 6000000);
             calculate();
         });
 
         document.getElementById('income-annual').addEventListener('input', function() {
-            const annual = parseFloat(this.value) || 0;
-            document.getElementById('income-monthly').value = Math.round(annual / 12);
+            const annual = parseNum(this.value);
+            document.getElementById('income-monthly').value = formatNum(annual / 12);
             document.getElementById('income-slider').value = Math.min(annual, 6000000);
             calculate();
         });
 
         document.getElementById('income-slider').addEventListener('input', function() {
-            const annual = parseFloat(this.value) || 0;
+            const annual = parseNum(this.value);
             document.getElementById('income-annual').value = formatNum(annual);
             document.getElementById('income-monthly').value = formatNum(Math.round(annual / 12));
             calculate();
