@@ -35,7 +35,7 @@
     </script>
 
     <!-- SEO Primary -->
-    <title>Impôt sur le revenu 2026 : barème, tranches et calcul</title>
+    <title>Impôt sur le revenu 2026 : barème, tranches et calcul</title>
     <meta name="description" content="Estimez votre impôt sur le revenu avec déductions : PER, frais de garde, dons, emploi à domicile, frais de scolarité. Résultat instantané. Barèmes 2026.">
     <meta name="keywords" content="simulateur impôt, impôt revenu 2026, calcul IR france, barème impôt, quotient familial, PER, simulation fiscale">
 
@@ -139,8 +139,8 @@
                         emerald: {
                             50: '#ecfdf5',
                             100: '#d1fae5',
-                            500: '#10b981',
-                            600: '#059669',
+                            500: '#047857',
+                            600: '#047857',
                             700: '#047857',
                         }
                     }
@@ -202,7 +202,7 @@
             appearance: none;
             border-radius: 99px;
             height: 4px;
-            background: linear-gradient(to right, #6366f1 0%, #6366f1 var(--progress, 0%), #e5e7eb var(--progress, 0%), #e5e7eb 100%);
+            background: linear-gradient(to right, #1f6a80 0%, #1f6a80 var(--progress, 0%), #e5e7eb var(--progress, 0%), #e5e7eb 100%);
             opacity: 0.85;
             transition: opacity 0.15s;
         }
@@ -225,7 +225,7 @@
             box-shadow: 0 0.5px 2px rgba(0,0,0,0.2), 0 0 0 0.5px rgba(0,0,0,0.04);
         }
         input[type="range"]::-moz-range-progress {
-            background: #6366f1;
+            background: #1f6a80;
             border-radius: 99px;
             height: 4px;
         }
@@ -243,7 +243,7 @@
         .inc-head span {
             font-size: 10px;
             font-weight: 600;
-            color: #94a3b8;
+            color: #475569;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             text-align: center;
@@ -279,14 +279,14 @@
             transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
         }
         .inc-row .inc-v input:hover { border-color: #cbd5e1; background: #f1f5f9; }
-        .inc-row .inc-v input:focus { border-color: #818cf8; background: white; box-shadow: 0 0 0 3px rgba(129,140,248,0.15); }
+        .inc-row .inc-v input:focus { border-color: #4a8599; background: white; box-shadow: 0 0 0 3px rgba(129,140,248,0.15); }
         .inc-row .inc-v .inc-u {
             position: absolute;
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 12px;
-            color: #94a3b8;
+            color: #475569;
             pointer-events: none;
         }
         .inc-row-net {
@@ -295,7 +295,7 @@
             padding: 6px 0;
             margin-bottom: 0;
         }
-        .inc-row-net .inc-lbl { color: #4f46e5; font-weight: 800; font-size: 13px; }
+        .inc-row-net .inc-lbl { color: #185563; font-weight: 800; font-size: 13px; }
         .inc-row-net .inc-v input { border-color: rgba(99,102,241,0.15); background: white; color: #1e293b; font-weight: 700; }
     </style>
 
@@ -380,9 +380,9 @@
 }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-600 antialiased selection:bg-indigo-100">
+<body class="bg-slate-50 text-slate-600 antialiased selection:bg-brand-100">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="/fr/" class="flex items-center gap-2 group">
                 <img src="/favicon.svg" alt="NetSalaire" class="w-8 h-8">
@@ -394,21 +394,21 @@
                 <div class="relative group">
                     <a href="/fr/france/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors flex items-center gap-1.5 py-2">
                         <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> France
-                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
+                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-600 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
                     </a>
                     <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-white border border-slate-200 rounded-lg shadow-lg py-2 min-w-[240px]">
-                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Outils principaux</div>
+                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-600 uppercase tracking-wider">Outils principaux</div>
                             <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:landmark" width="18" class="text-indigo-500"></iconify-icon>
+                                <iconify-icon icon="lucide:landmark" width="18" class="text-brand-700"></iconify-icon>
                                 Simulateur Impôt
                             </a>
                             <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:calculator" width="18" class="text-indigo-500"></iconify-icon>
+                                <iconify-icon icon="lucide:calculator" width="18" class="text-brand-700"></iconify-icon>
                                 Brut vers Net
                             </a>
                             <div class="border-t border-slate-100 my-2"></div>
-                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Autres simulateurs</div>
+                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-600 uppercase tracking-wider">Autres simulateurs</div>
                             <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-3 px-4 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors text-sm">
                                 <span class="w-[18px] text-center">📉</span>
                                 Chômage ARE
@@ -426,7 +426,7 @@
                                 Frais Km
                             </a>
                             <div class="border-t border-slate-100 my-2"></div>
-                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700 transition-colors text-sm font-medium">
+                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-brand-700 hover:bg-brand-50 hover:text-brand-700 transition-colors text-sm font-medium">
                                 <span class="w-[18px] text-center">🔀</span>
                                 Comparer France vs Maroc
                             </a>
@@ -437,24 +437,24 @@
                 <div class="relative group">
                     <a href="/fr/maroc/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors flex items-center gap-1.5 py-2">
                         <iconify-icon icon="circle-flags:ma" width="16"></iconify-icon> Maroc
-                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
+                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-600 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
                     </a>
                     <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-white border border-slate-200 rounded-lg shadow-lg py-2 min-w-[240px]">
                             <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:landmark" width="18" class="text-emerald-500"></iconify-icon>
+                                <iconify-icon icon="lucide:landmark" width="18" class="text-emerald-700"></iconify-icon>
                                 Simulateur Impôt
                             </a>
                             <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:calculator" width="18" class="text-emerald-500"></iconify-icon>
+                                <iconify-icon icon="lucide:calculator" width="18" class="text-emerald-700"></iconify-icon>
                                 Brut vers Net
                             </a>
                             <a href="/fr/maroc/guide/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:book-open" width="18" class="text-emerald-500"></iconify-icon>
+                                <iconify-icon icon="lucide:book-open" width="18" class="text-emerald-700"></iconify-icon>
                                 Guide Fiscal
                             </a>
                             <div class="border-t border-slate-100 my-2"></div>
-                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors text-sm font-medium">
+                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors text-sm font-medium">
                                 <span class="w-[18px] text-center">🔀</span>
                                 Comparer France vs Maroc
                             </a>
@@ -465,11 +465,11 @@
                 <div class="relative group">
                     <button class="hover:text-slate-900 transition-colors flex items-center gap-1.5 py-2 text-sm font-medium text-slate-600">
                         <iconify-icon icon="lucide:globe" width="16"></iconify-icon> International
-                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
+                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-600 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
                     </button>
                     <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-white border border-slate-200 rounded-xl shadow-xl mega-country-container" style="width: 420px; max-height: 75vh; overflow-y: auto;">
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Europe</div>
+                            <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mega-country-title">Europe</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:de" width="16"></iconify-icon> Allemagne</a>
                                 <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:be" width="16"></iconify-icon> Belgique</a>
@@ -483,12 +483,12 @@
                                 <a href="/fr/portugal/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:pt" width="16"></iconify-icon> Portugal</a>
                                 <a href="/fr/tchequie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cz" width="16"></iconify-icon> Tchéquie</a>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Amériques</div>
+                            <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mega-country-title">Amériques</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/usa/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:us" width="16"></iconify-icon> USA</a>
                                 <a href="/fr/mexique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:mx" width="16"></iconify-icon> Mexique</a>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Asie</div>
+                            <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mega-country-title">Asie</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/chine/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cn" width="16"></iconify-icon> Chine</a>
                                 <a href="/fr/coree-du-sud/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:kr" width="16"></iconify-icon> Corée du Sud</a>
@@ -521,30 +521,30 @@
                     <span class="flex items-center gap-2">
                         <iconify-icon icon="circle-flags:fr" width="18"></iconify-icon> France
                     </span>
-                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-400 transition-transform duration-200"></iconify-icon>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
                 </button>
                 <div class="hidden pl-4 pb-3 space-y-1">
-                    <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
-                        <iconify-icon icon="lucide:landmark" width="16" class="text-indigo-500"></iconify-icon> Simulateur Impôt
+                    <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <iconify-icon icon="lucide:landmark" width="16" class="text-brand-700"></iconify-icon> Simulateur Impôt
                     </a>
-                    <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon> Brut vers Net
+                    <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon> Brut vers Net
                     </a>
                     <div class="border-t border-slate-100 my-1"></div>
-                    <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">📉</span> Chômage ARE
                     </a>
-                    <a href="/fr/france/simulateur-apl/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/simulateur-apl/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">🏠</span> APL
                     </a>
-                    <a href="/fr/france/creche-tarifs/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/creche-tarifs/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">👶</span> Crèche
                     </a>
-                    <a href="/fr/france/simulateur-indemnite-kilometrique/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/simulateur-indemnite-kilometrique/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">🚗</span> Frais Km
                     </a>
                     <div class="border-t border-slate-100 my-1"></div>
-                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-indigo-600 font-medium py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-brand-700 font-medium py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">🔀</span> Comparer France vs Maroc
                     </a>
                 </div>
@@ -555,20 +555,20 @@
                     <span class="flex items-center gap-2">
                         <iconify-icon icon="circle-flags:ma" width="18"></iconify-icon> Maroc
                     </span>
-                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-400 transition-transform duration-200"></iconify-icon>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
                 </button>
                 <div class="hidden pl-4 pb-3 space-y-1">
-                    <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-600 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                        <iconify-icon icon="lucide:landmark" width="16" class="text-emerald-500"></iconify-icon> Simulateur Impôt
+                    <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:landmark" width="16" class="text-emerald-700"></iconify-icon> Simulateur Impôt
                     </a>
-                    <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-600 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-emerald-500"></iconify-icon> Brut vers Net
+                    <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-emerald-700"></iconify-icon> Brut vers Net
                     </a>
-                    <a href="/fr/maroc/guide/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-600 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                        <iconify-icon icon="lucide:book-open" width="16" class="text-emerald-500"></iconify-icon> Guide Fiscal
+                    <a href="/fr/maroc/guide/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:book-open" width="16" class="text-emerald-700"></iconify-icon> Guide Fiscal
                     </a>
                     <div class="border-t border-slate-100 my-1"></div>
-                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-emerald-600 font-medium py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-emerald-700 font-medium py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
                         <span class="w-4 text-center text-xs">🔀</span> Comparer France vs Maroc
                     </a>
                 </div>
@@ -579,17 +579,17 @@
                     <span class="flex items-center gap-2">
                         <iconify-icon icon="lucide:globe" width="18"></iconify-icon> International
                     </span>
-                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-400 transition-transform duration-200"></iconify-icon>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
                 </button>
                 <div class="hidden pb-3">
                     <div class="sticky top-0 bg-white pb-2 pt-1 z-10">
                         <div class="relative">
-                            <iconify-icon icon="lucide:search" width="16" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></iconify-icon>
-                            <input id="mobile-country-search" type="text" placeholder="Rechercher un pays..." class="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 outline-none transition-all" autocomplete="off">
+                            <iconify-icon icon="lucide:search" width="16" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600"></iconify-icon>
+                            <input id="mobile-country-search" type="text" placeholder="Rechercher un pays..." class="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:border-brand-300 focus:ring-2 focus:ring-brand-100 outline-none transition-all" autocomplete="off">
                         </div>
                     </div>
                     <div id="mobile-country-list" class="space-y-3 px-1"></div>
-                    <div id="mobile-no-results" class="hidden text-center py-6 text-sm text-slate-400">Aucun pays trouve</div>
+                    <div id="mobile-no-results" class="hidden text-center py-6 text-sm text-slate-600">Aucun pays trouve</div>
                 </div>
             </div>
             <!-- FAQ & Contact -->
@@ -611,18 +611,18 @@
         <!-- Hero Section -->
         <header><section class="pt-8 pb-6 md:pt-10 md:pb-8 text-center px-4">
             <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-200 px-4 py-1.5 mb-6">
-                <i data-lucide="sparkles" class="h-4 w-4 text-emerald-600"></i>
+                <i data-lucide="sparkles" class="h-4 w-4 text-emerald-700"></i>
                 <span class="text-sm font-medium text-emerald-700">Barème 2026 - 100% Gratuit - Résultat instantane</span>
             </div>
             <h1 class="mx-auto max-w-4xl text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-                <iconify-icon icon="circle-flags:fr" width="18" style="vertical-align:middle"></iconify-icon> <span class="text-indigo-600">Simulateur Impôt</span> France 2026
+                <iconify-icon icon="circle-flags:fr" width="18" style="vertical-align:middle"></iconify-icon> <span class="text-brand-700">Simulateur Impôt</span> France 2026
             </h1>
-                <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-500 mt-3">
+                <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-600 mt-3">
                     <span>Par <span class="font-medium text-slate-700">NetSalaire</span></span>
                     <span class="text-slate-300">&middot;</span>
-                    <time datetime="2026-09-01">Mis à jour le 24 septembre 2026</time>
+                    <time datetime="2026-09-24">Mis à jour le 24 septembre 2026</time>
                 </div>
-            <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-500">
+            <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
                 Simulation impôts gratuite et instantanee. Calculez votre impôt sur le revenu et découvrez combien vous pouvez économiser grâce au <strong class="text-slate-700">PER</strong> et aux <strong class="text-slate-700">dons</strong>.
             </p>
         </section></header>
@@ -635,14 +635,14 @@
                 <div class="order-1 lg:col-span-7 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
-                            <div class="p-2 bg-indigo-50 rounded-lg text-indigo-600">
+                            <div class="p-2 bg-brand-50 rounded-lg text-brand-700">
                                 <i data-lucide="users" class="h-5 w-5"></i>
                             </div>
                             <h2 class="text-lg font-semibold text-slate-900">Votre situation</h2>
                         </div>
                         <div class="text-right">
-                            <span class="text-xs text-slate-400">Parts fiscales</span>
-                            <p class="text-lg font-bold text-indigo-600" id="display-parts">1</p>
+                            <span class="text-xs text-slate-600">Parts fiscales</span>
+                            <p class="text-lg font-bold text-brand-700" id="display-parts">1</p>
                         </div>
                     </div>
 
@@ -651,15 +651,15 @@
                         <label class="block text-sm font-medium text-slate-700 mb-3">Statut marital</label>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                             <button type="button" id="btn-single" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
-                                <i data-lucide="user" class="h-5 w-5 mx-auto mb-1 text-slate-400"></i>
+                                <i data-lucide="user" class="h-5 w-5 mx-auto mb-1 text-slate-600"></i>
                                 <span class="block text-xs sm:text-sm font-medium text-slate-700">Célibataire</span>
                             </button>
                             <button type="button" id="btn-married" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
-                                <i data-lucide="heart" class="h-5 w-5 mx-auto mb-1 text-slate-400"></i>
+                                <i data-lucide="heart" class="h-5 w-5 mx-auto mb-1 text-slate-600"></i>
                                 <span class="block text-xs sm:text-sm font-medium text-slate-700">Marie/PACS</span>
                             </button>
                             <button type="button" id="btn-divorced" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
-                                <i data-lucide="user-x" class="h-5 w-5 mx-auto mb-1 text-slate-400"></i>
+                                <i data-lucide="user-x" class="h-5 w-5 mx-auto mb-1 text-slate-600"></i>
                                 <span class="block text-xs sm:text-sm font-medium text-slate-700">Divorce(e)</span>
                             </button>
                         </div>
@@ -670,14 +670,14 @@
                     <div class="mb-5 flex items-center justify-between">
                         <div>
                             <label class="block text-sm font-medium text-slate-700">Enfants a charge</label>
-                            <p class="text-xs text-slate-400 mt-0.5">Mineurs ou rattaches au foyer</p>
+                            <p class="text-xs text-slate-600 mt-0.5">Mineurs ou rattaches au foyer</p>
                         </div>
                         <div class="flex items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 p-1">
-                            <button id="btn-child-minus" type="button" class="h-9 w-9 rounded-md bg-white text-slate-500 shadow-sm hover:text-indigo-600 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
+                            <button id="btn-child-minus" type="button" class="h-9 w-9 rounded-md bg-white text-slate-600 shadow-sm hover:text-brand-700 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
                                 <i data-lucide="minus" class="h-4 w-4"></i>
                             </button>
                             <span id="child-count" class="w-8 text-center text-xl font-bold text-slate-900">0</span>
-                            <button id="btn-child-plus" type="button" class="h-9 w-9 rounded-md bg-white text-slate-500 shadow-sm hover:text-indigo-600 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
+                            <button id="btn-child-plus" type="button" class="h-9 w-9 rounded-md bg-white text-slate-600 shadow-sm hover:text-brand-700 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
                                 <i data-lucide="plus" class="h-4 w-4"></i>
                             </button>
                         </div>
@@ -688,12 +688,12 @@
                         <div class="flex items-center gap-2">
                             <label class="text-sm font-medium text-slate-700">Parent isole</label>
                             <span class="tooltip cursor-help" data-tip="Vous elevez seul(e) vos enfants">
-                                <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                             </span>
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="parent-isole" class="sr-only peer">
-                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-indigo-600 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
+                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-brand-600 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
                         </label>
                     </div>
                 </div>
@@ -701,7 +701,7 @@
                 <!-- Card: Revenus -->
                 <div class="order-2 lg:col-span-7 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="p-2 bg-indigo-50 rounded-lg text-indigo-600">
+                        <div class="p-2 bg-brand-50 rounded-lg text-brand-700">
                             <i data-lucide="wallet" class="h-5 w-5"></i>
                         </div>
                         <h2 class="text-lg font-semibold text-slate-900">Vos revenus annuels</h2>
@@ -711,7 +711,7 @@
                     <div class="mb-5">
                         <div class="flex items-center justify-between mb-3">
                             <label class="text-sm font-medium text-slate-700">Revenu du foyer</label>
-                            <select id="income1-status-select" class="text-xs border border-slate-200 rounded-lg py-1 px-2 text-slate-600 bg-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer">
+                            <select id="income1-status-select" class="text-xs border border-slate-200 rounded-lg py-1 px-2 text-slate-600 bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 cursor-pointer">
                                 <option value="noncadre" selected>Non-cadre (22%)</option>
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
@@ -746,7 +746,7 @@
                         <div style="padding:0 2px;">
                             <input type="range" id="income1-slider" min="0" max="200000" step="500" value="40000"
                                    class="w-full cursor-pointer" style="-webkit-appearance:none; padding:4px 0;">
-                            <div class="flex justify-between text-xs text-slate-400" style="margin-top:2px;">
+                            <div class="flex justify-between text-xs text-slate-600" style="margin-top:2px;">
                                 <span>0€</span>
                                 <span>200k€</span>
                             </div>
@@ -758,20 +758,20 @@
                         <div class="flex items-center gap-2">
                             <label class="text-sm font-medium text-slate-700">Deux revenus dans le foyer</label>
                             <span class="tooltip cursor-help" data-tip="Activez si votre conjoint a aussi des revenus">
-                                <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                             </span>
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="has-two-incomes" class="sr-only peer">
-                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-indigo-600 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
+                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-brand-600 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
                         </label>
                     </div>
 
                     <!-- Revenu Conjoint -->
                     <div id="income2-container" class="hidden mb-5 animate-in">
                         <div class="flex items-center justify-between mb-3">
-                            <label class="text-sm font-medium text-slate-700">Revenu du foyer <span class="text-slate-400 font-normal">(conjoint)</span></label>
-                            <select id="income2-status-select" class="text-xs border border-slate-200 rounded-lg py-1 px-2 text-slate-600 bg-white focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 cursor-pointer">
+                            <label class="text-sm font-medium text-slate-700">Revenu du foyer <span class="text-slate-600 font-normal">(conjoint)</span></label>
+                            <select id="income2-status-select" class="text-xs border border-slate-200 rounded-lg py-1 px-2 text-slate-600 bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 cursor-pointer">
                                 <option value="noncadre" selected>Non-cadre (22%)</option>
                                 <option value="cadre">Cadre (25%)</option>
                             </select>
@@ -806,7 +806,7 @@
                         <div style="padding:0 2px;">
                             <input type="range" id="income2-slider" min="0" max="200000" step="500" value="0"
                                    class="w-full cursor-pointer" style="-webkit-appearance:none; padding:4px 0;">
-                            <div class="flex justify-between text-xs text-slate-400" style="margin-top:2px;">
+                            <div class="flex justify-between text-xs text-slate-600" style="margin-top:2px;">
                                 <span>0€</span>
                                 <span>200k€</span>
                             </div>
@@ -815,7 +815,7 @@
 
                     <!-- Autres revenus -->
                     <details class="border-t border-slate-100 pt-4 group">
-                        <summary class="flex cursor-pointer items-center justify-between text-sm font-medium text-indigo-600 hover:text-indigo-700">
+                        <summary class="flex cursor-pointer items-center justify-between text-sm font-medium text-brand-700 hover:text-brand-700">
                             <span class="flex items-center gap-2">
                                 <i data-lucide="plus-circle" class="h-4 w-4"></i>
                                 Autres revenus (fonciers, etc.)
@@ -824,10 +824,10 @@
                         </summary>
                         <div class="mt-4 space-y-4 animate-in">
                             <div>
-                                <label class="block text-xs font-medium text-slate-500 mb-2">Revenus fonciers nets</label>
+                                <label class="block text-xs font-medium text-slate-600 mb-2">Revenus fonciers nets</label>
                                 <div class="relative">
-                                    <input type="number" id="income-foncier" value="0" min="0" class="block w-full rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-indigo-500 text-sm transition-all">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">EUR</span>
+                                    <input type="number" id="income-foncier" value="0" min="0" class="block w-full rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-500 text-sm transition-all">
+                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 text-xs">EUR</span>
                                 </div>
                             </div>
                         </div>
@@ -838,12 +838,12 @@
                 <div id="creche-card" class="order-5 lg:col-span-7 rounded-2xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-white p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
-                            <div class="p-2 bg-pink-100 rounded-lg text-pink-600">
+                            <div class="p-2 bg-pink-100 rounded-lg text-pink-700">
                                 <i data-lucide="baby" class="h-5 w-5"></i>
                             </div>
                             <div>
                                 <h2 class="text-lg font-semibold text-slate-900">Frais de garde (Crèche)</h2>
-                                <p class="text-xs text-slate-500">Crédit d'impôt de 50% (max 1 750 EUR/enfant)</p>
+                                <p class="text-xs text-slate-600">Crédit d'impôt de 50% (max 1 750 EUR/enfant)</p>
                             </div>
                         </div>
                         <span class="inline-flex items-center rounded-full bg-pink-100 px-2.5 py-1 text-xs font-medium text-pink-700">
@@ -867,15 +867,15 @@
                             <div class="flex items-center gap-2">
                                 <label class="text-sm font-medium text-slate-700">Enfants de moins de 6 ans</label>
                                 <span class="tooltip cursor-help" data-tip="Seuls les enfants de moins de 6 ans ouvrent droit au crédit">
-                                    <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                    <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                                 </span>
                             </div>
                             <div class="flex items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 p-1">
-                                <button id="btn-creche-child-minus" type="button" class="h-8 w-8 rounded-md bg-white text-slate-500 shadow-sm hover:text-pink-600 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
+                                <button id="btn-creche-child-minus" type="button" class="h-8 w-8 rounded-md bg-white text-slate-600 shadow-sm hover:text-pink-700 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
                                     <i data-lucide="minus" class="h-4 w-4"></i>
                                 </button>
                                 <span id="creche-child-count" class="w-6 text-center text-lg font-bold text-slate-900">0</span>
-                                <button id="btn-creche-child-plus" type="button" class="h-8 w-8 rounded-md bg-white text-slate-500 shadow-sm hover:text-pink-600 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
+                                <button id="btn-creche-child-plus" type="button" class="h-8 w-8 rounded-md bg-white text-slate-600 shadow-sm hover:text-pink-700 hover:bg-slate-50 flex items-center justify-center transition-all active:scale-95">
                                     <i data-lucide="plus" class="h-4 w-4"></i>
                                 </button>
                             </div>
@@ -886,23 +886,23 @@
                                 <div class="flex items-center gap-2">
                                     <label class="text-sm font-medium text-slate-700">Frais de garde annuels (total)</label>
                                     <span class="tooltip cursor-help" data-tip="Crèche, assistante maternelle, garde à domicile...">
-                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                                     </span>
                                 </div>
                                 <div class="relative">
                                     <input type="number" id="creche-amount" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-pink-500 text-sm font-semibold transition-all">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">EUR</span>
+                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 text-xs">EUR</span>
                                 </div>
                             </div>
-                            <input type="range" id="creche-slider" min="0" max="20000" step="100" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 touch-pan-x"
+                            <input type="range" id="creche-slider" min="0" max="20000" step="100" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600 touch-pan-x"
                            style="-webkit-appearance: none; padding: 8px 0;">
                             <div class="flex justify-between mt-1">
-                                <span class="text-xs text-slate-400">0 EUR</span>
-                                <span class="text-xs text-slate-400">20 000 EUR</span>
+                                <span class="text-xs text-slate-600">0 EUR</span>
+                                <span class="text-xs text-slate-600">20 000 EUR</span>
                             </div>
                         </div>
 
-                        <div class="text-xs text-slate-500 bg-slate-50 rounded-lg p-3">
+                        <div class="text-xs text-slate-600 bg-slate-50 rounded-lg p-3">
                             <p><strong>Info :</strong> Le crédit d'impôt est de 50% des frais engagés, plafonné à 3 500 EUR par enfant de moins de 6 ans (soit 1 750 EUR de crédit max par enfant).</p>
                         </div>
 
@@ -914,11 +914,11 @@
                             </div>
                             <div class="flex justify-between items-center mt-2">
                                 <span class="text-sm text-slate-600">Plafond applicable (<span id="creche-children-count">0</span> enfant(s))</span>
-                                <span class="text-sm font-medium text-slate-500" id="creche-plafond-display">0 EUR</span>
+                                <span class="text-sm font-medium text-slate-600" id="creche-plafond-display">0 EUR</span>
                             </div>
                             <div class="flex justify-between items-center mt-2 pt-2 border-t border-slate-100">
                                 <span class="text-sm text-slate-600">Crédit d'impôt (50%)</span>
-                                <span class="text-sm font-bold text-pink-600" id="creche-credit-display">0 EUR</span>
+                                <span class="text-sm font-bold text-pink-700" id="creche-credit-display">0 EUR</span>
                             </div>
                         </div>
                     </div>
@@ -928,12 +928,12 @@
                 <div class="order-4 lg:col-span-7 rounded-2xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
-                            <div class="p-2 bg-emerald-100 rounded-lg text-emerald-600">
+                            <div class="p-2 bg-emerald-100 rounded-lg text-emerald-700">
                                 <i data-lucide="piggy-bank" class="h-5 w-5"></i>
                             </div>
                             <div>
                                 <h2 class="text-lg font-semibold text-slate-900">Plan d'Épargne Retraite (PER)</h2>
-                                <p class="text-xs text-slate-500">Deduisez vos versements de votre revenu imposable</p>
+                                <p class="text-xs text-slate-600">Deduisez vos versements de votre revenu imposable</p>
                             </div>
                         </div>
                         <span class="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-medium text-emerald-700">
@@ -946,7 +946,7 @@
                         <label class="text-sm font-medium text-slate-700">As-tu verse sur un PER cette année ?</label>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="has-per" class="sr-only peer">
-                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-emerald-500 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
+                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-emerald-700 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
                         </label>
                     </div>
 
@@ -957,19 +957,19 @@
                                 <label class="text-sm font-medium text-slate-700">Montant verse sur le PER</label>
                                 <div class="relative">
                                     <input type="number" id="per-amount" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500 text-sm font-semibold transition-all">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">EUR</span>
+                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 text-xs">EUR</span>
                                 </div>
                             </div>
-                            <input type="range" id="per-slider" min="0" max="30000" step="100" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 touch-pan-x"
+                            <input type="range" id="per-slider" min="0" max="30000" step="100" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600 touch-pan-x"
                            style="-webkit-appearance: none; padding: 8px 0;">
                             <div class="flex justify-between mt-1">
-                                <span class="text-xs text-slate-400">0 EUR</span>
-                                <span class="text-xs text-slate-400">30 000 EUR</span>
+                                <span class="text-xs text-slate-600">0 EUR</span>
+                                <span class="text-xs text-slate-600">30 000 EUR</span>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-2">
-                            <input type="checkbox" id="per-plafond-unknown" class="rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+                            <input type="checkbox" id="per-plafond-unknown" class="rounded border-slate-300 text-emerald-700 focus:ring-emerald-500">
                             <label for="per-plafond-unknown" class="text-sm text-slate-600">Je ne connais pas mon plafond de déduction</label>
                         </div>
 
@@ -978,12 +978,12 @@
                                 <div class="flex items-center gap-2">
                                     <label class="text-sm font-medium text-slate-700">Plafond de déduction disponible</label>
                                     <span class="tooltip cursor-help" data-tip="Visible sur votre dernier avis d'imposition">
-                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                                     </span>
                                 </div>
                                 <div class="relative">
                                     <input type="number" id="per-plafond" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500 text-sm font-semibold transition-all">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">EUR</span>
+                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 text-xs">EUR</span>
                                 </div>
                             </div>
                         </div>
@@ -992,7 +992,7 @@
                         <div class="rounded-xl bg-white border border-emerald-200 p-4">
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-slate-600">Déduction retenue</span>
-                                <span class="text-sm font-bold text-emerald-600" id="per-deduction-display">0 EUR</span>
+                                <span class="text-sm font-bold text-emerald-700" id="per-deduction-display">0 EUR</span>
                             </div>
                             <div class="flex justify-between items-center mt-2 pt-2 border-t border-slate-100">
                                 <span class="text-sm text-slate-600">Revenu imposable après PER</span>
@@ -1001,30 +1001,30 @@
                         </div>
 
                         <!-- PER Optimization Suggestion -->
-                        <div id="per-optim" class="rounded-xl bg-indigo-50 border border-indigo-200 p-4 space-y-3">
-                            <p class="text-xs font-semibold text-indigo-700 uppercase tracking-wide">Recommandation personnalisée</p>
+                        <div id="per-optim" class="rounded-xl bg-brand-50 border border-brand-200 p-4 space-y-3">
+                            <p class="text-xs font-semibold text-brand-700 uppercase tracking-wide">Recommandation personnalisée</p>
                             <!-- Message dynamique principal -->
                             <p id="per-optim-msg" class="text-sm text-slate-700 leading-relaxed"></p>
                             <!-- Détails chiffrés -->
                             <div class="grid grid-cols-2 gap-3 text-sm">
                                 <div class="bg-white rounded-lg p-3">
-                                    <span class="text-xs text-slate-500">Versement recommandé</span>
-                                    <p id="per-optim-amount" class="font-bold text-indigo-700">, </p>
+                                    <span class="text-xs text-slate-600">Versement recommandé</span>
+                                    <p id="per-optim-amount" class="font-bold text-brand-700">, </p>
                                 </div>
                                 <div class="bg-white rounded-lg p-3">
-                                    <span class="text-xs text-slate-500">Économie d'impôt</span>
-                                    <p id="per-optim-savings" class="font-bold text-emerald-600">, </p>
+                                    <span class="text-xs text-slate-600">Économie d'impôt</span>
+                                    <p id="per-optim-savings" class="font-bold text-emerald-700">, </p>
                                 </div>
                             </div>
-                            <div class="flex justify-between items-center text-sm pt-1 border-t border-indigo-100">
-                                <span class="text-slate-500">Plafond PER estimé</span>
+                            <div class="flex justify-between items-center text-sm pt-1 border-t border-brand-100">
+                                <span class="text-slate-600">Plafond PER estimé</span>
                                 <span id="per-plafond-estimate" class="font-bold text-slate-700">, </span>
                             </div>
                         </div>
 
                         <div id="per-warning" class="hidden rounded-lg bg-amber-50 border border-amber-200 p-3 text-sm text-amber-800">
                             <div class="flex gap-2">
-                                <i data-lucide="alert-triangle" class="h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                                <i data-lucide="alert-triangle" class="h-4 w-4 text-amber-700 flex-shrink-0 mt-0.5"></i>
                                 <span>Plafond non renseigne : la déduction est estimee au montant verse.</span>
                             </div>
                         </div>
@@ -1032,18 +1032,18 @@
                 </div>
 
                 <!-- Card: Dons -->
-                <div class="order-6 lg:col-span-7 rounded-2xl border-2 border-violet-200 bg-gradient-to-br from-violet-50 to-white p-6 shadow-sm">
+                <div class="order-6 lg:col-span-7 rounded-2xl border-2 border-brand-200 bg-gradient-to-br from-brand-50 to-white p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center gap-3">
-                            <div class="p-2 bg-violet-100 rounded-lg text-violet-600">
+                            <div class="p-2 bg-brand-100 rounded-lg text-brand-700">
                                 <i data-lucide="heart-handshake" class="h-5 w-5"></i>
                             </div>
                             <div>
                                 <h2 class="text-lg font-semibold text-slate-900">Dons & Réductions d'impôt</h2>
-                                <p class="text-xs text-slate-500">Reduisez directement votre impôt (66% a 75%)</p>
+                                <p class="text-xs text-slate-600">Reduisez directement votre impôt (66% a 75%)</p>
                             </div>
                         </div>
-                        <span class="inline-flex items-center rounded-full bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-700">
+                        <span class="inline-flex items-center rounded-full bg-brand-100 px-2.5 py-1 text-xs font-medium text-brand-700">
                             Réduction
                         </span>
                     </div>
@@ -1053,7 +1053,7 @@
                         <label class="text-sm font-medium text-slate-700">As-tu fait des dons cette année ?</label>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="has-dons" class="sr-only peer">
-                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-violet-500 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
+                            <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-brand-500 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm"></div>
                         </label>
                     </div>
 
@@ -1065,15 +1065,15 @@
                                 <div class="flex items-center gap-2">
                                     <label class="text-sm font-medium text-slate-700">Dons associations (66%)</label>
                                     <span class="tooltip cursor-help" data-tip="Associations d'interet general, fondations...">
-                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                                     </span>
                                 </div>
                                 <div class="relative">
-                                    <input type="number" id="dons-66" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-violet-500 text-sm font-semibold transition-all">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">EUR</span>
+                                    <input type="number" id="dons-66" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-500 text-sm font-semibold transition-all">
+                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 text-xs">EUR</span>
                                 </div>
                             </div>
-                            <input type="range" id="dons-66-slider" min="0" max="10000" step="50" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 touch-pan-x"
+                            <input type="range" id="dons-66-slider" min="0" max="10000" step="50" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600 touch-pan-x"
                            style="-webkit-appearance: none; padding: 8px 0;">
                         </div>
 
@@ -1083,38 +1083,38 @@
                                 <div class="flex items-center gap-2">
                                     <label class="text-sm font-medium text-slate-700">Dons aide aux personnes (75%)</label>
                                     <span class="tooltip cursor-help" data-tip="Restos du Coeur, Secours Populaire... (plafonne a 1000EUR)">
-                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-400"></i>
+                                        <i data-lucide="help-circle" class="h-4 w-4 text-slate-600"></i>
                                     </span>
                                 </div>
                                 <div class="relative">
-                                    <input type="number" id="dons-75" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-violet-500 text-sm font-semibold transition-all">
-                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs">EUR</span>
+                                    <input type="number" id="dons-75" value="0" min="0" class="block w-36 text-right rounded-lg border-0 py-2 pl-3 pr-12 text-slate-900 ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-500 text-sm font-semibold transition-all">
+                                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 text-xs">EUR</span>
                                 </div>
                             </div>
-                            <input type="range" id="dons-75-slider" min="0" max="2000" step="50" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 touch-pan-x"
+                            <input type="range" id="dons-75-slider" min="0" max="2000" step="50" value="0" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600 touch-pan-x"
                            style="-webkit-appearance: none; padding: 8px 0;">
-                            <p class="text-xs text-slate-400 mt-1">75% jusqu'a 1000EUR, puis 66% au-dela</p>
+                            <p class="text-xs text-slate-600 mt-1">75% jusqu'a 1000EUR, puis 66% au-dela</p>
                         </div>
 
                         <!-- Dons Summary -->
-                        <div class="rounded-xl bg-white border border-violet-200 p-4">
+                        <div class="rounded-xl bg-white border border-brand-200 p-4">
                             <div class="flex justify-between items-center">
                                 <span class="text-sm text-slate-600">Total des dons</span>
                                 <span class="text-sm font-bold text-slate-900" id="dons-total-display">0 EUR</span>
                             </div>
                             <div class="flex justify-between items-center mt-2 pt-2 border-t border-slate-100">
                                 <span class="text-sm text-slate-600">Réduction d'impôt</span>
-                                <span class="text-sm font-bold text-violet-600" id="dons-reduction-display">0 EUR</span>
+                                <span class="text-sm font-bold text-brand-700" id="dons-reduction-display">0 EUR</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Actions -->
                 <div class="order-7 lg:col-span-7 flex items-center justify-between pt-2">
-                    <button id="btn-reset" type="button" class="text-sm text-slate-500 hover:text-slate-900 flex items-center gap-1.5 transition-colors">
+                    <button id="btn-reset" type="button" class="text-sm text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition-colors">
                         <i data-lucide="rotate-ccw" class="h-4 w-4"></i> Reinitialiser
                     </button>
-                    <span class="text-xs text-slate-400">Barème 2026 - Mis a jour janvier 2026</span>
+                    <span class="text-xs text-slate-600">Barème 2026 - Mis a jour janvier 2026</span>
                 </div>
 
                 <!-- Results Column -->
@@ -1123,12 +1123,12 @@
 
                         <!-- Main Result Card -->
                         <div class="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 shadow-xl overflow-hidden relative">
-                            <div class="absolute top-0 right-0 -mt-8 -mr-8 h-32 w-32 rounded-full bg-indigo-500 opacity-20 blur-2xl"></div>
-                            <div class="absolute bottom-0 left-0 -mb-8 -ml-8 h-24 w-24 rounded-full bg-emerald-500 opacity-10 blur-xl"></div>
+                            <div class="absolute top-0 right-0 -mt-8 -mr-8 h-32 w-32 rounded-full bg-brand-500 opacity-20 blur-2xl"></div>
+                            <div class="absolute bottom-0 left-0 -mb-8 -ml-8 h-24 w-24 rounded-full bg-emerald-700 opacity-10 blur-xl"></div>
 
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-sm font-medium text-slate-400 uppercase tracking-wider">Estimation impôt 2026</h3>
-                                <span class="inline-flex items-center rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-white/80">
+                                <h3 class="text-sm font-medium text-slate-300 uppercase tracking-wider">Estimation impôt 2026</h3>
+                                <span class="inline-flex items-center rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-white/90">
                                     <i data-lucide="zap" class="h-3 w-3 mr-1"></i> Temps réel
                                 </span>
                             </div>
@@ -1136,19 +1136,19 @@
                             <div class="flex items-end gap-2 mb-1">
                                 <span class="text-5xl font-bold tracking-tight" id="result-tax">0 EUR</span>
                             </div>
-                            <p class="text-sm text-slate-400 mb-4">Impôt sur le revenu estime</p>
+                            <p class="text-sm text-slate-300 mb-4">Impôt sur le revenu estime</p>
 
                             <div class="h-1.5 w-full bg-slate-700 rounded-full mb-6 overflow-hidden">
-                                <div id="tax-progress-bar" class="h-full bg-gradient-to-r from-indigo-400 to-indigo-500 chart-transition rounded-full" style="width: 0%"></div>
+                                <div id="tax-progress-bar" class="h-full bg-gradient-to-r from-brand-600 to-brand-500 chart-transition rounded-full" style="width: 0%"></div>
                             </div>
 
                             <div class="grid grid-cols-2 gap-4 border-t border-slate-700/50 pt-4">
                                 <div>
-                                    <p class="text-xs text-slate-400 mb-1">Taux moyen</p>
-                                    <p class="text-2xl font-bold text-indigo-400" id="result-avg-rate">0%</p>
+                                    <p class="text-xs text-slate-300 mb-1">Taux moyen</p>
+                                    <p class="text-2xl font-bold text-brand-400" id="result-avg-rate">0%</p>
                                 </div>
                                 <div>
-                                    <p class="text-xs text-slate-400 mb-1">Taux marginal</p>
+                                    <p class="text-xs text-slate-300 mb-1">Taux marginal</p>
                                     <p class="text-2xl font-bold text-white" id="result-marginal-rate">0%</p>
                                 </div>
                             </div>
@@ -1157,7 +1157,7 @@
                         <!-- Savings Cards -->
                         <div class="space-y-3">
                             <!-- PER Savings -->
-                            <div id="per-savings-card" class="hidden rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-5 shadow-lg animate-in">
+                            <div id="per-savings-card" class="hidden rounded-2xl bg-gradient-to-br from-emerald-700 to-emerald-700 text-white p-5 shadow-lg animate-in">
                                 <div class="flex items-center justify-between">
                                     <div>
                                         <p class="text-sm text-emerald-100 mb-1">Économie grâce au PER</p>
@@ -1173,17 +1173,17 @@
                             </div>
 
                             <!-- Dons Savings -->
-                            <div id="dons-savings-card" class="hidden rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 text-white p-5 shadow-lg animate-in">
+                            <div id="dons-savings-card" class="hidden rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 text-white p-5 shadow-lg animate-in">
                                 <div class="flex items-center justify-between">
                                     <div>
-                                        <p class="text-sm text-violet-100 mb-1">Réduction grâce aux dons</p>
+                                        <p class="text-sm text-brand-50 mb-1">Réduction grâce aux dons</p>
                                         <p class="text-3xl font-bold" id="result-dons-savings">0 EUR</p>
                                     </div>
                                     <div class="h-14 w-14 rounded-full bg-white/20 flex items-center justify-center">
                                         <i data-lucide="heart" class="h-7 w-7"></i>
                                     </div>
                                 </div>
-                                <p class="text-sm text-violet-100 mt-3">
+                                <p class="text-sm text-brand-50 mt-3">
                                     Vos dons de <span id="dons-total-result">0 EUR</span> réduisent directement votre impôt.
                                 </p>
                             </div>
@@ -1214,7 +1214,7 @@
                                 <div class="relative h-28 w-28 flex-shrink-0">
                                     <div id="chart-donut" class="absolute inset-0 rounded-full chart-transition" style="background: conic-gradient(#0ea5e9 0% 10%, #f1f5f9 10% 100%);"></div>
                                     <div class="absolute inset-3 rounded-full bg-white flex items-center justify-center flex-col shadow-inner">
-                                        <span class="text-xs text-slate-400">Net</span>
+                                        <span class="text-xs text-slate-600">Net</span>
                                         <span id="chart-percent" class="text-lg font-bold text-slate-900">90%</span>
                                     </div>
                                 </div>
@@ -1229,15 +1229,15 @@
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <div class="flex items-center gap-2">
-                                            <span class="h-3 w-3 rounded-full bg-indigo-500"></span>
+                                            <span class="h-3 w-3 rounded-full bg-brand-500"></span>
                                             <span class="text-sm text-slate-600">Impôt</span>
                                         </div>
-                                        <span class="text-sm font-medium text-slate-500" id="result-tax-small">- 0 EUR</span>
+                                        <span class="text-sm font-medium text-slate-600" id="result-tax-small">- 0 EUR</span>
                                     </div>
                                     <div class="pt-2 border-t border-slate-100">
                                         <div class="flex justify-between items-baseline">
                                             <span class="text-sm font-medium text-slate-900">Mensuel net</span>
-                                            <span class="text-xl font-bold text-indigo-600" id="result-monthly">0 EUR</span>
+                                            <span class="text-xl font-bold text-brand-700" id="result-monthly">0 EUR</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1263,7 +1263,7 @@
                                     </div>
                                     <div id="detail-per-row" class="hidden flex justify-between py-1.5 border-b border-slate-100">
                                         <span>Déduction PER</span>
-                                        <span class="font-medium text-emerald-600" id="detail-per">- 0 EUR</span>
+                                        <span class="font-medium text-emerald-700" id="detail-per">- 0 EUR</span>
                                     </div>
                                     <div class="flex justify-between py-1.5 border-b border-slate-100">
                                         <span>Revenu imposable</span>
@@ -1271,11 +1271,11 @@
                                     </div>
                                     <div id="detail-dons-row" class="hidden flex justify-between py-1.5 border-b border-slate-100">
                                         <span>Réduction dons</span>
-                                        <span class="font-medium text-violet-600" id="detail-dons">- 0 EUR</span>
+                                        <span class="font-medium text-brand-700" id="detail-dons">- 0 EUR</span>
                                     </div>
                                     <div id="detail-creche-row" class="hidden flex justify-between py-1.5 border-b border-slate-100">
                                         <span>Crédit frais de garde</span>
-                                        <span class="font-medium text-pink-600" id="detail-creche">- 0 EUR</span>
+                                        <span class="font-medium text-pink-700" id="detail-creche">- 0 EUR</span>
                                     </div>
                                     <div class="flex justify-between py-1.5 border-b border-slate-100">
                                         <span>Nombre de parts</span>
@@ -1289,7 +1289,7 @@
                                         <p class="text-xs font-medium text-slate-700 mb-3">Tranches appliquees (par part) :</p>
                                         <table class="w-full text-xs">
                                             <thead>
-                                                <tr class="text-left text-slate-500 border-b border-slate-200">
+                                                <tr class="text-left text-slate-600 border-b border-slate-200">
                                                     <th class="pb-2 font-medium">Tranche</th>
                                                     <th class="pb-2 font-medium text-right">Montant</th>
                                                     <th class="pb-2 font-medium text-right">Taux</th>
@@ -1304,12 +1304,12 @@
                         </div>
 
                         <!-- Tips Card -->
-                        <div class="rounded-xl bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 p-4">
+                        <div class="rounded-xl bg-gradient-to-br from-brand-50 to-white border border-brand-100 p-4">
                             <div class="flex gap-3">
-                                <div class="text-indigo-600 mt-0.5"><i data-lucide="lightbulb" class="h-5 w-5"></i></div>
+                                <div class="text-brand-700 mt-0.5"><i data-lucide="lightbulb" class="h-5 w-5"></i></div>
                                 <div>
-                                    <h4 class="text-sm font-semibold text-indigo-900">Conseil personnalise</h4>
-                                    <p class="text-sm text-indigo-700 mt-1 leading-relaxed" id="dynamic-tip">
+                                    <h4 class="text-sm font-semibold text-brand-900">Conseil personnalise</h4>
+                                    <p class="text-sm text-brand-700 mt-1 leading-relaxed" id="dynamic-tip">
                                         Analysez votre situation pour obtenir un conseil adapte.
                                     </p>
                                 </div>
@@ -1317,7 +1317,7 @@
                         </div>
 
                         <!-- Disclaimer -->
-                        <div class="text-center text-xs text-slate-400 px-4">
+                        <div class="text-center text-xs text-slate-600 px-4">
                             <i data-lucide="info" class="h-3 w-3 inline mr-1"></i>
                             Estimation indicative basee sur le barème officiel. Ne remplace pas l'avis de l'administration fiscale.
                         </div>
@@ -1382,31 +1382,31 @@
                         <h3 class="font-semibold text-slate-800 text-center mb-3">Célibataire sans enfant</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Revenu net imposable</span>
+                                <span class="text-slate-600">Revenu net imposable</span>
                                 <span class="font-medium">35 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Abattement 10%</span>
-                                <span class="font-medium text-red-600">-3 500 EUR</span>
+                                <span class="text-slate-600">Abattement 10%</span>
+                                <span class="font-medium text-red-700">-3 500 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Revenu imposable</span>
+                                <span class="text-slate-600">Revenu imposable</span>
                                 <span class="font-medium">31 500 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Parts fiscales</span>
+                                <span class="text-slate-600">Parts fiscales</span>
                                 <span class="font-medium">1</span>
                             </div>
                             <div class="border-t pt-2 flex justify-between">
                                 <span class="font-semibold">Impôt annuel</span>
-                                <span class="font-bold text-indigo-600">2 736 EUR</span>
+                                <span class="font-bold text-brand-700">2 736 EUR</span>
                             </div>
-                            <div class="flex justify-between text-xs text-slate-400">
+                            <div class="flex justify-between text-xs text-slate-600">
                                 <span>Taux moyen</span>
                                 <span>7,8%</span>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-500 mt-3">Jeune actif célibataire avec un salaire median.</p>
+                        <p class="text-xs text-slate-600 mt-3">Jeune actif célibataire avec un salaire median.</p>
                     </div>
 
                     <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -1416,65 +1416,65 @@
                         <h3 class="font-semibold text-slate-800 text-center mb-3">Couple avec 2 enfants</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Revenus du foyer</span>
+                                <span class="text-slate-600">Revenus du foyer</span>
                                 <span class="font-medium">70 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Abattement 10%</span>
-                                <span class="font-medium text-red-600">-7 000 EUR</span>
+                                <span class="text-slate-600">Abattement 10%</span>
+                                <span class="font-medium text-red-700">-7 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Revenu imposable</span>
+                                <span class="text-slate-600">Revenu imposable</span>
                                 <span class="font-medium">63 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Parts fiscales</span>
+                                <span class="text-slate-600">Parts fiscales</span>
                                 <span class="font-medium">3</span>
                             </div>
                             <div class="border-t pt-2 flex justify-between">
                                 <span class="font-semibold">Impôt annuel</span>
-                                <span class="font-bold text-indigo-600">3 204 EUR</span>
+                                <span class="font-bold text-brand-700">3 204 EUR</span>
                             </div>
-                            <div class="flex justify-between text-xs text-slate-400">
+                            <div class="flex justify-between text-xs text-slate-600">
                                 <span>Taux moyen</span>
                                 <span>4,6%</span>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-500 mt-3">Famille type avec deux revenus moyens.</p>
+                        <p class="text-xs text-slate-600 mt-3">Famille type avec deux revenus moyens.</p>
                     </div>
 
                     <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                         <div class="text-center mb-4">
-                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Exemple 3</span>
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-semibold px-3 py-1 rounded-full">Exemple 3</span>
                         </div>
                         <h3 class="font-semibold text-slate-800 text-center mb-3">Cadre supérieur + PER</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Revenu net imposable</span>
+                                <span class="text-slate-600">Revenu net imposable</span>
                                 <span class="font-medium">90 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Versement PER</span>
-                                <span class="font-medium text-emerald-600">-10 000 EUR</span>
+                                <span class="text-slate-600">Versement PER</span>
+                                <span class="font-medium text-emerald-700">-10 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Revenu imposable</span>
+                                <span class="text-slate-600">Revenu imposable</span>
                                 <span class="font-medium">71 000 EUR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Parts fiscales</span>
+                                <span class="text-slate-600">Parts fiscales</span>
                                 <span class="font-medium">1</span>
                             </div>
                             <div class="border-t pt-2 flex justify-between">
                                 <span class="font-semibold">Impôt annuel</span>
-                                <span class="font-bold text-indigo-600">14 586 EUR</span>
+                                <span class="font-bold text-brand-700">14 586 EUR</span>
                             </div>
-                            <div class="flex justify-between text-xs text-emerald-600">
+                            <div class="flex justify-between text-xs text-emerald-700">
                                 <span>Économie PER</span>
                                 <span>3 000 EUR</span>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-500 mt-3">Cadre optimisant avec le PER (TMI 30%).</p>
+                        <p class="text-xs text-slate-600 mt-3">Cadre optimisant avec le PER (TMI 30%).</p>
                     </div>
                 </div>
             </section>
@@ -1487,7 +1487,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Qu'est-ce que le taux marginal d'imposition (TMI) ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">Le <strong>taux marginal d'imposition</strong> est le taux applique à la dernière tranche de vos revenus. Il déterminé l'économie réalisée pour chaque euro déduit (PER, dons...). Par exemple, avec un TMI de 30%, chaque euro verse sur un PER vous fait économiser 30 centimes d'impôt.</p>
                         </details>
@@ -1495,7 +1495,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Comment fonctionne le prélèvement à la source ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">Depuis janvier 2019, l'impôt est prélève chaque mois sur votre salaire par votre employeur. Le <strong>taux applique est personnalise</strong> selon votre dernière déclaration. En septembre, ce taux est recalcule. Si vous avez trop paye, vous recevez un remboursement. Si vous n'avez pas assez paye, un complément est demande.</p>
                         </details>
@@ -1503,7 +1503,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Quelle différence entre réduction et crédit d'impôt ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">Une <strong>réduction d'impôt</strong> diminue l'impôt du, mais ne peut pas creer de remboursement (si l'impôt est nul, vous ne recuperez rien). Un <strong>crédit d'impôt</strong> est rembourse même si vous n'êtes pas imposable. Les dons donnent une réduction, l'emploi a domicile donne un crédit.</p>
                         </details>
@@ -1511,7 +1511,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Comment le PER réduit-il mon impôt ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">Les versements sur un <strong>Plan d'Épargne Retraite</strong> sont déduits de votre revenu imposable (dans la limite d'un plafond). L'économie d'impôt correspond a votre TMI : avec un TMI de 30%, vous economisez 30% du montant verse. Attention : l'épargne sera imposee à la sortie, mais souvent a un taux plus faible (retraite).</p>
                         </details>
@@ -1519,7 +1519,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">A partir de quel revenu est-on imposable ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">En 2026, un célibataire devient imposable à partir d'environ <strong>17 200 EUR de revenu net imposable</strong> (avant abattement). Après l'abattement de 10%, le revenu imposable de 15 480 EUR dépasse le seuil de 11 497 EUR. Pour un couple, le seuil est d'environ 32 200 EUR.</p>
                         </details>
@@ -1527,7 +1527,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Les heures supplémentaires sont-elles imposables ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">Les heures supplémentaires bénéficient d'une <strong>exonération d'impôt sur le revenu</strong> dans la limite de 7 500 EUR par an. Au-dela de ce plafond, elles sont imposables normalement. Cette exonération est automatique et apparait sur votre déclaration pre-remplie. Elles restent en revanche soumises à la CSG et à la CRDS, et entrent dans le revenu fiscal de référence qui conditionne certaines aides.</p>
                         </details>
@@ -1535,7 +1535,7 @@
                         <details class="group border-b border-slate-100 pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Comment déclarer des revenus fonciers ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">Les revenus fonciers (loyers) s'ajoutent a vos autres revenus et sont imposes au barème progressif. Deux régimes existent : le <strong>micro-foncier</strong> (abattement de 30% si loyers inférieurs a 15 000 EUR/an) ou le <strong>réel</strong> (déduction des charges réelles). Le choix dépend de vos charges déductibles.</p>
                         </details>
@@ -1543,7 +1543,7 @@
                         <details class="group pb-4">
                             <summary class="flex justify-between items-center cursor-pointer list-none">
                                 <span class="font-medium text-slate-800">Quand et comment déclarer ses revenus ?</span>
-                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-slate-600 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <p class="mt-3 text-sm text-slate-600">La déclaration se fait en ligne sur <strong>impôts.gouv.fr</strong> entre avril et juin (date limite variable selon le département). Votre déclaration est pre-remplie avec vos salaires et revenus connus de l'administration. Vous devez vérifier et completer avec vos réductions/crédits d'impôt et revenus non pre-remplis.</p>
                         </details>
@@ -1557,31 +1557,31 @@
                 <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div class="grid md:grid-cols-2 gap-4 text-sm">
                         <a href="https://www.impots.gouv.fr/particulier/questions/comment-est-calcule-limpot-sur-le-revenu" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <i data-lucide="external-link" class="h-5 w-5 text-indigo-600"></i>
+                            <i data-lucide="external-link" class="h-5 w-5 text-brand-700"></i>
                             <div>
                                 <div class="font-medium text-slate-800">impôts.gouv.fr</div>
-                                <div class="text-xs text-slate-500">Calcul de l'impôt sur le revenu</div>
+                                <div class="text-xs text-slate-600">Calcul de l'impôt sur le revenu</div>
                             </div>
                         </a>
                         <a href="https://www.service-public.fr/particuliers/vosdroits/F1419" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <i data-lucide="external-link" class="h-5 w-5 text-indigo-600"></i>
+                            <i data-lucide="external-link" class="h-5 w-5 text-brand-700"></i>
                             <div>
                                 <div class="font-medium text-slate-800">Service-Public.fr</div>
-                                <div class="text-xs text-slate-500">Barème et tranches d'imposition</div>
+                                <div class="text-xs text-slate-600">Barème et tranches d'imposition</div>
                             </div>
                         </a>
                         <a href="https://bofip.impots.gouv.fr/bofip/2494-PGP.html" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <i data-lucide="external-link" class="h-5 w-5 text-indigo-600"></i>
+                            <i data-lucide="external-link" class="h-5 w-5 text-brand-700"></i>
                             <div>
                                 <div class="font-medium text-slate-800">BOFIP</div>
-                                <div class="text-xs text-slate-500">Bulletin Officiel des Finances Publiques</div>
+                                <div class="text-xs text-slate-600">Bulletin Officiel des Finances Publiques</div>
                             </div>
                         </a>
                         <a href="https://www.economie.gouv.fr/particuliers/prelevement-source-impot-revenu" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <i data-lucide="external-link" class="h-5 w-5 text-indigo-600"></i>
+                            <i data-lucide="external-link" class="h-5 w-5 text-brand-700"></i>
                             <div>
                                 <div class="font-medium text-slate-800">économie.gouv.fr</div>
-                                <div class="text-xs text-slate-500">Prélèvement à la source</div>
+                                <div class="text-xs text-slate-600">Prélèvement à la source</div>
                             </div>
                         </a>
                     </div>
@@ -1592,25 +1592,25 @@
             <!-- Comparer avec d'autres pays -->
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8 mt-6">
                 <h3 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                    <iconify-icon icon="lucide:git-compare" width="20" class="text-indigo-500"></iconify-icon>
+                    <iconify-icon icon="lucide:git-compare" width="20" class="text-brand-700"></iconify-icon>
                     Comparez la fiscalité française avec d'autres pays
                 </h3>
                 <p class="text-sm text-slate-600 mb-4">Découvrez comment se compare l'impôt sur le revenu français avec les autres pays européens et internationaux.</p>
                 <div class="grid grid-cols-2 gap-3">
-                    <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Belgique
                     </a>
-                    <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Allemagne
                     </a>
-                    <a href="/fr/espagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/espagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Espagne
                     </a>
-                    <a href="/fr/luxembourg/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/luxembourg/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Luxembourg
                     </a>
                 </div>
@@ -1618,14 +1618,14 @@
     </main>
 
     <!-- Mobile Sticky Button -->
-    <button id="mobile-results-btn" class="lg:hidden mobile-sticky-btn inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all" style="background-color: #4f46e5;">
+    <button id="mobile-results-btn" class="lg:hidden mobile-sticky-btn inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all" style="background-color: #185563;">
         <i data-lucide="calculator" class="h-4 w-4"></i>
         Voir mes résultats
     </button>
             <!-- Example Calculation -->
-            <div class="bg-gradient-to-br from-indigo-50 to-white rounded-2xl border border-indigo-200 shadow-sm p-6 md:p-8 mt-6">
+            <div class="bg-gradient-to-br from-brand-50 to-white rounded-2xl border border-brand-200 shadow-sm p-6 md:p-8 mt-6">
                 <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                    <iconify-icon icon="lucide:calculator" width="20" class="text-indigo-500"></iconify-icon>
+                    <iconify-icon icon="lucide:calculator" width="20" class="text-brand-700"></iconify-icon>
                     Exemple de calcul: €45 000
                 </h2>
 
@@ -1653,9 +1653,9 @@
                     <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
                         <div class="flex justify-between items-center">
                             <span class="font-medium text-emerald-800">Impôt Net</span>
-                            <span class="text-xl font-bold text-emerald-600">6 786€</span>
+                            <span class="text-xl font-bold text-emerald-700">6 786€</span>
                         </div>
-                        <p class="text-xs text-emerald-600 mt-1">Soit 566€/mois | Taux moyen: 15,1%</p>
+                        <p class="text-xs text-emerald-700 mt-1">Soit 566€/mois | Taux moyen: 15,1%</p>
                     </div>
                 </div>
             </div>
@@ -1663,7 +1663,7 @@
             <!-- Tax Brackets Détails -->
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8 mt-6">
                 <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                    <iconify-icon icon="lucide:list" width="20" class="text-amber-500"></iconify-icon>
+                    <iconify-icon icon="lucide:list" width="20" class="text-amber-700"></iconify-icon>
                     Barèmes IR 2026
                 </h2>
 
@@ -1695,30 +1695,30 @@
             <!-- Official Sources -->
             <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 md:p-8 mt-6">
                 <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                    <iconify-icon icon="lucide:link" width="20" class="text-blue-500"></iconify-icon>
+                    <iconify-icon icon="lucide:link" width="20" class="text-blue-700"></iconify-icon>
                     Sources Officielles
                 </h2>
 
                 <div class="space-y-3 text-sm">
                     <a href="https://www.impots.gouv.fr/particulier/questions/quels-sont-les-taux-dimposition-pour-2026" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-                        <iconify-icon icon="lucide:external-link" width="16" class="text-blue-500"></iconify-icon>
+                        <iconify-icon icon="lucide:external-link" width="16" class="text-blue-700"></iconify-icon>
                         <div>
                             <p class="font-medium text-slate-900">Service des Impôts</p>
-                            <p class="text-xs text-slate-500">impôts.gouv.fr - Barèmes officiels 2026</p>
+                            <p class="text-xs text-slate-600">impôts.gouv.fr - Barèmes officiels 2026</p>
                         </div>
                     </a>
                     <a href="https://www.service-public.fr/particuliers/vosdroits/F1419" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-                        <iconify-icon icon="lucide:external-link" width="16" class="text-blue-500"></iconify-icon>
+                        <iconify-icon icon="lucide:external-link" width="16" class="text-blue-700"></iconify-icon>
                         <div>
                             <p class="font-medium text-slate-900">Service Public</p>
-                            <p class="text-xs text-slate-500">service-public.fr - Calcul de l impôt</p>
+                            <p class="text-xs text-slate-600">service-public.fr - Calcul de l impôt</p>
                         </div>
                     </a>
                     <a href="https://bofip.impots.gouv.fr/" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
-                        <iconify-icon icon="lucide:external-link" width="16" class="text-blue-500"></iconify-icon>
+                        <iconify-icon icon="lucide:external-link" width="16" class="text-blue-700"></iconify-icon>
                         <div>
                             <p class="font-medium text-slate-900">BOFiP</p>
-                            <p class="text-xs text-slate-500">bofip.impôts.gouv.fr - Documentation fiscale</p>
+                            <p class="text-xs text-slate-600">bofip.impôts.gouv.fr - Documentation fiscale</p>
                         </div>
                     </a>
                 </div>
@@ -1733,11 +1733,11 @@
                         <img src="/favicon.svg" alt="NetSalaire" class="w-6 h-6">
                         <span class="font-semibold text-slate-900">NetSalaire</span>
                     </div>
-                    <p class="text-sm text-slate-500">Simulateurs fiscaux gratuits. Barèmes 2026.</p>
+                    <p class="text-sm text-slate-600">Simulateurs fiscaux gratuits. Barèmes 2026.</p>
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">France</p>
-                    <ul class="space-y-2 text-sm text-slate-500">
+                    <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="/fr/france/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors">Brut vers Net</a></li>
                         <li><a href="/fr/france/simulateur-impot-revenu/" class="hover:text-slate-900 transition-colors">Simulateur Impôt</a></li>
                         <li><a href="/fr/france/simulateur-chomage-are/" class="hover:text-slate-900 transition-colors">Chômage ARE</a></li>
@@ -1748,7 +1748,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">Maroc</p>
-                    <ul class="space-y-2 text-sm text-slate-500">
+                    <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="/fr/maroc/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors">Brut vers Net</a></li>
                         <li><a href="/fr/maroc/simulateur-impot-revenu/" class="hover:text-slate-900 transition-colors">Simulateur Impôt</a></li>
                         <li><a href="/fr/maroc/guide/" class="hover:text-slate-900 transition-colors">Guide Fiscal</a></li>
@@ -1756,7 +1756,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">Informations</p>
-                    <ul class="space-y-2 text-sm text-slate-500">
+                    <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="/fr/comparateur-salaire-france-maroc/" class="hover:text-slate-900 transition-colors">Comparer FR vs MA</a></li>
                         <li><a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a></li>
                         <li><a href="/fr/mentions-legales/" class="hover:text-slate-900 transition-colors">Mentions Légales</a></li>
@@ -1767,7 +1767,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 mt-2 border-t border-slate-200">
                 <div>
                     <p class="font-semibold text-slate-900 mb-2 text-sm">Europe</p>
-                    <ul class="space-y-1 text-sm text-slate-500">
+                    <ul class="space-y-1 text-sm text-slate-600">
                         <li><a href="/fr/allemagne/simulateur-impot/" class="hover:text-slate-900 transition-colors">Allemagne</a></li>
                         <li><a href="/fr/belgique/simulateur-impot/" class="hover:text-slate-900 transition-colors">Belgique</a></li>
                         <li><a href="/fr/danemark/simulateur-impot/" class="hover:text-slate-900 transition-colors">Danemark</a></li>
@@ -1778,7 +1778,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-2 text-sm">Europe (suite)</p>
-                    <ul class="space-y-1 text-sm text-slate-500">
+                    <ul class="space-y-1 text-sm text-slate-600">
                         <li><a href="/fr/italie/simulateur-impot/" class="hover:text-slate-900 transition-colors">Italie</a></li>
                         <li><a href="/fr/luxembourg/simulateur-impot/" class="hover:text-slate-900 transition-colors">Luxembourg</a></li>
                         <li><a href="/fr/pays-bas/simulateur-impot/" class="hover:text-slate-900 transition-colors">Pays-Bas</a></li>
@@ -1788,7 +1788,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-2 text-sm">Amériques & Asie</p>
-                    <ul class="space-y-1 text-sm text-slate-500">
+                    <ul class="space-y-1 text-sm text-slate-600">
                         <li><a href="/fr/usa/simulateur-impot/" class="hover:text-slate-900 transition-colors">USA</a></li>
                         <li><a href="/fr/mexique/simulateur-impot/" class="hover:text-slate-900 transition-colors">Mexique</a></li>
                         <li><a href="/fr/chine/simulateur-impot/" class="hover:text-slate-900 transition-colors">Chine</a></li>
@@ -1798,11 +1798,11 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-500">&copy; 2026 NetSalaire.com, Cree par Radif Partners</p>
+                <p class="text-sm text-slate-600">&copy; 2026 NetSalaire.com, Cree par Radif Partners</p>
             </div>
         </div>
     
-      <div data-trust-kit class="trust-bottom" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.8125rem;opacity:.8"><p>Estimation indicative : ce site ne remplace ni une décision de l’administration ni l’avis d’un professionnel.</p><p>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time> · <a href="/fr/methodologie/">Méthode de calcul</a> · Publié par <a rel="author" href="/fr/a-propos/">Radif Partners</a></p></div>
+      <div data-trust-kit class="trust-bottom" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.8125rem;opacity:.8"><p>Estimation indicative : ce site ne remplace ni une décision de l’administration ni l’avis d’un professionnel.</p><p>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time> · <a href="/fr/methodologie/">Méthode de calcul</a> · Publié par <a rel="author" href="/fr/a-propos/">Radif Partners</a></p></div>
     </footer>
 
     <!-- Calculator Script -->
@@ -2156,14 +2156,14 @@
 
             $('#detail-tranches').innerHTML = data.tranchesApplied.map((t, i) => {
                 const isActive = t.amount > 0;
-                const rowClass = isActive ? 'text-slate-900 font-medium' : 'text-slate-400';
-                const bgClass = isActive ? 'bg-indigo-50/50' : '';
+                const rowClass = isActive ? 'text-slate-900 font-medium' : 'text-slate-600';
+                const bgClass = isActive ? 'bg-brand-50/50' : '';
                 let trancheLabel;
                 if (i === 0) trancheLabel = `Jusqu'a ${formatMoney(t.to)}`;
                 else if (t.to === Infinity) trancheLabel = `Au-dela de ${formatMoney(t.from)}`;
                 else trancheLabel = `${formatMoney(t.from + 1)} - ${formatMoney(t.to)}`;
-                return `<tr class="${bgClass}"><td class="py-1.5 pr-2 ${rowClass}">${trancheLabel}</td><td class="py-1.5 text-right ${rowClass}">${formatMoney(t.amount)}</td><td class="py-1.5 text-right ${rowClass}">${(t.rate * 100).toFixed(0)}%</td><td class="py-1.5 text-right ${isActive ? 'text-indigo-600 font-semibold' : 'text-slate-400'}">${formatMoney(t.tax)}</td></tr>`;
-            }).join('') + `<tr class="border-t border-slate-200 font-semibold text-slate-900"><td class="pt-2">Total x ${data.parts} parts</td><td></td><td></td><td class="pt-2 text-right text-indigo-600">${formatMoney(data.taxBeforeDons)}</td></tr>`;
+                return `<tr class="${bgClass}"><td class="py-1.5 pr-2 ${rowClass}">${trancheLabel}</td><td class="py-1.5 text-right ${rowClass}">${formatMoney(t.amount)}</td><td class="py-1.5 text-right ${rowClass}">${(t.rate * 100).toFixed(0)}%</td><td class="py-1.5 text-right ${isActive ? 'text-brand-600 font-semibold' : 'text-slate-600'}">${formatMoney(t.tax)}</td></tr>`;
+            }).join('') + `<tr class="border-t border-slate-200 font-semibold text-slate-900"><td class="pt-2">Total x ${data.parts} parts</td><td></td><td></td><td class="pt-2 text-right text-brand-700">${formatMoney(data.taxBeforeDons)}</td></tr>`;
 
             updateTip(data);
         }
@@ -2254,14 +2254,14 @@
                 btn.style.backgroundColor = 'white';
                 const icon = btn.querySelector('i');
                 const span = btn.querySelector('span');
-                if (icon) icon.style.color = '#94a3b8';
+                if (icon) icon.style.color = '#475569';
                 if (span) span.style.color = '#334155';
             });
             // Highlight active button with solid indigo background
             const activeBtn = document.getElementById('btn-' + value);
             if (activeBtn) {
-                activeBtn.style.borderColor = '#4f46e5';
-                activeBtn.style.backgroundColor = '#4f46e5';
+                activeBtn.style.borderColor = '#185563';
+                activeBtn.style.backgroundColor = '#185563';
                 const icon = activeBtn.querySelector('i');
                 const span = activeBtn.querySelector('span');
                 if (icon) icon.style.color = 'white';

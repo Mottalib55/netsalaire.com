@@ -131,11 +131,11 @@
         }
         .input-salary:focus {
             outline: none;
-            border-color: #10b981;
+            border-color: #047857;
             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
         .input-salary-net:focus {
-            border-color: #10b981;
+            border-color: #047857;
             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
         .salary-label {
@@ -216,7 +216,7 @@
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="/fr/" class="flex items-center gap-2 group">
                 <img src="/favicon.svg" alt="NetSalaire" class="w-8 h-8">
@@ -228,21 +228,21 @@
                 <div class="relative group">
                     <a href="/fr/france/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors flex items-center gap-1.5 py-2">
                         <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> France
-                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
+                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-600 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
                     </a>
                     <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-white border border-slate-200 rounded-lg shadow-lg py-2 min-w-[240px]">
-                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Outils principaux</div>
+                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-600 uppercase tracking-wider">Outils principaux</div>
                             <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:landmark" width="18" class="text-indigo-500"></iconify-icon>
+                                <iconify-icon icon="lucide:landmark" width="18" class="text-brand-700"></iconify-icon>
                                 Simulateur Impôt
                             </a>
                             <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:calculator" width="18" class="text-indigo-500"></iconify-icon>
+                                <iconify-icon icon="lucide:calculator" width="18" class="text-brand-700"></iconify-icon>
                                 Brut vers Net
                             </a>
                             <div class="border-t border-slate-100 my-2"></div>
-                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Autres simulateurs</div>
+                            <div class="px-4 py-1 text-[10px] font-semibold text-slate-600 uppercase tracking-wider">Autres simulateurs</div>
                             <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-3 px-4 py-2 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors text-sm">
                                 <span class="w-[18px] text-center">📉</span>
                                 Chômage ARE
@@ -260,7 +260,7 @@
                                 Frais Km
                             </a>
                             <div class="border-t border-slate-100 my-2"></div>
-                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700 transition-colors text-sm font-medium">
+                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-brand-700 hover:bg-brand-50 hover:text-brand-700 transition-colors text-sm font-medium">
                                 <span class="w-[18px] text-center">🔀</span>
                                 Comparer France vs Maroc
                             </a>
@@ -271,24 +271,24 @@
                 <div class="relative group">
                     <a href="/fr/maroc/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors flex items-center gap-1.5 py-2">
                         <iconify-icon icon="circle-flags:ma" width="16"></iconify-icon> Maroc
-                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
+                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-600 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
                     </a>
                     <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-white border border-slate-200 rounded-lg shadow-lg py-2 min-w-[240px]">
                             <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:landmark" width="18" class="text-emerald-500"></iconify-icon>
+                                <iconify-icon icon="lucide:landmark" width="18" class="text-emerald-700"></iconify-icon>
                                 Simulateur Impôt
                             </a>
                             <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:calculator" width="18" class="text-emerald-500"></iconify-icon>
+                                <iconify-icon icon="lucide:calculator" width="18" class="text-emerald-700"></iconify-icon>
                                 Brut vers Net
                             </a>
                             <a href="/fr/maroc/guide/" class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
-                                <iconify-icon icon="lucide:book-open" width="18" class="text-emerald-500"></iconify-icon>
+                                <iconify-icon icon="lucide:book-open" width="18" class="text-emerald-700"></iconify-icon>
                                 Guide Fiscal
                             </a>
                             <div class="border-t border-slate-100 my-2"></div>
-                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700 transition-colors text-sm font-medium">
+                            <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-3 px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors text-sm font-medium">
                                 <span class="w-[18px] text-center">🔀</span>
                                 Comparer France vs Maroc
                             </a>
@@ -299,11 +299,11 @@
                 <div class="relative group">
                     <button class="hover:text-slate-900 transition-colors flex items-center gap-1.5 py-2 text-sm font-medium text-slate-600">
                         <iconify-icon icon="lucide:globe" width="16"></iconify-icon> International
-                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-400 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
+                        <iconify-icon icon="lucide:chevron-down" width="14" class="text-slate-600 group-hover:text-slate-600 transition-transform group-hover:rotate-180"></iconify-icon>
                     </button>
                     <div class="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-white border border-slate-200 rounded-xl shadow-xl mega-country-container" style="width: 420px; max-height: 75vh; overflow-y: auto;">
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Europe</div>
+                            <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mega-country-title">Europe</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:de" width="16"></iconify-icon> Allemagne</a>
                                 <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:be" width="16"></iconify-icon> Belgique</a>
@@ -317,12 +317,12 @@
                                 <a href="/fr/portugal/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:pt" width="16"></iconify-icon> Portugal</a>
                                 <a href="/fr/tchequie/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cz" width="16"></iconify-icon> Tchéquie</a>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Amériques</div>
+                            <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mega-country-title">Amériques</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/usa/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:us" width="16"></iconify-icon> USA</a>
                                 <a href="/fr/mexique/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:mx" width="16"></iconify-icon> Mexique</a>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mega-country-title">Asie</div>
+                            <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider mega-country-title">Asie</div>
                             <div class="grid grid-cols-2 mega-country-grid" style="column-gap: 2rem; row-gap: 0.25rem;">
                                 <a href="/fr/chine/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:cn" width="16"></iconify-icon> Chine</a>
                                 <a href="/fr/coree-du-sud/simulateur-impot/" class="flex items-center gap-2 px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-md transition-colors"><iconify-icon icon="circle-flags:kr" width="16"></iconify-icon> Corée du Sud</a>
@@ -355,30 +355,30 @@
                     <span class="flex items-center gap-2">
                         <iconify-icon icon="circle-flags:fr" width="18"></iconify-icon> France
                     </span>
-                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-400 transition-transform duration-200"></iconify-icon>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
                 </button>
                 <div class="hidden pl-4 pb-3 space-y-1">
-                    <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
-                        <iconify-icon icon="lucide:landmark" width="16" class="text-indigo-500"></iconify-icon> Simulateur Impôt
+                    <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <iconify-icon icon="lucide:landmark" width="16" class="text-brand-700"></iconify-icon> Simulateur Impôt
                     </a>
-                    <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon> Brut vers Net
+                    <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon> Brut vers Net
                     </a>
                     <div class="border-t border-slate-100 my-1"></div>
-                    <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">📉</span> Chômage ARE
                     </a>
-                    <a href="/fr/france/simulateur-apl/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/simulateur-apl/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">🏠</span> APL
                     </a>
-                    <a href="/fr/france/creche-tarifs/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/creche-tarifs/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">👶</span> Crèche
                     </a>
-                    <a href="/fr/france/simulateur-indemnite-kilometrique/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-indigo-600 py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/france/simulateur-indemnite-kilometrique/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">🚗</span> Frais Km
                     </a>
                     <div class="border-t border-slate-100 my-1"></div>
-                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-indigo-600 font-medium py-1.5 px-2 rounded-lg hover:bg-indigo-50 transition-colors">
+                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-brand-700 font-medium py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
                         <span class="w-4 text-center text-xs">🔀</span> Comparer France vs Maroc
                     </a>
                 </div>
@@ -389,20 +389,20 @@
                     <span class="flex items-center gap-2">
                         <iconify-icon icon="circle-flags:ma" width="18"></iconify-icon> Maroc
                     </span>
-                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-400 transition-transform duration-200"></iconify-icon>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
                 </button>
                 <div class="hidden pl-4 pb-3 space-y-1">
-                    <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-600 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                        <iconify-icon icon="lucide:landmark" width="16" class="text-emerald-500"></iconify-icon> Simulateur Impôt
+                    <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:landmark" width="16" class="text-emerald-700"></iconify-icon> Simulateur Impôt
                     </a>
-                    <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-600 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-emerald-500"></iconify-icon> Brut vers Net
+                    <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-emerald-700"></iconify-icon> Brut vers Net
                     </a>
-                    <a href="/fr/maroc/guide/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-600 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                        <iconify-icon icon="lucide:book-open" width="16" class="text-emerald-500"></iconify-icon> Guide Fiscal
+                    <a href="/fr/maroc/guide/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:book-open" width="16" class="text-emerald-700"></iconify-icon> Guide Fiscal
                     </a>
                     <div class="border-t border-slate-100 my-1"></div>
-                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-emerald-600 font-medium py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-emerald-700 font-medium py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
                         <span class="w-4 text-center text-xs">🔀</span> Comparer France vs Maroc
                     </a>
                 </div>
@@ -413,17 +413,17 @@
                     <span class="flex items-center gap-2">
                         <iconify-icon icon="lucide:globe" width="18"></iconify-icon> International
                     </span>
-                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-400 transition-transform duration-200"></iconify-icon>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
                 </button>
                 <div class="hidden pb-3">
                     <div class="sticky top-0 bg-white pb-2 pt-1 z-10">
                         <div class="relative">
-                            <iconify-icon icon="lucide:search" width="16" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></iconify-icon>
-                            <input id="mobile-country-search" type="text" placeholder="Rechercher un pays..." class="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 outline-none transition-all" autocomplete="off">
+                            <iconify-icon icon="lucide:search" width="16" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600"></iconify-icon>
+                            <input id="mobile-country-search" type="text" placeholder="Rechercher un pays..." class="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:border-brand-300 focus:ring-2 focus:ring-brand-100 outline-none transition-all" autocomplete="off">
                         </div>
                     </div>
                     <div id="mobile-country-list" class="space-y-3 px-1"></div>
-                    <div id="mobile-no-results" class="hidden text-center py-6 text-sm text-slate-400">Aucun pays trouve</div>
+                    <div id="mobile-no-results" class="hidden text-center py-6 text-sm text-slate-600">Aucun pays trouve</div>
                 </div>
             </div>
             <!-- FAQ & Contact -->
@@ -450,12 +450,12 @@
                     <iconify-icon icon="circle-flags:ma" width="18" style="vertical-align:middle"></iconify-icon> Maroc · Barèmes 2026
                 </span>
                 <h1 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Simulateur Salaire Brut ↔ Net Maroc</h1>
-                <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-500 mt-3">
+                <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-600 mt-3">
                     <span>Par <span class="font-medium text-slate-700">NetSalaire</span></span>
                     <span class="text-slate-300">&middot;</span>
-                    <time datetime="2026-09-01">Mis à jour le 24 septembre 2026</time>
+                    <time datetime="2026-09-24">Mis à jour le 24 septembre 2026</time>
                 </div>
-                <p class="text-slate-500 text-sm">Conversion bidirectionnelle instantanée avec CNSS, AMO et IR</p>
+                <p class="text-slate-600 text-sm">Conversion bidirectionnelle instantanée avec CNSS, AMO et IR</p>
             </header>
 
             <!-- Main Calculator Section -->
@@ -468,24 +468,24 @@
                         <!-- Salaire Brut Row -->
                         <div>
                             <div class="flex items-center gap-2 mb-3">
-                                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-700"></div>
                                 <span class="font-semibold text-slate-800">Salaire Brut</span>
                             </div>
                             <div class="grid grid-cols-3 gap-3">
                                 <div>
                                     <label class="salary-label">Annuel (Dh)</label>
                                     <input type="text" inputmode="numeric" id="brut-annuel" class="input-salary" placeholder="180 000" value="180 000">
-                                    <div class="text-xs text-slate-400 text-right mt-1" id="brut-annuel-eur">≈ 16 667 €</div>
+                                    <div class="text-xs text-slate-600 text-right mt-1" id="brut-annuel-eur">≈ 16 667 €</div>
                                 </div>
                                 <div>
                                     <label class="salary-label">Mensuel (Dh)</label>
                                     <input type="text" inputmode="numeric" id="brut-mensuel" class="input-salary" placeholder="15 000" value="15 000">
-                                    <div class="text-xs text-slate-400 text-right mt-1" id="brut-mensuel-eur">≈ 1 389 €</div>
+                                    <div class="text-xs text-slate-600 text-right mt-1" id="brut-mensuel-eur">≈ 1 389 €</div>
                                 </div>
                                 <div>
                                     <label class="salary-label">Horaire (Dh)</label>
                                     <input type="text" inputmode="numeric" id="brut-horaire" class="input-salary" placeholder="86,54" value="86,54">
-                                    <div class="text-xs text-slate-400 text-right mt-1" id="brut-horaire-eur">≈ 8,01 €</div>
+                                    <div class="text-xs text-slate-600 text-right mt-1" id="brut-horaire-eur">≈ 8,01 €</div>
                                 </div>
                             </div>
                             <!-- Slider -->
@@ -493,7 +493,7 @@
                                 <input type="range" id="brut-slider" min="36000" max="600000" step="6000" value="180000"
                                        class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600 touch-pan-x"
                                        style="-webkit-appearance: none; padding: 8px 0;">
-                                <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <div class="flex justify-between text-xs text-slate-600 mt-1">
                                     <span>3 000 Dh/mois</span>
                                     <span>50 000 Dh/mois</span>
                                 </div>
@@ -505,23 +505,23 @@
                             <div class="flex items-center gap-2 mb-3">
                                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
                                 <span class="font-semibold text-slate-800">Salaire Net</span>
-                                <span class="text-xs text-slate-400">(après IR)</span>
+                                <span class="text-xs text-slate-600">(après IR)</span>
                             </div>
                             <div class="grid grid-cols-3 gap-3">
                                 <div>
                                     <label class="salary-label">Annuel (Dh)</label>
                                     <input type="text" inputmode="numeric" id="net-annuel" class="input-salary input-salary-net" placeholder="145 000">
-                                    <div class="text-xs text-slate-400 text-right mt-1" id="net-annuel-eur">≈ 13 426 €</div>
+                                    <div class="text-xs text-slate-600 text-right mt-1" id="net-annuel-eur">≈ 13 426 €</div>
                                 </div>
                                 <div>
                                     <label class="salary-label">Mensuel (Dh)</label>
                                     <input type="text" inputmode="numeric" id="net-mensuel" class="input-salary input-salary-net" placeholder="12 083">
-                                    <div class="text-xs text-slate-400 text-right mt-1" id="net-mensuel-eur">≈ 1 119 €</div>
+                                    <div class="text-xs text-slate-600 text-right mt-1" id="net-mensuel-eur">≈ 1 119 €</div>
                                 </div>
                                 <div>
                                     <label class="salary-label">Horaire (Dh)</label>
                                     <input type="text" inputmode="numeric" id="net-horaire" class="input-salary input-salary-net" placeholder="69,71">
-                                    <div class="text-xs text-slate-400 text-right mt-1" id="net-horaire-eur">≈ 6,45 €</div>
+                                    <div class="text-xs text-slate-600 text-right mt-1" id="net-horaire-eur">≈ 6,45 €</div>
                                 </div>
                             </div>
                         </div>
@@ -531,9 +531,9 @@
                             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
                                 <!-- Situation familiale -->
                                 <div class="flex-1">
-                                    <label class="block text-xs font-medium text-slate-500 mb-2">Situation familiale</label>
+                                    <label class="block text-xs font-medium text-slate-600 mb-2">Situation familiale</label>
                                     <div class="flex bg-white rounded-lg p-1 border border-slate-200">
-                                        <button type="button" id="btn-celibataire" onclick="setSituation('celibataire')" class="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-emerald-500 text-white shadow-sm">
+                                        <button type="button" id="btn-celibataire" onclick="setSituation('celibataire')" class="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-emerald-700 text-white shadow-sm">
                                             <iconify-icon icon="lucide:user" width="16"></iconify-icon>
                                             <span>Célibataire</span>
                                         </button>
@@ -546,16 +546,16 @@
                                 </div>
                                 <!-- Enfants à charge -->
                                 <div class="flex-1">
-                                    <label class="block text-xs font-medium text-slate-500 mb-2">Enfants à charge</label>
+                                    <label class="block text-xs font-medium text-slate-600 mb-2">Enfants à charge</label>
                                     <div class="flex items-center justify-between bg-white rounded-lg px-3 py-1.5 border border-slate-200">
-                                        <button type="button" onclick="changeEnfants(-1)" class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 transition-colors">
+                                        <button type="button" onclick="changeEnfants(-1)" class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors">
                                             <iconify-icon icon="lucide:minus" width="20"></iconify-icon>
                                         </button>
                                         <div class="flex items-center gap-2">
-                                            <iconify-icon icon="lucide:baby" width="18" class="text-emerald-500"></iconify-icon>
+                                            <iconify-icon icon="lucide:baby" width="18" class="text-emerald-700"></iconify-icon>
                                             <span id="enfants-display" class="text-lg font-semibold text-slate-800 min-w-[24px] text-center">0</span>
                                         </div>
-                                        <button type="button" onclick="changeEnfants(1)" class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 transition-colors">
+                                        <button type="button" onclick="changeEnfants(1)" class="w-9 h-9 flex items-center justify-center rounded-lg text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors">
                                             <iconify-icon icon="lucide:plus" width="20"></iconify-icon>
                                         </button>
                                     </div>
@@ -572,12 +572,12 @@
                             <canvas id="chart" width="280" height="280"></canvas>
                             <div class="text-center mt-4">
                                 <div class="text-2xl font-bold text-slate-900" id="taux-net">83%</div>
-                                <div class="text-xs text-slate-500">du brut conservé</div>
+                                <div class="text-xs text-slate-600">du brut conservé</div>
                             </div>
                             <!-- Legend -->
                             <div class="flex flex-wrap justify-center gap-3 mt-4 text-xs">
                                 <div class="flex items-center gap-1.5">
-                                    <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-emerald-700"></div>
                                     <span class="text-slate-600">Net (<span id="legend-net">83%</span>)</span>
                                 </div>
                                 <div class="flex items-center gap-1.5">
@@ -597,7 +597,7 @@
 
             <!-- Détails Breakdown -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 md:p-6 mb-8">
-                <h2 class="font-semibold text-slate-800 mb-4">Détail des cotisations et impôts <span class="text-sm font-normal text-slate-400">(mensuel)</span></h2>
+                <h2 class="font-semibold text-slate-800 mb-4">Détail des cotisations et impôts <span class="text-sm font-normal text-slate-600">(mensuel)</span></h2>
                 <div class="space-y-3">
                     <div class="flex items-center justify-between">
                         <span class="text-sm text-slate-600">CNSS (4,48% plafonné)</span>
@@ -612,7 +612,7 @@
                         <span class="text-sm text-slate-600">AMO (2,26%)</span>
                         <div class="flex items-center gap-3">
                             <div class="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
-                                <div class="h-full bg-purple-400 rounded-full" id="bar-amo" style="width: 35%"></div>
+                                <div class="h-full bg-brand-400 rounded-full" id="bar-amo" style="width: 35%"></div>
                             </div>
                             <span class="text-sm font-medium text-slate-700 w-24 text-right" id="detail-amo">-339 Dh</span>
                         </div>
@@ -623,7 +623,7 @@
                             <div class="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
                                 <div class="h-full bg-emerald-400 rounded-full" id="bar-fp" style="width: 100%"></div>
                             </div>
-                            <span class="text-sm font-medium text-emerald-600 w-24 text-right" id="detail-fp">-2 500 Dh</span>
+                            <span class="text-sm font-medium text-emerald-700 w-24 text-right" id="detail-fp">-2 500 Dh</span>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
@@ -636,17 +636,17 @@
                         </div>
                     </div>
                     <div id="row-abattement" class="flex items-center justify-between" style="display: none;">
-                        <span class="text-sm text-emerald-600">Abattement familial</span>
+                        <span class="text-sm text-emerald-700">Abattement familial</span>
                         <div class="flex items-center gap-3">
                             <div class="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
                                 <div class="h-full bg-emerald-400 rounded-full" id="bar-abat" style="width: 20%"></div>
                             </div>
-                            <span class="text-sm font-medium text-emerald-600 w-24 text-right" id="detail-abattement">+42 Dh</span>
+                            <span class="text-sm font-medium text-emerald-700 w-24 text-right" id="detail-abattement">+42 Dh</span>
                         </div>
                     </div>
                     <div class="border-t pt-3 mt-3 flex items-center justify-between">
                         <span class="font-semibold text-slate-800">Total prélèvements</span>
-                        <span class="font-bold text-red-600" id="detail-total">-2 608 Dh</span>
+                        <span class="font-bold text-red-700" id="detail-total">-2 608 Dh</span>
                     </div>
                 </div>
             </div>
@@ -695,20 +695,20 @@
                         </div>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Brut mensuel</span>
+                                <span class="text-slate-600">Brut mensuel</span>
                                 <span class="font-medium">3 500 Dh</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Cotisations</span>
-                                <span class="font-medium text-red-600">-236 Dh</span>
+                                <span class="text-slate-600">Cotisations</span>
+                                <span class="font-medium text-red-700">-236 Dh</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">IR</span>
-                                <span class="font-medium text-red-600">0 Dh</span>
+                                <span class="text-slate-600">IR</span>
+                                <span class="font-medium text-red-700">0 Dh</span>
                             </div>
                             <div class="border-t pt-2 flex justify-between">
                                 <span class="font-semibold">Net mensuel</span>
-                                <span class="font-bold text-emerald-600">3 264 Dh</span>
+                                <span class="font-bold text-emerald-700">3 264 Dh</span>
                             </div>
                         </div>
                     </div>
@@ -719,44 +719,44 @@
                         </div>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Brut mensuel</span>
+                                <span class="text-slate-600">Brut mensuel</span>
                                 <span class="font-medium">15 000 Dh</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Cotisations</span>
-                                <span class="font-medium text-red-600">-608 Dh</span>
+                                <span class="text-slate-600">Cotisations</span>
+                                <span class="font-medium text-red-700">-608 Dh</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">IR</span>
-                                <span class="font-medium text-red-600">-1 942 Dh</span>
+                                <span class="text-slate-600">IR</span>
+                                <span class="font-medium text-red-700">-1 942 Dh</span>
                             </div>
                             <div class="border-t pt-2 flex justify-between">
                                 <span class="font-semibold">Net mensuel</span>
-                                <span class="font-bold text-emerald-600">12 450 Dh</span>
+                                <span class="font-bold text-emerald-700">12 450 Dh</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4">
                         <div class="text-center mb-3">
-                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded-full">Cadre supérieur</span>
+                            <span class="inline-block bg-brand-100 text-brand-800 text-xs font-semibold px-2 py-0.5 rounded-full">Cadre supérieur</span>
                         </div>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Brut mensuel</span>
+                                <span class="text-slate-600">Brut mensuel</span>
                                 <span class="font-medium">40 000 Dh</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">Cotisations</span>
-                                <span class="font-medium text-red-600">-1 173 Dh</span>
+                                <span class="text-slate-600">Cotisations</span>
+                                <span class="font-medium text-red-700">-1 173 Dh</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-500">IR</span>
-                                <span class="font-medium text-red-600">-9 233 Dh</span>
+                                <span class="text-slate-600">IR</span>
+                                <span class="font-medium text-red-700">-9 233 Dh</span>
                             </div>
                             <div class="border-t pt-2 flex justify-between">
                                 <span class="font-semibold">Net mensuel</span>
-                                <span class="font-bold text-emerald-600">29 594 Dh</span>
+                                <span class="font-bold text-emerald-700">29 594 Dh</span>
                             </div>
                         </div>
                     </div>
@@ -778,7 +778,7 @@
                         <tbody class="divide-y divide-slate-100">
                             <tr>
                                 <td class="px-4 py-3">0 - 40 000 MAD</td>
-                                <td class="px-4 py-3 text-center font-medium text-emerald-600">0%</td>
+                                <td class="px-4 py-3 text-center font-medium text-emerald-700">0%</td>
                                 <td class="px-4 py-3 text-right">0 MAD</td>
                             </tr>
                             <tr>
@@ -803,7 +803,7 @@
                             </tr>
                             <tr>
                                 <td class="px-4 py-3">Plus de 180 000 MAD</td>
-                                <td class="px-4 py-3 text-center font-medium text-red-600">37%</td>
+                                <td class="px-4 py-3 text-center font-medium text-red-700">37%</td>
                                 <td class="px-4 py-3 text-right">27 400 MAD</td>
                             </tr>
                         </tbody>
@@ -817,17 +817,17 @@
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
                     <div class="grid md:grid-cols-2 gap-3 text-sm">
                         <a href="https://www.tax.gov.ma" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span class="iconify text-emerald-600" data-icon="lucide:external-link" width="16"></span>
+                            <span class="iconify text-emerald-700" data-icon="lucide:external-link" width="16"></span>
                             <div>
                                 <div class="font-medium text-slate-800">Direction Générale des Impôts</div>
-                                <div class="text-xs text-slate-500">tax.gov.ma</div>
+                                <div class="text-xs text-slate-600">tax.gov.ma</div>
                             </div>
                         </a>
                         <a href="https://www.cnss.ma" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span class="iconify text-emerald-600" data-icon="lucide:external-link" width="16"></span>
+                            <span class="iconify text-emerald-700" data-icon="lucide:external-link" width="16"></span>
                             <div>
                                 <div class="font-medium text-slate-800">CNSS</div>
-                                <div class="text-xs text-slate-500">cnss.ma</div>
+                                <div class="text-xs text-slate-600">cnss.ma</div>
                             </div>
                         </a>
                     </div>
@@ -886,25 +886,25 @@
             <!-- Comparer avec d'autres pays -->
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8 mt-6">
                 <h3 class="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                    <iconify-icon icon="lucide:git-compare" width="20" class="text-emerald-500"></iconify-icon>
+                    <iconify-icon icon="lucide:git-compare" width="20" class="text-emerald-700"></iconify-icon>
                     Comparez la fiscalité marocaine avec d'autres pays
                 </h3>
                 <p class="text-sm text-slate-600 mb-4">Comparez les cotisations marocaines (CNSS, AMO) avec les prélèvements dans d'autres pays.</p>
                 <div class="grid grid-cols-2 gap-3">
-                    <a href="/fr/espagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/espagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Espagne
                     </a>
-                    <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/belgique/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Belgique
                     </a>
-                    <a href="/fr/usa/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/usa/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur USA
                     </a>
-                    <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-indigo-300 hover:bg-indigo-50 transition-colors text-sm font-medium text-slate-700 hover:text-indigo-700">
-                        <iconify-icon icon="lucide:calculator" width="16" class="text-indigo-500"></iconify-icon>
+                    <a href="/fr/allemagne/simulateur-impot/" class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-colors text-sm font-medium text-slate-700 hover:text-brand-700">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon>
                         Simulateur Allemagne
                     </a>
                 </div>
@@ -915,38 +915,38 @@
                 <div class="space-y-6">
                 <details class="group border-b border-slate-200 pb-4">
                     <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <h3 class="font-semibold text-slate-800">Quelle part du brut un salarié marocain conserve-t-il ?</h3>
-                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        <h3 class="font-semibold text-slate-800">Quelle part du brut un salarié marocain conserve-t-il ?</h3>
+                        <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-slate-600 mt-3">Entre 75 et 85&nbsp;% selon le niveau de rémunération. Les prélèvements obligatoires représentent en pratique 15 à 25&nbsp;% du brut dans le secteur privé, la part sociale restant modeste et l'essentiel de l'écart venant de l'impôt sur le revenu, dont le taux marginal atteint 37&nbsp;% au-delà de 180&nbsp;000&nbsp;MAD par an.</p>
                 </details>
                 <details class="group border-b border-slate-200 pb-4">
                     <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <h3 class="font-semibold text-slate-800">Un salarié au SMIG paie-t-il de l&#x27;impôt ?</h3>
-                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        <h3 class="font-semibold text-slate-800">Un salarié au SMIG paie-t-il de l&#x27;impôt ?</h3>
+                        <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="text-slate-600 mt-3">Non. Avec un brut mensuel d'environ 3&nbsp;500&nbsp;MAD, les cotisations retirent près de 236&nbsp;MAD et le revenu net imposable reste bien en dessous du seuil de 40&nbsp;000&nbsp;MAD par an en deçà duquel l'IR est nul. Le net avoisine donc 3&nbsp;264&nbsp;MAD, la totalité de l'écart provenant des seules cotisations sociales.</p>
                 </details>
                 <details class="group border-b border-slate-200 pb-4">
                     <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <h3 class="font-semibold text-slate-800">Peut-on partir du net pour retrouver le brut ?</h3>
-                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        <h3 class="font-semibold text-slate-800">Peut-on partir du net pour retrouver le brut ?</h3>
+                        <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-3">Oui, c'est le sens de la conversion bidirectionnelle proposée ici : le calcul est inversé pour retrouver le brut correspondant à un net souhaité. C'est utile en négociation d'embauche, où les montants sont souvent discutés en net, alors que le contrat de travail et le bulletin de paie s'expriment en brut.</p>
+                    <p class="text-slate-600 mt-3">Oui, c'est le sens de la conversion bidirectionnelle proposée ici : le calcul est inversé pour retrouver le brut correspondant à un net souhaité. C'est utile en négociation d'embauche, où les montants sont souvent discutés en net, alors que le contrat de travail et le bulletin de paie s'expriment en brut.</p>
                 </details>
                 <details class="group border-b border-slate-200 pb-4">
                     <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <h3 class="font-semibold text-slate-800">Pourquoi le taux de prélèvement augmente-t-il avec le salaire ?</h3>
-                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        <h3 class="font-semibold text-slate-800">Pourquoi le taux de prélèvement augmente-t-il avec le salaire ?</h3>
+                        <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-3">Parce que deux mécanismes se cumulent : le barème de l'IR est progressif, et la déduction pour frais professionnels comme la cotisation CNSS sont plafonnées. Au-delà de ces plafonds, chaque dirham supplémentaire est imposé au taux marginal sans allègement, ce qui fait grimper nettement le taux moyen des hauts salaires.</p>
+                    <p class="text-slate-600 mt-3">Parce que deux mécanismes se cumulent : le barème de l'IR est progressif, et la déduction pour frais professionnels comme la cotisation CNSS sont plafonnées. Au-delà de ces plafonds, chaque dirham supplémentaire est imposé au taux marginal sans allègement, ce qui fait grimper nettement le taux moyen des hauts salaires.</p>
                 </details>
                 <details class="group border-b border-slate-200 pb-4">
                     <summary class="flex justify-between items-center cursor-pointer list-none">
-                        <h3 class="font-semibold text-slate-800">Que compare-t-on avec un cadre supérieur à 40 000 MAD par mois ?</h3>
-                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        <h3 class="font-semibold text-slate-800">Que compare-t-on avec un cadre supérieur à 40 000 MAD par mois ?</h3>
+                        <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-3">À ce niveau, les cotisations ne retirent plus qu'environ 1&nbsp;173&nbsp;MAD, la CNSS étant plafonnée depuis longtemps, tandis que l'IR prélève près de 9&nbsp;233&nbsp;MAD. Le net s'établit autour de 29&nbsp;594&nbsp;MAD, soit environ 74&nbsp;% du brut : la charge est devenue presque exclusivement fiscale.</p>
+                    <p class="text-slate-600 mt-3">À ce niveau, les cotisations ne retirent plus qu'environ 1&nbsp;173&nbsp;MAD, la CNSS étant plafonnée depuis longtemps, tandis que l'IR prélève près de 9&nbsp;233&nbsp;MAD. Le net s'établit autour de 29&nbsp;594&nbsp;MAD, soit environ 74&nbsp;% du brut : la charge est devenue presque exclusivement fiscale.</p>
                 </details>
                 </div>
             </section>
@@ -962,11 +962,11 @@
                         <img src="/favicon.svg" alt="NetSalaire" class="w-6 h-6">
                         <span class="font-semibold text-slate-900">NetSalaire</span>
                     </div>
-                    <p class="text-sm text-slate-500">Simulateurs fiscaux gratuits. Barèmes 2026.</p>
+                    <p class="text-sm text-slate-600">Simulateurs fiscaux gratuits. Barèmes 2026.</p>
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">France</p>
-                    <ul class="space-y-2 text-sm text-slate-500">
+                    <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="/fr/france/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors">Brut vers Net</a></li>
                         <li><a href="/fr/france/simulateur-impot-revenu/" class="hover:text-slate-900 transition-colors">Simulateur Impôt</a></li>
                         <li><a href="/fr/france/simulateur-chomage-are/" class="hover:text-slate-900 transition-colors">Chômage ARE</a></li>
@@ -977,7 +977,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">Maroc</p>
-                    <ul class="space-y-2 text-sm text-slate-500">
+                    <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="/fr/maroc/simulateur-salaire-brut-net/" class="hover:text-slate-900 transition-colors">Brut vers Net</a></li>
                         <li><a href="/fr/maroc/simulateur-impot-revenu/" class="hover:text-slate-900 transition-colors">Simulateur Impôt</a></li>
                         <li><a href="/fr/maroc/guide/" class="hover:text-slate-900 transition-colors">Guide Fiscal</a></li>
@@ -985,7 +985,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-3 text-sm">Informations</p>
-                    <ul class="space-y-2 text-sm text-slate-500">
+                    <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="/fr/comparateur-salaire-france-maroc/" class="hover:text-slate-900 transition-colors">Comparer FR vs MA</a></li>
                         <li><a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a></li>
                         <li><a href="/fr/mentions-legales/" class="hover:text-slate-900 transition-colors">Mentions Légales</a></li>
@@ -996,7 +996,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 mt-2 border-t border-slate-200">
                 <div>
                     <p class="font-semibold text-slate-900 mb-2 text-sm">Europe</p>
-                    <ul class="space-y-1 text-sm text-slate-500">
+                    <ul class="space-y-1 text-sm text-slate-600">
                         <li><a href="/fr/allemagne/simulateur-impot/" class="hover:text-slate-900 transition-colors">Allemagne</a></li>
                         <li><a href="/fr/belgique/simulateur-impot/" class="hover:text-slate-900 transition-colors">Belgique</a></li>
                         <li><a href="/fr/danemark/simulateur-impot/" class="hover:text-slate-900 transition-colors">Danemark</a></li>
@@ -1007,7 +1007,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-2 text-sm">Europe (suite)</p>
-                    <ul class="space-y-1 text-sm text-slate-500">
+                    <ul class="space-y-1 text-sm text-slate-600">
                         <li><a href="/fr/italie/simulateur-impot/" class="hover:text-slate-900 transition-colors">Italie</a></li>
                         <li><a href="/fr/luxembourg/simulateur-impot/" class="hover:text-slate-900 transition-colors">Luxembourg</a></li>
                         <li><a href="/fr/pays-bas/simulateur-impot/" class="hover:text-slate-900 transition-colors">Pays-Bas</a></li>
@@ -1017,7 +1017,7 @@
                 </div>
                 <div>
                     <p class="font-semibold text-slate-900 mb-2 text-sm">Amériques & Asie</p>
-                    <ul class="space-y-1 text-sm text-slate-500">
+                    <ul class="space-y-1 text-sm text-slate-600">
                         <li><a href="/fr/usa/simulateur-impot/" class="hover:text-slate-900 transition-colors">USA</a></li>
                         <li><a href="/fr/mexique/simulateur-impot/" class="hover:text-slate-900 transition-colors">Mexique</a></li>
                         <li><a href="/fr/chine/simulateur-impot/" class="hover:text-slate-900 transition-colors">Chine</a></li>
@@ -1027,11 +1027,11 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-500">&copy; 2026 NetSalaire.com, Cree par Radif Partners</p>
+                <p class="text-sm text-slate-600">&copy; 2026 NetSalaire.com, Cree par Radif Partners</p>
             </div>
         </div>
     
-      <div data-trust-kit class="trust-bottom" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.8125rem;opacity:.8"><p>Estimation indicative : ce site ne remplace ni une décision de l’administration ni l’avis d’un professionnel.</p><p>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time> · <a href="/fr/methodologie/">Méthode de calcul</a> · Publié par <a rel="author" href="/fr/a-propos/">Radif Partners</a></p></div>
+      <div data-trust-kit class="trust-bottom" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.8125rem;opacity:.8"><p>Estimation indicative : ce site ne remplace ni une décision de l’administration ni l’avis d’un professionnel.</p><p>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time> · <a href="/fr/methodologie/">Méthode de calcul</a> · Publié par <a rel="author" href="/fr/a-propos/">Radif Partners</a></p></div>
     </footer>
 
     <script>
@@ -1075,10 +1075,10 @@
             const btnMarie = document.getElementById('btn-marie');
 
             if (value === 'celibataire') {
-                btnCelibataire.className = 'flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-emerald-500 text-white shadow-sm';
+                btnCelibataire.className = 'flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-emerald-700 text-white shadow-sm';
                 btnMarie.className = 'flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 text-slate-600 hover:bg-slate-50';
             } else {
-                btnMarie.className = 'flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-emerald-500 text-white shadow-sm';
+                btnMarie.className = 'flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-emerald-700 text-white shadow-sm';
                 btnCelibataire.className = 'flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 text-slate-600 hover:bg-slate-50';
             }
             updateFromBrutMensuel();
@@ -1468,7 +1468,7 @@
             ctx.moveTo(center, center);
             ctx.arc(center, center, radius, startAngle, startAngle + netRate * Math.PI * 2);
             ctx.closePath();
-            ctx.fillStyle = '#10b981';
+            ctx.fillStyle = '#047857';
             ctx.fill();
             startAngle += netRate * Math.PI * 2;
 

@@ -147,7 +147,7 @@ body {
 }
 
 .nav-dropdown-ma .iconify {
-    color: #059669;
+    color: #047857;
 }
 
 .nav-link .iconify[data-icon="lucide:chevron-down"] {
@@ -324,7 +324,7 @@ body {
 }
 
 .footer a {
-    color: #94A3B8;
+    color: #475569;
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.2s;
@@ -335,7 +335,7 @@ body {
 }
 
 .footer p {
-    color: #94A3B8;
+    color: #475569;
     font-size: 0.875rem;
 }
 
@@ -363,7 +363,7 @@ body {
 
 .card-featured {
     border: 2px solid var(--primary);
-    background: linear-gradient(135deg, #EEF2FF 0%, var(--white) 100%);
+    background: linear-gradient(135deg, #eef4f6 0%, var(--white) 100%);
 }
 
 /* Buttons */
@@ -582,13 +582,13 @@ details p {
 }
 
 .country-badge-fr {
-    background: #EEF2FF;
+    background: #eef4f6;
     color: var(--primary);
 }
 
 .country-badge-ma {
     background: #ECFDF5;
-    color: #059669;
+    color: #047857;
 }
 
 /* Selector */
@@ -640,7 +640,7 @@ details p {
 
 .country-btn.active {
     border-color: var(--primary);
-    background: #EEF2FF;
+    background: #eef4f6;
     color: var(--primary);
 }
 

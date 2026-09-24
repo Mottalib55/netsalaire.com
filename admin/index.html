@@ -22,14 +22,14 @@
     <!-- Access Control -->
     <div id="lockScreen" class="fixed inset-0 bg-slate-900 z-50 flex items-center justify-center">
         <div class="text-center">
-            <div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">N.</div>
+            <div class="w-16 h-16 bg-brand-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">N.</div>
             <h1 class="text-white text-xl font-semibold mb-2">Admin Dashboard</h1>
-            <p class="text-slate-400 text-sm mb-6">Entrez le code d'acces</p>
+            <p class="text-slate-600 text-sm mb-6">Entrez le code d'acces</p>
             <input type="password" id="accessCode" placeholder="Code..."
-                   class="bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 text-white text-center w-48 focus:outline-none focus:border-indigo-500"
+                   class="bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 text-white text-center w-48 focus:outline-none focus:border-brand-500"
                    onkeypress="if(event.key==='Enter')checkAccess()">
             <br>
-            <button onclick="checkAccess()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg text-sm">
+            <button onclick="checkAccess()" class="mt-4 bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 rounded-lg text-sm">
                 Accéder
             </button>
             <p id="errorMsg" class="text-red-400 text-sm mt-3 hidden">Code incorrect</p>
@@ -73,13 +73,13 @@
     <header class="bg-slate-800 border-b border-slate-700 px-6 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">N.</div>
+                <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">N.</div>
                 <div>
                     <h1 class="text-white font-semibold">NetSalaire Admin</h1>
-                    <p class="text-slate-400 text-xs">Dashboard prive</p>
+                    <p class="text-slate-600 text-xs">Dashboard prive</p>
                 </div>
             </div>
-            <a href="/" class="text-slate-400 hover:text-white text-sm flex items-center gap-2">
+            <a href="/" class="text-slate-600 hover:text-white text-sm flex items-center gap-2">
                 <iconify-icon icon="lucide:external-link" width="16"></iconify-icon>
                 Voir le site
             </a>
@@ -91,60 +91,60 @@
         <!-- Quick Stats -->
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
             <div class="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                <p class="text-slate-400 text-sm">Pages FR</p>
+                <p class="text-slate-600 text-sm">Pages FR</p>
                 <p class="text-2xl font-bold text-white">69</p>
             </div>
             <div class="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                <p class="text-slate-400 text-sm">Pages EN</p>
+                <p class="text-slate-600 text-sm">Pages EN</p>
                 <p class="text-2xl font-bold text-white">68</p>
             </div>
             <div class="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                <p class="text-slate-400 text-sm">Pages Natives</p>
+                <p class="text-slate-600 text-sm">Pages Natives</p>
                 <p class="text-2xl font-bold text-emerald-400">37</p>
             </div>
             <div class="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                <p class="text-slate-400 text-sm">Langues</p>
-                <p class="text-2xl font-bold text-purple-400">24</p>
+                <p class="text-slate-600 text-sm">Langues</p>
+                <p class="text-2xl font-bold text-brand-400">24</p>
             </div>
             <div class="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                <p class="text-slate-400 text-sm">Pays</p>
+                <p class="text-slate-600 text-sm">Pays</p>
                 <p class="text-2xl font-bold text-amber-400">52</p>
             </div>
         </div>
 
         <!-- Quick Links -->
         <h2 class="text-white font-semibold mb-4 flex items-center gap-2">
-            <iconify-icon icon="lucide:link" width="20" class="text-indigo-400"></iconify-icon>
+            <iconify-icon icon="lucide:link" width="20" class="text-brand-400"></iconify-icon>
             Liens Rapides
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <a href="https://analytics.google.com/" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-indigo-500">
+            <a href="https://analytics.google.com/" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-brand-500">
                 <div class="w-10 h-10 bg-amber-500/20 rounded-lg flex items-center justify-center mb-3">
                     <iconify-icon icon="logos:google-analytics" width="24"></iconify-icon>
                 </div>
                 <p class="text-white font-medium">Google Analytics</p>
-                <p class="text-slate-400 text-xs">Statistiques du site</p>
+                <p class="text-slate-600 text-xs">Statistiques du site</p>
             </a>
-            <a href="https://search.google.com/search-console" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-indigo-500">
+            <a href="https://search.google.com/search-console" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-brand-500">
                 <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
                     <iconify-icon icon="logos:google-icon" width="24"></iconify-icon>
                 </div>
                 <p class="text-white font-medium">Search Console</p>
-                <p class="text-slate-400 text-xs">SEO & Indexation</p>
+                <p class="text-slate-600 text-xs">SEO & Indexation</p>
             </a>
-            <a href="https://github.com/Mottalib55/impotsfrancemaroc" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-indigo-500">
+            <a href="https://github.com/Mottalib55/impotsfrancemaroc" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-brand-500">
                 <div class="w-10 h-10 bg-slate-500/20 rounded-lg flex items-center justify-center mb-3">
                     <iconify-icon icon="mdi:github" width="24" class="text-white"></iconify-icon>
                 </div>
                 <p class="text-white font-medium">GitHub Repo</p>
-                <p class="text-slate-400 text-xs">Code source</p>
+                <p class="text-slate-600 text-xs">Code source</p>
             </a>
-            <a href="https://pagespeed.web.dev/" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-indigo-500">
+            <a href="https://pagespeed.web.dev/" target="_blank" class="card bg-slate-800 rounded-xl p-4 border border-slate-700 hover:border-brand-500">
                 <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
                     <iconify-icon icon="lucide:zap" width="24" class="text-green-400"></iconify-icon>
                 </div>
                 <p class="text-white font-medium">PageSpeed</p>
-                <p class="text-slate-400 text-xs">Performance</p>
+                <p class="text-slate-600 text-xs">Performance</p>
             </a>
         </div>
 
@@ -156,20 +156,20 @@
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <div>
                 <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                    <iconify-icon icon="lucide:search-check" width="24" class="text-indigo-400"></iconify-icon>
+                    <iconify-icon icon="lucide:search-check" width="24" class="text-brand-400"></iconify-icon>
                     SEO Snippet Dashboard
                 </h2>
-                <p class="text-slate-400 text-sm mt-1" id="seoSummaryText">Chargement...</p>
+                <p class="text-slate-600 text-sm mt-1" id="seoSummaryText">Chargement...</p>
             </div>
             <!-- Language Switcher Pills -->
             <div class="flex gap-1 bg-slate-800 p-1 rounded-xl border border-slate-700">
-                <button onclick="switchLang('fr')" id="langBtn-fr" class="lang-pill active flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-indigo-600 text-white">
+                <button onclick="switchLang('fr')" id="langBtn-fr" class="lang-pill active flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-600 text-white">
                     <iconify-icon icon="circle-flags:fr" width="16"></iconify-icon> Français
                 </button>
-                <button onclick="switchLang('en')" id="langBtn-en" class="lang-pill flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white">
+                <button onclick="switchLang('en')" id="langBtn-en" class="lang-pill flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:text-white">
                     <iconify-icon icon="circle-flags:gb" width="16"></iconify-icon> English
                 </button>
-                <button onclick="switchLang('native')" id="langBtn-native" class="lang-pill flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white">
+                <button onclick="switchLang('native')" id="langBtn-native" class="lang-pill flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:text-white">
                     <span>🌍</span> Natives
                 </button>
             </div>
@@ -177,44 +177,44 @@
 
         <!-- SEO Quick Tools -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-            <a href="https://www.google.com/search?q=site:netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-indigo-500 text-center transition-colors">
+            <a href="https://www.google.com/search?q=site:netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-brand-500 text-center transition-colors">
                 <iconify-icon icon="logos:google-icon" width="20" class="mb-1"></iconify-icon>
                 <p class="text-white text-xs">Pages indexees</p>
             </a>
-            <a href="https://search.google.com/test/rich-results?url=https://netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-indigo-500 text-center transition-colors">
+            <a href="https://search.google.com/test/rich-results?url=https://netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-brand-500 text-center transition-colors">
                 <iconify-icon icon="lucide:star" width="20" class="text-amber-400 mb-1"></iconify-icon>
                 <p class="text-white text-xs">Rich Results</p>
             </a>
-            <a href="https://pagespeed.web.dev/analysis?url=https://netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-indigo-500 text-center transition-colors">
+            <a href="https://pagespeed.web.dev/analysis?url=https://netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-brand-500 text-center transition-colors">
                 <iconify-icon icon="lucide:zap" width="20" class="text-green-400 mb-1"></iconify-icon>
                 <p class="text-white text-xs">PageSpeed</p>
             </a>
-            <a href="https://validator.w3.org/nu/?doc=https://netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-indigo-500 text-center transition-colors">
-                <iconify-icon icon="lucide:code" width="20" class="text-purple-400 mb-1"></iconify-icon>
+            <a href="https://validator.w3.org/nu/?doc=https://netsalaire.com" target="_blank" class="bg-slate-800 rounded-xl p-3 border border-slate-700 hover:border-brand-500 text-center transition-colors">
+                <iconify-icon icon="lucide:code" width="20" class="text-brand-400 mb-1"></iconify-icon>
                 <p class="text-white text-xs">HTML Validator</p>
             </a>
         </div>
 
         <!-- Summary Table (recap en haut) -->
         <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <iconify-icon icon="lucide:table" width="20" class="text-indigo-400"></iconify-icon>
+            <iconify-icon icon="lucide:table" width="20" class="text-brand-400"></iconify-icon>
             Recapitulatif toutes langues
-            <span id="googleIndexBadge" class="ml-auto text-xs font-normal text-slate-500"></span>
+            <span id="googleIndexBadge" class="ml-auto text-xs font-normal text-slate-600"></span>
         </h2>
         <div class="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden mb-8">
             <div class="overflow-x-auto max-h-[500px] overflow-y-auto">
                 <table class="w-full text-sm" id="summaryTable">
                     <thead class="sticky top-0 bg-slate-800 z-10">
                         <tr class="border-b border-slate-700">
-                            <th class="text-left p-3 text-slate-400 font-medium text-xs">Page</th>
-                            <th class="text-left p-3 text-slate-400 font-medium text-xs">Langue</th>
-                            <th class="text-left p-3 text-slate-400 font-medium text-xs">URL</th>
-                            <th class="text-left p-3 text-slate-400 font-medium text-xs">Title</th>
-                            <th class="text-center p-3 text-slate-400 font-medium text-xs">T.Len</th>
-                            <th class="text-center p-3 text-slate-400 font-medium text-xs">D.Len</th>
-                            <th class="text-center p-3 text-slate-400 font-medium text-xs">Status</th>
-                            <th class="text-center p-3 text-slate-400 font-medium text-xs">Google</th>
-                            <th class="text-center p-3 text-slate-400 font-medium text-xs">Actions</th>
+                            <th class="text-left p-3 text-slate-600 font-medium text-xs">Page</th>
+                            <th class="text-left p-3 text-slate-600 font-medium text-xs">Langue</th>
+                            <th class="text-left p-3 text-slate-600 font-medium text-xs">URL</th>
+                            <th class="text-left p-3 text-slate-600 font-medium text-xs">Title</th>
+                            <th class="text-center p-3 text-slate-600 font-medium text-xs">T.Len</th>
+                            <th class="text-center p-3 text-slate-600 font-medium text-xs">D.Len</th>
+                            <th class="text-center p-3 text-slate-600 font-medium text-xs">Status</th>
+                            <th class="text-center p-3 text-slate-600 font-medium text-xs">Google</th>
+                            <th class="text-center p-3 text-slate-600 font-medium text-xs">Actions</th>
                         </tr>
                     </thead>
                     <tbody id="summaryBody"></tbody>
@@ -224,42 +224,42 @@
 
         <!-- Snippet Cards (detail en dessous) -->
         <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <iconify-icon icon="lucide:file-search" width="20" class="text-indigo-400"></iconify-icon>
+            <iconify-icon icon="lucide:file-search" width="20" class="text-brand-400"></iconify-icon>
             Détail des Snippets
         </h2>
         <div id="snippetCards" class="space-y-4 mb-10"></div>
 
         <!-- Export Section -->
         <div class="flex items-center justify-between mb-4">
-            <p id="changesInfo" class="text-slate-500 text-sm"></p>
-            <button onclick="exportChanges()" class="flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors">
+            <p id="changesInfo" class="text-slate-600 text-sm"></p>
+            <button onclick="exportChanges()" class="flex items-center gap-1.5 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-xs font-medium transition-colors">
                 <iconify-icon icon="lucide:download" width="14"></iconify-icon>
                 Exporter les modifications
             </button>
         </div>
         <div id="exportBox" class="hidden bg-slate-800 rounded-xl border border-slate-700 p-4 mb-8">
-            <p class="text-slate-400 text-sm mb-3">Copie ce JSON et colle-le moi dans le chat :</p>
-            <textarea id="exportData" class="w-full h-48 bg-slate-900 border border-slate-700 rounded-lg p-3 text-slate-300 text-xs font-mono resize-none focus:outline-none focus:border-indigo-500"></textarea>
-            <button onclick="navigator.clipboard.writeText(document.getElementById('exportData').value)" class="mt-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-medium">
+            <p class="text-slate-600 text-sm mb-3">Copie ce JSON et colle-le moi dans le chat :</p>
+            <textarea id="exportData" class="w-full h-48 bg-slate-900 border border-slate-700 rounded-lg p-3 text-slate-300 text-xs font-mono resize-none focus:outline-none focus:border-brand-500"></textarea>
+            <button onclick="navigator.clipboard.writeText(document.getElementById('exportData').value)" class="mt-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-700 text-white rounded-lg text-xs font-medium">
                 Copier
             </button>
         </div>
 
         <!-- Notes Section -->
         <h2 class="text-white font-semibold mb-4 flex items-center gap-2">
-            <iconify-icon icon="lucide:sticky-note" width="20" class="text-indigo-400"></iconify-icon>
+            <iconify-icon icon="lucide:sticky-note" width="20" class="text-brand-400"></iconify-icon>
             Notes & Todo
         </h2>
         <div class="bg-slate-800 rounded-xl border border-slate-700 p-4 mb-8">
-            <textarea id="notes" class="w-full h-40 bg-slate-900 border border-slate-700 rounded-lg p-4 text-slate-300 text-sm resize-none focus:outline-none focus:border-indigo-500" placeholder="Ecris tes notes ici... (sauvegarde automatique en local)"></textarea>
-            <p class="text-slate-500 text-xs mt-2">Les notes sont sauvegardees dans le localStorage de ton navigateur.</p>
+            <textarea id="notes" class="w-full h-40 bg-slate-900 border border-slate-700 rounded-lg p-4 text-slate-300 text-sm resize-none focus:outline-none focus:border-brand-500" placeholder="Ecris tes notes ici... (sauvegarde automatique en local)"></textarea>
+            <p class="text-slate-600 text-xs mt-2">Les notes sont sauvegardees dans le localStorage de ton navigateur.</p>
         </div>
 
     </main>
 
     <!-- Footer -->
     <footer class="border-t border-slate-700 px-6 py-4 text-center">
-        <p class="text-slate-500 text-sm">NetSalaire Admin - Page privee non indexee</p>
+        <p class="text-slate-600 text-sm">NetSalaire Admin - Page privee non indexee</p>
     </footer>
 
     <script>
@@ -997,11 +997,11 @@
             currentLang = lang;
             editingPath = null;
             document.querySelectorAll('.lang-pill').forEach(b => {
-                b.classList.remove('active', 'bg-indigo-600', 'text-white');
+                b.classList.remove('active', 'bg-brand-600', 'text-white');
                 b.classList.add('text-slate-400');
             });
             const btn = document.getElementById('langBtn-' + lang);
-            btn.classList.add('active', 'bg-indigo-600', 'text-white');
+            btn.classList.add('active', 'bg-brand-600', 'text-white');
             btn.classList.remove('text-slate-400');
             renderCards();
         }
@@ -1092,30 +1092,30 @@
                 // --- Header row ---
                 html += '<div class="flex flex-wrap items-center justify-between gap-2">';
                 html += '<div class="flex items-center gap-3 min-w-0">';
-                html += '<iconify-icon icon="lucide:globe" width="18" class="text-indigo-400 flex-shrink-0"></iconify-icon>';
+                html += '<iconify-icon icon="lucide:globe" width="18" class="text-brand-400 flex-shrink-0"></iconify-icon>';
                 html += '<h3 class="font-bold text-white text-base truncate">' + esc(page.name) + '</h3>';
-                html += '<span class="hidden sm:inline text-xs text-slate-500 bg-slate-700/50 px-2 py-0.5 rounded-full font-mono truncate max-w-xs">' + esc(page.path) + '</span>';
+                html += '<span class="hidden sm:inline text-xs text-slate-600 bg-slate-700/50 px-2 py-0.5 rounded-full font-mono truncate max-w-xs">' + esc(page.path) + '</span>';
                 html += '</div>';
 
                 if (isEditing) {
                     html += '<div class="flex items-center gap-2">';
                     html += '<button onclick="cancelEdit()" class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-700 text-slate-300 hover:text-white transition-colors"><iconify-icon icon="lucide:x" width="14"></iconify-icon> Annuler</button>';
-                    html += '<button onclick="saveEdit(\'' + page.path.replace(/'/g,"\\'") + '\',\'' + page.title.replace(/'/g,"\\'").replace(/\\/g,"\\\\") + '\',\'' + page.desc.replace(/'/g,"\\'").replace(/\\/g,"\\\\") + '\')" class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"><iconify-icon icon="lucide:check" width="14"></iconify-icon> Enregistrer</button>';
+                    html += '<button onclick="saveEdit(\'' + page.path.replace(/'/g,"\\'") + '\',\'' + page.title.replace(/'/g,"\\'").replace(/\\/g,"\\\\") + '\',\'' + page.desc.replace(/'/g,"\\'").replace(/\\/g,"\\\\") + '\')" class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-600 text-white hover:bg-brand-700 transition-colors"><iconify-icon icon="lucide:check" width="14"></iconify-icon> Enregistrer</button>';
                     html += '</div>';
                 } else {
-                    html += '<button onclick="startEdit(\'' + page.path.replace(/'/g,"\\'") + '\')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 transition-colors"><iconify-icon icon="lucide:pencil" width="14"></iconify-icon> Modifier</button>';
+                    html += '<button onclick="startEdit(\'' + page.path.replace(/'/g,"\\'") + '\')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-500/10 text-brand-400 hover:bg-brand-500/20 transition-colors"><iconify-icon icon="lucide:pencil" width="14"></iconify-icon> Modifier</button>';
                 }
                 html += '</div>';
 
                 if (isEditing) {
                     // --- Edit mode ---
                     html += '<div class="space-y-3">';
-                    html += '<div><div class="flex items-center justify-between mb-1"><label class="text-xs font-medium text-slate-400">Title</label><span id="editTitleCount" class="text-xs font-mono text-slate-500">0 / 60</span></div>';
-                    html += '<input type="text" id="editTitle" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/30" oninput="updateEditCounts()"></div>';
-                    html += '<div><div class="flex items-center justify-between mb-1"><label class="text-xs font-medium text-slate-400">Description</label><span id="editDescCount" class="text-xs font-mono text-slate-500">0 / 160</span></div>';
-                    html += '<textarea id="editDesc" rows="3" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/30 resize-none" oninput="updateEditCounts()"></textarea></div>';
+                    html += '<div><div class="flex items-center justify-between mb-1"><label class="text-xs font-medium text-slate-600">Title</label><span id="editTitleCount" class="text-xs font-mono text-slate-600">0 / 60</span></div>';
+                    html += '<input type="text" id="editTitle" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/30" oninput="updateEditCounts()"></div>';
+                    html += '<div><div class="flex items-center justify-between mb-1"><label class="text-xs font-medium text-slate-600">Description</label><span id="editDescCount" class="text-xs font-mono text-slate-600">0 / 160</span></div>';
+                    html += '<textarea id="editDesc" rows="3" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/30 resize-none" oninput="updateEditCounts()"></textarea></div>';
                     // Live Google preview
-                    html += '<div><p class="text-xs text-slate-500 mb-1.5">Apercu Google</p>';
+                    html += '<div><p class="text-xs text-slate-600 mb-1.5">Apercu Google</p>';
                     html += '<div class="bg-white rounded-xl p-4 space-y-1">';
                     html += '<p class="text-xs text-[#202124]">netsalaire.com' + esc(page.path) + '</p>';
                     html += '<p id="previewTitle" class="text-[#1a0dab] text-base font-medium leading-tight" style="display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden">\u2014</p>';
@@ -1136,8 +1136,8 @@
                 const dColor = dLen >= 150 && dLen <= 160 ? 'text-emerald-400' : (dLen < 150 ? 'text-amber-400' : 'text-red-400');
 
                 html += '<div class="flex flex-wrap gap-4 text-sm">';
-                html += '<div class="flex items-center gap-2"><iconify-icon icon="lucide:type" width="14" class="text-slate-500"></iconify-icon><span class="text-slate-400">Title :</span><span class="font-semibold ' + tColor + '">' + tLen + ' car.</span><span class="text-xs text-slate-500">(ideal 50-60)</span></div>';
-                html += '<div class="flex items-center gap-2"><iconify-icon icon="lucide:align-left" width="14" class="text-slate-500"></iconify-icon><span class="text-slate-400">Description :</span><span class="font-semibold ' + dColor + '">' + dLen + ' car.</span><span class="text-xs text-slate-500">(ideal 150-160)</span></div>';
+                html += '<div class="flex items-center gap-2"><iconify-icon icon="lucide:type" width="14" class="text-slate-600"></iconify-icon><span class="text-slate-600">Title :</span><span class="font-semibold ' + tColor + '">' + tLen + ' car.</span><span class="text-xs text-slate-600">(ideal 50-60)</span></div>';
+                html += '<div class="flex items-center gap-2"><iconify-icon icon="lucide:align-left" width="14" class="text-slate-600"></iconify-icon><span class="text-slate-600">Description :</span><span class="font-semibold ' + dColor + '">' + dLen + ' car.</span><span class="text-xs text-slate-600">(ideal 150-160)</span></div>';
                 html += '</div>';
 
                 html += '</div>';
@@ -1166,8 +1166,8 @@
 
                 rows += '<tr class="border-b border-slate-700/50 hover:bg-slate-700/20">';
                 rows += '<td class="p-2.5 text-white font-medium text-xs">' + esc(page.name) + '</td>';
-                rows += '<td class="p-2.5 text-slate-400 text-xs"><span class="inline-flex items-center gap-1">' + page.flag + ' ' + esc(page.langLabel) + '</span></td>';
-                rows += '<td class="p-2.5 text-slate-500 text-xs font-mono max-w-[180px] truncate">' + esc(page.path) + '</td>';
+                rows += '<td class="p-2.5 text-slate-600 text-xs"><span class="inline-flex items-center gap-1">' + page.flag + ' ' + esc(page.langLabel) + '</span></td>';
+                rows += '<td class="p-2.5 text-slate-600 text-xs font-mono max-w-[180px] truncate">' + esc(page.path) + '</td>';
                 rows += '<td class="p-2.5 text-slate-300 text-xs max-w-xs truncate">' + esc(title) + '</td>';
                 rows += '<td class="p-2.5 text-center font-mono text-xs ' + tColor + '">' + tLen + '</td>';
                 rows += '<td class="p-2.5 text-center font-mono text-xs ' + dColor + '">' + dLen + '</td>';
@@ -1177,19 +1177,19 @@
                 const gStatus = googleIndex[page.path];
                 let gIcon;
                 if (gStatus === true) {
-                    gIcon = '<span title="Indexée sur Google" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400"><iconify-icon icon="lucide:check-circle" width="16"></iconify-icon></span>';
+                    gIcon = '<span title="Indexée sur Google" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-700/10 text-emerald-400"><iconify-icon icon="lucide:check-circle" width="16"></iconify-icon></span>';
                 } else if (gStatus === false) {
                     gIcon = '<span title="Non indexée sur Google" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-red-500/10 text-red-400"><iconify-icon icon="lucide:x-circle" width="16"></iconify-icon></span>';
                 } else {
-                    gIcon = '<span title="Statut inconnu" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-slate-500/10 text-slate-500"><iconify-icon icon="lucide:help-circle" width="16"></iconify-icon></span>';
+                    gIcon = '<span title="Statut inconnu" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-slate-500/10 text-slate-600"><iconify-icon icon="lucide:help-circle" width="16"></iconify-icon></span>';
                 }
                 rows += '<td class="p-2.5 text-center">' + gIcon + '</td>';
 
                 const cardId = 'snippet-' + page.path.replace(/[^a-z0-9]/gi, '-');
                 const siteQuery = 'https://www.google.com/search?q=site:' + encodeURIComponent('https://netsalaire.com' + page.path);
                 rows += '<td class="p-2.5 text-center whitespace-nowrap">';
-                rows += '<a href="#' + cardId + '" onclick="scrollToSnippet(\'' + cardId + '\',\'' + page.lang + '\')" title="Voir le snippet" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 transition-colors mr-1"><iconify-icon icon="lucide:hash" width="14"></iconify-icon></a>';
-                rows += '<a href="https://netsalaire.com' + page.path + '" target="_blank" title="Ouvrir la page" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 transition-colors mr-1"><iconify-icon icon="lucide:external-link" width="14"></iconify-icon></a>';
+                rows += '<a href="#' + cardId + '" onclick="scrollToSnippet(\'' + cardId + '\',\'' + page.lang + '\')" title="Voir le snippet" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-brand-500/10 text-brand-400 hover:bg-brand-500/20 transition-colors mr-1"><iconify-icon icon="lucide:hash" width="14"></iconify-icon></a>';
+                rows += '<a href="https://netsalaire.com' + page.path + '" target="_blank" title="Ouvrir la page" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-700/10 text-emerald-400 hover:bg-emerald-700/20 transition-colors mr-1"><iconify-icon icon="lucide:external-link" width="14"></iconify-icon></a>';
                 rows += '<a href="' + siteQuery + '" target="_blank" title="Verifier sur Google" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 hover:bg-amber-500/20 transition-colors"><iconify-icon icon="lucide:search" width="14"></iconify-icon></a>';
                 rows += '</td>';
 
@@ -1212,8 +1212,8 @@
                 const el = document.getElementById(cardId);
                 if (el) {
                     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    el.classList.add('ring-2', 'ring-indigo-500');
-                    setTimeout(() => el.classList.remove('ring-2', 'ring-indigo-500'), 2000);
+                    el.classList.add('ring-2', 'ring-brand-500');
+                    setTimeout(() => el.classList.remove('ring-2', 'ring-brand-500'), 2000);
                 }
             }, 100);
         }
@@ -1245,7 +1245,7 @@
                 badge.innerHTML = '<iconify-icon icon="logos:google-icon" width="12"></iconify-icon> ' +
                     '<span class="text-emerald-400">' + indexed + '</span> indexees / ' +
                     '<span class="text-red-400">' + notIndexed + '</span> absentes / ' +
-                    '<span class="text-slate-400">' + unknown + '</span> non verifiees' +
+                    '<span class="text-slate-600">' + unknown + '</span> non verifiees' +
                     ' <span class="text-slate-600">(' + googleIndexCheckedAt + ')</span>';
             }
         })();
