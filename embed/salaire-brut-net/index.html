@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Calculateur nu, destiné à être intégré en iframe sur un autre site.
+     Pas de navigation, pas de mesure d'audience, pas d'indexation : seule la
+     page /fr/widget/ explique l'intégration et la page d'origine porte le SEO. -->
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/">
+<title>Salaire brut en net, widget NetSalaire</title>
+<style>
+  :root { --marque:#1f6a80; --marque-fonce:#134350; --bord:#e2e8f0; --texte:#0f172a; --gris:#475569; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#f8fafc;color:var(--texte);padding:12px}
+  .widget{max-width:420px;margin:0 auto;background:#fff;border:1px solid var(--bord);border-radius:12px;overflow:hidden}
+  .tete{background:var(--marque-fonce);color:#fff;padding:14px 18px}
+  .tete h1{font-size:16px;font-weight:700}
+  .tete p{font-size:12px;color:#d6e5ea;margin-top:2px}
+  .corps{padding:18px}
+  label{display:block;font-size:13px;font-weight:600;color:var(--gris);margin-bottom:6px}
+  input,select{width:100%;padding:10px 12px;font-size:16px;border:1px solid var(--bord);border-radius:8px;color:var(--texte);background:#fff}
+  input:focus,select:focus{outline:2px solid var(--marque);outline-offset:1px}
+  .champ{margin-bottom:14px}
+  .resultat{background:#eef4f6;border:1px solid #d6e5ea;border-radius:10px;padding:14px;margin-top:4px}
+  .resultat .cle{font-size:12px;color:var(--gris)}
+  .resultat .valeur{font-size:26px;font-weight:700;color:var(--marque-fonce);line-height:1.2}
+  .detail{font-size:12px;color:var(--gris);margin-top:8px}
+  .credit{text-align:center;font-size:12px;color:var(--gris);padding:10px 12px;border-top:1px solid var(--bord)}
+  .credit a{color:var(--marque-fonce);font-weight:600}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="tete">
+    <h1>Salaire brut en net</h1>
+    <p>Barèmes 2026 · France</p>
+  </div>
+  <div class="corps">
+    <div class="champ">
+      <label for="brut">Salaire brut mensuel (€)</label>
+      <input type="text" inputmode="numeric" id="brut" value="3 000">
+    </div>
+    <div class="champ">
+      <label for="statut">Statut</label>
+      <select id="statut">
+        <option value="noncadre">Non-cadre</option>
+        <option value="cadre">Cadre</option>
+      </select>
+    </div>
+    <div class="resultat">
+      <div class="cle">Net mensuel avant impôt</div>
+      <div class="valeur" id="net">2 340 €</div>
+      <div class="detail" id="detail">Cotisations salariales : 660 € (22 %)</div>
+    </div>
+  </div>
+  <div class="credit">
+    Calcul fourni par <a href="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/" target="_blank" rel="noopener">NetSalaire.com</a>
+  </div>
+</div>
+<script>
+  var TAUX = { noncadre: 0.22, cadre: 0.25 };
+  var brut = document.getElementById('brut');
+  var statut = document.getElementById('statut');
+  var net = document.getElementById('net');
+  var detail = document.getElementById('detail');
+  function espace(n){ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function lire(v){ return parseInt(String(v).replace(/[^\d]/g, ''), 10) || 0; }
+  function calculer(){
+    var b = lire(brut.value), t = TAUX[statut.value];
+    net.textContent = espace(b * (1 - t)) + ' €';
+    detail.textContent = 'Cotisations salariales : ' + espace(b * t) + ' € (' + Math.round(t * 100) + ' %)';
+  }
+  // On ne réécrit jamais le champ pendant la frappe : c'est ce qui fait
+  // réapparaître un « 0 » que l'utilisateur vient d'effacer.
+  brut.addEventListener('input', calculer);
+  statut.addEventListener('change', calculer);
+  calculer();
+</script>
+</body>
+</html>

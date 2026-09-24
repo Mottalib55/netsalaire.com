@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8509347331076245" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Analytics (lazy-loaded) -->
+    <!-- Google Analytics (chargé après interaction pour performance) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -21,75 +21,59 @@
 
             gtag('js', new Date());
             gtag('config', 'G-Z328SB8DZ8');
-            // Track 404 error
-            gtag('event', 'page_not_found', {
-                'page_path': window.location.pathname,
-                'page_referrer': document.referrer
-            });
         }
 
+        // Charger GA après interaction utilisateur ou après 3s
         ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {
             window.addEventListener(evt, loadGA, {once: true, passive: true});
         });
         setTimeout(loadGA, 3000);
     </script>
 
-    <title>Page non trouvee - 404</title>
-    <meta name="description" content="La page que vous recherchez n'existe pas ou a ete deplacee.">
-    <meta name="robots" content="noindex, follow">
+    <!-- Language Router (must be early for redirect) -->
+<script>
+    </script>
 
-    <!-- Favicon -->
+    <title>Widget NetSalaire : intégrer nos calculateurs en iframe</title>
+    <meta name="description" content="Intégrez gratuitement nos calculateurs de salaire net sur votre site en iframe : code à copier, conditions d'utilisation et aperçu en direct.">>
+    <link rel="canonical" href="https://netsalaire.com/fr/widget/">
+    <link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/mentions-legales/">
+<link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/mentions-legales/">
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="Radif Partners">
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-    <!-- Preconnect pour performance -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://code.iconify.design">
-    <link rel="preconnect" href="https://api.iconify.design">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <link href="/assets/css/tailwind.min.css" rel="stylesheet">
-
-    <!-- Icons (defer pour ne pas bloquer) -->
-    <script defer src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .pulse-slow {
-            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
-                              linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
-            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-        }
-    </style>
-
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Accueil",
+                        "item": "https://netsalaire.com/fr/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Mentions légales"
+                }
+        ]
+}
+    </script>
 
     <!-- Schema.org Person (E-E-A-T) -->
     <script type="application/ld+json">
@@ -109,8 +93,7 @@
     }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-600 antialiased min-h-screen flex flex-col">
-
+<body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -228,6 +211,7 @@
                     </div>
                 </div>
                 <a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a>
+                <a href="/fr/a-propos/" class="hover:text-slate-900 transition-colors">A propos</a>
             </div>
             <div class="flex items-center gap-3">
                 <a href="#contact" class="hidden md:flex items-center gap-2 text-xs font-medium bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-900 px-4 py-2 rounded-full transition-all">
@@ -241,71 +225,129 @@
             </div>
         </div>
     </nav>
-
-    <!-- Main Content -->
-    <main class="flex-1 flex items-center justify-center px-6 pt-16">
-        <div class="absolute inset-0 bg-grid opacity-60 pointer-events-none"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-50/80 blur-[100px] rounded-full pointer-events-none"></div>
-
-        <header class="max-w-2xl mx-auto text-center relative z-10">
-            <!-- 404 Illustration -->
-            <div class="mb-8 floating">
-                <div class="relative inline-block">
-                    <div class="text-[180px] md:text-[220px] font-bold text-slate-200 leading-none select-none">
-                        404
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full flex items-center justify-center shadow-2xl">
-                            <iconify-icon icon="lucide:search-x" width="48" class="text-white md:hidden"></iconify-icon>
-                            <iconify-icon icon="lucide:search-x" width="64" class="text-white hidden md:block"></iconify-icon>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+        <div>
+            <!-- France -->
+            <div>
+                <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 text-sm font-semibold text-slate-900">
+                    <span class="flex items-center gap-2">
+                        <iconify-icon icon="circle-flags:fr" width="18"></iconify-icon> France
+                    </span>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
+                </button>
+                <div class="hidden pl-4 pb-3 space-y-1">
+                    <a href="/fr/france/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <iconify-icon icon="lucide:landmark" width="16" class="text-brand-700"></iconify-icon> Simulateur Impôt
+                    </a>
+                    <a href="/fr/france/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-brand-700"></iconify-icon> Brut vers Net
+                    </a>
+                    <div class="border-t border-slate-100 my-1"></div>
+                    <a href="/fr/france/simulateur-chomage-are/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <span class="w-4 text-center text-xs">📉</span> Chômage ARE
+                    </a>
+                    <a href="/fr/france/simulateur-apl/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <span class="w-4 text-center text-xs">🏠</span> APL
+                    </a>
+                    <a href="/fr/france/creche-tarifs/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <span class="w-4 text-center text-xs">👶</span> Crèche
+                    </a>
+                    <a href="/fr/france/simulateur-indemnite-kilometrique/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-brand-700 py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <span class="w-4 text-center text-xs">🚗</span> Frais Km
+                    </a>
+                    <div class="border-t border-slate-100 my-1"></div>
+                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-brand-700 font-medium py-1.5 px-2 rounded-lg hover:bg-brand-50 transition-colors">
+                        <span class="w-4 text-center text-xs">🔀</span> Comparer France vs Maroc
+                    </a>
+                </div>
+            </div>
+            <!-- Maroc -->
+            <div>
+                <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 text-sm font-semibold text-slate-900 border-t border-slate-100">
+                    <span class="flex items-center gap-2">
+                        <iconify-icon icon="circle-flags:ma" width="18"></iconify-icon> Maroc
+                    </span>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
+                </button>
+                <div class="hidden pl-4 pb-3 space-y-1">
+                    <a href="/fr/maroc/simulateur-impot-revenu/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:landmark" width="16" class="text-emerald-700"></iconify-icon> Simulateur Impôt
+                    </a>
+                    <a href="/fr/maroc/simulateur-salaire-brut-net/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:calculator" width="16" class="text-emerald-700"></iconify-icon> Brut vers Net
+                    </a>
+                    <a href="/fr/maroc/guide/" class="flex items-center gap-2.5 text-sm text-slate-600 hover:text-emerald-700 py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <iconify-icon icon="lucide:book-open" width="16" class="text-emerald-700"></iconify-icon> Guide Fiscal
+                    </a>
+                    <div class="border-t border-slate-100 my-1"></div>
+                    <a href="/fr/comparateur-salaire-france-maroc/" class="flex items-center gap-2.5 text-sm text-emerald-700 font-medium py-1.5 px-2 rounded-lg hover:bg-emerald-50 transition-colors">
+                        <span class="w-4 text-center text-xs">🔀</span> Comparer France vs Maroc
+                    </a>
+                </div>
+            </div>
+            <!-- International - avec recherche -->
+            <div>
+                <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.chevron-icon').classList.toggle('rotate-180');" class="w-full flex items-center justify-between py-3 text-sm font-semibold text-slate-900 border-t border-slate-100">
+                    <span class="flex items-center gap-2">
+                        <iconify-icon icon="lucide:globe" width="18"></iconify-icon> International
+                    </span>
+                    <iconify-icon icon="lucide:chevron-down" width="16" class="chevron-icon text-slate-600 transition-transform duration-200"></iconify-icon>
+                </button>
+                <div class="hidden pb-3">
+                    <div class="sticky top-0 bg-white pb-2 pt-1 z-10">
+                        <div class="relative">
+                            <iconify-icon icon="lucide:search" width="16" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600"></iconify-icon>
+                            <input id="mobile-country-search" type="text" placeholder="Rechercher un pays..." class="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:border-brand-300 focus:ring-2 focus:ring-brand-100 outline-none transition-all" autocomplete="off">
                         </div>
                     </div>
+                    <div id="mobile-country-list" class="space-y-3 px-1"></div>
+                    <div id="mobile-no-results" class="hidden text-center py-6 text-sm text-slate-600">Aucun pays trouve</div>
                 </div>
             </div>
-
-            <!-- Text Content -->
-            <h1 id="title" class="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
-                Page introuvable
-            </h1>
-            <p id="subtitle" class="text-lg text-slate-600 mb-2">
-                Oups ! La page que vous recherchez semble avoir disparu.
-            </p>
-            <p id="description" class="text-slate-600 mb-8">
-                Elle a peut-etre ete deplacee, supprimee, ou n'a jamais existe.
-            </p>
-
-            <!-- CTA Button -->
-            <a id="home-link" href="/fr/" class="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-900 text-white font-medium rounded-xl hover:bg-brand-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mb-10">
-                <iconify-icon icon="lucide:home" width="20"></iconify-icon>
-                <span id="home-btn">Retour à l'accueil</span>
-            </a>
-
-            <!-- Alternative Links -->
-            <div class="pt-8 border-t border-slate-200">
-                <p id="or-try" class="text-sm text-slate-600 mb-6">Ou essayez nos simulateurs</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <a id="france-href" href="/fr/france/simulateur-salaire-brut-net/" class="group flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition-all">
-                        <iconify-icon icon="circle-flags:fr" width="32"></iconify-icon>
-                        <span id="france-link" class="text-sm font-medium text-slate-700 group-hover:text-brand-700">Simulateur France</span>
-                    </a>
-                    <a id="maroc-href" href="/fr/maroc/simulateur-salaire-brut-net/" class="group flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all">
-                        <iconify-icon icon="circle-flags:ma" width="32"></iconify-icon>
-                        <span id="maroc-link" class="text-sm font-medium text-slate-700 group-hover:text-emerald-700">Simulateur Maroc</span>
-                    </a>
-                    <a id="compare-href" href="/fr/comparateur-salaire-france-maroc/" class="group flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-300 hover:shadow-md transition-all">
-                        <iconify-icon icon="lucide:arrow-right-left" width="32" class="text-slate-600 group-hover:text-brand-700"></iconify-icon>
-                        <span id="compare-link" class="text-sm font-medium text-slate-700 group-hover:text-brand-700">France vs Maroc</span>
-                    </a>
-                    <a id="faq-href" href="/fr/faq/" class="group flex flex-col items-center gap-2 p-4 bg-white rounded-xl border border-slate-200 hover:border-amber-300 hover:shadow-md transition-all">
-                        <iconify-icon icon="lucide:help-circle" width="32" class="text-slate-600 group-hover:text-amber-700"></iconify-icon>
-                        <span id="faq-link" class="text-sm font-medium text-slate-700 group-hover:text-amber-700">FAQ</span>
-                    </a>
-                </div>
+            <!-- FAQ & Contact -->
+            <div class="border-t border-slate-100 space-y-1 pt-1">
+                <a href="/fr/faq/" class="flex items-center gap-2 py-3 text-sm font-semibold text-slate-900">
+                    <iconify-icon icon="lucide:help-circle" width="18"></iconify-icon> FAQ
+                </a>
+                <a href="#contact" class="flex items-center justify-center gap-2 text-sm font-medium bg-slate-900 text-white px-4 py-2.5 rounded-xl hover:bg-slate-800 transition-colors">
+                    Contact
+                    <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+                </a>
             </div>
-        </header>
-    </main>
+        </div>
+    </div>
+    <script src="/assets/js/mobile-menu.js" defer></script>
 
-    <!-- Footer -->
+    <main class="py-12 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl font-bold text-slate-900 mb-2">Intégrer nos calculateurs sur votre site</h1>
+            <p class="text-slate-600 mb-8"><time datetime="2026-09-24">Mis à jour le 24 septembre 2026</time></p>
+
+            <p class="text-slate-700 mb-6">Nos calculateurs peuvent être affichés gratuitement sur votre site, votre intranet ou votre forum, dans un cadre&nbsp;iframe. L'outil reste hébergé chez nous&nbsp;: il suit les barèmes et se met à jour tout seul, vous n'avez rien à maintenir.</p>
+
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-3">Le code à copier</h2>
+            <p class="text-slate-700 mb-3">Collez ces lignes à l'endroit où le calculateur doit apparaître&nbsp;:</p>
+            <pre class="bg-slate-900 text-slate-100 text-sm rounded-xl p-4 overflow-x-auto"><code>&lt;iframe src="https://netsalaire.com/embed/salaire-brut-net/"
+        width="100%" height="420" style="border:0;max-width:440px"
+        loading="lazy" title="Calculateur salaire brut en net - NetSalaire"&gt;
+&lt;/iframe&gt;</code></pre>
+
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-3">Conditions d'utilisation</h2>
+            <ul class="text-slate-700 space-y-2 mb-6">
+                <li>· L'intégration est gratuite, sans inscription et sans limite de durée.</li>
+                <li>· Le lien de crédit affiché sous le calculateur doit rester visible et cliquable.</li>
+                <li>· Le contenu du cadre ne doit pas être modifié, masqué ni recouvert.</li>
+                <li>· Nous pouvons faire évoluer le calculateur&nbsp;; l'adresse du cadre, elle, reste stable.</li>
+                <li>· Aucune donnée saisie dans le cadre ne nous est transmise&nbsp;: le calcul se fait dans le navigateur de votre visiteur.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-3">Aperçu</h2>
+            <iframe src="/embed/salaire-brut-net/" width="100%" height="420" style="border:0;max-width:440px" loading="lazy" title="Aperçu du calculateur salaire brut en net"></iframe>
+
+            <p class="text-slate-600 text-sm mt-8">Une question, un autre calculateur à intégrer&nbsp;? Écrivez-nous à <a class="text-brand-700 underline" href="mailto:contact@netsalaire.com">contact@netsalaire.com</a>.</p>
+        </div>
+    </main>    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
@@ -384,7 +426,6 @@
             </div>
         </div>
     </footer>
-
 <!-- Microsoft Clarity -->
 <script>
 setTimeout(function(){
