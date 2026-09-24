@@ -137,6 +137,54 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Radif Partners","jobTitle":"Fondateur de NetSalaire","description":"Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.","url":"https://netsalaire.com/fr/a-propos/","knowsAbout":["finance personnelle","fiscalite internationale","simulation fiscale"],"worksFor":{"@type":"Organization","name":"NetSalaire","url":"https://netsalaire.com","foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"},"foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"}</script>
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Radif Partners">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Pourquoi parle-t-on de trois niveaux d&#x27;impôt aux États-Unis ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'impôt fédéral, prélevé par l'IRS selon sept tranches de 10 à 37 %, se cumule avec l'impôt de l'État de résidence et, dans certaines villes comme New York, avec un impôt municipal d'environ 3,5 %. Un même salaire peut donc être imposé très différemment selon l'adresse du contribuable."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quels États ne prélèvent pas d&#x27;impôt sur le revenu ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sept États s'en dispensent entièrement : le Texas, la Floride, le Nevada, l'État de Washington, le Wyoming, l'Alaska et le Dakota du Sud. Le Tennessee n'impose que les intérêts et dividendes. Ces États compensent généralement par une taxe foncière ou une taxe sur les ventes plus élevée."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Que recouvrent les cotisations FICA ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Deux prélèvements : la Social Security, à 6,2 % du salaire dans la limite d'une base de 168 600 $ en 2026, soit 10 453 $ au maximum, et Medicare, à 1,45 % sans plafond, majoré de 0,9 % au-delà de 200 000 $. L'employeur verse les mêmes taux, portant le total partagé à 15,3 %."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Un Français installé aux États-Unis reste-t-il imposable en France ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La convention fiscale franco-américaine répartit le droit d'imposer et écarte la double imposition, en général par un crédit d'impôt. La particularité américaine tient à la citoyenneté : un citoyen des États-Unis reste redevable de l'impôt américain sur ses revenus mondiaux, même s'il vit à Paris depuis vingt ans."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quel est le net d&#x27;un salaire de 75 000 $ à New York ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'impôt fédéral représente environ 11 553 $, l'impôt de l'État de New York et la taxe municipale près de 6 952 $, et les cotisations FICA 5 738 $. Il reste environ 50 757 $ nets par an, soit 4 230 $ par mois, pour un taux de prélèvement global de 32,3 %."
+            }
+        }
+    ]
+}
+    </script>
 </head>
 <body class="bg-slate-50 font-sans antialiased">
 
@@ -812,7 +860,49 @@
                     Comparer avec d'autres pays
                 </a>
             </div>
-        </div>
+        
+            <!-- FAQ -->
+            <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mt-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Questions fréquentes sur l&#x27;impôt américain</h2>
+                <div class="space-y-6">
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Pourquoi parle-t-on de trois niveaux d&#x27;impôt aux États-Unis ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">L'impôt fédéral, prélevé par l'IRS selon sept tranches de 10 à 37&nbsp;%, se cumule avec l'impôt de l'État de résidence et, dans certaines villes comme New York, avec un impôt municipal d'environ 3,5&nbsp;%. Un même salaire peut donc être imposé très différemment selon l'adresse du contribuable.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quels États ne prélèvent pas d&#x27;impôt sur le revenu ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Sept États s'en dispensent entièrement : le Texas, la Floride, le Nevada, l'État de Washington, le Wyoming, l'Alaska et le Dakota du Sud. Le Tennessee n'impose que les intérêts et dividendes. Ces États compensent généralement par une taxe foncière ou une taxe sur les ventes plus élevée.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Que recouvrent les cotisations FICA ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Deux prélèvements : la Social Security, à 6,2&nbsp;% du salaire dans la limite d'une base de 168&nbsp;600&nbsp;$ en 2026, soit 10&nbsp;453&nbsp;$ au maximum, et Medicare, à 1,45&nbsp;% sans plafond, majoré de 0,9&nbsp;% au-delà de 200&nbsp;000&nbsp;$. L'employeur verse les mêmes taux, portant le total partagé à 15,3&nbsp;%.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Un Français installé aux États-Unis reste-t-il imposable en France ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">La convention fiscale franco-américaine répartit le droit d'imposer et écarte la double imposition, en général par un crédit d'impôt. La particularité américaine tient à la citoyenneté : un citoyen des États-Unis reste redevable de l'impôt américain sur ses revenus mondiaux, même s'il vit à Paris depuis vingt ans.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quel est le net d&#x27;un salaire de 75 000 $ à New York ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">L'impôt fédéral représente environ 11&nbsp;553&nbsp;$, l'impôt de l'État de New York et la taxe municipale près de 6&nbsp;952&nbsp;$, et les cotisations FICA 5&nbsp;738&nbsp;$. Il reste environ 50&nbsp;757&nbsp;$ nets par an, soit 4&nbsp;230&nbsp;$ par mois, pour un taux de prélèvement global de 32,3&nbsp;%.</p>
+                </details>
+                </div>
+            </section>
+            </div>
     </main>
 
     <!-- Footer -->

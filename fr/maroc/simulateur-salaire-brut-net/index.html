@@ -165,6 +165,54 @@
 
     <!-- Schema.org Person (E-E-A-T) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Radif Partners","jobTitle":"Fondateur de NetSalaire","description":"Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.","url":"https://netsalaire.com/fr/a-propos/","knowsAbout":["finance personnelle","fiscalite internationale","simulation fiscale"],"worksFor":{"@type":"Organization","name":"NetSalaire","url":"https://netsalaire.com","foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"},"foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"}</script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Quelle part du brut un salarié marocain conserve-t-il ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Entre 75 et 85 % selon le niveau de rémunération. Les prélèvements obligatoires représentent en pratique 15 à 25 % du brut dans le secteur privé, la part sociale restant modeste et l'essentiel de l'écart venant de l'impôt sur le revenu, dont le taux marginal atteint 37 % au-delà de 180 000 MAD par an."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Un salarié au SMIG paie-t-il de l&#x27;impôt ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non. Avec un brut mensuel d'environ 3 500 MAD, les cotisations retirent près de 236 MAD et le revenu net imposable reste bien en dessous du seuil de 40 000 MAD par an en deçà duquel l'IR est nul. Le net avoisine donc 3 264 MAD, la totalité de l'écart provenant des seules cotisations sociales."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Peut-on partir du net pour retrouver le brut ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, c'est le sens de la conversion bidirectionnelle proposée ici : le calcul est inversé pour retrouver le brut correspondant à un net souhaité. C'est utile en négociation d'embauche, où les montants sont souvent discutés en net, alors que le contrat de travail et le bulletin de paie s'expriment en brut."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Pourquoi le taux de prélèvement augmente-t-il avec le salaire ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Parce que deux mécanismes se cumulent : le barème de l'IR est progressif, et la déduction pour frais professionnels comme la cotisation CNSS sont plafonnées. Au-delà de ces plafonds, chaque dirham supplémentaire est imposé au taux marginal sans allègement, ce qui fait grimper nettement le taux moyen des hauts salaires."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Que compare-t-on avec un cadre supérieur à 40 000 MAD par mois ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "À ce niveau, les cotisations ne retirent plus qu'environ 1 173 MAD, la CNSS étant plafonnée depuis longtemps, tandis que l'IR prélève près de 9 233 MAD. Le net s'établit autour de 29 594 MAD, soit environ 74 % du brut : la charge est devenue presque exclusivement fiscale."
+            }
+        }
+    ]
+}
+    </script>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -860,6 +908,48 @@
                         Simulateur Allemagne
                     </a>
                 </div>
+            
+            <!-- FAQ -->
+            <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mt-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Questions fréquentes sur le salaire net au Maroc</h2>
+                <div class="space-y-6">
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quelle part du brut un salarié marocain conserve-t-il ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Entre 75 et 85&nbsp;% selon le niveau de rémunération. Les prélèvements obligatoires représentent en pratique 15 à 25&nbsp;% du brut dans le secteur privé, la part sociale restant modeste et l'essentiel de l'écart venant de l'impôt sur le revenu, dont le taux marginal atteint 37&nbsp;% au-delà de 180&nbsp;000&nbsp;MAD par an.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Un salarié au SMIG paie-t-il de l&#x27;impôt ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Non. Avec un brut mensuel d'environ 3&nbsp;500&nbsp;MAD, les cotisations retirent près de 236&nbsp;MAD et le revenu net imposable reste bien en dessous du seuil de 40&nbsp;000&nbsp;MAD par an en deçà duquel l'IR est nul. Le net avoisine donc 3&nbsp;264&nbsp;MAD, la totalité de l'écart provenant des seules cotisations sociales.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Peut-on partir du net pour retrouver le brut ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Oui, c'est le sens de la conversion bidirectionnelle proposée ici : le calcul est inversé pour retrouver le brut correspondant à un net souhaité. C'est utile en négociation d'embauche, où les montants sont souvent discutés en net, alors que le contrat de travail et le bulletin de paie s'expriment en brut.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Pourquoi le taux de prélèvement augmente-t-il avec le salaire ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Parce que deux mécanismes se cumulent : le barème de l'IR est progressif, et la déduction pour frais professionnels comme la cotisation CNSS sont plafonnées. Au-delà de ces plafonds, chaque dirham supplémentaire est imposé au taux marginal sans allègement, ce qui fait grimper nettement le taux moyen des hauts salaires.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Que compare-t-on avec un cadre supérieur à 40 000 MAD par mois ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">À ce niveau, les cotisations ne retirent plus qu'environ 1&nbsp;173&nbsp;MAD, la CNSS étant plafonnée depuis longtemps, tandis que l'IR prélève près de 9&nbsp;233&nbsp;MAD. Le net s'établit autour de 29&nbsp;594&nbsp;MAD, soit environ 74&nbsp;% du brut : la charge est devenue presque exclusivement fiscale.</p>
+                </details>
+                </div>
+            </section>
             </div>
     </main>
 

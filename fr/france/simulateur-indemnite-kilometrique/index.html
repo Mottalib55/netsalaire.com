@@ -133,6 +133,54 @@
 
     <!-- Schema.org Person (E-E-A-T) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Radif Partners","jobTitle":"Fondateur de NetSalaire","description":"Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.","url":"https://netsalaire.com/fr/a-propos/","knowsAbout":["finance personnelle","fiscalite internationale","simulation fiscale"],"worksFor":{"@type":"Organization","name":"NetSalaire","url":"https://netsalaire.com","foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"},"foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"}</script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "À quoi sert le barème kilométrique ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Publié chaque année par l'administration au Bulletin officiel des finances publiques, il permet d'évaluer forfaitairement les frais d'usage professionnel d'un véhicule personnel, sans avoir à justifier chaque dépense. Il s'utilise dans le cadre de l'option pour les frais réels, en remplacement de l'abattement automatique de 10 %."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quels frais le barème couvre-t-il, et lesquels s&#x27;y ajoutent ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il intègre la dépréciation du véhicule, l'entretien et les réparations, les pneumatiques, le carburant et l'assurance. Restent déductibles en plus, sur justificatifs, les frais de péage, les frais de stationnement et les intérêts de l'emprunt contracté pour acheter le véhicule, au prorata de l'usage professionnel."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Pourquoi le coût au kilomètre diminue-t-il avec la distance ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Parce que le barème distingue trois tranches : jusqu'à 5 000 km, de 5 001 à 20 000 km, puis au-delà. Les coûts fixes, comme l'assurance ou la décote, se répartissent sur un plus grand nombre de kilomètres à mesure que la distance augmente, ce que traduit la dégressivité du coefficient applicable."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelle majoration s&#x27;applique aux véhicules électriques ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le montant obtenu avec le barème standard est majoré de 20 %. Concrètement, un calcul aboutissant à 4 000 EUR pour une voiture thermique de 5 CV donne 4 800 EUR pour un véhicule cent pour cent électrique. Cette mesure, reconduite pour les revenus 2025, vise à encourager les mobilités moins émettrices."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelle distance puis-je retenir entre mon domicile et mon travail ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'administration admet sans justification particulière un trajet aller-retour jusqu'à quarante kilomètres par jour. Au-delà, il faut motiver l'éloignement par des circonstances comme l'emploi du conjoint, la scolarité des enfants ou l'état du marché du logement, faute de quoi la déduction est limitée à cette distance."
+            }
+        }
+    ]
+}
+    </script>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -602,6 +650,48 @@
                         Simulateur Espagne
                     </a>
                 </div>
+            
+            <!-- FAQ -->
+            <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mt-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Questions fréquentes sur le barème kilométrique</h2>
+                <div class="space-y-6">
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">À quoi sert le barème kilométrique ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Publié chaque année par l'administration au Bulletin officiel des finances publiques, il permet d'évaluer forfaitairement les frais d'usage professionnel d'un véhicule personnel, sans avoir à justifier chaque dépense. Il s'utilise dans le cadre de l'option pour les frais réels, en remplacement de l'abattement automatique de 10&nbsp;%.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quels frais le barème couvre-t-il, et lesquels s&#x27;y ajoutent ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Il intègre la dépréciation du véhicule, l'entretien et les réparations, les pneumatiques, le carburant et l'assurance. Restent déductibles en plus, sur justificatifs, les frais de péage, les frais de stationnement et les intérêts de l'emprunt contracté pour acheter le véhicule, au prorata de l'usage professionnel.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Pourquoi le coût au kilomètre diminue-t-il avec la distance ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Parce que le barème distingue trois tranches : jusqu'à 5&nbsp;000 km, de 5&nbsp;001 à 20&nbsp;000 km, puis au-delà. Les coûts fixes, comme l'assurance ou la décote, se répartissent sur un plus grand nombre de kilomètres à mesure que la distance augmente, ce que traduit la dégressivité du coefficient applicable.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quelle majoration s&#x27;applique aux véhicules électriques ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Le montant obtenu avec le barème standard est majoré de 20&nbsp;%. Concrètement, un calcul aboutissant à 4&nbsp;000&nbsp;EUR pour une voiture thermique de 5&nbsp;CV donne 4&nbsp;800&nbsp;EUR pour un véhicule cent pour cent électrique. Cette mesure, reconduite pour les revenus 2025, vise à encourager les mobilités moins émettrices.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quelle distance puis-je retenir entre mon domicile et mon travail ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">L'administration admet sans justification particulière un trajet aller-retour jusqu'à quarante kilomètres par jour. Au-delà, il faut motiver l'éloignement par des circonstances comme l'emploi du conjoint, la scolarité des enfants ou l'état du marché du logement, faute de quoi la déduction est limitée à cette distance.</p>
+                </details>
+                </div>
+            </section>
             </div>
     </main>    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-slate-200 bg-white">

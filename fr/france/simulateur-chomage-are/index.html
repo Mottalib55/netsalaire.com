@@ -137,6 +137,54 @@
 
     <!-- Schema.org Person (E-E-A-T) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Radif Partners","jobTitle":"Fondateur de NetSalaire","description":"Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.","url":"https://netsalaire.com/fr/a-propos/","knowsAbout":["finance personnelle","fiscalite internationale","simulation fiscale"],"worksFor":{"@type":"Organization","name":"NetSalaire","url":"https://netsalaire.com","foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"},"foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"}</script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Comment est calculée l&#x27;allocation d&#x27;aide au retour à l&#x27;emploi ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "France Travail retient le montant le plus élevé entre 57 % du salaire journalier de référence et 40,4 % de ce salaire augmentés de 12,95 EUR. L'allocation ne peut être inférieure à 31,59 EUR par jour pour un ancien emploi à temps plein, ni dépasser 75 % du salaire journalier de référence."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qu&#x27;est-ce que le salaire journalier de référence ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "C'est la base de tout le calcul : la somme des salaires bruts de la période de référence divisée par le nombre de jours travaillés. La période porte sur les vingt-quatre derniers mois, étendue à trente-six mois pour les personnes de 53 ans et plus. Primes et heures supplémentaires y sont intégrées, pas les indemnités de rupture."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Combien de temps dure l&#x27;indemnisation ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le principe est d'un jour indemnisé pour un jour travaillé, dans la limite de 18 mois avant 53 ans, de 22,5 mois entre 53 et 54 ans et de 27 mois à partir de 55 ans. Ces durées maximales ont été révisées à plusieurs reprises et dépendent aussi de la conjoncture du marché du travail."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelles conditions faut-il remplir pour percevoir l&#x27;ARE ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il faut avoir travaillé au moins six mois, soit 130 jours, au cours des vingt-quatre derniers mois, être inscrit comme demandeur d'emploi, rechercher activement un emploi, être physiquement apte à travailler et ne pas avoir atteint l'âge de la retraite à taux plein. La perte d'emploi doit par ailleurs être involontaire."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "L&#x27;allocation affichée est-elle nette ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Non, les montants calculés ici sont bruts. L'ARE supporte la CSG et la CRDS, ainsi qu'une participation au financement des retraites complémentaires, ce qui réduit de quelques pour cent le montant effectivement versé. Elle est par ailleurs imposable et figure sur la déclaration de revenus préremplie."
+            }
+        }
+    ]
+}
+    </script>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -601,6 +649,48 @@
                         Simulateur Portugal
                     </a>
                 </div>
+            
+            <!-- FAQ -->
+            <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mt-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Questions fréquentes sur l&#x27;allocation chômage</h2>
+                <div class="space-y-6">
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Comment est calculée l&#x27;allocation d&#x27;aide au retour à l&#x27;emploi ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">France Travail retient le montant le plus élevé entre 57&nbsp;% du salaire journalier de référence et 40,4&nbsp;% de ce salaire augmentés de 12,95&nbsp;EUR. L'allocation ne peut être inférieure à 31,59&nbsp;EUR par jour pour un ancien emploi à temps plein, ni dépasser 75&nbsp;% du salaire journalier de référence.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Qu&#x27;est-ce que le salaire journalier de référence ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">C'est la base de tout le calcul : la somme des salaires bruts de la période de référence divisée par le nombre de jours travaillés. La période porte sur les vingt-quatre derniers mois, étendue à trente-six mois pour les personnes de 53 ans et plus. Primes et heures supplémentaires y sont intégrées, pas les indemnités de rupture.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Combien de temps dure l&#x27;indemnisation ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Le principe est d'un jour indemnisé pour un jour travaillé, dans la limite de 18 mois avant 53 ans, de 22,5 mois entre 53 et 54 ans et de 27 mois à partir de 55 ans. Ces durées maximales ont été révisées à plusieurs reprises et dépendent aussi de la conjoncture du marché du travail.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quelles conditions faut-il remplir pour percevoir l&#x27;ARE ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Il faut avoir travaillé au moins six mois, soit 130 jours, au cours des vingt-quatre derniers mois, être inscrit comme demandeur d'emploi, rechercher activement un emploi, être physiquement apte à travailler et ne pas avoir atteint l'âge de la retraite à taux plein. La perte d'emploi doit par ailleurs être involontaire.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">L&#x27;allocation affichée est-elle nette ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Non, les montants calculés ici sont bruts. L'ARE supporte la CSG et la CRDS, ainsi qu'une participation au financement des retraites complémentaires, ce qui réduit de quelques pour cent le montant effectivement versé. Elle est par ailleurs imposable et figure sur la déclaration de revenus préremplie.</p>
+                </details>
+                </div>
+            </section>
             </div>
     </main>    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-slate-200 bg-white">

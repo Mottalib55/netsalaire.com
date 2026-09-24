@@ -107,6 +107,54 @@
 
     <!-- Schema.org Person (E-E-A-T) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Radif Partners","jobTitle":"Fondateur de NetSalaire","description":"Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.","url":"https://netsalaire.com/fr/a-propos/","knowsAbout":["finance personnelle","fiscalite internationale","simulation fiscale"],"worksFor":{"@type":"Organization","name":"NetSalaire","url":"https://netsalaire.com","foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"},"foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"}</script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Dans quel ordre s&#x27;enchaînent les prélèvements sur un salaire marocain ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Quatre étapes se suivent : on retire d'abord la CNSS et l'AMO du brut, ce qui donne le net social ; on applique ensuite la déduction forfaitaire de 20 % pour frais professionnels, qui donne le net imposable ; le barème de l'IR s'applique à ce montant ; enfin l'abattement familial vient en réduction de l'impôt obtenu."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Pourquoi la CNSS est-elle plafonnée et pas l&#x27;AMO ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La CNSS finance retraite, prestations familiales et indemnités journalières, prestations elles-mêmes plafonnées : la cotisation de 4,48 % s'arrête donc à une assiette de 6 000 MAD par mois, soit 268,80 MAD au maximum. L'AMO, qui couvre les frais de santé sans limite de dépense, s'applique à 2,26 % sur la totalité du salaire."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quel est le plafond de la déduction pour frais professionnels ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La déduction forfaitaire de 20 % s'applique au revenu brut imposable après cotisations sociales, mais ne peut excéder 30 000 MAD par an, soit 2 500 MAD par mois. Au-delà d'environ 12 500 MAD de salaire mensuel imposable, l'avantage cesse donc de croître et le taux effectif d'imposition s'élève plus vite."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Combien reste-t-il à un salarié marié gagnant 15 000 MAD par mois ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Après 269 MAD de CNSS et 339 MAD d'AMO, le net social s'établit à 14 392 MAD. La déduction de frais professionnels, plafonnée à 2 500 MAD, ramène le net imposable à 11 892 MAD, sur lequel l'IR prélève 2 147 MAD, réduits de 125 MAD d'abattement familial. Le salaire net atteint donc environ 12 370 MAD."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "L&#x27;abattement familial réduit-il le revenu ou l&#x27;impôt ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il réduit l'impôt lui-même, ce qui le rend bien plus lisible qu'une déduction de revenu : 500 MAD par an et par personne à charge, conjoint et enfants confondus, dans la limite de 3 000 MAD, soit six personnes. Son montant ne dépend donc pas du niveau de salaire, contrairement au quotient familial français."
+            }
+        }
+    ]
+}
+    </script>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -687,6 +735,48 @@
                         Simulateur Mexique
                     </a>
                 </div>
+            
+            <!-- FAQ -->
+            <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mt-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Questions fréquentes sur la fiscalité marocaine</h2>
+                <div class="space-y-6">
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Dans quel ordre s&#x27;enchaînent les prélèvements sur un salaire marocain ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Quatre étapes se suivent : on retire d'abord la CNSS et l'AMO du brut, ce qui donne le net social ; on applique ensuite la déduction forfaitaire de 20&nbsp;% pour frais professionnels, qui donne le net imposable ; le barème de l'IR s'applique à ce montant ; enfin l'abattement familial vient en réduction de l'impôt obtenu.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Pourquoi la CNSS est-elle plafonnée et pas l&#x27;AMO ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">La CNSS finance retraite, prestations familiales et indemnités journalières, prestations elles-mêmes plafonnées : la cotisation de 4,48&nbsp;% s'arrête donc à une assiette de 6&nbsp;000&nbsp;MAD par mois, soit 268,80&nbsp;MAD au maximum. L'AMO, qui couvre les frais de santé sans limite de dépense, s'applique à 2,26&nbsp;% sur la totalité du salaire.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quel est le plafond de la déduction pour frais professionnels ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">La déduction forfaitaire de 20&nbsp;% s'applique au revenu brut imposable après cotisations sociales, mais ne peut excéder 30&nbsp;000&nbsp;MAD par an, soit 2&nbsp;500&nbsp;MAD par mois. Au-delà d'environ 12&nbsp;500&nbsp;MAD de salaire mensuel imposable, l'avantage cesse donc de croître et le taux effectif d'imposition s'élève plus vite.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Combien reste-t-il à un salarié marié gagnant 15 000 MAD par mois ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Après 269&nbsp;MAD de CNSS et 339&nbsp;MAD d'AMO, le net social s'établit à 14&nbsp;392&nbsp;MAD. La déduction de frais professionnels, plafonnée à 2&nbsp;500&nbsp;MAD, ramène le net imposable à 11&nbsp;892&nbsp;MAD, sur lequel l'IR prélève 2&nbsp;147&nbsp;MAD, réduits de 125&nbsp;MAD d'abattement familial. Le salaire net atteint donc environ 12&nbsp;370&nbsp;MAD.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">L&#x27;abattement familial réduit-il le revenu ou l&#x27;impôt ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Il réduit l'impôt lui-même, ce qui le rend bien plus lisible qu'une déduction de revenu : 500&nbsp;MAD par an et par personne à charge, conjoint et enfants confondus, dans la limite de 3&nbsp;000&nbsp;MAD, soit six personnes. Son montant ne dépend donc pas du niveau de salaire, contrairement au quotient familial français.</p>
+                </details>
+                </div>
+            </section>
             </div>
     </main>    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-slate-200 bg-white">
