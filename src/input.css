@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Largeur de l'écran : rien ne doit dépasser (RECETTE-SITE.md §10.2)
+   -----------------------------------------------------------------
+   Sur un téléphone étroit (320 à 360 px, la moitié du parc Android),
+   plusieurs pages se laissaient balayer horizontalement. La cause n'est
+   jamais une largeur fixe mais la règle par défaut du flexbox : un enfant
+   de conteneur flex a `min-width: auto`, donc il refuse de descendre sous
+   la largeur de son contenu. Une ligne « Plafond : 3 000 MAD/an (6 personnes
+   max) » impose alors 269 px dans une colonne de 190, et toute la page suit.
+
+   Les deux déclarations ci-dessous rendent la chose impossible : les enfants
+   de flex et de grille ont le droit de rétrécir, et un mot trop long se coupe
+   au lieu de pousser. Elles ne changent rien tant qu'il y a la place. */
+@layer base {
+  @media (max-width: 640px) {
+    main .flex > *,
+    main .grid > * {
+      min-width: 0;
+    }
+    main {
+      overflow-wrap: break-word;
+    }
+  }
+}
