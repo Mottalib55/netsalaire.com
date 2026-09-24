@@ -132,6 +132,62 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Radif Partners","jobTitle":"Fondateur de NetSalaire","description":"Éditeur de calculateurs et de guides pratiques, passionne par la finance personnelle. Createur de NetSalaire, plateforme de simulateurs fiscaux gratuits couvrant 18+ pays.","url":"https://netsalaire.com/fr/a-propos/","knowsAbout":["finance personnelle","fiscalite internationale","simulation fiscale"],"worksFor":{"@type":"Organization","name":"NetSalaire","url":"https://netsalaire.com","foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"},"foundingDate":"2025-01-01","publishingPrinciples":"/fr/methodologie/"}</script>
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Radif Partners">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Qu&#x27;est-ce que le Grundfreibetrag et à partir de quel revenu paie-t-on l&#x27;impôt ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le Grundfreibetrag est l'abattement de base de l'Einkommensteuer : en 2026, aucun impôt n'est dû sur les premiers 11 604 EUR de revenu annuel pour une personne seule, le double pour un couple imposé conjointement. Au-delà, le taux part de 14 % et progresse de façon continue, sans palier, jusqu'à 42 % à partir de 66 760 EUR."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Comment fonctionne l&#x27;Ehegattensplitting pour les couples mariés ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le splitting conjugal additionne les revenus des deux époux, les divise par deux, calcule l'impôt sur cette moitié puis le multiplie par deux. Le gain est nul quand les deux salaires sont identiques et peut dépasser 15 000 EUR par an lorsqu'un seul conjoint travaille. C'est le principal correctif familial du système allemand, qui ne connaît pas le quotient familial français."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "À quoi servent les six Steuerklassen et laquelle me concerne ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La classe d'impôt ne change pas l'impôt final, seulement le montant retenu chaque mois sur la paie. La classe I vise les célibataires, la II les parents isolés, les III, IV et V les couples mariés selon l'écart entre leurs revenus, et la VI un second emploi. La régularisation intervient à la déclaration annuelle."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Dois-je payer le Solidaritätszuschlag et la Kirchensteuer ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le Soli représente 5,5 % de l'impôt dû, mais il ne concerne plus, depuis la réforme, que les revenus élevés, au-delà d'environ 75 000 EUR par an pour une personne seule. La Kirchensteuer, elle, n'est prélevée que si vous êtes inscrit auprès d'une Église reconnue : 8 % de l'impôt en Bavière et dans le Bade-Wurtemberg, 9 % ailleurs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quelles cotisations sociales sont retenues sur un salaire allemand ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La part salariale avoisine 20,5 % du brut et se répartit entre retraite (9,3 %), assurance maladie (7,3 % plus une cotisation additionnelle), dépendance (1,7 %, majorée sans enfant) et chômage (1,3 %). Chaque branche s'arrête à un plafond, ce qui allège le taux effectif des hauts salaires. L'employeur verse une part équivalente."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Suis-je obligé de déposer une Steuererklärung en Allemagne ?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La déclaration n'est obligatoire que dans certains cas : classes d'impôt III, V ou VI, revenus complémentaires supérieurs à 410 EUR, indemnités de chômage ou de maternité perçues dans l'année, ou plusieurs employeurs. Les autres salariés ont tout intérêt à la déposer : elle donne lieu à un remboursement dans la grande majorité des cas."
+            }
+        }
+    ]
+}
+    </script>
 </head>
 <body class="bg-slate-50 font-sans antialiased">
 
@@ -689,7 +745,56 @@
                     Comparer avec d'autres pays
                 </a>
             </div>
-        </div>
+        
+            <!-- FAQ -->
+            <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 mt-8">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Questions fréquentes sur l&#x27;impôt allemand</h2>
+                <div class="space-y-6">
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Qu&#x27;est-ce que le Grundfreibetrag et à partir de quel revenu paie-t-on l&#x27;impôt ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Le Grundfreibetrag est l'abattement de base de l'Einkommensteuer : en 2026, aucun impôt n'est dû sur les premiers 11&nbsp;604&nbsp;EUR de revenu annuel pour une personne seule, le double pour un couple imposé conjointement. Au-delà, le taux part de 14&nbsp;% et progresse de façon continue, sans palier, jusqu'à 42&nbsp;% à partir de 66&nbsp;760&nbsp;EUR.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Comment fonctionne l&#x27;Ehegattensplitting pour les couples mariés ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Le splitting conjugal additionne les revenus des deux époux, les divise par deux, calcule l'impôt sur cette moitié puis le multiplie par deux. Le gain est nul quand les deux salaires sont identiques et peut dépasser 15&nbsp;000&nbsp;EUR par an lorsqu'un seul conjoint travaille. C'est le principal correctif familial du système allemand, qui ne connaît pas le quotient familial français.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">À quoi servent les six Steuerklassen et laquelle me concerne ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">La classe d'impôt ne change pas l'impôt final, seulement le montant retenu chaque mois sur la paie. La classe I vise les célibataires, la II les parents isolés, les III, IV et V les couples mariés selon l'écart entre leurs revenus, et la VI un second emploi. La régularisation intervient à la déclaration annuelle.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Dois-je payer le Solidaritätszuschlag et la Kirchensteuer ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">Le Soli représente 5,5&nbsp;% de l'impôt dû, mais il ne concerne plus, depuis la réforme, que les revenus élevés, au-delà d'environ 75&nbsp;000&nbsp;EUR par an pour une personne seule. La Kirchensteuer, elle, n'est prélevée que si vous êtes inscrit auprès d'une Église reconnue : 8&nbsp;% de l'impôt en Bavière et dans le Bade-Wurtemberg, 9&nbsp;% ailleurs.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Quelles cotisations sociales sont retenues sur un salaire allemand ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">La part salariale avoisine 20,5&nbsp;% du brut et se répartit entre retraite (9,3&nbsp;%), assurance maladie (7,3&nbsp;% plus une cotisation additionnelle), dépendance (1,7&nbsp;%, majorée sans enfant) et chômage (1,3&nbsp;%). Chaque branche s'arrête à un plafond, ce qui allège le taux effectif des hauts salaires. L'employeur verse une part équivalente.</p>
+                </details>
+                <details class="group border-b border-slate-200 pb-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none">
+                        <h3 class="font-semibold text-slate-800">Suis-je obligé de déposer une Steuererklärung en Allemagne ?</h3>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 mt-3">La déclaration n'est obligatoire que dans certains cas : classes d'impôt III, V ou VI, revenus complémentaires supérieurs à 410&nbsp;EUR, indemnités de chômage ou de maternité perçues dans l'année, ou plusieurs employeurs. Les autres salariés ont tout intérêt à la déposer : elle donne lieu à un remboursement dans la grande majorité des cas.</p>
+                </details>
+                </div>
+            </section>
+            </div>
     </main>    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto">
