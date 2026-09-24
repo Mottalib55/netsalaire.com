@@ -188,7 +188,7 @@
             "name": "Comment est calculé le taux de change ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Notre comparateur utilise le taux de change EUR/MAD fourni par la Banque Centrale Européenne via l'API Frankfurter. Le taux est mis à jour en temps réel. Vous pouvez également saisir un taux personnalisé si vous avez un taux spécifique en tête."
+                "text": "Notre comparateur interroge une cotation quotidienne de l'euro contre le dirham marocain, actualisée à chaque chargement de la page. La Banque centrale européenne ne publie pas le dirham parmi ses taux de référence : la cotation vient donc d'un agrégateur de marché, et non d'une source officielle marocaine. Vous pouvez également saisir un taux personnalisé si vous avez un taux spécifique en tête."
             }
         },
         {
@@ -868,7 +868,7 @@
                         <h3 class="font-semibold text-slate-800">Comment est calculé le taux de change ?</h3>
                         <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-3">Notre comparateur utilise le taux de change EUR/MAD fourni par la Banque Centrale Européenne via l'API Frankfurter. Le taux est mis à jour en temps réel. Vous pouvez également saisir un taux personnalisé si vous avez un taux spécifique en tête.</p>
+                    <p class="text-slate-600 mt-3">Notre comparateur interroge une cotation quotidienne de l'euro contre le dirham marocain, actualisée à chaque chargement de la page. La Banque centrale européenne ne publie pas le dirham parmi ses taux de référence&nbsp;: la cotation vient donc d'un agrégateur de marché, et non d'une source officielle marocaine. Vous pouvez également saisir un taux personnalisé si vous avez un taux spécifique en tête.</p>
                 </details>
 
                 <details class="group pb-4">
@@ -1546,7 +1546,11 @@
         async function fetchExchangeRate() {
             const rateStatus = document.getElementById('rate-status');
             try {
-                const response = await fetch('https://api.frankfurter.app/latest?from=EUR&to=MAD');
+                // La BCE ne publie pas le dirham : l'API Frankfurter, qui reprend
+                // ses taux de référence, répondait « not found » et le comparateur
+                // retombait en silence sur un taux figé. On interroge donc une
+                // source qui cote réellement l'EUR/MAD.
+                const response = await fetch('https://open.er-api.com/v6/latest/EUR');
                 const data = await response.json();
                 if (data.rates && data.rates.MAD) {
                     const rate = data.rates.MAD;
