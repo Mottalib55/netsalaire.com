@@ -161,7 +161,7 @@
             "name": "Combien de cotisations sociales paie un salarié espagnol ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "La part salariale représente environ 6,35 % du brut : 4,7 % pour les contingencias comunes, 1,55 % pour le chômage et 0,1 % pour la formation. L'employeur verse près de 30 % supplémentaires. Les cotisations s'arrêtent à une base maximale d'environ 4 720 EUR par mois, ce qui allège fortement le taux effectif des hauts salaires."
+                "text": "La part salariale représente 6,50 % du brut : 4,7 % pour les contingencias comunes, 1,55 % pour le chômage, 0,1 % pour la formation et 0,15 % au titre du mécanisme d'équité intergénérationnelle (MEI). L'employeur verse près de 30,65 % supplémentaires. Les cotisations s'arrêtent à une base maximale de 5 101,20 EUR par mois, ce qui allège fortement le taux effectif des hauts salaires."
             }
         },
         {
@@ -177,7 +177,7 @@
             "name": "Quel est le net d&#x27;un salaire de 40 000 EUR bruts en Espagne ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "L'IRPF prélève environ 6 800 EUR et la Seguridad Social environ 2 540 EUR, ce qui laisse près de 30 660 EUR nets par an, soit environ 2 555 EUR par mois sur douze mois. Le taux de prélèvement total avoisine 23,4 %, sensiblement plus faible qu'en France à salaire égal."
+                "text": "Après déduction des cotisations, des frais forfaitaires de 2 000 EUR et du minimum personnel, l'IRPF prélève environ 7 745 EUR et la Seguridad Social 2 600 EUR, ce qui laisse près de 29 655 EUR nets par an, soit environ 2 471 EUR par mois sur douze mois. Le taux de prélèvement total avoisine 25,9 %, sensiblement plus faible qu'en France à salaire égal."
             }
         }
     ]
@@ -191,7 +191,7 @@
     "description": "Calculez votre IRPF en Espagne avec tranches étatiques et autonomiques et cotisations Seguridad Social. Résultat net en euros. Barèmes officiels 2026.",
     "url": "https://netsalaire.com/fr/espagne/simulateur-impot/",
     "datePublished": "2026-09-01",
-    "dateModified": "2026-09-24",
+    "dateModified": "2026-10-02",
     "author": {
         "@type": "Organization",
         "name": "Radif Partners",
@@ -452,7 +452,7 @@
     <script src="/assets/js/mobile-menu.js" defer></script>
 
     <main class="pt-24 pb-16 px-4">
-        <p data-trust-kit class="trust-top" style="margin:0 0 .75rem;font-size:.8125rem;opacity:.75">Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time></p>
+        <p data-trust-kit class="trust-top" style="margin:0 0 .75rem;font-size:.8125rem;opacity:.75">Mis à jour le <time datetime="2026-10-02">2 octobre 2026</time></p>
         <div class="max-w-4xl mx-auto">
 
             <header class="text-center mb-10">
@@ -518,7 +518,7 @@
                         </div>
                         <p class="text-2xl font-bold text-amber-700" id="social-tax">€0</p>
                         <p class="text-xs mt-1"><span id="conv-social-usd" class="text-slate-600">~$0</span></p>
-                        <p class="text-xs text-slate-600 mt-1">Sécurité Sociale : 6,35% cotisation employé</p>
+                        <p class="text-xs text-slate-600 mt-1">Sécurité Sociale : 6,50% cotisation employé (MEI inclus)</p>
                         </div>
 
                         <div class="result-card bg-gradient-to-br from-emerald-50 to-white rounded-xl border border-emerald-200 p-5 ">
@@ -617,30 +617,32 @@
                 <div class="space-y-4 text-sm">
 
                     <div class="bg-white rounded-lg p-4 border border-slate-200">
-                        <h4 class="font-medium text-slate-900 mb-2">1. IRPF - Impôt sur le Revenu (~€6 800)</h4>
+                        <h4 class="font-medium text-slate-900 mb-2">1. IRPF - Impôt sur le Revenu (~€7 745)</h4>
                         <div class="space-y-1 text-slate-600">
-                            <p>€0 - €12 450: 19% = €2 366</p>
+                            <p>Base imposable : €40 000 - €2 600 (Seguridad Social) - €2 000 (frais forfaitaires) = €35 400</p>
+                            <p>€0 - €12 450: 19% = €2 366</p>
                             <p>€12 450 - €20 200: 24% = €1 860</p>
                             <p>€20 200 - €35 200: 30% = €4 500</p>
-                            <p>€35 200 - €40 000: 37% = €1 776</p>
-                            <p class="font-medium text-slate-900 pt-1 border-t">Total IRPF: ~€6 800</p>
+                            <p>€35 200 - €35 400: 37% = €74</p>
+                            <p>Minimum personnel : €5 550 x 19% = - €1 055</p>
+                            <p class="font-medium text-slate-900 pt-1 border-t">Total IRPF: ~€7 745</p>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-lg p-4 border border-slate-200">
-                        <h4 class="font-medium text-slate-900 mb-2">2. Seguridad Social (~€2 540)</h4>
+                        <h4 class="font-medium text-slate-900 mb-2">2. Seguridad Social (€2 600)</h4>
                         <div class="space-y-1 text-slate-600">
-                            <p>Cotisation employé: ~6,35%</p>
-                            <p class="font-medium text-slate-900 pt-1 border-t">Total: ~€2 540</p>
+                            <p>Cotisation employé: 6,50%</p>
+                            <p class="font-medium text-slate-900 pt-1 border-t">Total: €2 600</p>
                         </div>
                     </div>
 
                     <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
                         <div class="flex justify-between items-center">
                             <span class="font-medium text-emerald-800">Revenu Net Annuel</span>
-                            <span class="text-xl font-bold text-emerald-700">~€30 660</span>
+                            <span class="text-xl font-bold text-emerald-700">~€29 655</span>
                         </div>
-                        <p class="text-xs text-emerald-700 mt-1">Soit ~€2 555/mois | Taux effectif: ~23,4%</p>
+                        <p class="text-xs text-emerald-700 mt-1">Soit ~€2 471/mois | Taux effectif: ~25,9%</p>
                     </div>
                 </div>
             </div>
@@ -660,6 +662,7 @@
                             <li>Contingencias comunes: <span class="font-medium">4,7%</span></li>
                             <li>Desempleo: <span class="font-medium">1,55%</span></li>
                             <li>Formacion: <span class="font-medium">0,1%</span></li>
+                            <li>MEI: <span class="font-medium">0,15%</span></li>
                         </ul>
                     </div>
                     <div>
@@ -668,6 +671,7 @@
                             <li>Contingencias: <span class="font-medium">23,6%</span></li>
                             <li>Desempleo: <span class="font-medium">5,5%</span></li>
                             <li>FOGASA: <span class="font-medium">0,2%</span></li>
+                            <li>MEI: <span class="font-medium">0,75%</span></li>
                         </ul>
                     </div>
                 </div>
@@ -751,24 +755,26 @@
                     <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
                         <div class="grid md:grid-cols-2 gap-4">
                             <div>
-                                <h4 class="font-semibold text-amber-900 mb-2">Part Salarié (~6,35%)</h4>
+                                <h4 class="font-semibold text-amber-900 mb-2">Part Salarié (6,50%)</h4>
                                 <ul class="space-y-1 text-amber-800 text-xs">
                                     <li>Contingencias comunes : <strong>4,7%</strong></li>
                                     <li>Desempleo (chômage) : <strong>1,55%</strong></li>
-                                    <li>Formation : <strong>0,1%</strong></li>
+                                    <li>Formation : <strong>0,1%</strong></li>
+                                    <li>MEI (équité intergénérationnelle) : <strong>0,15%</strong></li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-amber-900 mb-2">Part Employeur (~30%)</h4>
+                                <h4 class="font-semibold text-amber-900 mb-2">Part Employeur (~30,65%)</h4>
                                 <ul class="space-y-1 text-amber-800 text-xs">
                                     <li>Contingencias comunes : <strong>23,6%</strong></li>
                                     <li>Desempleo : <strong>5,5%</strong></li>
                                     <li>FOGASA : <strong>0,2%</strong></li>
-                                    <li>Formation : <strong>0,6%</strong></li>
+                                    <li>Formation : <strong>0,6%</strong></li>
+                                    <li>MEI : <strong>0,75%</strong></li>
                                 </ul>
                             </div>
                         </div>
-                        <p class="text-xs text-amber-700 mt-3">Base maximale 2026 : ~4 720 €/mois</p>
+                        <p class="text-xs text-amber-700 mt-3">Base maximale 2026 : 5 101,20 €/mois</p>
                     </div>
 
                     <h3 class="text-base font-semibold text-slate-800 mt-6 mb-3">Régime Beckham (Impatriés)</h3>
@@ -816,10 +822,10 @@
                         </thead>
                         <tbody>
                             <tr><td class="border border-slate-200 px-3 py-1.5">Taux marginal max</td><td class="border border-slate-200 px-3 py-1.5 text-center">47% (48% Catalogne)</td><td class="border border-slate-200 px-3 py-1.5 text-center">45%</td></tr>
-                            <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">Cotisations employé</td><td class="border border-slate-200 px-3 py-1.5 text-center font-medium text-emerald-700">~6,35%</td><td class="border border-slate-200 px-3 py-1.5 text-center text-rose-700">~22%</td></tr>
-                            <tr><td class="border border-slate-200 px-3 py-1.5">Plus-values mobilieres</td><td class="border border-slate-200 px-3 py-1.5 text-center">19-28%</td><td class="border border-slate-200 px-3 py-1.5 text-center">30%</td></tr>
+                            <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">Cotisations employé</td><td class="border border-slate-200 px-3 py-1.5 text-center font-medium text-emerald-700">6,50%</td><td class="border border-slate-200 px-3 py-1.5 text-center text-rose-700">~22%</td></tr>
+                            <tr><td class="border border-slate-200 px-3 py-1.5">Plus-values mobilieres</td><td class="border border-slate-200 px-3 py-1.5 text-center">19-30%</td><td class="border border-slate-200 px-3 py-1.5 text-center">30%</td></tr>
                             <tr class="bg-slate-50"><td class="border border-slate-200 px-3 py-1.5">TVA standard</td><td class="border border-slate-200 px-3 py-1.5 text-center">21%</td><td class="border border-slate-200 px-3 py-1.5 text-center">20%</td></tr>
-                            <tr><td class="border border-slate-200 px-3 py-1.5">Net sur 45 000 €</td><td class="border border-slate-200 px-3 py-1.5 text-center font-medium text-emerald-700">~33 500 €</td><td class="border border-slate-200 px-3 py-1.5 text-center">~32 000 €</td></tr>
+                            <tr><td class="border border-slate-200 px-3 py-1.5">Net sur 45 000 €</td><td class="border border-slate-200 px-3 py-1.5 text-center font-medium text-emerald-700">~32 600 €</td><td class="border border-slate-200 px-3 py-1.5 text-center">~32 200 €</td></tr>
                         </tbody>
                     </table></div>
 
@@ -929,7 +935,7 @@
                         <h3 class="font-semibold text-slate-800">Combien de cotisations sociales paie un salarié espagnol ?</h3>
                         <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-3">La part salariale représente environ 6,35&nbsp;% du brut : 4,7&nbsp;% pour les contingencias comunes, 1,55&nbsp;% pour le chômage et 0,1&nbsp;% pour la formation. L'employeur verse près de 30&nbsp;% supplémentaires. Les cotisations s'arrêtent à une base maximale d'environ 4&nbsp;720&nbsp;EUR par mois, ce qui allège fortement le taux effectif des hauts salaires.</p>
+                    <p class="text-slate-600 mt-3">La part salariale représente 6,50 % du brut : 4,7 % pour les contingencias comunes, 1,55 % pour le chômage, 0,1 % pour la formation et 0,15 % au titre du mécanisme d'équité intergénérationnelle (MEI). L'employeur verse près de 30,65 % supplémentaires. Les cotisations s'arrêtent à une base maximale de 5 101,20 EUR par mois, ce qui allège fortement le taux effectif des hauts salaires.</p>
                 </details>
                 <details class="group border-b border-slate-200 pb-4">
                     <summary class="flex justify-between items-center cursor-pointer list-none">
@@ -943,7 +949,7 @@
                         <h3 class="font-semibold text-slate-800">Quel est le net d&#x27;un salaire de 40 000 EUR bruts en Espagne ?</h3>
                         <span class="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="text-slate-600 mt-3">L'IRPF prélève environ 6&nbsp;800&nbsp;EUR et la Seguridad Social environ 2&nbsp;540&nbsp;EUR, ce qui laisse près de 30&nbsp;660&nbsp;EUR nets par an, soit environ 2&nbsp;555&nbsp;EUR par mois sur douze mois. Le taux de prélèvement total avoisine 23,4&nbsp;%, sensiblement plus faible qu'en France à salaire égal.</p>
+                    <p class="text-slate-600 mt-3">Après déduction des cotisations, des frais forfaitaires de 2 000 EUR et du minimum personnel, l'IRPF prélève environ 7 745 EUR et la Seguridad Social 2 600 EUR, ce qui laisse près de 29 655 EUR nets par an, soit environ 2 471 EUR par mois sur douze mois. Le taux de prélèvement total avoisine 25,9 %, sensiblement plus faible qu'en France à salaire égal.</p>
                 </details>
                 </div>
             </section>
@@ -1027,7 +1033,7 @@
             </div>
         </div>
     
-      <div data-trust-kit class="trust-bottom" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.8125rem;opacity:.8"><p>Estimation indicative : ce site ne remplace ni une décision de l’administration ni l’avis d’un professionnel.</p><p>Mis à jour le <time datetime="2026-09-24">24 septembre 2026</time> · <a href="/fr/methodologie/">Méthode de calcul</a> · Publié par <a rel="author" href="/fr/a-propos/">Radif Partners</a></p></div>
+      <div data-trust-kit class="trust-bottom" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.8125rem;opacity:.8"><p>Estimation indicative : ce site ne remplace ni une décision de l’administration ni l’avis d’un professionnel.</p><p>Mis à jour le <time datetime="2026-10-02">2 octobre 2026</time> · <a href="/fr/methodologie/">Méthode de calcul</a> · Publié par <a rel="author" href="/fr/a-propos/">Radif Partners</a></p></div>
     </footer>
 
     <script>
@@ -1039,7 +1045,29 @@
             { limit: 300000, rate: 0.45 },
             { limit: Infinity, rate: 0.47 }
         ];
-        const SOCIAL_RATE = 0.0635;
+        const SOCIAL_RATE = 0.065; // 4.70 + 1.55 + 0.10 + MEI 0.15
+        const SOCIAL_BASE_MAX = 5101.20 * 12; // Base maxima de cotizacion 2026
+        const PERSONAL_MINIMUM = 5550;
+        const WORK_EXPENSES = 2000;
+
+        function socialContributions(income) {
+            return Math.min(income, SOCIAL_BASE_MAX) * SOCIAL_RATE;
+        }
+
+        // Reduccion por rendimientos del trabajo (low salaries)
+        function workReduction(netWork) {
+            if (netWork <= 14852) return 7302;
+            if (netWork <= 17673.52) return 7302 - 1.75 * (netWork - 14852);
+            if (netWork <= 19747.5) return 2364.34 - 1.14 * (netWork - 17673.52);
+            return 0;
+        }
+
+        // IRPF: scale applied to the taxable base, minus the scale applied to the personal minimum
+        function calculateSpainTax(income) {
+            const netWork = Math.max(0, income - socialContributions(income) - WORK_EXPENSES);
+            const base = Math.max(0, netWork - workReduction(netWork));
+            return Math.max(0, calculateBracketTax(base, BRACKETS) - calculateBracketTax(PERSONAL_MINIMUM, BRACKETS));
+        }
         const SYMBOL = '€';
         const IS_TAX_FREE = false;
         function getAnnualIncome() {
@@ -1066,8 +1094,8 @@ function calculateBracketTax(income, brackets) {
         function calculate() {
             const income = getAnnualIncome();
 
-            const incomeTax = calculateBracketTax(income, BRACKETS);
-            const socialTax = income * SOCIAL_RATE;
+            const incomeTax = calculateSpainTax(income);
+            const socialTax = socialContributions(income);
             const totalTax = incomeTax + socialTax;
             const netIncome = income - totalTax;
 
