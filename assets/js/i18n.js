@@ -510,8 +510,8 @@ const translations = {
     },
     'legal.cookies': { fr: 'Cookies', en: 'Cookies' },
     'legal.cookies_text': {
-        fr: 'Ce site n\'utilise pas de cookies de suivi ni de cookies publicitaires. Seuls des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés.',
-        en: 'This site does not use tracking cookies or advertising cookies. Only strictly necessary technical cookies for the site operation may be used.'
+        fr: 'Ce site dépose des cookies de mesure d\'audience (Google Analytics, Microsoft Clarity) et des cookies publicitaires (Google AdSense) à l\'ouverture de la page, sans bandeau préalable. Le détail figure dans la politique de confidentialité.',
+        en: 'This site sets audience measurement cookies (Google Analytics, Microsoft Clarity) and advertising cookies (Google AdSense) when a page opens, with no prior banner. Details are given in the privacy policy.'
     },
     'legal.law': { fr: 'Droit applicable', en: 'Applicable Law' },
     'legal.law_text': {
@@ -521,25 +521,25 @@ const translations = {
 
     // Privacy Policy
     'privacy.title': { fr: 'Politique de Confidentialité', en: 'Privacy Policy' },
-    'privacy.updated': { fr: 'Dernière mise à jour : Décembre 2025', en: 'Last updated: December 2025' },
+    'privacy.updated': { fr: 'Dernière mise à jour : Octobre 2026', en: 'Last updated: October 2026' },
     'privacy.intro': { fr: 'Introduction', en: 'Introduction' },
     'privacy.intro_text': {
         fr: 'Chez NetSalaire, nous accordons une importance primordiale à la protection de votre vie privée. Cette politique de confidentialité explique comment nous traitons les informations lorsque vous utilisez notre site.',
         en: 'At NetSalaire, we attach primary importance to protecting your privacy. This privacy policy explains how we handle information when you use our site.'
     },
     'privacy.data_collected': { fr: 'Données collectées', en: 'Data Collected' },
-    'privacy.good_news': { fr: 'Bonne nouvelle : nous ne collectons aucune donnée personnelle.', en: 'Good news: we do not collect any personal data.' },
+    'privacy.good_news': { fr: 'Ce que vous saisissez dans les simulateurs ne quitte pas votre navigateur.', en: 'What you enter into the simulators never leaves your browser.' },
     'privacy.data_text': {
         fr: 'Tous les calculs effectués sur nos simulateurs sont réalisés localement dans votre navigateur. Aucune information (salaire, situation familiale, etc.) n\'est envoyée à nos serveurs ni stockée de quelque manière que ce soit.',
         en: 'All calculations performed on our simulators are done locally in your browser. No information (salary, family status, etc.) is sent to our servers or stored in any way.'
     },
     'privacy.cookies_text': {
-        fr: 'Notre site n\'utilise pas de cookies de suivi, de cookies publicitaires ou de cookies tiers. Nous n\'utilisons aucun outil d\'analyse de trafic (Google Analytics, etc.).',
-        en: 'Our site does not use tracking cookies, advertising cookies or third-party cookies. We do not use any traffic analysis tools (Google Analytics, etc.).'
+        fr: 'Notre site mesure son audience avec Google Analytics 4 et Microsoft Clarity, et affiche de la publicité avec Google AdSense. Ces trois services déposent des cookies à l\'ouverture de la page, sans bandeau préalable : _ga et _ga_Z328SB8DZ8 (deux ans) pour Google Analytics, _clck (un an) et _clsk (un jour) pour Microsoft Clarity, et des cookies publicitaires de Google pour AdSense. Clarity enregistre les clics, le défilement et les pages vues sous forme de sessions et de cartes de chaleur ; le contenu des champs de saisie est masqué avant tout envoi.',
+        en: 'Our site measures its audience with Google Analytics 4 and Microsoft Clarity, and displays advertising with Google AdSense. These three services set cookies when a page opens, with no prior banner: _ga and _ga_Z328SB8DZ8 (two years) for Google Analytics, _clck (one year) and _clsk (one day) for Microsoft Clarity, and Google advertising cookies for AdSense. Clarity records clicks, scrolling and pages viewed as sessions and heatmaps; the content of input fields is masked before anything is sent.'
     },
     'privacy.cookies_text2': {
-        fr: 'Seuls des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés par votre navigateur.',
-        en: 'Only strictly necessary technical cookies for site operation may be used by your browser.'
+        fr: 'Vous pouvez refuser ou supprimer ces cookies dans les réglages de votre navigateur ; les simulateurs fonctionnent sans eux.',
+        en: 'You can refuse or delete these cookies in your browser settings; the simulators work without them.'
     },
     'privacy.third_party': { fr: 'Services tiers', en: 'Third-Party Services' },
     'privacy.third_party_text': { fr: 'Notre site utilise les services tiers suivants :', en: 'Our site uses the following third-party services:' },
@@ -553,8 +553,8 @@ const translations = {
     },
     'privacy.rights': { fr: 'Vos droits', en: 'Your Rights' },
     'privacy.rights_text': {
-        fr: 'Conformément au RGPD, vous disposez de droits sur vos données personnelles. Cependant, comme nous ne collectons aucune donnée, ces droits ne s\'appliquent pas dans le cadre de l\'utilisation de nos simulateurs.',
-        en: 'In accordance with GDPR, you have rights over your personal data. However, as we do not collect any data, these rights do not apply when using our simulators.'
+        fr: 'Conformément au RGPD, vous disposez de droits sur vos données personnelles (accès, rectification, effacement, opposition). Ils s\'appliquent aux données recueillies par les outils de mesure d\'audience et de publicité ; les simulateurs, eux, ne collectent rien.',
+        en: 'In accordance with GDPR, you have rights over your personal data (access, rectification, erasure, objection). They apply to the data collected by the audience measurement and advertising tools; the simulators themselves collect nothing.'
     },
     'privacy.changes': { fr: 'Modifications', en: 'Changes' },
     'privacy.changes_text': {
