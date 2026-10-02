@@ -119,23 +119,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/faq/"/>
   </url>
 
-<url>
-    <loc>https://netsalaire.com/fr/mentions-legales/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/mentions-legales/"/>
-  </url>
 
-<url>
-    <loc>https://netsalaire.com/fr/politique-confidentialite/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/politique-confidentialite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/politique-confidentialite/"/>
-  </url>
 
 <url>
     <loc>https://netsalaire.com/fr/allemagne/simulateur-impot/</loc>
