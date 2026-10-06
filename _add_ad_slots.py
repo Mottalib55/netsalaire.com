@@ -7,7 +7,8 @@ et rapportent le plus :
   2. au milieu de l'article (bloc In-Article) ;
   3. avant la FAQ ou en fin de page (bloc multiplex).
 Jamais au-dessus du simulateur. Chaque bloc réserve sa hauteur (pas de saut de
-page au chargement, CLS) et disparaît s'il n'est pas rempli. Le reste du site
+page) : un emplacement vide ne prend aucune place, et n'affiche son
+libellé « Publicité » qu'une fois rempli. Le reste du site
 est couvert par les annonces automatiques (bannière du bas sur mobile, liens
 d'intention, bannières espacées d'au moins 880 px).
 
@@ -23,9 +24,11 @@ SLOTS = {
 }
 
 STYLE = """    <style id="ns-ads">
-      .ns-ad { margin: 2rem auto; max-width: 100%; text-align: center; }
-      .ns-ad__label { display: block; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: #94a3b8; margin-bottom: .35rem; }
-      .ns-ad:has(ins[data-ad-status="unfilled"]) { display: none; }
+      /* Un emplacement ne prend de place qu'une fois rempli : vide, il ne laisse pas de trou. */
+      .ns-ad { margin: 0 auto; max-width: 100%; text-align: center; }
+      .ns-ad__label { display: none; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: #94a3b8; margin-bottom: .35rem; }
+      .ns-ad:has(ins[data-ad-status="filled"]) { margin: 2rem auto; }
+      .ns-ad:has(ins[data-ad-status="filled"]) .ns-ad__label { display: block; }
     </style>
 """
 
@@ -33,9 +36,9 @@ STYLE = """    <style id="ns-ads">
 def bloc(kind: str) -> str:
     attrs, height = SLOTS[kind]
     return (
-        f'            <div class="ns-ad ns-ad--{kind}" style="min-height:{height + 20}px">\n'
+        f'            <div class="ns-ad ns-ad--{kind}">\n'
         f'                <span class="ns-ad__label">Publicité</span>\n'
-        f'                <ins class="adsbygoogle" style="display:block;min-height:{height}px" data-ad-client="{CLIENT}" {attrs}></ins>\n'
+        f'                <ins class="adsbygoogle" style="display:block" data-ad-client="{CLIENT}" {attrs}></ins>\n'
         f'                <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>\n'
         f'            </div>\n'
     )
