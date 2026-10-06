@@ -227,6 +227,9 @@
       /* Un emplacement ne prend de place qu'une fois rempli : vide, il ne laisse pas de trou. */
       .ns-ad { margin: 0 auto; max-width: 100%; text-align: center; }
       .ns-ad__label { display: none; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: #94a3b8; margin-bottom: .35rem; }
+      /* Google réserve la hauteur pendant qu'il cherche une annonce : tant qu'elle
+         n'est pas là, l'emplacement reste à zéro (la largeur suffit à la demande). */
+      .ns-ad ins.adsbygoogle:not([data-ad-status="filled"]) { height: 0 !important; min-height: 0 !important; overflow: hidden; }
       .ns-ad:has(ins[data-ad-status="filled"]) { margin: 2rem auto; }
       .ns-ad:has(ins[data-ad-status="filled"]) .ns-ad__label { display: block; }
     </style>
