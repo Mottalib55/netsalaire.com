@@ -2,33 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8509347331076245" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Analytics (chargé après interaction pour performance) -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-
-        function loadGA() {
-            if (window.gaLoaded) return;
-            window.gaLoaded = true;
-
-            var script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z328SB8DZ8';
-            script.async = true;
-            document.head.appendChild(script);
-
-            gtag('js', new Date());
-            gtag('config', 'G-Z328SB8DZ8');
-        }
-
-        // Charger GA après interaction utilisateur ou après 3s
-        ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {
-            window.addEventListener(evt, loadGA, {once: true, passive: true});
-        });
-        setTimeout(loadGA, 3000);
-    </script>
 
     <!-- Language Router (must be early for redirect) -->
 <script>
@@ -92,8 +67,9 @@
         }
     }
     </script>
+    <script>(function(){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});var s=document.createElement('script');s.async=true;s.src='https://www.clarity.ms/tag/xm1npi7l98';document.head.appendChild(s);})();</script>
 </head>
-<body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
+<body data-clarity-mask="true" style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -377,19 +353,13 @@
 
                 <section class="mb-8">
                     <h2 class="text-xl font-bold mb-4" data-i18n="legal.data">Données personnelles</h2>
-                    <p class="text-slate-600" data-i18n="legal.data_text">
-                        Ce site ne collecte aucune donnée personnelle. Tous les calculs sont effectués localement dans votre navigateur. Aucune information n'est transmise à nos serveurs.
-                    </p>
-                    <p class="text-slate-600 mt-4" data-i18n="legal.data_text2">
-                        Pour plus d'informations, consultez notre <a href="/fr/politique-confidentialite/" class="text-brand-700">politique de confidentialité</a>.
-                    </p>
+                    <p class="text-slate-600">Radif Partners n’enregistre aucune donnée personnelle sur les visiteurs de NetSalaire. Les montants saisis dans les simulateurs (salaire, situation familiale, loyer…) sont calculés dans votre navigateur et ne sont ni transmis ni conservés.</p>
+                    <p class="text-slate-600 mt-4">Le détail, y compris la mesure anonyme de stabilité et les prestataires techniques, figure dans la <a href="/fr/politique-confidentialite/" class="text-brand-700">politique de confidentialité</a>.</p>
                 </section>
 
                 <section class="mb-8">
                     <h2 class="text-xl font-bold mb-4" data-i18n="legal.cookies">Cookies</h2>
-                    <p class="text-slate-600" data-i18n="legal.cookies_text">
-                        Ce site dépose des cookies de mesure d'audience (Google Analytics, Microsoft Clarity) et des cookies publicitaires (Google AdSense) à l'ouverture de la page, sans bandeau préalable. Le détail figure dans la politique de confidentialité.
-                    </p>
+                    <p class="text-slate-600">Le site ne dépose aucun cookie et n’affiche aucune publicité, si bien qu’aucun bandeau ne s’affiche. Microsoft Clarity n’y sert qu’à mesurer la stabilité technique des pages, en mode sans cookie et avec le contenu masqué.</p>
                 </section>
 
                 <section>
@@ -481,17 +451,5 @@
             </div>
         </div>
     </footer>
-<!-- Microsoft Clarity -->
-<script>
-setTimeout(function(){
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;
-    t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t,y);
-  })(window,document,"clarity","script","xm1npi7l98");
-},3000);
-</script>
 </body>
 </html>

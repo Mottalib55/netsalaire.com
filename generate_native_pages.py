@@ -1223,24 +1223,7 @@ def build_head(lang, country_name, country_slug_native, page_slug, fr_slug, en_s
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){{dataLayer.push(arguments);}}
-        function loadGA() {{
-            if (window.gaLoaded) return;
-            window.gaLoaded = true;
-            var script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z328SB8DZ8';
-            script.async = true;
-            document.head.appendChild(script);
-            gtag('js', new Date());
-            gtag('config', 'G-Z328SB8DZ8');
-        }}
-        ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {{
-            window.addEventListener(evt, loadGA, {{once: true, passive: true}});
-        }});
-        setTimeout(loadGA, 3000);
-    </script>
+    <script>(function(){{window.clarity=window.clarity||function(){{(window.clarity.q=window.clarity.q||[]).push(arguments);}};window.clarity('consentv2',{{ad_Storage:'denied',analytics_Storage:'denied'}});var s=document.createElement('script');s.async=true;s.src='https://www.clarity.ms/tag/xm1npi7l98';document.head.appendChild(s);}})();</script>
 
     <title>{title}</title>
     <meta name="description" content="{desc}">
@@ -1331,7 +1314,7 @@ def build_navbar(lang, country_name, flag, fr_slug, en_slug, country_slug_native
     compare_text = menu_ui['compare_all']
 
     return f'''
-<body class="bg-slate-50 font-sans antialiased">
+<body data-clarity-mask="true" class="bg-slate-50 font-sans antialiased">
 
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">

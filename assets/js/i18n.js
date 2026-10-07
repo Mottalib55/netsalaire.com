@@ -510,8 +510,8 @@ const translations = {
     },
     'legal.cookies': { fr: 'Cookies', en: 'Cookies' },
     'legal.cookies_text': {
-        fr: 'Ce site dépose des cookies de mesure d\'audience (Google Analytics, Microsoft Clarity) et des cookies publicitaires (Google AdSense) à l\'ouverture de la page, sans bandeau préalable. Le détail figure dans la politique de confidentialité.',
-        en: 'This site sets audience measurement cookies (Google Analytics, Microsoft Clarity) and advertising cookies (Google AdSense) when a page opens, with no prior banner. Details are given in the privacy policy.'
+        fr: 'Le site ne dépose aucun cookie et n\'affiche aucune publicité, si bien qu\'aucun bandeau ne s\'affiche. Microsoft Clarity n\'y sert qu\'à mesurer la stabilité technique des pages, en mode sans cookie et avec le contenu masqué.',
+        en: 'The site sets no cookies and shows no advertising, so no banner is displayed. Microsoft Clarity is used only to measure the technical stability of pages, in cookieless mode with content masked.'
     },
     'legal.law': { fr: 'Droit applicable', en: 'Applicable Law' },
     'legal.law_text': {
@@ -534,12 +534,12 @@ const translations = {
         en: 'All calculations performed on our simulators are done locally in your browser. No information (salary, family status, etc.) is sent to our servers or stored in any way.'
     },
     'privacy.cookies_text': {
-        fr: 'Notre site mesure son audience avec Google Analytics 4 et Microsoft Clarity, et affiche de la publicité avec Google AdSense. Ces trois services déposent des cookies à l\'ouverture de la page, sans bandeau préalable : _ga et _ga_Z328SB8DZ8 (deux ans) pour Google Analytics, _clck (un an) et _clsk (un jour) pour Microsoft Clarity, et des cookies publicitaires de Google pour AdSense. Clarity enregistre les clics, le défilement et les pages vues sous forme de sessions et de cartes de chaleur ; le contenu des champs de saisie est masqué avant tout envoi.',
-        en: 'Our site measures its audience with Google Analytics 4 and Microsoft Clarity, and displays advertising with Google AdSense. These three services set cookies when a page opens, with no prior banner: _ga and _ga_Z328SB8DZ8 (two years) for Google Analytics, _clck (one year) and _clsk (one day) for Microsoft Clarity, and Google advertising cookies for AdSense. Clarity records clicks, scrolling and pages viewed as sessions and heatmaps; the content of input fields is masked before anything is sent.'
+        fr: 'Aucun cookie n\'est déposé par netsalaire.com, ni par un service appelé par ses pages : pas de cookie de mesure d\'audience, pas de cookie publicitaire. Microsoft Clarity, en mode sans cookie et contenu masqué, sert seulement à mesurer de manière anonyme la stabilité des pages (erreurs, temps de chargement, clics inopérants).',
+        en: 'No cookie is set by netsalaire.com or by any service its pages call: no audience-measurement cookie, no advertising cookie. Microsoft Clarity, in cookieless mode with content masked, is used only to measure page stability anonymously (errors, load times, dead clicks).'
     },
     'privacy.cookies_text2': {
-        fr: 'Vous pouvez refuser ou supprimer ces cookies dans les réglages de votre navigateur ; les simulateurs fonctionnent sans eux.',
-        en: 'You can refuse or delete these cookies in your browser settings; the simulators work without them.'
+        fr: 'Il n\'y a donc pas de bandeau cookies : il n\'y a rien à accepter ni à refuser.',
+        en: 'There is therefore no cookie banner: there is nothing to accept or refuse.'
     },
     'privacy.third_party': { fr: 'Services tiers', en: 'Third-Party Services' },
     'privacy.third_party_text': { fr: 'Notre site utilise les services tiers suivants :', en: 'Our site uses the following third-party services:' },
@@ -553,8 +553,8 @@ const translations = {
     },
     'privacy.rights': { fr: 'Vos droits', en: 'Your Rights' },
     'privacy.rights_text': {
-        fr: 'Conformément au RGPD, vous disposez de droits sur vos données personnelles (accès, rectification, effacement, opposition). Ils s\'appliquent aux données recueillies par les outils de mesure d\'audience et de publicité ; les simulateurs, eux, ne collectent rien.',
-        en: 'In accordance with GDPR, you have rights over your personal data (access, rectification, erasure, objection). They apply to the data collected by the audience measurement and advertising tools; the simulators themselves collect nothing.'
+        fr: 'Le RGPD vous donne un droit d\'accès, de rectification, d\'effacement et d\'opposition. En dehors d\'un message que vous nous auriez envoyé, l\'éditeur ne détient aucune donnée vous concernant.',
+        en: 'The GDPR gives you rights of access, rectification, erasure and objection. Apart from a message you may have sent us, the publisher holds no data about you.'
     },
     'privacy.changes': { fr: 'Modifications', en: 'Changes' },
     'privacy.changes_text': {
