@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8509347331076245" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APL 2026 : calcul de l'aide au logement versée par la CAF</title>
     <meta name="description" content="Combien allez-vous toucher ? Estimez votre APL avec les barèmes CAF 2026 : locataires, étudiants et colocataires. Résultat immédiat, sans inscription.">
@@ -112,9 +113,18 @@
     ]
 }
     </script>
-    <script>(function(){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});var s=document.createElement('script');s.async=true;s.src='https://www.clarity.ms/tag/xm1npi7l98';document.head.appendChild(s);})();</script>
+    <style id="ns-ads">
+      /* Un emplacement ne prend de place qu'une fois rempli : vide, il ne laisse pas de trou. */
+      .ns-ad { margin: 0 auto; max-width: 100%; text-align: center; }
+      .ns-ad__label { display: none; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: #94a3b8; margin-bottom: .35rem; }
+      /* Google réserve la hauteur pendant qu'il cherche une annonce : tant qu'elle
+         n'est pas là, l'emplacement reste à zéro (la largeur suffit à la demande). */
+      .ns-ad ins.adsbygoogle:not([data-ad-status="filled"]) { height: 0 !important; min-height: 0 !important; overflow: hidden; }
+      .ns-ad:has(ins[data-ad-status="filled"]) { margin: 2rem auto; }
+      .ns-ad:has(ins[data-ad-status="filled"]) .ns-ad__label { display: block; }
+    </style>
 </head>
-<body data-clarity-mask="true" style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
+<body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -505,6 +515,11 @@
             </div>
         </div>
 
+            <div class="ns-ad ns-ad--resultat">
+                <span class="ns-ad__label">Publicité</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8509347331076245" data-ad-slot="4822195144" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         <!-- Informations -->
 
             <section id="en-bref" class="bg-brand-50 border border-brand-100 rounded-xl p-6 mt-8">
@@ -567,6 +582,11 @@
             </div>
         </div>
 
+            <div class="ns-ad ns-ad--article">
+                <span class="ns-ad__label">Publicité</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8509347331076245" data-ad-slot="5317019164" data-ad-layout="in-article" data-ad-format="fluid"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         <!-- Plafonds de loyer -->
         <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
             <h2 class="text-xl font-bold text-slate-800 mb-6">Plafonds de loyer depuis le 1er octobre 2026 (location)</h2>
@@ -685,6 +705,11 @@
             </div>
         </div>
 
+            <div class="ns-ad ns-ad--fin">
+                <span class="ns-ad__label">Publicité</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8509347331076245" data-ad-slot="4980968080" data-ad-format="autorelaxed"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         <!-- Autres simulateurs -->
         <div class="bg-slate-800 rounded-xl p-6 text-white">
             <h2 class="text-xl font-bold mb-4">Autres simulateurs France</h2>
@@ -948,7 +973,13 @@
             trackingTimeout = setTimeout(function() {
                 if (Math.abs(loyer - lastTrackedLoyer) < 50) return;
                 lastTrackedLoyer = loyer;
-                
+                if (typeof gtag === 'function') {
+                    gtag('event', 'calculation', {
+                        'event_category': 'Simulateur APL',
+                        'event_label': 'Zone ' + zone,
+                        'value': Math.round(loyer)
+                    });
+                }
             }, 1500);
         }
 
@@ -1017,5 +1048,17 @@
         calculerAPL();
         setEnfants(0);
     </script>
+<!-- Microsoft Clarity -->
+<script>
+setTimeout(function(){
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;
+    t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","xm1npi7l98");
+},3000);
+</script>
 </body>
 </html>

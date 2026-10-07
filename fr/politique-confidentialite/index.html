@@ -2,15 +2,40 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8509347331076245" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Analytics (chargé après interaction pour performance) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        function loadGA() {
+            if (window.gaLoaded) return;
+            window.gaLoaded = true;
+
+            var script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z328SB8DZ8';
+            script.async = true;
+            document.head.appendChild(script);
+
+            gtag('js', new Date());
+            gtag('config', 'G-Z328SB8DZ8');
+        }
+
+        // Charger GA après interaction utilisateur ou après 3s
+        ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {
+            window.addEventListener(evt, loadGA, {once: true, passive: true});
+        });
+        setTimeout(loadGA, 3000);
+    </script>
 
     <!-- Language Router (must be early for redirect) -->
 <script>
     </script>
 
     <title>Politique de Confidentialité – Protection des Données</title>
-    <meta name="description" content="Aucun cookie, aucune publicité : vos saisies de salaire restent dans le navigateur. Seule une mesure anonyme de stabilité (Clarity sans cookie) est faite.">
+    <meta name="description" content="Comment vos données sont protégées. Aucune donnée personnelle stockée, tous les calculs s'effectuent localement dans votre navigateur. Conforme RGPD.">
     <link rel="canonical" href="https://netsalaire.com/fr/politique-confidentialite/">
     <link rel="alternate" hreflang="fr" href="https://netsalaire.com/fr/politique-confidentialite/">
 <link rel="alternate" hreflang="x-default" href="https://netsalaire.com/fr/politique-confidentialite/">
@@ -72,7 +97,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Politique de Confidentialité – Protection des Données",
-    "description": "Aucun cookie, aucune publicité : vos saisies de salaire restent dans le navigateur. Seule une mesure anonyme de stabilité (Clarity sans cookie) est faite.",
+    "description": "Comment vos données sont protégées. Aucune donnée personnelle stockée, tous les calculs s'effectuent localement dans votre navigateur. Conforme RGPD.",
     "url": "https://netsalaire.com/fr/politique-confidentialite/",
     "datePublished": "2026-09-01",
     "dateModified": "2026-10-02",
@@ -107,9 +132,8 @@
     "inLanguage": "fr"
 }
     </script>
-    <script>(function(){window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};window.clarity('consentv2',{ad_Storage:'denied',analytics_Storage:'denied'});var s=document.createElement('script');s.async=true;s.src='https://www.clarity.ms/tag/xm1npi7l98';document.head.appendChild(s);})();</script>
 </head>
-<body data-clarity-mask="true" style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
+<body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -346,51 +370,71 @@
             <div class="card prose prose-slate max-w-none">
 
                 <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">En résumé</h2>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.intro">Introduction</h2>
+                    <p class="text-slate-600" data-i18n="privacy.intro_text">
+                        Chez NetSalaire, nous accordons une importance primordiale à la protection de votre vie privée. Cette politique de confidentialité explique comment nous traitons les informations lorsque vous utilisez notre site.
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.data_collected">Données collectées</h2>
                     <div class="bg-emerald-50 rounded-lg p-4 mb-4">
-                        <p class="text-emerald-800 font-semibold">NetSalaire ne dépose aucun cookie et Radif Partners n’enregistre aucune donnée personnelle sur ses visiteurs.</p>
+                        <p class="text-emerald-800 font-semibold" data-i18n="privacy.good_news">Ce que vous saisissez dans les simulateurs ne quitte pas votre navigateur.</p>
                     </div>
-                    <p class="text-slate-600">Cette page explique ce qui se passe quand vous utilisez nos simulateurs de salaire brut en net, d’impôt sur le revenu, d’allocation chômage, d’APL, de frais de crèche ou d’indemnités kilométriques, en France, au Maroc et dans les autres pays couverts. Elle a été mise à jour le 7 octobre 2026.</p>
+                    <p class="text-slate-600" data-i18n="privacy.data_text">
+                        Tous les calculs effectués sur nos simulateurs sont réalisés localement dans votre navigateur. Aucune information (salaire, situation familiale, etc.) n'est envoyée à nos serveurs ni stockée de quelque manière que ce soit.
+                    </p>
                 </section>
+
                 <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Vos saisies restent dans votre navigateur</h2>
-                    <p class="text-slate-600">Le salaire brut, le statut cadre ou non cadre, le temps partiel, le nombre de parts, le loyer ou les revenus du foyer que vous tapez dans un simulateur sont traités par le code de la page, sur votre appareil. Ils ne sont envoyés à aucun serveur, ne sont pas conservés d’une visite à l’autre et ne sont pas écrits sur votre appareil : rien n’est stocké dans le navigateur, ni cookie, ni stockage local. Fermer l’onglet efface tout.</p>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="legal.cookies">Cookies</h2>
+                    <p class="text-slate-600" data-i18n="privacy.cookies_text">
+                        Notre site mesure son audience avec Google Analytics 4 et Microsoft Clarity, et affiche de la publicité avec Google AdSense. Ces trois services déposent des cookies à l'ouverture de la page, sans bandeau préalable : _ga et _ga_Z328SB8DZ8 (deux ans) pour Google Analytics, _clck (un an) et _clsk (un jour) pour Microsoft Clarity, et des cookies publicitaires de Google pour AdSense. Clarity enregistre les clics, le défilement et les pages vues sous forme de sessions et de cartes de chaleur ; le contenu des champs de saisie est masqué avant tout envoi.
+                    </p>
+                    <p class="text-slate-600 mt-4" data-i18n="privacy.cookies_text2">
+                        Vous pouvez refuser ou supprimer ces cookies dans les réglages de votre navigateur ; les simulateurs fonctionnent sans eux.
+                    </p>
                 </section>
+
                 <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Cookies</h2>
-                    <p class="text-slate-600">Aucun cookie n’est déposé par netsalaire.com, ni par un service appelé par ses pages : pas de cookie de mesure d’audience, pas de cookie publicitaire, pas de cookie de réseau social. Le site n’affiche aucune publicité et n’utilise aucun outil de statistiques marketing.</p>
-                    <p class="text-slate-600 mt-4">Il n’y a donc pas de bandeau cookies : il n’y a rien à accepter ni à refuser, et les simulateurs fonctionnent de la même façon pour tout le monde.</p>
-                </section>
-                <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Mesure anonyme de la stabilité du site</h2>
-                    <p class="text-slate-600">Pour repérer les pages qui plantent ou qui se chargent mal, nous utilisons Microsoft Clarity dans son mode sans cookie. L’outil relève seulement des indicateurs techniques : erreurs JavaScript, temps de chargement, clics qui ne produisent rien, profondeur de défilement.</p>
-                    <ul class="list-disc pl-6 text-slate-600 mt-2 space-y-1">
-                        <li><strong>Sans cookie</strong> : Clarity ne pose ni <code>_clck</code>, ni <code>_clsk</code>, ni <code>MUID</code>, ni <code>CLID</code> ; chaque page vue reçoit un identifiant à usage unique, et deux visites ne peuvent pas être reliées entre elles.</li>
-                        <li><strong>Contenu masqué</strong> : le texte des pages et tout ce que vous saisissez (montants, situation familiale) sont masqués par le code de la page avant tout envoi ; Clarity ne voit que des blocs anonymes.</li>
-                        <li><strong>Responsable</strong> : Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlande, pour l’hébergement et le traitement de ces mesures.</li>
-                        <li><strong>Conservation</strong> : 30 jours pour les enregistrements de pages vues, 13 mois pour les statistiques agrégées.</li>
-                        <li><strong>Base légale</strong> : l’intérêt légitime de l’éditeur à faire fonctionner correctement ses simulateurs (article 6, paragraphe 1, point f du RGPD).</li>
-                        <li><strong>Vous opposer</strong> : bloquez le domaine <code>clarity.ms</code> avec un bloqueur ou les réglages de votre navigateur (les simulateurs restent entièrement utilisables), ou écrivez-nous à l’adresse ci-dessous.</li>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.third_party">Services tiers</h2>
+                    <p class="text-slate-600" data-i18n="privacy.third_party_text">
+                        Notre site utilise les services tiers suivants :
+                    </p>
+                    <ul class="list-disc pl-6 text-slate-600 mt-2">
+                        <li><strong>Service d'hébergement web</strong> : <span data-i18n="privacy.third_party_hosting">hébergement du site</span></li>
+                        <li><strong>Frankfurter API</strong> : <span data-i18n="privacy.third_party_frankfurter">récupération du taux de change EUR/MAD (aucune donnée personnelle transmise)</span></li>
+                        <li><strong>Google Analytics, Microsoft Clarity, Google AdSense</strong> : mesure d'audience et publicité</li>
+                        <li><strong>CDN publics</strong> : <span data-i18n="privacy.third_party_cdn">chargement de polices et icônes (Tailwind, Iconify, Google Fonts)</span></li>
                     </ul>
                 </section>
+
                 <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Autres services techniques</h2>
-                    <p class="text-slate-600">Comme tout site, netsalaire.com repose sur quelques prestataires. Aucun ne reçoit vos saisies ni ne dépose de cookie :</p>
-                    <ul class="list-disc pl-6 text-slate-600 mt-2 space-y-1">
-                        <li><strong>GitHub Pages</strong> (GitHub, Inc.) héberge le site ; ses serveurs tiennent des journaux techniques (adresse IP, date, page demandée) pour la sécurité du service, sans que l’éditeur y ait accès.</li>
-                        <li><strong>Polices et icônes</strong> : les polices sont chargées depuis Google Fonts et les icônes depuis Iconify ; ces serveurs voient l’adresse IP qui demande le fichier, comme pour toute ressource web.</li>
-                        <li><strong>Taux de change</strong> : le comparateur France–Maroc interroge open.er-api.com pour le cours euro / dirham ; la requête ne contient aucune de vos saisies.</li>
-                        <li><strong>Formulaire de contact</strong> : si vous nous écrivez depuis l’accueil, la FAQ ou le guide Maroc, votre message et votre adresse e-mail transitent par Formspree et nous parviennent par e-mail ; ils servent uniquement à vous répondre et sont supprimés une fois l’échange terminé.</li>
-                    </ul>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.security">Sécurité</h2>
+                    <p class="text-slate-600" data-i18n="privacy.security_text">
+                        Notre site est servi via HTTPS, garantissant que toutes les communications entre votre navigateur et notre site sont chiffrées.
+                    </p>
                 </section>
+
                 <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Vos droits</h2>
-                    <p class="text-slate-600">Le RGPD et la loi Informatique et Libertés vous donnent un droit d’accès, de rectification, d’effacement et d’opposition. En dehors d’un message que vous nous auriez envoyé, l’éditeur ne détient aucune donnée vous concernant. Pour toute demande : <a href="mailto:contact@netsalaire.com" class="text-brand-700">contact@netsalaire.com</a>.</p>
-                    <p class="text-slate-600 mt-4">Vous pouvez aussi adresser une réclamation à la Commission nationale de l’informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, <a href="https://www.cnil.fr/fr/plaintes" rel="nofollow noopener" target="_blank" class="text-brand-700">cnil.fr/fr/plaintes</a>.</p>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.rights">Vos droits</h2>
+                    <p class="text-slate-600" data-i18n="privacy.rights_text">
+                        Conformément au RGPD, vous disposez de droits sur vos données personnelles (accès, rectification, effacement, opposition). Ils s'appliquent aux données recueillies par les outils de mesure d'audience et de publicité ; les simulateurs, eux, ne collectent rien.
+                    </p>
                 </section>
+
                 <section class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Modifications</h2>
-                    <p class="text-slate-600">Si un nouvel outil devait un jour être ajouté au site, cette page serait mise à jour avant sa mise en service, avec sa date de révision.</p>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.contact">Contact</h2>
+                    <p class="text-slate-600" data-i18n="privacy.contact_text">
+                        Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter via le formulaire disponible sur notre <a href="/fr/faq/" class="text-brand-700">page FAQ</a>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold mb-4" data-i18n="privacy.changes">Modifications</h2>
+                    <p class="text-slate-600" data-i18n="privacy.changes_text">
+                        Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour.
+                    </p>
                 </section>
 
             </div>
@@ -475,5 +519,17 @@
             </div>
         </div>
     </footer>
+<!-- Microsoft Clarity -->
+<script>
+setTimeout(function(){
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;
+    t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","xm1npi7l98");
+},3000);
+</script>
 </body>
 </html>
