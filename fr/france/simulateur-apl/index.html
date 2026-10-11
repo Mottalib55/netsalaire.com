@@ -123,6 +123,7 @@
       .ns-ad:has(ins[data-ad-status="filled"]) { margin: 2rem auto; }
       .ns-ad:has(ins[data-ad-status="filled"]) .ns-ad__label { display: block; }
     </style>
+<style>/* Premier écran (RECETTE §5, 2026-10-11) : résultat à côté des champs sur ordinateur */@media (min-width:1024px){.ns-pe{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:1.75rem;align-items:start}.ns-pe-resultat{position:sticky;top:5.5rem}.ns-pe-resultat>:first-child{margin-top:0}.ns-pe-champs [id^=btn-zone-]{padding:1rem .75rem}}</style>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -375,21 +376,22 @@
     <main class="max-w-4xl mx-auto px-4 py-8 -mt-8">
         <p data-trust-kit class="trust-top" style="margin:0 0 .75rem;font-size:.8125rem;opacity:.75">Mis à jour le <time datetime="2026-10-02">2 octobre 2026</time></p>
         <!-- Calculator Card -->
-        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+        <div class="ns-pe bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+                <div class="ns-pe-champs">
             <form id="apl-form" class="space-y-6">
                 <!-- Zone géographique -->
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-3">Zone géographique</label>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                        <button type="button" onclick="setZone(1)" id="btn-zone-1" class="p-5 border-2 rounded-xl cursor-pointer transition-all text-left" style="border-color: #1f6a80; background-color: #eef4f6;">
+                        <button type="button" onclick="setZone(1)" id="btn-zone-1" aria-pressed="true" class="p-5 border-2 rounded-xl cursor-pointer transition-all text-left" style="border-color: #1f6a80; background-color: #eef4f6;">
                             <div style="font-size: 1.25rem; font-weight: 700; color: #1e293b;">Zone 1</div>
                             <div style="font-size: 0.95rem; color: #475569; margin-top: 4px;">Paris et petite couronne</div>
                         </button>
-                        <button type="button" onclick="setZone(2)" id="btn-zone-2" class="p-5 border-2 rounded-xl cursor-pointer transition-all text-left" style="border-color: #e2e8f0; background-color: #ffffff;">
+                        <button type="button" onclick="setZone(2)" id="btn-zone-2" aria-pressed="false" class="p-5 border-2 rounded-xl cursor-pointer transition-all text-left" style="border-color: #e2e8f0; background-color: #ffffff;">
                             <div style="font-size: 1.25rem; font-weight: 700; color: #1e293b;">Zone 2</div>
                             <div style="font-size: 0.95rem; color: #475569; margin-top: 4px;">Grandes agglomérations</div>
                         </button>
-                        <button type="button" onclick="setZone(3)" id="btn-zone-3" class="p-5 border-2 rounded-xl cursor-pointer transition-all text-left" style="border-color: #e2e8f0; background-color: #ffffff;">
+                        <button type="button" onclick="setZone(3)" id="btn-zone-3" aria-pressed="false" class="p-5 border-2 rounded-xl cursor-pointer transition-all text-left" style="border-color: #e2e8f0; background-color: #ffffff;">
                             <div style="font-size: 1.25rem; font-weight: 700; color: #1e293b;">Zone 3</div>
                             <div style="font-size: 0.95rem; color: #475569; margin-top: 4px;">Reste de la France</div>
                         </button>
@@ -401,11 +403,11 @@
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-3">Situation familiale</label>
                     <div class="grid grid-cols-2 gap-3">
-                        <button type="button" onclick="setSituation('seul')" id="btn-situation-seul" class="p-4 border-2 rounded-xl cursor-pointer transition-all text-center" style="border-color: #1f6a80; background-color: #eef4f6;">
+                        <button type="button" onclick="setSituation('seul')" id="btn-situation-seul" aria-pressed="true" class="p-4 border-2 rounded-xl cursor-pointer transition-all text-center" style="border-color: #1f6a80; background-color: #eef4f6;">
                             <div class="text-2xl mb-1">👤</div>
                             <div class="font-semibold text-slate-800">Seul(e)</div>
                         </button>
-                        <button type="button" onclick="setSituation('couple')" id="btn-situation-couple" class="p-4 border-2 rounded-xl cursor-pointer transition-all text-center" style="border-color: #e2e8f0; background-color: #ffffff;">
+                        <button type="button" onclick="setSituation('couple')" id="btn-situation-couple" aria-pressed="false" class="p-4 border-2 rounded-xl cursor-pointer transition-all text-center" style="border-color: #e2e8f0; background-color: #ffffff;">
                             <div class="text-2xl mb-1">👫</div>
                             <div class="font-semibold text-slate-800">En couple</div>
                         </button>
@@ -417,11 +419,11 @@
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-3">Nombre de personnes à charge</label>
                     <div class="grid grid-cols-5 gap-2">
-                        <button type="button" onclick="setEnfants(0)" id="btn-enfants-0" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #1f6a80; color: #ffffff;">0</button>
-                        <button type="button" onclick="setEnfants(1)" id="btn-enfants-1" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">1</button>
-                        <button type="button" onclick="setEnfants(2)" id="btn-enfants-2" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">2</button>
-                        <button type="button" onclick="setEnfants(3)" id="btn-enfants-3" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">3</button>
-                        <button type="button" onclick="setEnfants(4)" id="btn-enfants-4" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">4+</button>
+                        <button type="button" onclick="setEnfants(0)" id="btn-enfants-0" aria-pressed="true" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #1f6a80; color: #ffffff;">0</button>
+                        <button type="button" onclick="setEnfants(1)" id="btn-enfants-1" aria-pressed="false" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">1</button>
+                        <button type="button" onclick="setEnfants(2)" id="btn-enfants-2" aria-pressed="false" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">2</button>
+                        <button type="button" onclick="setEnfants(3)" id="btn-enfants-3" aria-pressed="false" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">3</button>
+                        <button type="button" onclick="setEnfants(4)" id="btn-enfants-4" aria-pressed="false" class="py-3 px-4 rounded-lg font-semibold transition-all" style="background-color: #f1f5f9; color: #475569;">4+</button>
                     </div>
                     <input type="hidden" id="enfants" value="0">
                 </div>
@@ -464,8 +466,10 @@
                 </div>
             </form>
 
+                </div>
+                <div class="ns-pe-resultat">
             <!-- Résultats -->
-            <div id="resultats" class="mt-8 p-6 bg-white rounded-xl border-2 border-slate-200 shadow-sm">
+            <div id="resultats" data-resultat class="mt-8 p-6 bg-white rounded-xl border-2 border-slate-200 shadow-sm">
                 <div class="text-center">
                     <p class="text-sm text-slate-600 font-medium mb-2">Estimation de votre APL mensuelle</p>
                     <p id="montant-apl" class="text-5xl font-bold text-slate-900 mb-2">0 €</p>
@@ -502,8 +506,9 @@
                 </div>
             </div>
 
+                </div>
             <!-- Avertissement -->
-            <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+            <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl" style="grid-column:1/-1">
                 <div class="flex items-start space-x-3">
                     <span class="text-amber-700 text-xl">⚠️</span>
                     <div class="text-sm text-amber-800">
@@ -899,6 +904,7 @@
             document.getElementById('zone').value = z;
             for (let i = 1; i <= 3; i++) {
                 const btn = document.getElementById('btn-zone-' + i);
+                btn.setAttribute('aria-pressed', String(i === z));
                 if (i === z) {
                     btn.style.borderColor = '#1f6a80';
                     btn.style.backgroundColor = '#eef4f6';
@@ -915,6 +921,7 @@
             document.getElementById('situation').value = s;
             ['seul', 'couple'].forEach(function(sit) {
                 const btn = document.getElementById('btn-situation-' + sit);
+                btn.setAttribute('aria-pressed', String(sit === s));
                 if (sit === s) {
                     btn.style.borderColor = '#1f6a80';
                     btn.style.backgroundColor = '#eef4f6';
@@ -931,6 +938,7 @@
             for (let i = 0; i <= 4; i++) {
                 const btn = document.getElementById('btn-enfants-' + i);
                 btn.className = 'py-3 px-4 rounded-lg font-semibold transition-all';
+                btn.setAttribute('aria-pressed', String(i === n));
                 if (i === n) {
                     btn.style.backgroundColor = '#1f6a80';
                     btn.style.color = '#ffffff';

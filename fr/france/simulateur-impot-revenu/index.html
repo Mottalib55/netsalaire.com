@@ -379,6 +379,7 @@
     ]
 }
     </script>
+<style>/* Premier écran (RECETTE §5, 2026-10-11) : en-tête resserré sur ordinateur pour que le simulateur commence plus haut */@media (min-width:1024px){.ns-pe-hero{padding-top:1rem!important;padding-bottom:1.25rem!important}.ns-pe-hero>div:first-child{margin-bottom:1rem}.ns-pe-hero h1{font-size:3.25rem;line-height:1.1}.ns-pe-hero>p{margin-top:.875rem}}</style>
 </head>
 <body class="bg-slate-50 text-slate-600 antialiased selection:bg-brand-100">
     <!-- Navbar -->
@@ -607,9 +608,8 @@
     <script src="/assets/js/mobile-menu.js" defer></script>
 
     <main class="flex-grow pt-16">
-        <p data-trust-kit class="trust-top" style="margin:0 0 .75rem;font-size:.8125rem;opacity:.75">Mis à jour le <time datetime="2026-10-02">2 octobre 2026</time></p>
         <!-- Hero Section -->
-        <header><section class="pt-8 pb-6 md:pt-10 md:pb-8 text-center px-4">
+        <header><section class="ns-pe-hero pt-8 pb-6 md:pt-10 md:pb-8 text-center px-4">
             <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-200 px-4 py-1.5 mb-6">
                 <i data-lucide="sparkles" class="h-4 w-4 text-emerald-700"></i>
                 <span class="text-sm font-medium text-emerald-700">Barème 2026 - 100% Gratuit - Résultat instantane</span>
@@ -639,10 +639,6 @@
                                 <i data-lucide="users" class="h-5 w-5"></i>
                             </div>
 
-            <section id="en-bref" class="bg-brand-50 border border-brand-100 rounded-xl p-6 mt-8">
-                <h2 class="text-lg font-bold text-slate-900 mb-3">L&#x27;essentiel sur l&#x27;impôt sur le revenu 2026</h2>
-                <p class="text-slate-700 leading-relaxed">L'impôt sur le revenu français est progressif&nbsp;: le revenu imposable est d'abord divisé par le nombre de parts du foyer, puis le barème s'applique à ce quotient avant d'être multiplié par le nombre de parts. Une personne seule devient imposable à partir d'environ 17&nbsp;200&nbsp;EUR de revenu net imposable, un couple à partir de 32&nbsp;500&nbsp;EUR environ. Le taux marginal d'imposition, celui qui frappe le dernier euro gagné, détermine l'économie réalisée sur chaque euro déduit&nbsp;: avec un taux marginal de 30&nbsp;%, un versement de 1&nbsp;000&nbsp;EUR sur un plan d'épargne retraite fait économiser 300&nbsp;EUR d'impôt. Depuis 2019, l'impôt est prélevé chaque mois à la source par l'employeur, le taux étant recalculé en septembre après le traitement de la déclaration annuelle.</p>
-            </section>
                             <h2 class="text-lg font-semibold text-slate-900">Votre situation</h2>
                         </div>
                         <div class="text-right">
@@ -655,15 +651,15 @@
                     <div class="mb-6">
                         <label class="block text-sm font-medium text-slate-700 mb-3">Statut marital</label>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
-                            <button type="button" id="btn-single" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
+                            <button type="button" id="btn-single" aria-pressed="false" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
                                 <i data-lucide="user" class="h-5 w-5 mx-auto mb-1 text-slate-600"></i>
                                 <span class="block text-xs sm:text-sm font-medium text-slate-700">Célibataire</span>
                             </button>
-                            <button type="button" id="btn-married" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
+                            <button type="button" id="btn-married" aria-pressed="false" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
                                 <i data-lucide="heart" class="h-5 w-5 mx-auto mb-1 text-slate-600"></i>
                                 <span class="block text-xs sm:text-sm font-medium text-slate-700">Marie/PACS</span>
                             </button>
-                            <button type="button" id="btn-divorced" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
+                            <button type="button" id="btn-divorced" aria-pressed="false" class="status-btn rounded-xl border-2 p-2 sm:p-3 text-center transition-all cursor-pointer" style="border-color: #e2e8f0; background-color: white;">
                                 <i data-lucide="user-x" class="h-5 w-5 mx-auto mb-1 text-slate-600"></i>
                                 <span class="block text-xs sm:text-sm font-medium text-slate-700">Divorce(e)</span>
                             </button>
@@ -1127,7 +1123,7 @@
                     <div class="lg:sticky lg:top-24 space-y-5">
 
                         <!-- Main Result Card -->
-                        <div class="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 shadow-xl overflow-hidden relative">
+                        <div class="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 shadow-xl overflow-hidden relative" data-resultat>
                             <div class="absolute top-0 right-0 -mt-8 -mr-8 h-32 w-32 rounded-full bg-brand-500 opacity-20 blur-2xl"></div>
                             <div class="absolute bottom-0 left-0 -mb-8 -ml-8 h-24 w-24 rounded-full bg-emerald-700 opacity-10 blur-xl"></div>
 
@@ -1333,7 +1329,12 @@
 
         <!-- SEO Content Section -->
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-12">
+            <p data-trust-kit class="trust-top" style="margin:0 0 .75rem;font-size:.8125rem;opacity:.75">Mis à jour le <time datetime="2026-10-02">2 octobre 2026</time></p>
 
+            <section id="en-bref" class="bg-brand-50 border border-brand-100 rounded-xl p-6 mt-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">L&#x27;essentiel sur l&#x27;impôt sur le revenu 2026</h2>
+                <p class="text-slate-700 leading-relaxed">L'impôt sur le revenu français est progressif&nbsp;: le revenu imposable est d'abord divisé par le nombre de parts du foyer, puis le barème s'applique à ce quotient avant d'être multiplié par le nombre de parts. Une personne seule devient imposable à partir d'environ 17&nbsp;200&nbsp;EUR de revenu net imposable, un couple à partir de 32&nbsp;500&nbsp;EUR environ. Le taux marginal d'imposition, celui qui frappe le dernier euro gagné, détermine l'économie réalisée sur chaque euro déduit&nbsp;: avec un taux marginal de 30&nbsp;%, un versement de 1&nbsp;000&nbsp;EUR sur un plan d'épargne retraite fait économiser 300&nbsp;EUR d'impôt. Depuis 2019, l'impôt est prélevé chaque mois à la source par l'employeur, le taux étant recalculé en septembre après le traitement de la déclaration annuelle.</p>
+            </section>
             <!-- Explanations -->
             <section class="mt-12">
                 <h2 class="text-xl font-bold text-slate-900 mb-6">Comprendre l'impôt sur le revenu en France</h2>
@@ -2283,6 +2284,7 @@
             state.status = value;
             // Reset all buttons to default style
             document.querySelectorAll('.status-btn').forEach(btn => {
+                btn.setAttribute('aria-pressed', 'false');
                 btn.style.borderColor = '#e2e8f0';
                 btn.style.backgroundColor = 'white';
                 const icon = btn.querySelector('i');
@@ -2293,6 +2295,7 @@
             // Highlight active button with solid indigo background
             const activeBtn = document.getElementById('btn-' + value);
             if (activeBtn) {
+                activeBtn.setAttribute('aria-pressed', 'true');
                 activeBtn.style.borderColor = '#185563';
                 activeBtn.style.backgroundColor = '#185563';
                 const icon = activeBtn.querySelector('i');

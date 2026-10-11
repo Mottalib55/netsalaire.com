@@ -221,6 +221,7 @@
     "inLanguage": "fr"
 }
     </script>
+<style>/* Premier écran (RECETTE §5, 2026-10-11) : résultat à côté des champs sur ordinateur */@media (min-width:1024px){.ns-pe{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:1.75rem;align-items:start}.ns-pe-resultat{position:sticky;top:5.5rem}.ns-pe-resultat>:first-child{margin-top:0}}</style>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -467,21 +468,22 @@
             </header>
 
             <!-- Calculator -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
+            <div class="ns-pe bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
 
+                <div class="ns-pe-champs">
                 <!-- Vehicle Type -->
                 <div class="mb-6">
                     <label class="block text-sm font-medium text-slate-700 mb-3">Type de véhicule</label>
                     <div class="grid grid-cols-3 gap-3">
-                        <button type="button" onclick="setVehicleType('voiture')" id="btn-voiture" class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all">
+                        <button type="button" onclick="setVehicleType('voiture')" id="btn-voiture" aria-pressed="true" class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all">
                             <iconify-icon icon="lucide:car" width="28"></iconify-icon>
                             <span class="text-sm font-medium">Voiture</span>
                         </button>
-                        <button type="button" onclick="setVehicleType('moto')" id="btn-moto" class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">
+                        <button type="button" onclick="setVehicleType('moto')" id="btn-moto" aria-pressed="false" class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">
                             <iconify-icon icon="lucide:bike" width="28"></iconify-icon>
                             <span class="text-sm font-medium">Moto</span>
                         </button>
-                        <button type="button" onclick="setVehicleType('velo')" id="btn-velo" class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">
+                        <button type="button" onclick="setVehicleType('velo')" id="btn-velo" aria-pressed="false" class="flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">
                             <iconify-icon icon="lucide:bike" width="28"></iconify-icon>
                             <span class="text-sm font-medium">Vélo</span>
                         </button>
@@ -493,11 +495,11 @@
                 <div id="puissance-section" class="mb-6">
                     <label class="block text-sm font-medium text-slate-700 mb-3">Puissance fiscale (CV)</label>
                     <div class="grid grid-cols-5 gap-2">
-                        <button type="button" onclick="setPuissance(3)" id="btn-cv-3" class="py-2.5 text-sm font-medium rounded-lg border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all">3 CV</button>
-                        <button type="button" onclick="setPuissance(4)" id="btn-cv-4" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">4 CV</button>
-                        <button type="button" onclick="setPuissance(5)" id="btn-cv-5" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">5 CV</button>
-                        <button type="button" onclick="setPuissance(6)" id="btn-cv-6" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">6 CV</button>
-                        <button type="button" onclick="setPuissance(7)" id="btn-cv-7" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">7+ CV</button>
+                        <button type="button" onclick="setPuissance(3)" id="btn-cv-3" aria-pressed="true" class="py-2.5 text-sm font-medium rounded-lg border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all">3 CV</button>
+                        <button type="button" onclick="setPuissance(4)" id="btn-cv-4" aria-pressed="false" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">4 CV</button>
+                        <button type="button" onclick="setPuissance(5)" id="btn-cv-5" aria-pressed="false" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">5 CV</button>
+                        <button type="button" onclick="setPuissance(6)" id="btn-cv-6" aria-pressed="false" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">6 CV</button>
+                        <button type="button" onclick="setPuissance(7)" id="btn-cv-7" aria-pressed="false" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">7+ CV</button>
                     </div>
                     <input type="hidden" id="puissance" value="3">
                 </div>
@@ -506,9 +508,9 @@
                 <div id="puissance-moto-section" class="mb-6 hidden">
                     <label class="block text-sm font-medium text-slate-700 mb-3">Cylindree moto</label>
                     <div class="grid grid-cols-3 gap-2">
-                        <button type="button" onclick="setPuissanceMoto(1)" id="btn-moto-1" class="py-2.5 text-sm font-medium rounded-lg border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all">1-2 CV</button>
-                        <button type="button" onclick="setPuissanceMoto(2)" id="btn-moto-2" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">3-5 CV</button>
-                        <button type="button" onclick="setPuissanceMoto(3)" id="btn-moto-3" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">5+ CV</button>
+                        <button type="button" onclick="setPuissanceMoto(1)" id="btn-moto-1" aria-pressed="true" class="py-2.5 text-sm font-medium rounded-lg border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all">1-2 CV</button>
+                        <button type="button" onclick="setPuissanceMoto(2)" id="btn-moto-2" aria-pressed="false" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">3-5 CV</button>
+                        <button type="button" onclick="setPuissanceMoto(3)" id="btn-moto-3" aria-pressed="false" class="py-2.5 text-sm font-medium rounded-lg border-2 border-slate-200 text-slate-600 hover:border-slate-300 transition-all">5+ CV</button>
                     </div>
                     <input type="hidden" id="puissance-moto" value="1">
                 </div>
@@ -531,8 +533,10 @@
                     </label>
                 </div>
 
+                </div>
+                <div class="ns-pe-resultat">
                 <!-- Result -->
-                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200">
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200" data-resultat>
                     <div class="text-center">
                         <p class="text-sm text-emerald-700 mb-1">Indemnité kilométrique déductible</p>
                         <p class="text-4xl font-bold text-emerald-700" id="result">1 590 €</p>
@@ -548,6 +552,7 @@
                             <p class="text-lg font-semibold text-slate-700" id="par-mois">132,50 €</p>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
 
@@ -851,6 +856,7 @@
             // Update buttons
             ['voiture', 'moto', 'velo'].forEach(t => {
                 const btn = document.getElementById('btn-' + t);
+                btn.setAttribute('aria-pressed', String(t === type));
                 if (t === type) {
                     btn.className = 'flex flex-col items-center gap-2 p-4 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all';
                 } else {
@@ -872,6 +878,7 @@
 
             for (let i = 3; i <= 7; i++) {
                 const btn = document.getElementById('btn-cv-' + i);
+                btn.setAttribute('aria-pressed', String(i === cv));
                 if (i === cv) {
                     btn.className = 'py-2.5 text-sm font-medium rounded-lg border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all';
                 } else {
@@ -887,6 +894,7 @@
 
             for (let i = 1; i <= 3; i++) {
                 const btn = document.getElementById('btn-moto-' + i);
+                btn.setAttribute('aria-pressed', String(i === cv));
                 if (i === cv) {
                     btn.className = 'py-2.5 text-sm font-medium rounded-lg border-2 border-brand-500 bg-brand-50 text-brand-700 transition-all';
                 } else {

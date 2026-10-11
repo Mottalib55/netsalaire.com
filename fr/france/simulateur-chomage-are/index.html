@@ -195,6 +195,7 @@
       .ns-ad:has(ins[data-ad-status="filled"]) { margin: 2rem auto; }
       .ns-ad:has(ins[data-ad-status="filled"]) .ns-ad__label { display: block; }
     </style>
+<style>/* Premier écran (RECETTE §5, 2026-10-11) : résultat à côté des champs sur ordinateur */@media (min-width:1024px){.ns-pe{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:1.75rem;align-items:start}.ns-pe-resultat{position:sticky;top:5.5rem}.ns-pe-resultat>:first-child{margin-top:0}}</style>
 </head>
 <body style="font-family: 'Inter', system-ui, sans-serif;" class="bg-slate-50">
     <!-- Navbar -->
@@ -436,8 +437,9 @@
             </header>
 
             <!-- Calculator -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
+            <div class="ns-pe bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8">
 
+                <div class="ns-pe-champs">
                 <!-- Salaire brut -->
                 <div class="mb-6">
                     <label class="block text-sm font-medium text-slate-700 mb-2">Salaire brut moyen</label>
@@ -502,8 +504,10 @@
                     <input type="hidden" id="temps" value="plein">
                 </div>
 
+                </div>
+                <div class="ns-pe-resultat">
                 <!-- Results -->
-                <div class="bg-gradient-to-br from-blue-50 to-brand-50 rounded-xl p-6 border border-blue-200">
+                <div class="bg-gradient-to-br from-blue-50 to-brand-50 rounded-xl p-6 border border-blue-200" data-resultat>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="text-center">
                             <p class="text-sm text-blue-700 mb-1">Allocation journaliere</p>
@@ -538,6 +542,7 @@
                         <iconify-icon icon="lucide:alert-triangle" width="20" class="text-amber-700 flex-shrink-0 mt-0.5"></iconify-icon>
                         <p class="text-sm text-amber-700">Cette estimation est indicative. Le calcul réel par France Travail prend en compte de nombreux paramètres supplémentaires (primes, congés, etc.).</p>
                     </div>
+                </div>
                 </div>
             </div>
 
