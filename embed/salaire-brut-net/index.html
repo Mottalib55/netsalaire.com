@@ -58,8 +58,10 @@
     Calcul fourni par <a href="https://netsalaire.com/fr/france/simulateur-salaire-brut-net/" target="_blank" rel="noopener">NetSalaire.com</a>
   </div>
 </div>
+<script src="/assets/js/brut-net-fr.js"></script>
 <script>
-  var TAUX = { noncadre: 0.22, cadre: 0.25 };
+  // Cotisations salariales réelles 2026 : assets/js/brut-net-fr.js (sources en tête du fichier)
+  var MOTEUR = window.BRUT_NET_FR;
   var brut = document.getElementById('brut');
   var statut = document.getElementById('statut');
   var net = document.getElementById('net');
@@ -67,9 +69,11 @@
   function espace(n){ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
   function lire(v){ return parseInt(String(v).replace(/[^\d]/g, ''), 10) || 0; }
   function calculer(){
-    var b = lire(brut.value), t = TAUX[statut.value];
-    net.textContent = espace(b * (1 - t)) + ' €';
-    detail.textContent = 'Cotisations salariales : ' + espace(b * t) + ' € (' + Math.round(t * 100) + ' %)';
+    var b = lire(brut.value);
+    var c = MOTEUR.cotisations(b * 12, statut.value).total / 12;
+    var t = b > 0 ? c / b : 0;
+    net.textContent = espace(b - c) + ' €';
+    detail.textContent = 'Cotisations salariales : ' + espace(c) + ' € (' + (Math.round(t * 1000) / 10).toString().replace('.', ',') + ' %)';
   }
   // On ne réécrit jamais le champ pendant la frappe : c'est ce qui fait
   // réapparaître un « 0 » que l'utilisateur vient d'effacer.

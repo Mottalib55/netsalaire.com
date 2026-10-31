@@ -531,6 +531,12 @@ details[open] summary::after {
     content: "−";
 }
 
+/* Résumé qui porte déjà sa propre icône (accueil, simulateur France) : pas de second « + » */
+details summary:has(iconify-icon)::after,
+details summary:has(svg)::after {
+    content: none;
+}
+
 details p {
     padding: 0 1rem 1rem;
     color: var(--text-light);

@@ -383,7 +383,7 @@
 </head>
 <body class="bg-slate-50 text-slate-600 antialiased selection:bg-brand-100">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white/80">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="/fr/" class="flex items-center gap-2 group">
                 <img src="/logo.svg" width="32" height="32" alt="" class="w-8 h-8">
@@ -499,7 +499,7 @@
                     </div>
                 </div>
                 <a href="/fr/faq/" class="hover:text-slate-900 transition-colors">FAQ</a>
-                <a href="/fr/a-propos/" class="hover:text-slate-900 transition-colors">A propos</a>
+                <a href="/fr/a-propos/" class="hover:text-slate-900 transition-colors">À propos</a>
             </div>
             <div class="flex items-center gap-3">
                 <a href="#contact" class="hidden md:flex items-center gap-2 text-xs font-medium bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-900 px-4 py-2 rounded-full transition-all">
@@ -713,8 +713,8 @@
                         <div class="flex items-center justify-between mb-3">
                             <label class="text-sm font-medium text-slate-700">Revenu du foyer</label>
                             <select id="income1-status-select" class="text-xs border border-slate-200 rounded-lg py-1 px-2 text-slate-600 bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 cursor-pointer">
-                                <option value="noncadre" selected>Non-cadre (22%)</option>
-                                <option value="cadre">Cadre (25%)</option>
+                                <option value="noncadre" selected>Non-cadre</option>
+                                <option value="cadre">Cadre</option>
                             </select>
                         </div>
                         <div style="margin-bottom:12px;">
@@ -724,11 +724,11 @@
                             <div class="inc-row">
                                 <span class="inc-lbl">Brut</span>
                                 <div class="inc-v">
-                                    <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 274">
+                                    <input type="text" inputmode="numeric" id="income1-brut-monthly" value="4 215">
                                     <span class="inc-u">€</span>
                                 </div>
                                 <div class="inc-v">
-                                    <input type="text" inputmode="numeric" id="income1-brut-annual" value="51 282">
+                                    <input type="text" inputmode="numeric" id="income1-brut-annual" value="50 582">
                                     <span class="inc-u">€</span>
                                 </div>
                             </div>
@@ -773,8 +773,8 @@
                         <div class="flex items-center justify-between mb-3">
                             <label class="text-sm font-medium text-slate-700">Revenu du foyer <span class="text-slate-600 font-normal">(conjoint)</span></label>
                             <select id="income2-status-select" class="text-xs border border-slate-200 rounded-lg py-1 px-2 text-slate-600 bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 cursor-pointer">
-                                <option value="noncadre" selected>Non-cadre (22%)</option>
-                                <option value="cadre">Cadre (25%)</option>
+                                <option value="noncadre" selected>Non-cadre</option>
+                                <option value="cadre">Cadre</option>
                             </select>
                         </div>
                         <div style="margin-bottom:12px;">
@@ -1804,7 +1804,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-600">&copy; 2026 NetSalaire.com, Cree par Radif Partners</p>
+                <p class="text-sm text-slate-600">&copy; 2026 NetSalaire.com, Créé par Radif Partners</p>
             </div>
         </div>
     
@@ -1812,6 +1812,7 @@
     </footer>
 
     <!-- Calculator Script -->
+    <script src="/assets/js/brut-net-fr.js"></script>
     <script>
     (function() {
         'use strict';
@@ -1830,13 +1831,12 @@
         const QF_CAP = 1807; // plafond de l'avantage par demi-part
         const QF_CAP_PARENT_ISOLE = 4262; // part entiere du premier enfant d'un parent isole
         const DECOTE = { single: 897, couple: 1483, rate: 0.4525 };
-        const COTIS_RATES = { cadre: 0.25, noncadre: 0.22 };
-
+        // Cotisations salariales réelles 2026 : assets/js/brut-net-fr.js (sources en tête du fichier)
         function brutToNet(brut, status) {
-            return Math.round(brut * (1 - COTIS_RATES[status]));
+            return Math.round(window.BRUT_NET_FR.brutVersNet(brut, status));
         }
         function netToBrut(net, status) {
-            return Math.round(net / (1 - COTIS_RATES[status]));
+            return Math.round(window.BRUT_NET_FR.netVersBrut(net, status));
         }
 
         const state = {

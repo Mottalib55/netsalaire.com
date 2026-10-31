@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.min.css --minify",
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.min.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node scripts/test-brut-net-fr.mjs"
   },
   "repository": {
     "type": "git",

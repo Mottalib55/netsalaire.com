@@ -111,7 +111,7 @@ const translations = {
     'reassurance.instant': { fr: 'Instantané', en: 'Instant' },
     'reassurance.instant_desc': { fr: 'Calculs en temps réel', en: 'Real-time calculations' },
     'reassurance.free': { fr: 'Gratuit', en: 'Free' },
-    'reassurance.free_desc': { fr: 'Sans pub ni inscription', en: 'No ads or registration' },
+    'reassurance.free_desc': { fr: 'Sans inscription', en: 'No registration' },
 
     // HOMEPAGE - Contact
     'contact.title': { fr: 'Une question ?', en: 'Have a question?' },
@@ -159,8 +159,8 @@ const translations = {
     },
     'faq.free_title': { fr: 'Les simulateurs sont-ils gratuits ?', en: 'Are the simulators free?' },
     'faq.free_text': {
-        fr: 'Oui, tous nos simulateurs sont 100% gratuits, sans publicité et sans inscription requise. Vous pouvez les utiliser autant de fois que vous le souhaitez.',
-        en: 'Yes, all our simulators are 100% free, without ads and without required registration. You can use them as many times as you want.'
+        fr: 'Oui, tous nos simulateurs sont 100% gratuits et sans inscription requise. Vous pouvez les utiliser autant de fois que vous le souhaitez.',
+        en: 'Yes, all our simulators are 100% free, with no registration required. You can use them as many times as you want.'
     },
     'faq.update_title': { fr: 'À quelle fréquence les barèmes sont-ils mis à jour ?', en: 'How often are the rates updated?' },
     'faq.update_text': {
