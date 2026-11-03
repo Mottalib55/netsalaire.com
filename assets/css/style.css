@@ -699,10 +699,15 @@ span[id="legend-social"] {
     flex-shrink: 0;
     white-space: nowrap;
 }
-/* Mobile : on garde le bandeau du bas (le format qui rapporte le plus) et on
-   retire la pub sous le résultat et le multiplex de fin de page, pour un
-   premier écran plus léger. Un bloc masqué ne demande aucune annonce. */
+
+/* Pubs manuelles : on ne garde que le bloc sous le résultat, et seulement
+   sur ordinateur (sur mobile, le bandeau du bas rapporte bien plus).
+   Le bloc du milieu d'article et le multiplex de fin rapportaient très peu
+   et chargeaient la page : retirés partout. Les annonces automatiques
+   (bandeau, bannières espacées) couvrent le reste.
+   Un bloc masqué ne demande aucune annonce. */
+.ns-ad--article,
+.ns-ad--fin { display: none !important; }
 @media (max-width: 767px) {
-  .ns-ad--resultat,
-  .ns-ad--fin { display: none !important; }
+  .ns-ad--resultat { display: none !important; }
 }
