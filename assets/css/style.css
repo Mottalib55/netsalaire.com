@@ -699,3 +699,10 @@ span[id="legend-social"] {
     flex-shrink: 0;
     white-space: nowrap;
 }
+/* Mobile : on garde le bandeau du bas (le format qui rapporte le plus) et on
+   retire la pub sous le résultat et le multiplex de fin de page, pour un
+   premier écran plus léger. Un bloc masqué ne demande aucune annonce. */
+@media (max-width: 767px) {
+  .ns-ad--resultat,
+  .ns-ad--fin { display: none !important; }
+}
